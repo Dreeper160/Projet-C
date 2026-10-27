@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">MLV_keyboard.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MLV__keyboard_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *   Copyright (C) 2010,2011,2012 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef __MLV__MLV_KEYBOARD_H__</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define __MLV__MLV_KEYBOARD_H__</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifndef MEMORY_DEBUG</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;memory_debug.h&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="MLV__device__with__buttons_8h.html">MLV_device_with_buttons.h</a>&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">   50</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        MLV_KEYBOARD_NONE = SDLK_UNKNOWN,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        MLV_KEYBOARD_UNKNOWN = SDLK_UNKNOWN,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        MLV_KEYBOARD_FIRST = SDLK_FIRST,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        MLV_KEYBOARD_BACKSPACE = SDLK_BACKSPACE, </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        MLV_KEYBOARD_TAB = SDLK_TAB, </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        MLV_KEYBOARD_CLEAR = SDLK_CLEAR, </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        MLV_KEYBOARD_RETURN = SDLK_RETURN, </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        MLV_KEYBOARD_PAUSE = SDLK_PAUSE, </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        MLV_KEYBOARD_ESCAPE = SDLK_ESCAPE, </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        MLV_KEYBOARD_SPACE = SDLK_SPACE, </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        MLV_KEYBOARD_EXCLAIM = SDLK_EXCLAIM, </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        MLV_KEYBOARD_QUOTEDBL = SDLK_QUOTEDBL, </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        MLV_KEYBOARD_HASH = SDLK_HASH, </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        MLV_KEYBOARD_DOLLAR = SDLK_DOLLAR, </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        MLV_KEYBOARD_AMPERSAND = SDLK_AMPERSAND, </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        MLV_KEYBOARD_QUOTE = SDLK_QUOTE, </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        MLV_KEYBOARD_LEFTPAREN = SDLK_LEFTPAREN, </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        MLV_KEYBOARD_RIGHTPAREN = SDLK_RIGHTPAREN, </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        MLV_KEYBOARD_ASTERISK = SDLK_ASTERISK, </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        MLV_KEYBOARD_PLUS = SDLK_PLUS, </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        MLV_KEYBOARD_COMMA = SDLK_COMMA, </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        MLV_KEYBOARD_MINUS = SDLK_MINUS, </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        MLV_KEYBOARD_PERIOD = SDLK_PERIOD, </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        MLV_KEYBOARD_SLASH = SDLK_SLASH, </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        MLV_KEYBOARD_0 = SDLK_0, </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        MLV_KEYBOARD_1 = SDLK_1, </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        MLV_KEYBOARD_2 = SDLK_2, </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        MLV_KEYBOARD_3 = SDLK_3, </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        MLV_KEYBOARD_4 = SDLK_4, </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        MLV_KEYBOARD_5 = SDLK_5, </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        MLV_KEYBOARD_6 = SDLK_6, </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        MLV_KEYBOARD_7 = SDLK_7, </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        MLV_KEYBOARD_8 = SDLK_8, </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        MLV_KEYBOARD_9 = SDLK_9, </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        MLV_KEYBOARD_COLON = SDLK_COLON, </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        MLV_KEYBOARD_SEMICOLON = SDLK_SEMICOLON, </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        MLV_KEYBOARD_LESS = SDLK_LESS, </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        MLV_KEYBOARD_EQUALS = SDLK_EQUALS, </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        MLV_KEYBOARD_GREATER = SDLK_GREATER, </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        MLV_KEYBOARD_QUESTION = SDLK_QUESTION, </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        MLV_KEYBOARD_AT = SDLK_AT, </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        MLV_KEYBOARD_LEFTBRACKET = SDLK_LEFTBRACKET, </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        MLV_KEYBOARD_BACKSLASH = SDLK_BACKSLASH, </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        MLV_KEYBOARD_RIGHTBRACKET = SDLK_RIGHTBRACKET, </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        MLV_KEYBOARD_CARET = SDLK_CARET, </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        MLV_KEYBOARD_UNDERSCORE = SDLK_UNDERSCORE, </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        MLV_KEYBOARD_BACKQUOTE = SDLK_BACKQUOTE, </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        MLV_KEYBOARD_a = SDLK_a, </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        MLV_KEYBOARD_b = SDLK_b, </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        MLV_KEYBOARD_c = SDLK_c, </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        MLV_KEYBOARD_d = SDLK_d, </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        MLV_KEYBOARD_e = SDLK_e, </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        MLV_KEYBOARD_f = SDLK_f, </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        MLV_KEYBOARD_g = SDLK_g, </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        MLV_KEYBOARD_h = SDLK_h, </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        MLV_KEYBOARD_i = SDLK_i, </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        MLV_KEYBOARD_j = SDLK_j, </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        MLV_KEYBOARD_k = SDLK_k, </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        MLV_KEYBOARD_l = SDLK_l, </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        MLV_KEYBOARD_m = SDLK_m, </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        MLV_KEYBOARD_n = SDLK_n, </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        MLV_KEYBOARD_o = SDLK_o, </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        MLV_KEYBOARD_p = SDLK_p, </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        MLV_KEYBOARD_q = SDLK_q, </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        MLV_KEYBOARD_r = SDLK_r, </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        MLV_KEYBOARD_s = SDLK_s, </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        MLV_KEYBOARD_t = SDLK_t, </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        MLV_KEYBOARD_u = SDLK_u, </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        MLV_KEYBOARD_v = SDLK_v, </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        MLV_KEYBOARD_w = SDLK_w, </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        MLV_KEYBOARD_x = SDLK_x, </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        MLV_KEYBOARD_y = SDLK_y, </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        MLV_KEYBOARD_z = SDLK_z, </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        MLV_KEYBOARD_DELETE = SDLK_DELETE, </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        MLV_KEYBOARD_WORLD_0 = SDLK_WORLD_0,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        MLV_KEYBOARD_WORLD_1 = SDLK_WORLD_1,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        MLV_KEYBOARD_WORLD_2 = SDLK_WORLD_2,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        MLV_KEYBOARD_WORLD_3 = SDLK_WORLD_3,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        MLV_KEYBOARD_WORLD_4 = SDLK_WORLD_4,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        MLV_KEYBOARD_WORLD_5 = SDLK_WORLD_5,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        MLV_KEYBOARD_WORLD_6 = SDLK_WORLD_6,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        MLV_KEYBOARD_WORLD_7 = SDLK_WORLD_7,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        MLV_KEYBOARD_WORLD_8 = SDLK_WORLD_8,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        MLV_KEYBOARD_WORLD_9 = SDLK_WORLD_9,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        MLV_KEYBOARD_WORLD_10 = SDLK_WORLD_10,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        MLV_KEYBOARD_WORLD_11 = SDLK_WORLD_11,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        MLV_KEYBOARD_WORLD_12 = SDLK_WORLD_12,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        MLV_KEYBOARD_WORLD_13 = SDLK_WORLD_13,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        MLV_KEYBOARD_WORLD_14 = SDLK_WORLD_14,</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        MLV_KEYBOARD_WORLD_15 = SDLK_WORLD_15,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        MLV_KEYBOARD_WORLD_16 = SDLK_WORLD_16,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        MLV_KEYBOARD_WORLD_17 = SDLK_WORLD_17,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        MLV_KEYBOARD_WORLD_18 = SDLK_WORLD_18,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        MLV_KEYBOARD_WORLD_19 = SDLK_WORLD_19,</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        MLV_KEYBOARD_WORLD_20 = SDLK_WORLD_20,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        MLV_KEYBOARD_WORLD_21 = SDLK_WORLD_21,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        MLV_KEYBOARD_WORLD_22 = SDLK_WORLD_22,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        MLV_KEYBOARD_WORLD_23 = SDLK_WORLD_23,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        MLV_KEYBOARD_WORLD_24 = SDLK_WORLD_24,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        MLV_KEYBOARD_WORLD_25 = SDLK_WORLD_25,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        MLV_KEYBOARD_WORLD_26 = SDLK_WORLD_26,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        MLV_KEYBOARD_WORLD_27 = SDLK_WORLD_27,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        MLV_KEYBOARD_WORLD_28 = SDLK_WORLD_28,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        MLV_KEYBOARD_WORLD_29 = SDLK_WORLD_29,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        MLV_KEYBOARD_WORLD_30 = SDLK_WORLD_30,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        MLV_KEYBOARD_WORLD_31 = SDLK_WORLD_31,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        MLV_KEYBOARD_WORLD_32 = SDLK_WORLD_32,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        MLV_KEYBOARD_WORLD_33 = SDLK_WORLD_33,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        MLV_KEYBOARD_WORLD_34 = SDLK_WORLD_34,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        MLV_KEYBOARD_WORLD_35 = SDLK_WORLD_35,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        MLV_KEYBOARD_WORLD_36 = SDLK_WORLD_36,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        MLV_KEYBOARD_WORLD_37 = SDLK_WORLD_37,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        MLV_KEYBOARD_WORLD_38 = SDLK_WORLD_38,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        MLV_KEYBOARD_WORLD_39 = SDLK_WORLD_39,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        MLV_KEYBOARD_WORLD_40 = SDLK_WORLD_40,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        MLV_KEYBOARD_WORLD_41 = SDLK_WORLD_41,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        MLV_KEYBOARD_WORLD_42 = SDLK_WORLD_42,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        MLV_KEYBOARD_WORLD_43 = SDLK_WORLD_43,</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        MLV_KEYBOARD_WORLD_44 = SDLK_WORLD_44,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        MLV_KEYBOARD_WORLD_45 = SDLK_WORLD_45,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        MLV_KEYBOARD_WORLD_46 = SDLK_WORLD_46,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        MLV_KEYBOARD_WORLD_47 = SDLK_WORLD_47,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        MLV_KEYBOARD_WORLD_48 = SDLK_WORLD_48,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        MLV_KEYBOARD_WORLD_49 = SDLK_WORLD_49,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        MLV_KEYBOARD_WORLD_50 = SDLK_WORLD_50,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        MLV_KEYBOARD_WORLD_51 = SDLK_WORLD_51,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        MLV_KEYBOARD_WORLD_52 = SDLK_WORLD_52,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        MLV_KEYBOARD_WORLD_53 = SDLK_WORLD_53,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        MLV_KEYBOARD_WORLD_54 = SDLK_WORLD_54,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        MLV_KEYBOARD_WORLD_55 = SDLK_WORLD_55,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        MLV_KEYBOARD_WORLD_56 = SDLK_WORLD_56,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        MLV_KEYBOARD_WORLD_57 = SDLK_WORLD_57,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        MLV_KEYBOARD_WORLD_58 = SDLK_WORLD_58,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        MLV_KEYBOARD_WORLD_59 = SDLK_WORLD_59,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        MLV_KEYBOARD_WORLD_60 = SDLK_WORLD_60,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        MLV_KEYBOARD_WORLD_61 = SDLK_WORLD_61,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        MLV_KEYBOARD_WORLD_62 = SDLK_WORLD_62,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        MLV_KEYBOARD_WORLD_63 = SDLK_WORLD_63,</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        MLV_KEYBOARD_WORLD_64 = SDLK_WORLD_64,</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        MLV_KEYBOARD_WORLD_65 = SDLK_WORLD_65,</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        MLV_KEYBOARD_WORLD_66 = SDLK_WORLD_66,</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        MLV_KEYBOARD_WORLD_67 = SDLK_WORLD_67,</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        MLV_KEYBOARD_WORLD_68 = SDLK_WORLD_68,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        MLV_KEYBOARD_WORLD_69 = SDLK_WORLD_69,</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        MLV_KEYBOARD_WORLD_70 = SDLK_WORLD_70,</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        MLV_KEYBOARD_WORLD_71 = SDLK_WORLD_71,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        MLV_KEYBOARD_WORLD_72 = SDLK_WORLD_72,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        MLV_KEYBOARD_WORLD_73 = SDLK_WORLD_73,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        MLV_KEYBOARD_WORLD_74 = SDLK_WORLD_74,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        MLV_KEYBOARD_WORLD_75 = SDLK_WORLD_75,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        MLV_KEYBOARD_WORLD_76 = SDLK_WORLD_76,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        MLV_KEYBOARD_WORLD_77 = SDLK_WORLD_77,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        MLV_KEYBOARD_WORLD_78 = SDLK_WORLD_78,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        MLV_KEYBOARD_WORLD_79 = SDLK_WORLD_79,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        MLV_KEYBOARD_WORLD_80 = SDLK_WORLD_80,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        MLV_KEYBOARD_WORLD_81 = SDLK_WORLD_81,</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        MLV_KEYBOARD_WORLD_82 = SDLK_WORLD_82,</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        MLV_KEYBOARD_WORLD_83 = SDLK_WORLD_83,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        MLV_KEYBOARD_WORLD_84 = SDLK_WORLD_84,</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        MLV_KEYBOARD_WORLD_85 = SDLK_WORLD_85,</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        MLV_KEYBOARD_WORLD_86 = SDLK_WORLD_86,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        MLV_KEYBOARD_WORLD_87 = SDLK_WORLD_87,</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        MLV_KEYBOARD_WORLD_88 = SDLK_WORLD_88,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        MLV_KEYBOARD_WORLD_89 = SDLK_WORLD_89,</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        MLV_KEYBOARD_WORLD_90 = SDLK_WORLD_90,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        MLV_KEYBOARD_WORLD_91 = SDLK_WORLD_91,</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        MLV_KEYBOARD_WORLD_92 = SDLK_WORLD_92,</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        MLV_KEYBOARD_WORLD_93 = SDLK_WORLD_93,</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        MLV_KEYBOARD_WORLD_94 = SDLK_WORLD_94,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        MLV_KEYBOARD_WORLD_95 = SDLK_WORLD_95,</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        MLV_KEYBOARD_KP0 = SDLK_KP0, </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        MLV_KEYBOARD_KP1 = SDLK_KP1, </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        MLV_KEYBOARD_KP2 = SDLK_KP2, </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        MLV_KEYBOARD_KP3 = SDLK_KP3, </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        MLV_KEYBOARD_KP4 = SDLK_KP4, </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        MLV_KEYBOARD_KP5 = SDLK_KP5, </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        MLV_KEYBOARD_KP6 = SDLK_KP6, </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        MLV_KEYBOARD_KP7 = SDLK_KP7, </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        MLV_KEYBOARD_KP8 = SDLK_KP8, </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        MLV_KEYBOARD_KP9 = SDLK_KP9, </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        MLV_KEYBOARD_KP_PERIOD = SDLK_KP_PERIOD, </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        MLV_KEYBOARD_KP_DIVIDE = SDLK_KP_DIVIDE, </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        MLV_KEYBOARD_KP_MULTIPLY = SDLK_KP_MULTIPLY, </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        MLV_KEYBOARD_KP_MINUS = SDLK_KP_MINUS, </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        MLV_KEYBOARD_KP_PLUS = SDLK_KP_PLUS, </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        MLV_KEYBOARD_KP_ENTER = SDLK_KP_ENTER, </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        MLV_KEYBOARD_KP_EQUALS = SDLK_KP_EQUALS, </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        MLV_KEYBOARD_UP = SDLK_UP, </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        MLV_KEYBOARD_DOWN = SDLK_DOWN, </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        MLV_KEYBOARD_RIGHT = SDLK_RIGHT, </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        MLV_KEYBOARD_LEFT = SDLK_LEFT, </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        MLV_KEYBOARD_INSERT = SDLK_INSERT, </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        MLV_KEYBOARD_HOME = SDLK_HOME, </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        MLV_KEYBOARD_END = SDLK_END, </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        MLV_KEYBOARD_PAGEUP = SDLK_PAGEUP, </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        MLV_KEYBOARD_PAGEDOWN = SDLK_PAGEDOWN, </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        MLV_KEYBOARD_F1 = SDLK_F1, </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        MLV_KEYBOARD_F2 = SDLK_F2, </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        MLV_KEYBOARD_F3 = SDLK_F3, </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        MLV_KEYBOARD_F4 = SDLK_F4, </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        MLV_KEYBOARD_F5 = SDLK_F5, </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        MLV_KEYBOARD_F6 = SDLK_F6, </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        MLV_KEYBOARD_F7 = SDLK_F7, </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        MLV_KEYBOARD_F8 = SDLK_F8, </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        MLV_KEYBOARD_F9 = SDLK_F9, </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        MLV_KEYBOARD_F10 = SDLK_F10, </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        MLV_KEYBOARD_F11 = SDLK_F11, </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        MLV_KEYBOARD_F12 = SDLK_F12, </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        MLV_KEYBOARD_F13 = SDLK_F13, </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        MLV_KEYBOARD_F14 = SDLK_F14, </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        MLV_KEYBOARD_F15 = SDLK_F15, </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        MLV_KEYBOARD_NUMLOCK = SDLK_NUMLOCK, </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        MLV_KEYBOARD_CAPSLOCK = SDLK_CAPSLOCK, </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        MLV_KEYBOARD_SCROLLOCK = SDLK_SCROLLOCK, </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        MLV_KEYBOARD_RSHIFT = SDLK_RSHIFT, </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        MLV_KEYBOARD_LSHIFT = SDLK_LSHIFT, </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        MLV_KEYBOARD_RCTRL = SDLK_RCTRL, </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        MLV_KEYBOARD_LCTRL = SDLK_LCTRL, </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        MLV_KEYBOARD_RALT = SDLK_RALT, </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        MLV_KEYBOARD_LALT = SDLK_LALT, </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        MLV_KEYBOARD_RMETA = SDLK_RMETA, </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        MLV_KEYBOARD_LMETA = SDLK_LMETA, </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        MLV_KEYBOARD_LSUPER = SDLK_LSUPER, </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        MLV_KEYBOARD_RSUPER = SDLK_RSUPER, </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        MLV_KEYBOARD_MODE = SDLK_MODE, </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        MLV_KEYBOARD_COMPOSE = SDLK_COMPOSE, </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        MLV_KEYBOARD_HELP = SDLK_HELP, </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        MLV_KEYBOARD_PRINT = SDLK_PRINT, </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        MLV_KEYBOARD_SYSREQ = SDLK_SYSREQ, </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        MLV_KEYBOARD_BREAK = SDLK_BREAK, </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        MLV_KEYBOARD_MENU = SDLK_MENU, </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        MLV_KEYBOARD_POWER = SDLK_POWER, </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        MLV_KEYBOARD_EURO = SDLK_EURO, </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        MLV_KEYBOARD_UNDO = SDLK_UNDO, </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        MLV_KEYBOARD_LAST = SDLK_LAST </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>} <a class="code hl_enumeration" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a>;</div>
+</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span></div>
+<div class="foldopen" id="foldopen00299" data-start="{" data-end="};">
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">  299</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        MLV_KEYBOARD_KMOD_NONE = KMOD_NONE, </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        MLV_KEYBOARD_KMOD_LSHIFT = KMOD_LSHIFT, </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        MLV_KEYBOARD_KMOD_RSHIFT = KMOD_RSHIFT, </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        MLV_KEYBOARD_KMOD_LCTRL = KMOD_LCTRL, </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        MLV_KEYBOARD_KMOD_RCTRL = KMOD_RCTRL, </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        MLV_KEYBOARD_KMOD_LALT = KMOD_LALT, </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        MLV_KEYBOARD_KMOD_RALT = KMOD_RALT, </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        MLV_KEYBOARD_KMOD_LMETA = KMOD_LMETA, </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        MLV_KEYBOARD_KMOD_RMETA = KMOD_RMETA, </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        MLV_KEYBOARD_KMOD_NUM = KMOD_NUM, </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        MLV_KEYBOARD_KMOD_CAPS = KMOD_CAPS, </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        MLV_KEYBOARD_KMOD_MODE = KMOD_MODE, </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        MLV_KEYBOARD_KMOD_RESERVED = KMOD_RESERVED </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>} <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a>;</div>
+</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a8ce4ab3f9c39d780ebbc68a6bd8c83c0.html#a8ce4ab3f9c39d780ebbc68a6bd8c83c0">  336</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__keyboard_8h_a8ce4ab3f9c39d780ebbc68a6bd8c83c0.html#a8ce4ab3f9c39d780ebbc68a6bd8c83c0">MLV_wait_keyboard</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a>* sym, <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a>* mod, <span class="keywordtype">int</span>* unicode );</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a94c1a5e575d1c074f673b7729a345b25.html#a94c1a5e575d1c074f673b7729a345b25">  360</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a94c1a5e575d1c074f673b7729a345b25.html#a94c1a5e575d1c074f673b7729a345b25">MLV_wait_keyboard_or_seconds</a>(</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <a class="code hl_enumeration" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a>* sym, <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a>* mod, <span class="keywordtype">int</span>* unicode, <span class="keywordtype">int</span> seconds</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a662e4c18cb9e4b2ca541863d7236dbea.html#a662e4c18cb9e4b2ca541863d7236dbea">  373</a></span><a class="code hl_enumeration" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> <a class="code hl_function" href="MLV__keyboard_8h_a662e4c18cb9e4b2ca541863d7236dbea.html#a662e4c18cb9e4b2ca541863d7236dbea">MLV_convert_string_to_keyboard_button</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* key_string );</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_ac6047e95f50a22e4a362fb0f10d45cb8.html#ac6047e95f50a22e4a362fb0f10d45cb8">  383</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="MLV__keyboard_8h_ac6047e95f50a22e4a362fb0f10d45cb8.html#ac6047e95f50a22e4a362fb0f10d45cb8">MLV_convert_keyboard_button_to_string</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> key_code );</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span></div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a353fba9684051e1a53806777c992b498.html#a353fba9684051e1a53806777c992b498">  393</a></span><span class="keywordtype">char</span>* <a class="code hl_function" href="MLV__keyboard_8h_a353fba9684051e1a53806777c992b498.html#a353fba9684051e1a53806777c992b498">MLV_convert_keyboard_mod_to_string</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> keymod_code );</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_aef763811b62bf2282e7a509a29011935.html#aef763811b62bf2282e7a509a29011935">  403</a></span><a class="code hl_enumeration" href="MLV__device__with__buttons_8h_a414d4f89d60b1215a254975dc4059779.html#a414d4f89d60b1215a254975dc4059779">MLV_Button_state</a> <a class="code hl_function" href="MLV__keyboard_8h_aef763811b62bf2282e7a509a29011935.html#aef763811b62bf2282e7a509a29011935">MLV_get_keyboard_state</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> keyboard_code );</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span></div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a4d85b85e4935d674f141a18c884d98dc.html#a4d85b85e4935d674f141a18c884d98dc">  412</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a4d85b85e4935d674f141a18c884d98dc.html#a4d85b85e4935d674f141a18c884d98dc">MLV_shift_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a88815c79ed1846fdecb44bcc301a726c.html#a88815c79ed1846fdecb44bcc301a726c">  421</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a88815c79ed1846fdecb44bcc301a726c.html#a88815c79ed1846fdecb44bcc301a726c">MLV_left_shift_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a5accdbfd616497349e799ba4c1366a04.html#a5accdbfd616497349e799ba4c1366a04">  430</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a5accdbfd616497349e799ba4c1366a04.html#a5accdbfd616497349e799ba4c1366a04">MLV_right_shift_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span></div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a377a77210787137c7cd613becc30083c.html#a377a77210787137c7cd613becc30083c">  439</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a377a77210787137c7cd613becc30083c.html#a377a77210787137c7cd613becc30083c">MLV_left_ctrl_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a4add0503b4b2236cc4a95ff882da5be5.html#a4add0503b4b2236cc4a95ff882da5be5">  448</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a4add0503b4b2236cc4a95ff882da5be5.html#a4add0503b4b2236cc4a95ff882da5be5">MLV_right_ctrl_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span></div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a38577035e0e376851ad5be9c3ec63ad7.html#a38577035e0e376851ad5be9c3ec63ad7">  457</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a38577035e0e376851ad5be9c3ec63ad7.html#a38577035e0e376851ad5be9c3ec63ad7">MLV_ctrl_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span></div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_abd3aed025fbdef9c9beb18ee9cfa6cfc.html#abd3aed025fbdef9c9beb18ee9cfa6cfc">  466</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_abd3aed025fbdef9c9beb18ee9cfa6cfc.html#abd3aed025fbdef9c9beb18ee9cfa6cfc">MLV_left_alt_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span></div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a3fb44a41b3cb98688f5fbd0887246929.html#a3fb44a41b3cb98688f5fbd0887246929">  475</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a3fb44a41b3cb98688f5fbd0887246929.html#a3fb44a41b3cb98688f5fbd0887246929">MLV_right_alt_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span></div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a315229f023590666197d81a4be13b1b4.html#a315229f023590666197d81a4be13b1b4">  484</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a315229f023590666197d81a4be13b1b4.html#a315229f023590666197d81a4be13b1b4">MLV_alt_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span></div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_adb52122b7f6910bc54a4f7adb49a908b.html#adb52122b7f6910bc54a4f7adb49a908b">  493</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_adb52122b7f6910bc54a4f7adb49a908b.html#adb52122b7f6910bc54a4f7adb49a908b">MLV_left_meta_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span></div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a30c777d2f9e031e9697e595e04ed21ca.html#a30c777d2f9e031e9697e595e04ed21ca">  502</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a30c777d2f9e031e9697e595e04ed21ca.html#a30c777d2f9e031e9697e595e04ed21ca">MLV_right_meta_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span></div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_aabff2ae11b6493e651c26c569defc990.html#aabff2ae11b6493e651c26c569defc990">  511</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_aabff2ae11b6493e651c26c569defc990.html#aabff2ae11b6493e651c26c569defc990">MLV_meta_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span></div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a5ef4a283784f481da9a53eb4c0bd47b9.html#a5ef4a283784f481da9a53eb4c0bd47b9">  520</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a5ef4a283784f481da9a53eb4c0bd47b9.html#a5ef4a283784f481da9a53eb4c0bd47b9">MLV_num_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span></div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_ab16a8cb4894baa1d464063f4909b8396.html#ab16a8cb4894baa1d464063f4909b8396">  529</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_ab16a8cb4894baa1d464063f4909b8396.html#ab16a8cb4894baa1d464063f4909b8396">MLV_caps_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span></div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="MLV__keyboard_8h_a1167756fb522ea90819d52807a5ee34d.html#a1167756fb522ea90819d52807a5ee34d">  538</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__keyboard_8h_a1167756fb522ea90819d52807a5ee34d.html#a1167756fb522ea90819d52807a5ee34d">MLV_mode_key_was_pressed</a>( <a class="code hl_enumeration" href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code );</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span> </div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>}</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMLV__device__with__buttons_8h_a414d4f89d60b1215a254975dc4059779_html_a414d4f89d60b1215a254975dc4059779"><div class="ttname"><a href="MLV__device__with__buttons_8h_a414d4f89d60b1215a254975dc4059779.html#a414d4f89d60b1215a254975dc4059779">MLV_Button_state</a></div><div class="ttdeci">MLV_Button_state</div><div class="ttdoc">Énumère les différents états possibles d&#39;un bouton.</div><div class="ttdef"><b>Definition</b> MLV_device_with_buttons.h:43</div></div>
+<div class="ttc" id="aMLV__device__with__buttons_8h_html"><div class="ttname"><a href="MLV__device__with__buttons_8h.html">MLV_device_with_buttons.h</a></div><div class="ttdoc">Ce fichier définit des énumérations et des prototypes de fonctions pour manipuler des boutons de diff...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a1167756fb522ea90819d52807a5ee34d_html_a1167756fb522ea90819d52807a5ee34d"><div class="ttname"><a href="MLV__keyboard_8h_a1167756fb522ea90819d52807a5ee34d.html#a1167756fb522ea90819d52807a5ee34d">MLV_mode_key_was_pressed</a></div><div class="ttdeci">int MLV_mode_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison m...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a30c777d2f9e031e9697e595e04ed21ca_html_a30c777d2f9e031e9697e595e04ed21ca"><div class="ttname"><a href="MLV__keyboard_8h_a30c777d2f9e031e9697e595e04ed21ca.html#a30c777d2f9e031e9697e595e04ed21ca">MLV_right_meta_key_was_pressed</a></div><div class="ttdeci">int MLV_right_meta_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison m...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a315229f023590666197d81a4be13b1b4_html_a315229f023590666197d81a4be13b1b4"><div class="ttname"><a href="MLV__keyboard_8h_a315229f023590666197d81a4be13b1b4.html#a315229f023590666197d81a4be13b1b4">MLV_alt_key_was_pressed</a></div><div class="ttdeci">int MLV_alt_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison a...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a353fba9684051e1a53806777c992b498_html_a353fba9684051e1a53806777c992b498"><div class="ttname"><a href="MLV__keyboard_8h_a353fba9684051e1a53806777c992b498.html#a353fba9684051e1a53806777c992b498">MLV_convert_keyboard_mod_to_string</a></div><div class="ttdeci">char * MLV_convert_keyboard_mod_to_string(MLV_Keyboard_modifier keymod_code)</div><div class="ttdoc">Renvoie la chaîne de caractères correspondant au mode du clavier passé en paramètre.</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a377a77210787137c7cd613becc30083c_html_a377a77210787137c7cd613becc30083c"><div class="ttname"><a href="MLV__keyboard_8h_a377a77210787137c7cd613becc30083c.html#a377a77210787137c7cd613becc30083c">MLV_left_ctrl_key_was_pressed</a></div><div class="ttdeci">int MLV_left_ctrl_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison c...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a38577035e0e376851ad5be9c3ec63ad7_html_a38577035e0e376851ad5be9c3ec63ad7"><div class="ttname"><a href="MLV__keyboard_8h_a38577035e0e376851ad5be9c3ec63ad7.html#a38577035e0e376851ad5be9c3ec63ad7">MLV_ctrl_key_was_pressed</a></div><div class="ttdeci">int MLV_ctrl_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison c...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a3fb44a41b3cb98688f5fbd0887246929_html_a3fb44a41b3cb98688f5fbd0887246929"><div class="ttname"><a href="MLV__keyboard_8h_a3fb44a41b3cb98688f5fbd0887246929.html#a3fb44a41b3cb98688f5fbd0887246929">MLV_right_alt_key_was_pressed</a></div><div class="ttdeci">int MLV_right_alt_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison a...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a4add0503b4b2236cc4a95ff882da5be5_html_a4add0503b4b2236cc4a95ff882da5be5"><div class="ttname"><a href="MLV__keyboard_8h_a4add0503b4b2236cc4a95ff882da5be5.html#a4add0503b4b2236cc4a95ff882da5be5">MLV_right_ctrl_key_was_pressed</a></div><div class="ttdeci">int MLV_right_ctrl_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison c...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a4d85b85e4935d674f141a18c884d98dc_html_a4d85b85e4935d674f141a18c884d98dc"><div class="ttname"><a href="MLV__keyboard_8h_a4d85b85e4935d674f141a18c884d98dc.html#a4d85b85e4935d674f141a18c884d98dc">MLV_shift_key_was_pressed</a></div><div class="ttdeci">int MLV_shift_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison s...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a5accdbfd616497349e799ba4c1366a04_html_a5accdbfd616497349e799ba4c1366a04"><div class="ttname"><a href="MLV__keyboard_8h_a5accdbfd616497349e799ba4c1366a04.html#a5accdbfd616497349e799ba4c1366a04">MLV_right_shift_key_was_pressed</a></div><div class="ttdeci">int MLV_right_shift_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison s...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a5ef4a283784f481da9a53eb4c0bd47b9_html_a5ef4a283784f481da9a53eb4c0bd47b9"><div class="ttname"><a href="MLV__keyboard_8h_a5ef4a283784f481da9a53eb4c0bd47b9.html#a5ef4a283784f481da9a53eb4c0bd47b9">MLV_num_key_was_pressed</a></div><div class="ttdeci">int MLV_num_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison n...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a662e4c18cb9e4b2ca541863d7236dbea_html_a662e4c18cb9e4b2ca541863d7236dbea"><div class="ttname"><a href="MLV__keyboard_8h_a662e4c18cb9e4b2ca541863d7236dbea.html#a662e4c18cb9e4b2ca541863d7236dbea">MLV_convert_string_to_keyboard_button</a></div><div class="ttdeci">MLV_Keyboard_button MLV_convert_string_to_keyboard_button(const char *key_string)</div><div class="ttdoc">Renvoie le code de la touche clavier correspondant au type clavier passé en paramètre.</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a88815c79ed1846fdecb44bcc301a726c_html_a88815c79ed1846fdecb44bcc301a726c"><div class="ttname"><a href="MLV__keyboard_8h_a88815c79ed1846fdecb44bcc301a726c.html#a88815c79ed1846fdecb44bcc301a726c">MLV_left_shift_key_was_pressed</a></div><div class="ttdeci">int MLV_left_shift_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison s...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a8ce4ab3f9c39d780ebbc68a6bd8c83c0_html_a8ce4ab3f9c39d780ebbc68a6bd8c83c0"><div class="ttname"><a href="MLV__keyboard_8h_a8ce4ab3f9c39d780ebbc68a6bd8c83c0.html#a8ce4ab3f9c39d780ebbc68a6bd8c83c0">MLV_wait_keyboard</a></div><div class="ttdeci">void MLV_wait_keyboard(MLV_Keyboard_button *sym, MLV_Keyboard_modifier *mod, int *unicode)</div><div class="ttdoc">Suspend l&#39;exécution jusqu&#39;à ce que l&#39;utilisateur appuie sur une touche du clavier.</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_a94c1a5e575d1c074f673b7729a345b25_html_a94c1a5e575d1c074f673b7729a345b25"><div class="ttname"><a href="MLV__keyboard_8h_a94c1a5e575d1c074f673b7729a345b25.html#a94c1a5e575d1c074f673b7729a345b25">MLV_wait_keyboard_or_seconds</a></div><div class="ttdeci">int MLV_wait_keyboard_or_seconds(MLV_Keyboard_button *sym, MLV_Keyboard_modifier *mod, int *unicode, int seconds)</div><div class="ttdoc">Suspend l&#39;exécution jusqu&#39;à ce que l&#39;utilisateur appuie sur une touche du clavier ou jusq&#39;à ce q&#39;un n...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_aabff2ae11b6493e651c26c569defc990_html_aabff2ae11b6493e651c26c569defc990"><div class="ttname"><a href="MLV__keyboard_8h_aabff2ae11b6493e651c26c569defc990.html#aabff2ae11b6493e651c26c569defc990">MLV_meta_key_was_pressed</a></div><div class="ttdeci">int MLV_meta_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison m...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_ab16a8cb4894baa1d464063f4909b8396_html_ab16a8cb4894baa1d464063f4909b8396"><div class="ttname"><a href="MLV__keyboard_8h_ab16a8cb4894baa1d464063f4909b8396.html#ab16a8cb4894baa1d464063f4909b8396">MLV_caps_key_was_pressed</a></div><div class="ttdeci">int MLV_caps_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison c...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_abd3aed025fbdef9c9beb18ee9cfa6cfc_html_abd3aed025fbdef9c9beb18ee9cfa6cfc"><div class="ttname"><a href="MLV__keyboard_8h_abd3aed025fbdef9c9beb18ee9cfa6cfc.html#abd3aed025fbdef9c9beb18ee9cfa6cfc">MLV_left_alt_key_was_pressed</a></div><div class="ttdeci">int MLV_left_alt_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison a...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_ac6047e95f50a22e4a362fb0f10d45cb8_html_ac6047e95f50a22e4a362fb0f10d45cb8"><div class="ttname"><a href="MLV__keyboard_8h_ac6047e95f50a22e4a362fb0f10d45cb8.html#ac6047e95f50a22e4a362fb0f10d45cb8">MLV_convert_keyboard_button_to_string</a></div><div class="ttdeci">const char * MLV_convert_keyboard_button_to_string(MLV_Keyboard_button key_code)</div><div class="ttdoc">Renvoie la chaîne de caractères correspondant au code de la touche passé en paramètre.</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_adb52122b7f6910bc54a4f7adb49a908b_html_adb52122b7f6910bc54a4f7adb49a908b"><div class="ttname"><a href="MLV__keyboard_8h_adb52122b7f6910bc54a4f7adb49a908b.html#adb52122b7f6910bc54a4f7adb49a908b">MLV_left_meta_key_was_pressed</a></div><div class="ttdeci">int MLV_left_meta_key_was_pressed(MLV_Keyboard_modifier modifier_code)</div><div class="ttdoc">Renvoie vrai si le code, passé en paramètre, correspond à l&#39;état appuyé de la touche de combinaison m...</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_aef763811b62bf2282e7a509a29011935_html_aef763811b62bf2282e7a509a29011935"><div class="ttname"><a href="MLV__keyboard_8h_aef763811b62bf2282e7a509a29011935.html#aef763811b62bf2282e7a509a29011935">MLV_get_keyboard_state</a></div><div class="ttdeci">MLV_Button_state MLV_get_keyboard_state(MLV_Keyboard_button keyboard_code)</div><div class="ttdoc">Renvoie l&#39;état (préssé ou relaché) d&#39;une touche donnée d&#39;un clavier.</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_html_a216eb844b6a872c8cdf1a2923e7b72b3"><div class="ttname"><a href="MLV__keyboard_8h.html#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a></div><div class="ttdeci">MLV_Keyboard_button</div><div class="ttdoc">Énumère l&#39;ensemble des codes des touches du clavier.</div><div class="ttdef"><b>Definition</b> MLV_keyboard.h:50</div></div>
+<div class="ttc" id="aMLV__keyboard_8h_html_ae679aa50e1df531008a239fdde77b347"><div class="ttname"><a href="MLV__keyboard_8h.html#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a></div><div class="ttdeci">MLV_Keyboard_modifier</div><div class="ttdoc">Énumère l&#39;ensemble des codes associées aux différents modes du clavier.</div><div class="ttdef"><b>Definition</b> MLV_keyboard.h:299</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

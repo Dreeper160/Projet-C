@@ -1,0 +1,384 @@
+.TH "MLV_input_box.h" 3 "Mardi 27 Octobre 2026 16:46:18" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_input_box.h \- Ce fichier définit les prototypes des fonctions permettant de demander à l'utilisateur du texte par l'intermédiaire de boîtes de saisie\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _MLV_Input_box \fBMLV_Input_box\fP"
+.br
+.RI "Définition du type des boîtes de saisies\&. "
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMLV_wait_input_box\fP (int sommetHautGaucheX, int sommetHautGaucheY, int sommetBasDroitX, int sommetBasDroitY, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char *informativeMessage, char **text,\&.\&.\&.)"
+.br
+.RI "Cette fonction suspend l'exécution du programme, affiche une boîte de saisie et attends que l'utilisateur rentre une phrase dans le champs de la boîte\&. "
+.ti -1c
+.RI "void \fBMLV_wait_input_box_with_font\fP (int sommetHautGaucheX, int sommetHautGaucheY, int sommetBasDroitX, int sommetBasDroitY, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char *informativeMessage, char **text, const \fBMLV_Font\fP *font,\&.\&.\&.)"
+.br
+.RI "Même chose que \fBMLV_wait_input_box()\fP, mais il est possible de changer la fonte du du texte\&. "
+.ti -1c
+.RI "void \fBMLV_wait_particular_input_box\fP (\fBMLV_Input_box\fP *input_box, char **text)"
+.br
+.RI "Cette fonction suspend l'exécution du programme jusqu'à ce que l'utilisateur écrive une phrase dans le champs de la boîte de saisie passée en paramètre de la fonction\&. "
+.ti -1c
+.RI "\fBMLV_Input_box\fP * \fBMLV_create_input_box\fP (int sommetHautGaucheX, int sommetHautGaucheY, int width, int height, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char *informativeMessage,\&.\&.\&.)"
+.br
+.RI "Cette fonction créé une boîte de saisie\&. "
+.ti -1c
+.RI "\fBMLV_Input_box\fP * \fBMLV_create_input_box_with_font\fP (int sommetHautGaucheX, int sommetHautGaucheY, int width, int height, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char *informativeMessage, const \fBMLV_Font\fP *font,\&.\&.\&.)"
+.br
+.RI "Cette fonction créé une boîte de saisie avec une font spécifique\&. "
+.ti -1c
+.RI "void \fBMLV_free_input_box\fP (\fBMLV_Input_box\fP *input_box)"
+.br
+.RI "Cette fonction ferme une boîte de saisie précédement créée\&. "
+.ti -1c
+.RI "void \fBMLV_change_informative_message_of_input_box\fP (\fBMLV_Input_box\fP *input_box, const char *message,\&.\&.\&.)"
+.br
+.RI "Cette fonction change le message d'entête d'une boîte de saisie\&. "
+.ti -1c
+.RI "void \fBMLV_draw_input_box\fP (\fBMLV_Input_box\fP *input_box)"
+.br
+.RI "Cette fonction dessine une boîte de saisie particulière\&. "
+.ti -1c
+.RI "void \fBMLV_draw_all_input_boxes\fP ()"
+.br
+.RI "Cette fonction dessine tous les boîtes de saisies\&. "
+.ti -1c
+.RI "void \fBMLV_suppress_history\fP (\fBMLV_Input_box\fP *input_box)"
+.br
+.RI "Cette fonction supprime l'historique d'une boîte de saisie\&. "
+.ti -1c
+.RI "void \fBMLV_change_input_box_geometry\fP (\fBMLV_Input_box\fP *input_box, int sommetHautGaucheX, int sommetHautGaucheY, int width, int height)"
+.br
+.RI "Cette fonction change la taille et la position d'une boîte de saisie donnée en paramètre\&. "
+.ti -1c
+.RI "void \fBMLV_change_input_box_size\fP (\fBMLV_Input_box\fP *input_box, int width, int height)"
+.br
+.RI "Cette fonction change la taille d'une boîte de saisie\&. "
+.ti -1c
+.RI "void \fBMLV_change_input_box_position\fP (\fBMLV_Input_box\fP *input_box, int sommetHautGaucheX, int sommetHautGaucheY)"
+.br
+.RI "Cette fonction change la position d'une boîte de saisie donnée en paramètre\&. "
+.ti -1c
+.RI "void \fBMLV_change_input_box_colors\fP (\fBMLV_Input_box\fP *input_box, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor)"
+.br
+.RI "Cette fonction change les différentes couleurs d'une boîte de saisie donnée\&. "
+.ti -1c
+.RI "void \fBMLV_activate_input_box\fP (\fBMLV_Input_box\fP *input_box)"
+.br
+.RI "Cette fonction active une boîte de saisie\&. "
+.ti -1c
+.RI "void \fBMLV_desactivate_input_box\fP ()"
+.br
+.RI "Cette fonction désactive la boîte de saisie qui est active\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit les prototypes des fonctions permettant de demander à l'utilisateur du texte par l'intermédiaire de boîtes de saisie\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void MLV_activate_input_box (\fBMLV_Input_box\fP * input_box)"
+
+.PP
+Cette fonction active une boîte de saisie\&. Cette opération agit comme si l'utilisateur avait cliqué sur la boîte de saisie en question (action qui rend active une boîte de saisie)\&.
+
+.PP
+Lorsque une boîte de saisie est active, les évènements du clavier sont récupérés par la boîte de saisie et sont utilisés pour enregistrer le texte tapé par l'utilisateur\&. Les cliques de souris sur la boîte de saisie sont aussi récupérés par la boîte de saisie\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à activer\&. 
+.RE
+.PP
+
+.SS "void MLV_change_informative_message_of_input_box (\fBMLV_Input_box\fP * input_box, const char * message,  \&.\&.\&.)"
+
+.PP
+Cette fonction change le message d'entête d'une boîte de saisie\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à modifier\&. 
+.br
+\fImessage\fP Le message d'entête\&. 
+.RE
+.PP
+
+.SS "void MLV_change_input_box_colors (\fBMLV_Input_box\fP * input_box, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor)"
+
+.PP
+Cette fonction change les différentes couleurs d'une boîte de saisie donnée\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à modifier\&. 
+.br
+\fIborderColor\fP La nouvelle couleur du bord de la boîte de saisie\&. 
+.br
+\fItextColor\fP La nouvelle couleur du texte de la boîte de saisie\&. 
+.br
+\fIbackgroundColor\fP La nouvelle couleur de fond de la boîte de saisie\&. 
+.RE
+.PP
+
+.SS "void MLV_change_input_box_geometry (\fBMLV_Input_box\fP * input_box, int sommetHautGaucheX, int sommetHautGaucheY, int width, int height)"
+
+.PP
+Cette fonction change la taille et la position d'une boîte de saisie donnée en paramètre\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à modifier\&. 
+.br
+\fIsommetHautGaucheX\fP La nouvelle coordonnée en X de la position du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetHautGaucheY\fP La nouvelle coordonnée en Y de la position du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIwidth\fP La nouvelle largeur de la boîte de saisie\&. 
+.br
+\fIheight\fP La nouvelle hauteur de la boîte de saisie\&. 
+.RE
+.PP
+
+.SS "void MLV_change_input_box_position (\fBMLV_Input_box\fP * input_box, int sommetHautGaucheX, int sommetHautGaucheY)"
+
+.PP
+Cette fonction change la position d'une boîte de saisie donnée en paramètre\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à modifier\&. 
+.br
+\fIsommetHautGaucheX\fP La nouvelle coordonnée en X de la position du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetHautGaucheY\fP La nouvelle coordonnée en Y de la position du sommet Nord-Ouest de la boîte de saisie\&. 
+.RE
+.PP
+
+.SS "void MLV_change_input_box_size (\fBMLV_Input_box\fP * input_box, int width, int height)"
+
+.PP
+Cette fonction change la taille d'une boîte de saisie\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à modifier\&. 
+.br
+\fIwidth\fP La nouvelle largeur de la boîte de saisie\&. 
+.br
+\fIheight\fP La nouvelle hauteur de la boîte de saisie\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Input_box\fP * MLV_create_input_box (int sommetHautGaucheX, int sommetHautGaucheY, int width, int height, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char * informativeMessage,  \&.\&.\&.)"
+
+.PP
+Cette fonction créé une boîte de saisie\&. Une fois la boîte de saisie créé, si l'utilisateur clique sur la boîte de saisie, la boîte de saisie devient active\&. Cela veux dire que tout les évènements clavier sont récupérés par la boîte de saisie qui s'en sert pour enregistrer le texte tapé par l'utilisateur\&. De même, tout clique de souris réalisé sur la boîte de saisie est acaparé par la boîte de saisie\&.
+
+.PP
+Pour dessiner une ou toutes les boîtes de saisies, dans la zone où vous les avez créées, vous devez utiliser les fonctions :
+.IP "\(bu" 2
+\fBMLV_draw_input_box()\fP
+.IP "\(bu" 2
+\fBMLV_draw_all_input_boxes()\fP
+.PP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsommetHautGaucheX\fP La coordonnée en X du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetHautGaucheY\fP La coordonnée en Y du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIwidth\fP La largeur de la boîte de saisie\&. 
+.br
+\fIheight\fP La hauteur de la boîte de saisie\&. 
+.br
+\fIborderColor\fP La couleur de la bordure de la boîte de saisie\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond\&. 
+.br
+\fIinformativeMessage\fP La message d'entête de la boîte de saisie\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBmedium/03_input_box_events\&.c\fP, et \fBmedium/04_events\&.c\fP\&.
+.SS "\fBMLV_Input_box\fP * MLV_create_input_box_with_font (int sommetHautGaucheX, int sommetHautGaucheY, int width, int height, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char * informativeMessage, const \fBMLV_Font\fP * font,  \&.\&.\&.)"
+
+.PP
+Cette fonction créé une boîte de saisie avec une font spécifique\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsommetHautGaucheX\fP La coordonnée en X du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetHautGaucheY\fP La coordonnée en Y du sommet Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIwidth\fP La largeur de la boîte de saisie\&. 
+.br
+\fIheight\fP La hauteur de la boîte de saisie\&. 
+.br
+\fIborderColor\fP La couleur de la bordure de la boîte de saisie\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond\&. 
+.br
+\fIinformativeMessage\fP Le message d'entête de la boîte de saisie\&. 
+.br
+\fIfont\fP La font à utiliser pour le texte\&. 
+.RE
+.PP
+
+.SS "void MLV_desactivate_input_box ()"
+
+.PP
+Cette fonction désactive la boîte de saisie qui est active\&. Si il n'y a pas de boîte de saisie active, cette fonction ne fait rien\&. 
+.SS "void MLV_draw_input_box (\fBMLV_Input_box\fP * input_box)"
+
+.PP
+Cette fonction dessine une boîte de saisie particulière\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à dessiner\&. 
+.RE
+.PP
+
+.SS "void MLV_free_input_box (\fBMLV_Input_box\fP * input_box)"
+
+.PP
+Cette fonction ferme une boîte de saisie précédement créée\&. L'espace mémoire allouée à la boîte de saisie est libéré\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie à fermer\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBmedium/03_input_box_events\&.c\fP\&.
+.SS "void MLV_suppress_history (\fBMLV_Input_box\fP * input_box)"
+
+.PP
+Cette fonction supprime l'historique d'une boîte de saisie\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie dont l'histoirque doit être supprimé 
+.RE
+.PP
+
+.SS "void MLV_wait_input_box (int sommetHautGaucheX, int sommetHautGaucheY, int sommetBasDroitX, int sommetBasDroitY, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char * informativeMessage, char ** text,  \&.\&.\&.)"
+
+.PP
+Cette fonction suspend l'exécution du programme, affiche une boîte de saisie et attends que l'utilisateur rentre une phrase dans le champs de la boîte\&. La boîte de saisie contient deux zones de textes\&. La première zone ne peut pas être éditée par l'utilisateur et sert à afficher un message d'information\&. La deuxième est vide et peut être éditée par l'utilisateur\&. Lorsque l'utilisateur appuie sur la touche entrée, le texte qui se trouve dans la zone de texte est renvoyé par la fonction grâce au paramètre text\&. Le texte, la taille et les couleurs de la boîte de saisie sont paramétrables\&.
+
+.PP
+\fBMLV_wait_input_box()\fP alloue lui même la mémoire associée au paramètre "text"\&. Par contre, après utilisation, vous devez libérer l'espace mémoire qui a été alloué\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsommetHautGaucheX\fP La coordonnée en X du coin Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetHautGaucheY\fP La coordonnée en Y du coin Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetBasDroitX\fP La coordonnée en X du coin Sud-Est de la boîte de saisie\&. 
+.br
+\fIsommetBasDroitY\fP La coordonnée en Y du coin Sud-Est de la boîte de saisie\&. 
+.br
+\fIborderColor\fP La couleur de la bordure de la boîte de saisie\&. 
+.br
+\fItextColor\fP La couleur du texte de la boîte de saisie\&. 
+.br
+\fIbackgroundColor\fP La couleur de fond de la boîte de saisie\&. 
+.br
+\fIinformativeMessage\fP Le message à afficher devant la boîte de saisie\&. 
+.br
+\fItext\fP L'addresse où sera placé la réponse donnée par l'utilisateur\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/07_input_box\&.c\fP\&.
+.SS "void MLV_wait_input_box_with_font (int sommetHautGaucheX, int sommetHautGaucheY, int sommetBasDroitX, int sommetBasDroitY, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, const char * informativeMessage, char ** text, const \fBMLV_Font\fP * font,  \&.\&.\&.)"
+
+.PP
+Même chose que \fBMLV_wait_input_box()\fP, mais il est possible de changer la fonte du du texte\&. \fBMLV_wait_input_box_with_font()\fP alloue lui même la mémoire associée au paramètre "text"\&. Par contre, après utilisation, vous devez libérer l'espace mémoire qui a été alloué\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsommetHautGaucheX\fP La coordonnée en X du coin Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetHautGaucheY\fP La coordonnée en Y du coin Nord-Ouest de la boîte de saisie\&. 
+.br
+\fIsommetBasDroitX\fP La coordonnée en X du coin Sud-Est de la boîte de saisie\&. 
+.br
+\fIsommetBasDroitY\fP La coordonnée en Y du coin Sud-Est de la boîte de saisie\&. 
+.br
+\fIborderColor\fP La couleur de la bordure de la boîte de saisie\&. 
+.br
+\fItextColor\fP La couleur du texte de la boîte de saisie\&. 
+.br
+\fIbackgroundColor\fP La couleur de fond de la boîte de saisie\&. 
+.br
+\fIinformativeMessage\fP Le message à afficher devant la boîte de saisie\&. 
+.br
+\fItext\fP L'addresse où sera placé la réponse donnée par l'utilisateur\&. 
+.br
+\fIfont\fP La font du texte à utiliser\&. 
+.RE
+.PP
+
+.SS "void MLV_wait_particular_input_box (\fBMLV_Input_box\fP * input_box, char ** text)"
+
+.PP
+Cette fonction suspend l'exécution du programme jusqu'à ce que l'utilisateur écrive une phrase dans le champs de la boîte de saisie passée en paramètre de la fonction\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIinput_box\fP La boîte de saisie qui doit être observée\&. 
+.br
+\fItext\fP Le texte récupéré par la boîte de saisie\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

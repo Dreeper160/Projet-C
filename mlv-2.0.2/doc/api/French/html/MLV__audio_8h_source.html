@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">MLV_audio.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MLV__audio_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *   Copyright (C) 2010,2011,2012 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef __MLV__MLV_AUDIO_H__</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define __MLV__MLV_AUDIO_H__</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifndef MEMORY_DEBUG</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;SDL/SDL.h&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;memory_debug.h&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="MLV__audio_8h.html#ac8b060333ed8b2a912cbfe3ef75a60e9">   48</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_MLV_Music <a class="code hl_typedef" href="MLV__audio_8h.html#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="MLV__audio_8h.html#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">   53</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>_MLV_Sound <a class="code hl_typedef" href="MLV__audio_8h.html#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="MLV__audio_8h_a4dc9290589b441534358f31f777f47c7.html#a4dc9290589b441534358f31f777f47c7">   62</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__audio_8h_a4dc9290589b441534358f31f777f47c7.html#a4dc9290589b441534358f31f777f47c7">MLV_init_audio</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="MLV__audio_8h.html#abc207de0a92452024cf93a703efca43a">   67</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h.html#abc207de0a92452024cf93a703efca43a">MLV_free_audio</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="MLV__audio_8h_ab3f51951da22c4354ed300ff50226569.html#ab3f51951da22c4354ed300ff50226569">   96</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__audio_8h_ab3f51951da22c4354ed300ff50226569.html#ab3f51951da22c4354ed300ff50226569">MLV_change_audio_buffer_size</a>( <span class="keywordtype">int</span> buffer_size );</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="MLV__audio_8h_a4219e99dc861514d4029173470f69d14.html#a4219e99dc861514d4029173470f69d14">  104</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h_a4219e99dc861514d4029173470f69d14.html#a4219e99dc861514d4029173470f69d14">MLV_change_number_of_parallel_sounds</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n );</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="MLV__audio_8h_a037e0fc93f58b39599a9fd9248136c65.html#a037e0fc93f58b39599a9fd9248136c65">  120</a></span><a class="code hl_typedef" href="MLV__audio_8h.html#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a>* <a class="code hl_function" href="MLV__audio_8h_a037e0fc93f58b39599a9fd9248136c65.html#a037e0fc93f58b39599a9fd9248136c65">MLV_load_music</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* file_music );</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="MLV__audio_8h_a94ff2df762e320951ff1f7f1e416f6e2.html#a94ff2df762e320951ff1f7f1e416f6e2">  127</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h_a94ff2df762e320951ff1f7f1e416f6e2.html#a94ff2df762e320951ff1f7f1e416f6e2">MLV_free_music</a>( <a class="code hl_typedef" href="MLV__audio_8h.html#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a>* music );</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="MLV__audio_8h_ab4fa9f36393225dfbb65d58e8f21b3ba.html#ab4fa9f36393225dfbb65d58e8f21b3ba">  137</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h_ab4fa9f36393225dfbb65d58e8f21b3ba.html#ab4fa9f36393225dfbb65d58e8f21b3ba">MLV_play_music</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="MLV__audio_8h.html#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a>* music, <span class="keywordtype">float</span> volume, <span class="keywordtype">int</span> loop );</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="MLV__audio_8h.html#aa414ad97d527410805cebae5f00dabce">  142</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h.html#aa414ad97d527410805cebae5f00dabce">MLV_stop_music</a>();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="MLV__audio_8h_a18edd237e90f3a85fe5cf1b02bf44698.html#a18edd237e90f3a85fe5cf1b02bf44698">  160</a></span><a class="code hl_typedef" href="MLV__audio_8h.html#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a>* <a class="code hl_function" href="MLV__audio_8h_a18edd237e90f3a85fe5cf1b02bf44698.html#a18edd237e90f3a85fe5cf1b02bf44698">MLV_load_sound</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* file_sound );</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="MLV__audio_8h_ad3c1db9fc9729b31fa994dcf792f03c3.html#ad3c1db9fc9729b31fa994dcf792f03c3">  167</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h_ad3c1db9fc9729b31fa994dcf792f03c3.html#ad3c1db9fc9729b31fa994dcf792f03c3">MLV_free_sound</a>( <a class="code hl_typedef" href="MLV__audio_8h.html#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a>* sound );</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="MLV__audio_8h_a1f3364260a5aa829d93d52c2a4c11e5f.html#a1f3364260a5aa829d93d52c2a4c11e5f">  175</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h_a1f3364260a5aa829d93d52c2a4c11e5f.html#a1f3364260a5aa829d93d52c2a4c11e5f">MLV_play_sound</a>( <span class="keyword">const</span> <a class="code hl_typedef" href="MLV__audio_8h.html#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a>* sound, <span class="keywordtype">float</span> volume );</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="MLV__audio_8h.html#a9d6c93448c3ffded1d52d612aea8c542">  180</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="MLV__audio_8h.html#a9d6c93448c3ffded1d52d612aea8c542">MLV_stop_all_sounds</a>();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMLV__audio_8h_a037e0fc93f58b39599a9fd9248136c65_html_a037e0fc93f58b39599a9fd9248136c65"><div class="ttname"><a href="MLV__audio_8h_a037e0fc93f58b39599a9fd9248136c65.html#a037e0fc93f58b39599a9fd9248136c65">MLV_load_music</a></div><div class="ttdeci">MLV_Music * MLV_load_music(const char *file_music)</div><div class="ttdoc">Charge un ficher contenant de la musique en mémoire.</div></div>
+<div class="ttc" id="aMLV__audio_8h_a18edd237e90f3a85fe5cf1b02bf44698_html_a18edd237e90f3a85fe5cf1b02bf44698"><div class="ttname"><a href="MLV__audio_8h_a18edd237e90f3a85fe5cf1b02bf44698.html#a18edd237e90f3a85fe5cf1b02bf44698">MLV_load_sound</a></div><div class="ttdeci">MLV_Sound * MLV_load_sound(const char *file_sound)</div><div class="ttdoc">Charge un ficher contenant un échantillon sonore en mémoire.</div></div>
+<div class="ttc" id="aMLV__audio_8h_a1f3364260a5aa829d93d52c2a4c11e5f_html_a1f3364260a5aa829d93d52c2a4c11e5f"><div class="ttname"><a href="MLV__audio_8h_a1f3364260a5aa829d93d52c2a4c11e5f.html#a1f3364260a5aa829d93d52c2a4c11e5f">MLV_play_sound</a></div><div class="ttdeci">void MLV_play_sound(const MLV_Sound *sound, float volume)</div><div class="ttdoc">Joue un échantillon sonore chargé en mémoire.</div></div>
+<div class="ttc" id="aMLV__audio_8h_a4219e99dc861514d4029173470f69d14_html_a4219e99dc861514d4029173470f69d14"><div class="ttname"><a href="MLV__audio_8h_a4219e99dc861514d4029173470f69d14.html#a4219e99dc861514d4029173470f69d14">MLV_change_number_of_parallel_sounds</a></div><div class="ttdeci">void MLV_change_number_of_parallel_sounds(unsigned int n)</div><div class="ttdoc">Change le nombre d&#39;écahantillons sonores qui peuvent être joués en même temps.</div></div>
+<div class="ttc" id="aMLV__audio_8h_a4dc9290589b441534358f31f777f47c7_html_a4dc9290589b441534358f31f777f47c7"><div class="ttname"><a href="MLV__audio_8h_a4dc9290589b441534358f31f777f47c7.html#a4dc9290589b441534358f31f777f47c7">MLV_init_audio</a></div><div class="ttdeci">int MLV_init_audio()</div><div class="ttdoc">Cette fonction initialise la bibliothèque MLV pour pouvoir jouer de la musique et des sons.</div></div>
+<div class="ttc" id="aMLV__audio_8h_a94ff2df762e320951ff1f7f1e416f6e2_html_a94ff2df762e320951ff1f7f1e416f6e2"><div class="ttname"><a href="MLV__audio_8h_a94ff2df762e320951ff1f7f1e416f6e2.html#a94ff2df762e320951ff1f7f1e416f6e2">MLV_free_music</a></div><div class="ttdeci">void MLV_free_music(MLV_Music *music)</div><div class="ttdoc">Ferme un morceau de musique chargé en mémoire.</div></div>
+<div class="ttc" id="aMLV__audio_8h_ab3f51951da22c4354ed300ff50226569_html_ab3f51951da22c4354ed300ff50226569"><div class="ttname"><a href="MLV__audio_8h_ab3f51951da22c4354ed300ff50226569.html#ab3f51951da22c4354ed300ff50226569">MLV_change_audio_buffer_size</a></div><div class="ttdeci">int MLV_change_audio_buffer_size(int buffer_size)</div><div class="ttdoc">Change la taille du buffer audio. La taille doit être une puissance de 2.</div></div>
+<div class="ttc" id="aMLV__audio_8h_ab4fa9f36393225dfbb65d58e8f21b3ba_html_ab4fa9f36393225dfbb65d58e8f21b3ba"><div class="ttname"><a href="MLV__audio_8h_ab4fa9f36393225dfbb65d58e8f21b3ba.html#ab4fa9f36393225dfbb65d58e8f21b3ba">MLV_play_music</a></div><div class="ttdeci">void MLV_play_music(const MLV_Music *music, float volume, int loop)</div><div class="ttdoc">Joue un morceau de musique qui est chargée en mémoire.</div></div>
+<div class="ttc" id="aMLV__audio_8h_ad3c1db9fc9729b31fa994dcf792f03c3_html_ad3c1db9fc9729b31fa994dcf792f03c3"><div class="ttname"><a href="MLV__audio_8h_ad3c1db9fc9729b31fa994dcf792f03c3.html#ad3c1db9fc9729b31fa994dcf792f03c3">MLV_free_sound</a></div><div class="ttdeci">void MLV_free_sound(MLV_Sound *sound)</div><div class="ttdoc">Ferme un échantillon sonore chargé en mémoire.</div></div>
+<div class="ttc" id="aMLV__audio_8h_html_a1f1dcb3e422bf7ae8fb84fd2be75e1c5"><div class="ttname"><a href="MLV__audio_8h.html#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a></div><div class="ttdeci">struct _MLV_Sound MLV_Sound</div><div class="ttdoc">Ce type code un échantillon sonore.</div><div class="ttdef"><b>Definition</b> MLV_audio.h:53</div></div>
+<div class="ttc" id="aMLV__audio_8h_html_a9d6c93448c3ffded1d52d612aea8c542"><div class="ttname"><a href="MLV__audio_8h.html#a9d6c93448c3ffded1d52d612aea8c542">MLV_stop_all_sounds</a></div><div class="ttdeci">void MLV_stop_all_sounds()</div><div class="ttdoc">Arrête tous les échantillons sonores.</div></div>
+<div class="ttc" id="aMLV__audio_8h_html_aa414ad97d527410805cebae5f00dabce"><div class="ttname"><a href="MLV__audio_8h.html#aa414ad97d527410805cebae5f00dabce">MLV_stop_music</a></div><div class="ttdeci">void MLV_stop_music()</div><div class="ttdoc">Arrête toutes les musiques.</div></div>
+<div class="ttc" id="aMLV__audio_8h_html_abc207de0a92452024cf93a703efca43a"><div class="ttname"><a href="MLV__audio_8h.html#abc207de0a92452024cf93a703efca43a">MLV_free_audio</a></div><div class="ttdeci">void MLV_free_audio()</div><div class="ttdoc">Ferme proprement les différents périphériques audios.</div></div>
+<div class="ttc" id="aMLV__audio_8h_html_ac8b060333ed8b2a912cbfe3ef75a60e9"><div class="ttname"><a href="MLV__audio_8h.html#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a></div><div class="ttdeci">struct _MLV_Music MLV_Music</div><div class="ttdoc">Ce type code un morceau de musique.</div><div class="ttdef"><b>Definition</b> MLV_audio.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

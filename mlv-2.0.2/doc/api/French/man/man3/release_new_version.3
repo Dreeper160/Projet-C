@@ -1,0 +1,476 @@
+.TH "release_new_version" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+release_new_version \- Procédure pour sortir une nouvelle version de MLV 
+.PP
+Cette page explique la procédure à suivre pour publier officiellement une nouvelleversion en provenance de la branche de développement de MLV du serveur git\&.
+
+.PP
+On supposera, dans la suite de ce document que votre depôt git est nettoyé, comme si vous veniez de le cloner\&.
+.SH "Fusionner la branche develop dans celle de release"
+.PP
+Commencez par fusionner la branche develop dans celle de release : 
+.PP
+.nf
+git checkout release
+git merge develop
+
+.fi
+.PP
+.SH "Changer le numéro de version"
+.PP
+Commencez par enlever le suffixe -dev du numéro de version\&. Pour cela, cherchez la ligne qui commence par, 
+.PP
+.nf
+AC_INIT([MLV], [2\&.0\&.2-dev], [adrien\&.boussicault@labri\&.fr], [], [http://www-igm\&.univ-mlv\&.fr/~boussica/mlv/index\&.html])
+
+.fi
+.PP
+ et remplacez là par 
+.PP
+.nf
+AC_INIT([MLV], [2\&.0\&.2], [adrien\&.boussicault@labri\&.fr], [], [http://www-igm\&.univ-mlv\&.fr/~boussica/mlv/index\&.html])
+
+.fi
+.PP
+
+.PP
+Modifiez ensuite les numéros de version \fRmlvcurrent\fP, \fRmlvrevision\fP et \fRmlvage\fP situés dans le fichier \fRconfigure\&.ac\fP\&.
+
+.PP
+La logique à suivre est expliquée en commentaire dans le fichier\&. Pour cela, vous aurez à conaître les modifications qui ont été réalisé depuis la dernière version\&. POur cela, consultez le fichier \fRChangeLog\fP situé dans à la racine\&. Regardez les modifications faites dans la version courrente de développement : 
+.PP
+.nf
+mlv-2\&.0\&.2-dev
+
+.fi
+.PP
+
+.PP
+Les lignes à modifier sont les suivantes : 
+.PP
+.nf
+define([mlvcurrent], [2])dnl                                                    
+define([mlvrevision], [0])dnl                                                   
+define([mlvage], [2])dnl
+
+.fi
+.PP
+
+.PP
+Mettez à jour, dans le fichier \fRconfigure\&.ac\fP de la racine de mlv, les versions pour MacOSX et Fedora: 
+.PP
+.nf
+AC_SUBST(MLV_MACOSX_VERSION,[10\&.10])
+
+.fi
+.PP
+ Mettez à la place la version actuelle de MacOSX\&.
+
+.PP
+.PP
+.nf
+AC_SUBST(MLV_FEDORA_VERSION,[22])
+.fi
+.PP
+ Mettez à la place la version actuelle de Fedora\&.
+.SH "Mettre à jour les fichiers ChangeLog et todo"
+.PP
+Modifiez le fichier \fRChangeLog\fP situé à la racine de la bibliothèque\&. Pour cela, mettez à jour, le numéro de version apparaissant dans la première ligne de ChangeLog\&. Cette ligne ressemble à : 
+.PP
+.nf
+mlv-2\&.0\&.2-dev
+
+.fi
+.PP
+
+.PP
+Vous devez mettre le même numéro de version que celui que vous avez mis dans la section : \fBChanger le numéro de version\fP Changer, et vous devez enlever le suffixe -dev\&.
+
+.PP
+Mettez à jour le fichier \fRtodo\fP situé à la racine de la bibliothèque\&.
+
+.PP
+Pour la suite du document, pour que les numéros de versions coincident avec les nouveaux numéros de version que vous venez de renseigner, nous vous conseillons de recompiler la documentation et de continuer avec la nouvelle documentation ainsi générée\&. Pour cela tapez les commandes suivantes : 
+.PP
+.nf
+make distclean
+\&./autogen\&.sh
+\&./configure
+make
+
+.fi
+.PP
+
+.PP
+La nouvelle version de la page que vous êtes en train de lire se trouve dans le fichier 
+.PP
+.nf
+\&./doc/api/French/html/release_new_version\&.html
+
+.fi
+.PP
+ à partir de la racine de la bibliothèque MLV\&.
+.SH "Préparer une clé pour signer les différents paquets d'indstallation"
+.PP
+Créez uen clé qui servira à signer tous les paquets d'installation\&. Pour cela, tapez la commande suivante : 
+.PP
+.nf
+gpg --gen-key
+
+.fi
+.PP
+ et choisisez une clef RSA de 4096 bits, mettez un temps d'expiration de 3 jours (temps que vous vous donnez pour créer et tester l'ensemble des paquets de distribution) et choisissez comme commentaire: \fRmlv-2\&.0\&.2 key\fP\&.
+
+.PP
+Vérifier que la clé est dans votre liste de clés en tapant : 
+.PP
+.nf
+gpg --list-key
+
+.fi
+.PP
+
+.PP
+Vous devriez obtenir l'affichage suivant : 
+.PP
+.nf
+/home/boussica/\&.gnupg/pubring\&.gpg
+---------------------------------
+pub   4096R/E594D293 2014-02-25 [expire : 2014-02-28]
+uid                  Adrien Boussicault (mlv-2\&.0\&.2 key) <boussica@labri\&.fr>
+sub   4096R/4B3F1834 2014-02-25 [expire : 2014-02-28]
+
+.fi
+.PP
+
+.PP
+L'identifiant de la clé est ici \fRE594D293\fP
+
+.PP
+Exportez la clé publique pour pouvoir la comuniquer à différents utilisateurs 
+.PP
+.nf
+gpg --export --armor IDENTIFIANT_CLE > mlv-2\&.0\&.2-packaging-gpg-key-VOTRE_NOM
+
+.fi
+.PP
+ où \fRIDENTIFIANT_CLE\fP est l'identifiant de la clé vu précédement\&.
+
+.PP
+Exportez votre clé privé pour pouvoir l'importer dans toutes les machines qui vont créer les paquets de distribution (notament pour debian et fedora)\&. 
+.PP
+.nf
+gpg --export-secret-keys --armor IDENTIFIANT_CLE > mlv-2\&.0\&.2-packaging-gpg-secretkey-VOTRE_NOM
+
+.fi
+.PP
+ où \fRIDENTIFIANT_CLE\fP est l'identifiant de la clé vu précédement\&.
+
+.PP
+Vous ne devez JAMAIS comuniquer cette clé\&. C'est elle qui sert à crypter les messages et à réaliser les signatures de vos paquets\&.
+
+.PP
+Archivez dans vos archives personnelles (et secrète) la clé publique et la clé privée\&.
+.SH "Verifiez le bon fonctionnement de la bibliothèque (optionel)"
+.PP
+Vérifiez maintenant le bon fonctionement de la bibliothèque\&.
+
+.PP
+Pour cela, créez tout les paquets de distribution en suivant les procédures présentes à la page : \fBCréer des paquets distribuables de la bibliothèque MLV\fP \&.
+
+.PP
+Testez ensuite tous les paquets crées et vérifiez le bon fonctionnement des programmes en compilant et testant tous les exemples présents dans le dossier \fRexample\fP du dossier de documentation qui a été installé par le paquet\&. Sous linux, il est situé dans \fR/usr/share/doc/mlv/\fP\&.
+
+.PP
+Vous prendrez bien soin de bien vérifier que les programmes qui utilisent le son fonctionne correctement (notament sous Mac OS X et windows)\&.
+
+.PP
+Vous vérifiez aussi que la documentation est bien à jour en verifiant que les nouveaux numéros de version sont à jour, notament dans la partie téléchargement de la documentation\&. Pour cela, il suffit de suivre les différents liens présents à la page \fRdoc/index\&.html\fP\&.
+.SH "Fusionner la branche release dans master et dans develop"
+.PP
+Quand la bibliothèque est prête à être publiée, il ne reste plus qu'à fusionner release dans master\&.
+
+.PP
+Commencez par bien vérifier que vous avez sauvegardé les dernières modifications de release : 
+.PP
+.nf
+git status
+
+.fi
+.PP
+
+.PP
+Ensuite, procédez à la fusion de merge dans master en tapant : 
+.PP
+.nf
+git checkout master
+git merge release
+
+.fi
+.PP
+
+.PP
+Ajouter un tag pour préciser que ce dernier commit est une nouvelle version\&. 
+.PP
+.nf
+git tag -a v2\&.0\&.2 -m 'The version 2\&.0\&.2 of MLV\&.'
+
+.fi
+.PP
+ où 2\&.0\&.2 est normalement le nouveau numéro de version de la bibliothèque\&. Si ce n'est pas le cas, c'est que vous n'avez pas recompilé cette documentation après avoir changé les numéros de version\&.
+
+.PP
+Vous pouvez éventuellement, ajoutez des commentaires dans l'opition -m\&.
+
+.PP
+Il ne reste plus qu'à envoyer tous les changements sur le dépot git\&. 
+.PP
+.nf
+git push --follow-tags
+
+.fi
+.PP
+
+.PP
+Il ne rest plus qu'à mettre en place une nouvelle version en developpement\&. Commencez par mettre à jour la branche de developpement : 
+.PP
+.nf
+git checkout develop
+git merge release
+
+.fi
+.PP
+
+.PP
+Mettez à jour le numéro de version : dans le fichier \fRconfigure\&.ac\fP ajoutez le suffixe -dev au numéro de version\&. Pour cela, cherchez la ligne 
+.PP
+.nf
+AC_INIT([MLV], [2\&.0\&.2], [adrien\&.boussicault@labri\&.fr], [], [http://www-igm\&.univ-mlv\&.fr/~boussica/mlv/index\&.html])
+
+.fi
+.PP
+
+.PP
+et remplacez-là par 
+.PP
+.nf
+AC_INIT([MLV], [2\&.0\&.2-dev], [adrien\&.boussicault@labri\&.fr], [], [http://www-igm\&.univ-mlv\&.fr/~boussica/mlv/index\&.html])
+
+.fi
+.PP
+
+.PP
+Enfin, créer un nouveau paragraphe dans le fichier \fRChangeLog\fP situé à la racine de la bibliothèque\&. Ce paragraphe doit commencer par : 
+.PP
+.nf
+mlv-2\&.0\&.2-dev
+
+.fi
+.PP
+ Normalement, ce paragraphe ne doit pas déjà exister\&. Si c'est le cas, c'est que vous n'avez pas recompilé cette documentation après avoir mis à jour les numéros de version\&.
+
+.PP
+Mettez à jour le fichier \fRtodo\fP situé à la racine de la bibliothèque\&.
+
+.PP
+Enregistrez dans git les modifications, en mettant le commentaire d'une ligne "New developement version of MLV\&." lorsque cela est demandé : 
+.PP
+.nf
+git add configure\&.ac
+git commit
+
+.fi
+.PP
+
+.PP
+Enfin envoyez les modification sur le serveur git officiel\&. 
+.PP
+.nf
+git push
+
+.fi
+.PP
+
+.PP
+Basculez de nouveau sur la branche master, pour la suite de document\&. 
+.PP
+.nf
+git checkout master
+
+.fi
+.PP
+.SH "Créer les nouveaux paquets de distributions"
+.PP
+Vérifiez que vous êtes bien sur la branche master du depot git de MLV\&. Tapez les commandes : 
+.PP
+.nf
+git checkout master   # pour charger la branche master
+git status            # pour vérifier que vous êtes sur la branche master
+
+.fi
+.PP
+
+.PP
+Commencez par créer un paquet de distribution pour le code source, à partir de la branche master : 
+.PP
+.nf
+\&./configure
+make dist
+
+.fi
+.PP
+
+.PP
+Normalement le fichier \fRmlv-2\&.0\&.2\&.tar\&.gz\fP a du être créé\&. Il est très important d'exécuter le script \fR\&./configure\fP, même s'il existait déjà\&. En effet, son exécution permet de mettre à jour le numéro de révision git situé dans le code source\&.
+
+.PP
+Ensuite, à partir de ce dernier fichier, recréez l'ensemble des paquets de distribution\&.
+
+.PP
+Pour cela vous pouvez utiliser l'émulateur \fRvirt-manageur\fP pour installer localement une debian 32 bit, une debian 64 bit, un fedora 32 bits et 64 bits\&.
+
+.PP
+Pour chaque distribution (debian, fedora, window, MacOSX), créez des paquets d'installation en suivant les instructions suivantes :
+.IP "\(bu" 2
+utilisez les procédure de créations des paquets de la page \fBCréer des paquets distribuables de la bibliothèque MLV\fP
+.IP "\(bu" 2
+quand, dans ces procédures, une clée pour signer des fichiers est utilisée, vous devez toujours utiliser la clé \fRmlv-2\&.0\&.2-packaging-gpg-secretkey-VOTRE_NOM\fP, qui a été générée précédement\&. Pour importer cette clé, il vous suffit de taper la commande suivante : 
+.PP
+.nf
+  gpg --import mlv-2\&.0\&.2-packaging-gpg-secretkey-VOTRE_NOM
+
+.fi
+.PP
+
+.PP
+
+.PP
+Vérifiez le bon fonctionnement de ces paquets\&.
+.SH "Mettre a jour le site web officiel"
+.PP
+Commencez par créer deux dossiers : \fRdepot\fP et \fRsite\fP, dans le répertoire \fR/tmp\fP\&.
+
+.PP
+Dans le dossier \fRdepot\fP, créez un dossier \fRmlv-2\&.0\&.2\fP\&.
+
+.PP
+Mettez dans le dossier \fRdepot\fP le fichier \fRmlv-2\&.0\&.2\&.tar\&.gz\fP\&.
+
+.PP
+Ensuite, mettez les fichiers suivants, dans le dossier \fRdepot/mlv-2\&.0\&.2\fP: 
+.PP
+.nf
+libmlv0_2\&.0\&.2-1_i386\&.deb
+libmlv0-dev_2\&.0\&.2-1_i386\&.deb
+libmlv0_2\&.0\&.2-1_amd64\&.deb
+libmlv0-dev_2\&.0\&.2-1_amd64\&.deb
+mlv-2\&.0\&.2-0\&.fc22\&.i686\&.rpm
+mlv-devel-2\&.0\&.2-0\&.fc22\&.i686\&.rpm
+mlv-static-2\&.0\&.2-0\&.fc22\&.i686\&.rpm
+mlv-2\&.0\&.2-0\&.fc22\&.src\&.rpm
+mlv-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm
+mlv-devel-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm
+mlv-static-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm
+mlv-2\&.0\&.2-0\&.fc22\&.src\&.rpm
+RPM-GPG-KEY-Boussicault
+mlv-2\&.0\&.2-win32\&.zip
+mlv-2\&.0\&.2-code_blocks\&.zip
+mlv-2\&.0\&.2-dev-cpp\&.zip
+mlv-2\&.0\&.2_macos-10\&.10\&.pkg
+mlv-2\&.0\&.2\&.tar\&.gz
+
+.fi
+.PP
+ N'oubliez surtout pas de mettre de nouveau le fichier \fRmlv-2\&.0\&.2\&.tar\&.gz\fP\&.
+
+.PP
+Il faut maintenant signer tous les fichiers qui n'ont pas encore été signés : 
+.PP
+.nf
+cd /tmp/depot
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2\&.0\&.2\&.tar\&.gz
+cd /tmp/depot/mlv-2\&.0\&.2
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2\&.0\&.2-win32\&.zip
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2\&.0\&.2-code_blocks\&.zip
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2\&.0\&.2-dev-cpp\&.zip
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2\&.0\&.2_macos-10\&.10\&.pkg
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2\&.0\&.2\&.tar\&.gz
+
+.fi
+.PP
+ où \fRIDENtiFIANT_CLE\fP est l'identifiant de la clé créé dans la partie "Préparer une clé pour signer \&.\&.\&."\&.
+
+.PP
+Puis on vérifie les signatures créés : 
+.PP
+.nf
+cd /tmp/depot
+gpg  --verify mlv-2\&.0\&.2\&.tar\&.gz\&.sig
+cd /tmp/depot/mlv-2\&.0\&.2
+gpg --verify mlv-2\&.0\&.2-win32\&.zip\&.sig
+gpg --verify mlv-2\&.0\&.2-code_blocks\&.zip\&.sig
+gpg --verify mlv-2\&.0\&.2-dev-cpp\&.zip\&.sig
+gpg --verify mlv-2\&.0\&.2_macos-10\&.10\&.pkg\&.sig
+gpg --verify mlv-2\&.0\&.2\&.tar\&.gz\&.sig
+
+.fi
+.PP
+
+.PP
+Copiez le fichier \fRmlv-2\&.0\&.2\&.tar\&.gz\fP dans le dossier \fR/tmp\fP et générez la documentation de la bibliothèque en tapant les commandes suivantes: 
+.PP
+.nf
+cd /tmp
+tar -xzf mlv-2\&.0\&.2\&.tar\&.gz
+cd mlv-2\&.0\&.2
+\&./configure
+make 
+cp -r doc/api /tmp/depot/mlv-2\&.0\&.2/
+
+.fi
+.PP
+
+.PP
+Enfin, ajouter les programmes d'installation des ide Code-blocks et Dev-cpp en prenant soin de mettre la version de l'installateur correspondant au numéro de version qui se trouve sur la documentation\&.
+
+.PP
+Préparons maintenant le code source du site\&. Pour cela, tapez les commandes suivantes 
+.PP
+.nf
+cd /tmp/mlv-2\&.0\&.2/doc
+cp -r index\&.html api /tmp/site
+
+.fi
+.PP
+
+.PP
+Il ne reste plus qu'à télécharger les fichiers de distributions sur le serveur de Savannah en tapant les commandes suivantes : 
+.PP
+.nf
+cd /tmp/depot/
+chmod 644 *
+rsync -av /tmp/depot/\&. LOGIN@dl\&.sv\&.nongnu\&.org:/releases/mlv/\&.
+
+.fi
+.PP
+ où LOGIN est votre login de developpeur et le mot de passe celui de votre clé RSA donné pour accéder au dépot git\&.
+
+.PP
+Il faut maintenant mettre à jour le site web\&. Commencez par monter le dossier du code source de http://www-igm.univ-mlv.fr/~boussica/mlv/index.html sur le dossier DOSSIER_SITE_WEB\&. Puis, tapez la commande suivante : 
+.PP
+.nf
+rsync -av --delete /tmp/site/\&. LE_SITE_WEB
+
+.fi
+.PP
+.SH "Verifier la documentation et les fichiers publiés officiellement"
+.PP
+Testez un à un tous les liens présents dans la section téléchargement de la documentation\&.
+
+.PP
+Vérifiez que les paquets s'installent correctement et vérifiez que les exemples s'executent correctement\&.
+
+.PP
+Vérifiez que, lors de l'exécution du programme \fRexample/beginner/10_library_information\fP, le numéro de version et la révision git qui apparaît à l'écran, correspond bien à la révision courante présente dans la branche master du dépôt git\&. 

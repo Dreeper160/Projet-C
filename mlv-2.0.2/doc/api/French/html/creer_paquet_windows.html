@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Créer des paquets contenant la bibliothèque MLV pour Windows </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Cette page explique comment créer des paquets de distribution pour Windows.</p>
+<p>Il y a trois types de paquets :</p><ul>
+<li>les binaires windows, qui contienent la bibliothèque MLV sous forme de binaires.</li>
+<li>le paquet pour Code::Blocks, qui contient un projet Code:Blocks utilisant la bibliothèque MLV. Dans ce paquet est inclu les binaires windows de la bibliothèque ainsi que des exemples d'utilisation de la bibliothèque.</li>
+<li>le paquet pour dev-cpp, qui contient un projet dev-cpp utilisant la bibliothèque MLV. Dans ce paquet est inclu les binaires windows de la bibliothèque ainsi que des exemples d'utilisation de la bibliothèque.</li>
+</ul>
+<p>Les quatres parties</p>
+<ul>
+<li><a class="el" href="#packaging_windows_prerequis">Prérequis pour créer des paquets MLV pour Windows</a></li>
+<li><a class="el" href="#packaging_windows_binaire">Créer un paquet MLV pour Windows ne contenant que les binaires de la bibliothèque</a></li>
+<li><a class="el" href="#packaging_windows_code_blocks">Créer un paquet MLV pour Windows contenant un projet Code::Blocks</a></li>
+<li><a class="el" href="#packaging_windows_dev_cpp">Créer un paquet MLV pour Windows contenant un projet dev-cpp</a></li>
+</ul>
+<p>expliquent comment construire ces 3 paquets.</p>
+<p>La dernière section (la section <a class="el" href="#packaging_windows_from_scratch">Créer une infrastructure de Cross-Compilation Linux-Widows pour MLV</a>) explique comment créer à la main l'infrastructure de cross-compilation linux-windows. Cette partie est très technique et fastidieuse. Nous vous conseillons de ne pas utiliser cette dernière partie, sauf cas particuliers.</p>
+<h1 class="doxsection"><a class="anchor" id="packaging_windows_prerequis"></a>
+Prérequis pour créer des paquets MLV pour Windows</h1>
+<p>Les scripts de compilation pour créer des paquets MLV ont été prévus pour s'exécuter sous Ubuntu. Vous devez donc utiliser Ubuntu pour pouvoir continuer.</p>
+<p>Vous devez ensuite installer des paquets pour la compilation avec mingw en tapant la commande suivante: </p><pre class="fragment">sudo apt-get install mingw-w64
+</pre><p>Ensuite, vous devez ne pas oublier d'installer les logiciels de compilation et de compression usuels: </p><pre class="fragment">sudo apt-get install build-essential zip unzip
+</pre><h1 class="doxsection"><a class="anchor" id="packaging_windows_binaire"></a>
+Créer un paquet MLV pour Windows ne contenant que les binaires de la bibliothèque</h1>
+<p>Comencez par suivre la procédure d'installation de la section <a class="el" href="#packaging_windows_prerequis">Prérequis pour créer des paquets MLV pour Windows</a>.</p>
+<p>Ensuite, allez dans le repertoire packaging/windows , puis tapez la commande suivante: </p><pre class="fragment">./create_win32_binaries
+</pre><p>La création du paquet peut prendre pas mal de temps. Ne vous inquiétez pas et prenez votre mal en patiente.</p>
+<p>Si tout ce passe bien, vous devez obtenir un fichier mlv-2.0.2-win32.zip contenant les binaires pour Windows de la bibliothèque MLV.</p>
+<h1 class="doxsection"><a class="anchor" id="packaging_windows_code_blocks"></a>
+Créer un paquet MLV pour Windows contenant un projet Code::Blocks</h1>
+<p>Comencez par suivre la procédure d'installation de la section <a class="el" href="#packaging_windows_prerequis">Prérequis pour créer des paquets MLV pour Windows</a>.</p>
+<p>Ensuite, allez dans le repertoire packaging/windows , puis tapez la commande suivante: </p><pre class="fragment">./create_code_blocks_package
+</pre><p>La création du paquet peut prendre pas mal de temps. Ne vous inquiétez pas et prenez votre mal en patiente.</p>
+<p>Si tout ce passe bien, vous devez obtenir un fichier mlv-2.0.2-code_blocks.zip contenant les binaires pour Windows de la bibliothèque MLV.</p>
+<h1 class="doxsection"><a class="anchor" id="packaging_windows_dev_cpp"></a>
+Créer un paquet MLV pour Windows contenant un projet dev-cpp</h1>
+<p>Comencez par suivre la procédure d'installation de la section <a class="el" href="#packaging_windows_prerequis">Prérequis pour créer des paquets MLV pour Windows</a>.</p>
+<p>Ensuite, allez dans le repertoire packaging/windows , puis tapez la commande suivante: </p><pre class="fragment">./create_dev_cpp_package
+</pre><p>La création du paquet peut prendre pas mal de temps. Ne vous inquiétez pas et prenez votre mal en patiente.</p>
+<p>Si tout ce passe bien, vous devez obtenir un fichier mlv-2.0.2-dev-cpp.zip contenant les binaires pour Windows de la bibliothèque MLV.</p>
+<h1 class="doxsection"><a class="anchor" id="packaging_windows_from_scratch"></a>
+Créer une infrastructure de Cross-Compilation Linux-Widows pour MLV</h1>
+<p>Un platforme de compilation Linux-Windows pour MLV est fournie dans le fichier packaging/windows/cross-compilation/cross-compilation-x86.tar.xz.</p>
+<p>Une documentation sera bientôt disponnible pour expliquer comment réaliser cette platforme. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

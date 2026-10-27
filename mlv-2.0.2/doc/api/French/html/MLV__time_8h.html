@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier MLV_time.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce fichier définit tous les prototypes des fonctions concernant la gestion du temps.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="MLV__time_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2308067361eff58ed505814efe381a20" id="r_a2308067361eff58ed505814efe381a20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__time_8h_a2308067361eff58ed505814efe381a20.html#a2308067361eff58ed505814efe381a20">MLV_wait_milliseconds</a> (int milliseconds)</td></tr>
+<tr class="memdesc:a2308067361eff58ed505814efe381a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le programme s'intérompt pendant un nombre de milli-secondes donné en paramètre.  <br /></td></tr>
+<tr class="memitem:ac628f6783be5d11bee510f4e06a2c2a7" id="r_ac628f6783be5d11bee510f4e06a2c2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__time_8h_ac628f6783be5d11bee510f4e06a2c2a7.html#ac628f6783be5d11bee510f4e06a2c2a7">MLV_wait_seconds</a> (int seconds)</td></tr>
+<tr class="memdesc:ac628f6783be5d11bee510f4e06a2c2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le programme s'intérompt pendant un nombre de secondes.  <br /></td></tr>
+<tr class="memitem:a26bba76fb74ff0fcbc5176ce3c7d7b69" id="r_a26bba76fb74ff0fcbc5176ce3c7d7b69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__time_8h_a26bba76fb74ff0fcbc5176ce3c7d7b69.html#a26bba76fb74ff0fcbc5176ce3c7d7b69">MLV_get_time</a> ()</td></tr>
+<tr class="memdesc:a26bba76fb74ff0fcbc5176ce3c7d7b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le nombre de millisecondes écoulées depuis le début de l'initialisation de la bibliothèque MLV ( avec MLV_create_window ).  <br /></td></tr>
+<tr class="memitem:a275509197f3df3c8cbc8be379caea1f9" id="r_a275509197f3df3c8cbc8be379caea1f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__time_8h_a275509197f3df3c8cbc8be379caea1f9.html#a275509197f3df3c8cbc8be379caea1f9">MLV_get_date</a> (int *seconds, int *minutes, int *hours, int *day, int *month, int *year, int *day_of_the_week)</td></tr>
+<tr class="memdesc:a275509197f3df3c8cbc8be379caea1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne la date du jour (seconde/heure/jour/mois/annee).  <br /></td></tr>
+<tr class="memitem:adc95b099576765ca8bb25315a8485114" id="r_adc95b099576765ca8bb25315a8485114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__time_8h_adc95b099576765ca8bb25315a8485114.html#adc95b099576765ca8bb25315a8485114">MLV_change_frame_rate</a> (int rate)</td></tr>
+<tr class="memdesc:adc95b099576765ca8bb25315a8485114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure la fréquence de rafraichissement en Hz.  <br /></td></tr>
+<tr class="memitem:ace610129f35a0df7a3578a5d6f87cabf" id="r_ace610129f35a0df7a3578a5d6f87cabf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__time_8h_ace610129f35a0df7a3578a5d6f87cabf.html#ace610129f35a0df7a3578a5d6f87cabf">MLV_get_frame_rate</a> ()</td></tr>
+<tr class="memdesc:ace610129f35a0df7a3578a5d6f87cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne la fréquence de rafraîchissement courante.  <br /></td></tr>
+<tr class="memitem:a06aeb1975d13c11e5cd06cb5cc1d521d" id="r_a06aeb1975d13c11e5cd06cb5cc1d521d"><td class="memItemLeft" align="right" valign="top"><a id="a06aeb1975d13c11e5cd06cb5cc1d521d" name="a06aeb1975d13c11e5cd06cb5cc1d521d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_delay_according_to_frame_rate</b> ()</td></tr>
+<tr class="memdesc:a06aeb1975d13c11e5cd06cb5cc1d521d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend l'exécution du programme de façon à ce que le temps écoulé depuis le drenier appel à cette fonction, soit égale à la période de la fréquence de rafraîchissement configuré par MLV_change_frame_rate. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce fichier définit tous les prototypes des fonctions concernant la gestion du temps. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Adrien Boussicault </dd>
+<dd>
+Marc Zipstein</dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

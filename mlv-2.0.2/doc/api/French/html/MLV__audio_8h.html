@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier MLV_audio.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce fichier définit les prototypes des fonctions permettant de faire jouer de la musique et des échantillons sonores à l'aide de la bibliothèque MLV.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="MLV__audio_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ac8b060333ed8b2a912cbfe3ef75a60e9" id="r_ac8b060333ed8b2a912cbfe3ef75a60e9"><td class="memItemLeft" align="right" valign="top"><a id="ac8b060333ed8b2a912cbfe3ef75a60e9" name="ac8b060333ed8b2a912cbfe3ef75a60e9"></a>
+typedef struct _MLV_Music&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_Music</b></td></tr>
+<tr class="memdesc:ac8b060333ed8b2a912cbfe3ef75a60e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce type code un morceau de musique. <br /></td></tr>
+<tr class="memitem:a1f1dcb3e422bf7ae8fb84fd2be75e1c5" id="r_a1f1dcb3e422bf7ae8fb84fd2be75e1c5"><td class="memItemLeft" align="right" valign="top"><a id="a1f1dcb3e422bf7ae8fb84fd2be75e1c5" name="a1f1dcb3e422bf7ae8fb84fd2be75e1c5"></a>
+typedef struct _MLV_Sound&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_Sound</b></td></tr>
+<tr class="memdesc:a1f1dcb3e422bf7ae8fb84fd2be75e1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ce type code un échantillon sonore. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a4dc9290589b441534358f31f777f47c7" id="r_a4dc9290589b441534358f31f777f47c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_a4dc9290589b441534358f31f777f47c7.html#a4dc9290589b441534358f31f777f47c7">MLV_init_audio</a> ()</td></tr>
+<tr class="memdesc:a4dc9290589b441534358f31f777f47c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction initialise la bibliothèque MLV pour pouvoir jouer de la musique et des sons.  <br /></td></tr>
+<tr class="memitem:abc207de0a92452024cf93a703efca43a" id="r_abc207de0a92452024cf93a703efca43a"><td class="memItemLeft" align="right" valign="top"><a id="abc207de0a92452024cf93a703efca43a" name="abc207de0a92452024cf93a703efca43a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_free_audio</b> ()</td></tr>
+<tr class="memdesc:abc207de0a92452024cf93a703efca43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ferme proprement les différents périphériques audios. <br /></td></tr>
+<tr class="memitem:ab3f51951da22c4354ed300ff50226569" id="r_ab3f51951da22c4354ed300ff50226569"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_ab3f51951da22c4354ed300ff50226569.html#ab3f51951da22c4354ed300ff50226569">MLV_change_audio_buffer_size</a> (int buffer_size)</td></tr>
+<tr class="memdesc:ab3f51951da22c4354ed300ff50226569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change la taille du buffer audio. La taille doit être une puissance de 2.  <br /></td></tr>
+<tr class="memitem:a4219e99dc861514d4029173470f69d14" id="r_a4219e99dc861514d4029173470f69d14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_a4219e99dc861514d4029173470f69d14.html#a4219e99dc861514d4029173470f69d14">MLV_change_number_of_parallel_sounds</a> (unsigned int n)</td></tr>
+<tr class="memdesc:a4219e99dc861514d4029173470f69d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change le nombre d'écahantillons sonores qui peuvent être joués en même temps.  <br /></td></tr>
+<tr class="memitem:a037e0fc93f58b39599a9fd9248136c65" id="r_a037e0fc93f58b39599a9fd9248136c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_a037e0fc93f58b39599a9fd9248136c65.html#a037e0fc93f58b39599a9fd9248136c65">MLV_load_music</a> (const char *file_music)</td></tr>
+<tr class="memdesc:a037e0fc93f58b39599a9fd9248136c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge un ficher contenant de la musique en mémoire.  <br /></td></tr>
+<tr class="memitem:a94ff2df762e320951ff1f7f1e416f6e2" id="r_a94ff2df762e320951ff1f7f1e416f6e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_a94ff2df762e320951ff1f7f1e416f6e2.html#a94ff2df762e320951ff1f7f1e416f6e2">MLV_free_music</a> (<a class="el" href="#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a> *music)</td></tr>
+<tr class="memdesc:a94ff2df762e320951ff1f7f1e416f6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ferme un morceau de musique chargé en mémoire.  <br /></td></tr>
+<tr class="memitem:ab4fa9f36393225dfbb65d58e8f21b3ba" id="r_ab4fa9f36393225dfbb65d58e8f21b3ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_ab4fa9f36393225dfbb65d58e8f21b3ba.html#ab4fa9f36393225dfbb65d58e8f21b3ba">MLV_play_music</a> (const <a class="el" href="#ac8b060333ed8b2a912cbfe3ef75a60e9">MLV_Music</a> *music, float volume, int loop)</td></tr>
+<tr class="memdesc:ab4fa9f36393225dfbb65d58e8f21b3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joue un morceau de musique qui est chargée en mémoire.  <br /></td></tr>
+<tr class="memitem:aa414ad97d527410805cebae5f00dabce" id="r_aa414ad97d527410805cebae5f00dabce"><td class="memItemLeft" align="right" valign="top"><a id="aa414ad97d527410805cebae5f00dabce" name="aa414ad97d527410805cebae5f00dabce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_stop_music</b> ()</td></tr>
+<tr class="memdesc:aa414ad97d527410805cebae5f00dabce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrête toutes les musiques. <br /></td></tr>
+<tr class="memitem:a18edd237e90f3a85fe5cf1b02bf44698" id="r_a18edd237e90f3a85fe5cf1b02bf44698"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_a18edd237e90f3a85fe5cf1b02bf44698.html#a18edd237e90f3a85fe5cf1b02bf44698">MLV_load_sound</a> (const char *file_sound)</td></tr>
+<tr class="memdesc:a18edd237e90f3a85fe5cf1b02bf44698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge un ficher contenant un échantillon sonore en mémoire.  <br /></td></tr>
+<tr class="memitem:ad3c1db9fc9729b31fa994dcf792f03c3" id="r_ad3c1db9fc9729b31fa994dcf792f03c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_ad3c1db9fc9729b31fa994dcf792f03c3.html#ad3c1db9fc9729b31fa994dcf792f03c3">MLV_free_sound</a> (<a class="el" href="#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a> *sound)</td></tr>
+<tr class="memdesc:ad3c1db9fc9729b31fa994dcf792f03c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ferme un échantillon sonore chargé en mémoire.  <br /></td></tr>
+<tr class="memitem:a1f3364260a5aa829d93d52c2a4c11e5f" id="r_a1f3364260a5aa829d93d52c2a4c11e5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__audio_8h_a1f3364260a5aa829d93d52c2a4c11e5f.html#a1f3364260a5aa829d93d52c2a4c11e5f">MLV_play_sound</a> (const <a class="el" href="#a1f1dcb3e422bf7ae8fb84fd2be75e1c5">MLV_Sound</a> *sound, float volume)</td></tr>
+<tr class="memdesc:a1f3364260a5aa829d93d52c2a4c11e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joue un échantillon sonore chargé en mémoire.  <br /></td></tr>
+<tr class="memitem:a9d6c93448c3ffded1d52d612aea8c542" id="r_a9d6c93448c3ffded1d52d612aea8c542"><td class="memItemLeft" align="right" valign="top"><a id="a9d6c93448c3ffded1d52d612aea8c542" name="a9d6c93448c3ffded1d52d612aea8c542"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_stop_all_sounds</b> ()</td></tr>
+<tr class="memdesc:a9d6c93448c3ffded1d52d612aea8c542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrête tous les échantillons sonores. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce fichier définit les prototypes des fonctions permettant de faire jouer de la musique et des échantillons sonores à l'aide de la bibliothèque MLV. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Adrien Boussicault </dd>
+<dd>
+Marc Zipstein </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

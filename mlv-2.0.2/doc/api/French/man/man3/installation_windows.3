@@ -1,0 +1,189 @@
+.TH "installation_windows" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+installation_windows \- Installer MLV sous Windows 
+.PP
+Pour compiler votre programme sous Windows, vous pouvez utiliser différents environnements de développement\&. Nous vous proposons, au choix l'un des deux environnements suivants :
+
+.PP
+.IP "\(bu" 2
+\fBInstaller MLV avec Dev-C++\fP
+.IP "\(bu" 2
+\fBInstaller MLV avec Code:Blocks\fP (Ne fonctionne plus, pour l'instant - Utilisez dec-cpp à la place)
+.PP
+
+.PP
+Si vous ne savez pas quel environnement choisir, nous vous conseillons d'utiliser Dev-C++ qui est un peu plus simple à utiliser\&.
+
+.PP
+Attention: Il faut savoir que la bibliothèque mlv-2\&.0\&.2 fonctionne actuellement avec Windows 2000, NT, XP et SEVEN, mais pas avec windows VISTA\&. Sous windows, la croix d'arrêt des fenêtres ne fonctionne pas toujours correctement\&.
+.SH "Installer MLV avec Dev-C++"
+.PP
+Nous allons expliquer comment installer MLV avec Dev-C++\&. Commencez par télécharger le programme d'installation \fRdevcpp-4\&.9\&.9\&.2_setup\&.exe\fP et installez-le sur votre ordinateur\&.
+
+.PP
+Une fois l'installation terminée, vous allez télécharger deux projets pour Dev-c++ qui utilisent la bibliothèque MLV\&. Pour cela, récupérez le fichier : \fRmlv-2\&.0\&.2-dev-cpp\&.zip\fP\&.
+
+.PP
+Une fois le fichier téléchargé, décompressez-le où vous le souhaitez\&. Vous devez obtenir un dossier qui contient les fichiers suivants: 
+.PP
+.nf
+mlv-0\&.6\&.692-dev-cpp
+|-- documentation
+|   |-- English\\
+|   |-- French\\
+|   `-- Spanish\\
+|-- MLV_examples
+|   |-- beginner_01_hello_world\&.dev
+|   |-- beginner_02_shapes\&.dev
+|   |-- beginner_03_random\&.dev
+|   |-- beginner_04_texts_and_boxes\&.dev
+|   |-- beginner_05_mouse\&.dev
+|   |-- beginner_06_keyboard\&.dev
+|   |-- beginner_07_input_box\&.dev
+|   |-- beginner_08_mouse_keyboard_timer\&.dev
+|   |-- beginner_09_colors\&.dev
+|   |-- beginner_10_library_informations\&.dev
+|   |-- medium_01_keyboard_events\&.dev
+|   |-- medium_02_mouse_events\&.dev
+|   |-- medium_03_input_box_events\&.dev
+|   |-- medium_04_events\&.dev
+|   |-- medium_05_exit\&.dev
+|   |-- medium_06_colors\&.dev
+|   |-- medium_07_time\&.dev
+|   |-- medium_08_full_screen\&.dev
+|   |-- medium_09_keyboard_accents\&.dev
+|   |-- medium_10_mouse_or_keyboard_access\&.dev
+|   |-- medium_11_keys_codes\&.dev
+|   |-- medium_12_desktop_size\&.dev
+|   |-- advanced_01_texts_and_boxes\&.dev
+|   |-- advanced_02_font\&.dev
+|   |-- advanced_03_music\&.dev
+|   |-- advanced_04_sound\&.dev
+|   |-- advanced_05_playlist\&.dev
+|   |-- advanced_06_image\&.dev
+|   |-- advanced_07_transparency\&.dev
+|   |-- advanced_08_zone_click\&.dev
+|   |-- advanced_09_animation\&.dev
+|   |-- advanced_10_read_xml_file\&.dev
+|   |-- advanced_11_animation_book\&.dev
+|   |-- advanced_12_paths\&.dev
+|   |-- gpl\&.txt
+|   |-- final_product\\
+|   |-- include\\
+|   |-- lib\\
+|   |-- obj\\
+|   `-- sources\\
+`-- my_project
+    |-- my_project\&.dev
+    |-- gpl\&.txt
+    |-- final_product\\
+    |-- include\\
+    |-- lib\\
+    |-- obj\\
+    `-- sources\\
+
+.fi
+.PP
+
+.PP
+Éxécutez le programme \fIdevcpp\&.exe\fP et ouvrez les projets situés dans le dossier MLV_example\&. Ce sont des exemples d'utilisation de la bibliothèque MLV\&.
+
+.PP
+Vous pouvez compiler puis éxécuter ces différents projets en utilisant la barre d'icône du programme\&.
+
+.PP
+Pour créer votre propre projet, recopiez le répertoire, \fImon_projet\fP, éditez le fichier \fImon_projet\&.dev\fP et adaptez le à vos besoins\&.
+
+.PP
+Pour distribuer le programme que vous avez obtenu, il vous suffit de copier le répertoire \fIfinal_product\fP qui se trouve dans le répertoire de votre projet\&. Le programme situé dans ce répertoire est autonome et ne nécessite pas d'avoir Dev-C++ installé pour fonctionner\&.
+.SH "Installer MLV avec Code:Blocks"
+.PP
+Actuellement cette partie ne fonctionne plus\&. Utilisez dec-cpp\&.
+
+.PP
+Nous allons expliquer comment installer MLV avec Code:Blocks\&. Commencez par télécharger le programme d'installation \fRcodeblocks-8\&.02mingw-setup\&.exe\fP et installez-le sur votre ordinateur\&.
+
+.PP
+Une fois l'installation terminée, vous allez télécharger deux projets pour Code::Blocks qui utilisent la bibliothèque MLV\&. Pour cela, récupérez le fichier : \fRmlv-2\&.0\&.2-code_blocks\&.zip\fP\&.
+
+.PP
+Une fois le fichier téléchargé, décompressez-le où vous le souhaitez\&. Vous devez obtenir un dossier qui contient les fichiers suivants: 
+.PP
+.nf
+mlv-0\&.6\&.692-code_blocks
+|-- documentation
+|   |-- English
+|   |-- French
+|   `-- Spanish
+|-- MLV_examples
+|   |-- beginner_01_hello_world\&.cbp
+|   |-- beginner_02_shapes\&.cbp
+|   |-- beginner_03_random\&.cbp
+|   |-- beginner_04_texts_and_boxes\&.cbp
+|   |-- beginner_05_mouse\&.cbp
+|   |-- beginner_06_keyboard\&.cbp
+|   |-- beginner_07_input_box\&.cbp
+|   |-- beginner_08_mouse_keyboard_timer\&.cbp
+|   |-- beginner_09_colors\&.cbp
+|   |-- beginner_10_library_informations\&.cbp
+|   |-- medium_01_keyboard_events\&.cbp
+|   |-- medium_02_mouse_events\&.cbp
+|   |-- medium_03_input_box_events\&.cbp
+|   |-- medium_04_events\&.cbp
+|   |-- medium_05_exit\&.cbp
+|   |-- medium_06_colors\&.cbp
+|   |-- medium_07_time\&.cbp
+|   |-- medium_08_full_screen\&.cbp
+|   |-- medium_09_keyboard_accents\&.cbp
+|   |-- medium_10_mouse_or_keyboard_access\&.cbp
+|   |-- medium_11_keys_codes\&.cbp
+|   |-- medium_12_desktop_size\&.cbp
+|   |-- advanced_01_texts_and_boxes\&.cbp
+|   |-- advanced_02_font\&.cbp
+|   |-- advanced_03_music\&.cbp
+|   |-- advanced_04_sound\&.cbp
+|   |-- advanced_05_playlist\&.cbp
+|   |-- advanced_06_image\&.cbp
+|   |-- advanced_07_transparency\&.cbp
+|   |-- advanced_08_zone_click\&.cbp
+|   |-- advanced_09_animation\&.cbp
+|   |-- advanced_10_read_xml_file\&.cbp
+|   |-- advanced_11_animation_book\&.cbp
+|   |-- advanced_12_paths\&.cbp
+|   |-- gpl\&.txt
+|   |-- final_product/
+|   |-- include/
+|   |-- lib/
+|   |-- obj/
+|   `-- sources/
+`-- my_project
+    |-- gpl\&.txt
+    |-- final_product/
+    |-- include/
+    |-- lib/
+    |-- my_project\&.cbp
+    |-- obj/
+    `-- sources/
+
+.fi
+.PP
+
+.PP
+Éxécutez le programme \fIcodeblocks\&.exe\fP et ouvrez les projets situés dans le dossier MLV_example\&. Ce sont des exemples d'utilisation de la bibliothèque MLV\&.
+
+.PP
+Vous pouvez compiler puis éxécuter ces différents projets en cliquant respectivement sur la roue dentée et le triangle de lecture\&.
+
+.PP
+Pour créer votre propre projet, ouvrez le projet situé dans le répertoire, \fImon_projet\fP\&. Puis sauvegardez le projet comme un "user template"\&.
+
+.PP
+Une fois fait, vous pouvez créer un nouveau projet en utilisant ce template\&. Attention ! Vous devez créer ce projet dans le même répertoire que le répertoire mon_projet !
+
+.PP
+Si vous voulez créer votre projet dans un nouveau répertoire, alors vous devez recopier intégralement le contenu de \fImon_projet\fP et le placer dans le nouveau répertoire\&. Vous pourez alors obtenir votre nouveau projet en utilisant le template créé précédement\&.
+
+.PP
+Pour distribuer le programme que vous avez obtenu, il vous suffit de copier le répertoire \fIfinal_product\fP qui se trouve dans le répertoire de votre projet\&. Le programme situé dans ce répertoire est autonome et ne nécessite pas d'avoir Code:Blocks installé pour fonctionner\&. 

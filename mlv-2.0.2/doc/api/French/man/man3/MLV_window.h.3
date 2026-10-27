@@ -1,0 +1,440 @@
+.TH "MLV_window.h" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_window.h \- Ce fichier définit les prototypes des fonctions permettant de créer, initialiser et fermer des fenêtres\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMLV_create_window\fP (const char *window_name, const char *icone_name, unsigned int width, unsigned int height)"
+.br
+.RI "Créé une fenêtre dont la taille, et les différents noms sont passés en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_create_window_with_default_font\fP (const char *window_name, const char *icone_name, unsigned int width, unsigned int height, const char *path_to_font, unsigned int size_font)"
+.br
+.RI "Même chose que \fBMLV_create_window()\fP, mais en utilisant une fonte de caractères particulière\&. "
+.ti -1c
+.RI "void \fBMLV_change_default_font\fP (const char *path_to_font, unsigned int size_font)"
+.br
+.RI "Change la fonte de caractères par défault de la bibliothèque MLV\&. "
+.ti -1c
+.RI "void \fBMLV_create_full_screen_window\fP (const char *window_name, const char *icone_name, unsigned int width, unsigned int height)"
+.br
+.RI "Même chose que \fBMLV_create_window()\fP, mais configure la fenêtre en mode plein écran\&. "
+.ti -1c
+.RI "void \fBMLV_create_full_screen_window_with_default_font\fP (const char *window_name, const char *icone_name, unsigned int width, unsigned int height, const char *path_to_font, unsigned int size_font)"
+.br
+.RI "Même chose que \fBMLV_create_window()\fP, mais configure la fenêtre en mode plein écran\&. "
+.ti -1c
+.RI "void \fBMLV_enable_full_screen\fP ()"
+.br
+.RI "Affiche la fenêtre en plein ecran\&. "
+.ti -1c
+.RI "void \fBMLV_disable_full_screen\fP ()"
+.br
+.RI "Désactve le mode plein écran de la fenêtre\&. "
+.ti -1c
+.RI "int \fBMLV_is_full_screen\fP ()"
+.br
+.RI "Test si l'affichage est en mode plein écran ou en mode fenêtre\&. "
+.ti -1c
+.RI "void \fBMLV_change_window_size\fP (unsigned int width, unsigned int height)"
+.br
+.RI "Change la taille de la fenêtre\&. "
+.ti -1c
+.RI "void \fBMLV_change_window_caption\fP (const char *window_name, const char *icone_name)"
+.br
+.RI "Change les intitulés de la fenêtre principale\&. "
+.ti -1c
+.RI "void \fBMLV_get_window_size\fP (unsigned int *width, unsigned int *height)"
+.br
+.RI "Renvoie dans les paramètres, la hauteur et la largeur de la fentre\&. "
+.ti -1c
+.RI "int \fBMLV_get_window_height\fP ()"
+.br
+.RI "Retourne la hauteur de la fenêtre\&. "
+.ti -1c
+.RI "int \fBMLV_get_window_width\fP ()"
+.br
+.RI "Retourne la largeur de la fenêtre\&. "
+.ti -1c
+.RI "void \fBMLV_clear_window\fP (\fBMLV_Color\fP color)"
+.br
+.RI "Éfface la fenêtre et la remplace par un monochrome de la couleur donnée en paramètre\&. "
+.ti -1c
+.RI "void \fBMLV_free_window\fP ()"
+.br
+.RI "Ferme la fenêtre de la bibliothèque MLV\&. "
+.ti -1c
+.RI "void \fBMLV_actualise_window\fP ()"
+.br
+.RI "Actualise l'affichage de la fenêtre\&. "
+.ti -1c
+.RI "void \fBMLV_update_window\fP ()"
+.br
+.RI "Met à jour l'affichage de la fenêtre\&. "
+.ti -1c
+.RI "void \fBMLV_execute_at_exit\fP (void(*function)(void *), void *data)"
+.br
+.RI "Exécute la fonction de call back donnée en paramètre lorsque le système envoie un signal d'arrêt, ou lorsque l'utilisateur clique sur la croix de la fenêtre\&. "
+.ti -1c
+.RI "void \fBMLV_get_desktop_size\fP (unsigned int *width, unsigned int *height)"
+.br
+.RI "Renvoie dans les paramètres, la hauteur et la largeur de l'environement de bureau de l'ordinateur\&. "
+.ti -1c
+.RI "int \fBMLV_get_desktop_height\fP ()"
+.br
+.RI "Renvoie la hauteur de l'environement de bureau de l'ordinateur\&. "
+.ti -1c
+.RI "int \fBMLV_get_desktop_width\fP ()"
+.br
+.RI "Renvoie la largeur de l'environement de bureau de l'ordinateur\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit les prototypes des fonctions permettant de créer, initialiser et fermer des fenêtres\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein 
+.RE
+.PP
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void MLV_actualise_window ()"
+
+.PP
+Actualise l'affichage de la fenêtre\&. 
+.br
+ 
+
+.PP
+Vois La fonction MLV_update_window
+
+.PP
+Lorsque vous utilisez des fonctions de dessins, les différents changements effectués ne sont pas visibles\&. Pour les afficher vous devez utiliser cette fonction\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBadvanced/02_font\&.c\fP, \fBadvanced/04_sound\&.c\fP, \fBadvanced/05_playlist\&.c\fP, \fBadvanced/06_image\&.c\fP, \fBadvanced/07_transparency\&.c\fP, \fBadvanced/08_zone_click\&.c\fP, \fBadvanced/09_animation\&.c\fP, \fBadvanced/11_animation_book\&.c\fP, \fBbeginner/01_hello_world\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, \fBbeginner/05_mouse\&.c\fP, \fBbeginner/06_keyboard\&.c\fP, \fBbeginner/07_input_box\&.c\fP, \fBbeginner/08_mouse_keyboard_timer\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBbeginner/10_library_informations\&.c\fP, \fBmedium/01_keyboard_events\&.c\fP, \fBmedium/02_mouse_events\&.c\fP, \fBmedium/03_input_box_events\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/06_colors\&.c\fP, \fBmedium/07_time\&.c\fP, \fBmedium/08_full_screen\&.c\fP, \fBmedium/09_keyboard_accents\&.c\fP, \fBmedium/10_mouse_or_keyboard_access\&.c\fP, \fBmedium/11_keys_codes\&.c\fP, et \fBmedium/12_desktop_size\&.c\fP\&.
+.SS "void MLV_change_default_font (const char * path_to_font, unsigned int size_font)"
+
+.PP
+Change la fonte de caractères par défault de la bibliothèque MLV\&. 
+.br
+ 
+
+.PP
+Cette fonction change la fonte de caractères par défault de la bibliothèque\&. Cette fonction ne peux s'exécuter qu'après avoir initialisé la bibliothèque MLV en créant une fenêtre à l'aide de la fonction \fBMLV_create_window()\fP\&. Cette fonction n'a pas de sens si vous ne souhaitez pas changer de fontes plusieurs fois durant l'exécution de votre programme\&. Si vous n'utilisez qu'une seule fonte de caractères, il vaut mieux l'indiquer à la bibliothèque MLV lors de la création de la fenêtre en utilisant la fonction: \fBMLV_create_window_with_default_font()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIpath_to_font\fP Le chemin d'accès vers une fonte de caratères au standard "TrueType" (fichiers d'extension \&.ttf)\&. 
+.br
+\fIsize_font\fP La taille de la fonte de caractères\&. 
+.RE
+.PP
+
+.SS "void MLV_change_window_caption (const char * window_name, const char * icone_name)"
+
+.PP
+Change les intitulés de la fenêtre principale\&. 
+.br
+ 
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwindow_name\fP Intitulé apparaissaissant sur la barre de la fenêtre\&. 
+.br
+\fIicone_name\fP Intitulé apparaissaissant dans la barre des tâches\&. 
+.RE
+.PP
+
+.SS "void MLV_change_window_size (unsigned int width, unsigned int height)"
+
+.PP
+Change la taille de la fenêtre\&. 
+.br
+ 
+
+.PP
+Si la fenêtre est configurée en mode plein ecran, l'application reste alors en mode plein écran\&. Pour que l'application soit en plein écran, il faut que la taille de la fenêtre soit compatible avec la résolution de l'écran\&. De plus, en mode plein écran, la taille de la fenêtre correspond à la résolution de l'image sur l'écran\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwidth\fP la largeur de la fenêtre 
+.br
+\fIheight\fP la hauteur de la fenêtre 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/06_image\&.c\fP, \fBadvanced/08_zone_click\&.c\fP, et \fBmedium/08_full_screen\&.c\fP\&.
+.SS "void MLV_clear_window (\fBMLV_Color\fP color)"
+
+.PP
+Éfface la fenêtre et la remplace par un monochrome de la couleur donnée en paramètre\&. 
+.br
+ 
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcolor\fP La couleur du fond de la fênetre\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/07_transparency\&.c\fP, \fBadvanced/09_animation\&.c\fP, \fBadvanced/11_animation_book\&.c\fP, \fBbeginner/08_mouse_keyboard_timer\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBmedium/01_keyboard_events\&.c\fP, \fBmedium/02_mouse_events\&.c\fP, \fBmedium/03_input_box_events\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/06_colors\&.c\fP, \fBmedium/07_time\&.c\fP, \fBmedium/08_full_screen\&.c\fP, \fBmedium/10_mouse_or_keyboard_access\&.c\fP, et \fBmedium/11_keys_codes\&.c\fP\&.
+.SS "void MLV_create_full_screen_window (const char * window_name, const char * icone_name, unsigned int width, unsigned int height)"
+
+.PP
+Même chose que \fBMLV_create_window()\fP, mais configure la fenêtre en mode plein écran\&. 
+.br
+ 
+
+.PP
+\fBBogue\fP
+.RS 4
+Même bogues que \fBMLV_create_window()\fP\&.
+.RE
+.PP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwindow_name\fP Le nom de la fenêtre\&. 
+.br
+\fIicone_name\fP Le nom de l'icône de la fenêtre\&. 
+.br
+\fIwidth\fP La largeur de la fenêtre ( en mode plein écran, cette valeur correspond à la coordonnée en X de la résolution de l'image )\&. 
+.br
+\fIheight\fP La hauteur de la fenêtre ( en mode plein écran, cela correspond à la coordonnée en Y de la résolution de l'image )\&. 
+.RE
+.PP
+
+.SS "void MLV_create_full_screen_window_with_default_font (const char * window_name, const char * icone_name, unsigned int width, unsigned int height, const char * path_to_font, unsigned int size_font)"
+
+.PP
+Même chose que \fBMLV_create_window()\fP, mais configure la fenêtre en mode plein écran\&. 
+.br
+ 
+
+.PP
+\fBBogue\fP
+.RS 4
+Même bogues que \fBMLV_create_window()\fP\&.
+.RE
+.PP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwindow_name\fP Le nom de la fenêtre\&. 
+.br
+\fIicone_name\fP Le nom de l'icône de la fenêtre\&. 
+.br
+\fIwidth\fP La largeur de la fenêtre ( en mode plein écran, cette valeur correspond à la coordonnée en X de la résolution de l'image )\&. 
+.br
+\fIheight\fP La hauteur de la fenêtre ( en mode plein écran, cela correspond à la coordonnée en Y de la résolution de l'image )\&. 
+.br
+\fIpath_to_font\fP Le chemin d'accès vers une fonte de caratères au standard "TrueType" (fichiers d'extension \&.ttf)\&. 
+.br
+\fIsize_font\fP La taille de la fonte de caractères\&. 
+.RE
+.PP
+
+.SS "void MLV_create_window (const char * window_name, const char * icone_name, unsigned int width, unsigned int height)"
+
+.PP
+Créé une fenêtre dont la taille, et les différents noms sont passés en paramètres\&. 
+.br
+ 
+
+.PP
+Cette fonction initialise la bibliothèque MLV\&. Un programme donné ne peut pas ouvrir plus d'une fenêtre à la fois\&. Les paramètres largeur et hauteur peuvent éventuellement prendre des valeurs négatives\&. Dans ce cas, la fenêtre est dessinée en plein écran\&.
+
+.PP
+\fBBogue\fP
+.RS 4
+BOGUES WINDOWS ET MACOSX UNIQUEMENT
+.br
+
+.br
+ Sous Windows uniquement, la fenêtre crée ne peut pas toujours être fermée à l'aide de la croix\&. En effet, la bibliothèque MLV implémente une fermeture automatique de la fenêtre lorsque l'utilisateur utilise la croix\&. Or, ce mécanisme utilise les threads SDL qui ne sont malheureusement pas bien supportés sous Windows et MacOSX\&.
+.br
+
+.br
+ En fait, la bibliothèque MLV utilise un second thread pour récuperer en permanance tous les évènements SDL de la pile et pour les traiter au fur et à mesure de leurs apparitions\&. OR, sous Windos et Mac OS X, comme les threads ne fonctionnent pas, la bibliothèque ne peux pas lire les évènements systèmes comme ceux de la fermeture de la fenêtre\&. Elle n'est donc plus informée de ce qui ce passe\&. Pour permettre à la bibliothèque de récupérer ces informations, il vous suffit de demander un évènement à l'aide de la fonction : \fBMLV_get_event()\fP\&. Cela obligera la bibliothèque MLV à dépiler et à traiter tous les évènements SDL de la pile\&. Cela aura pour conséquence de traiter l'évènement système de la fermeture de la fenêtre\&. Dans l'implémentation des fonctions : \fBMLV_wait_keyboard()\fP, \fBMLV_wait_mouse()\fP, etc \&.\&.\&., nous utilisons la fonction \fBMLV_get_event()\fP\&. C'est pourquoi, la croix fonctionne correctement lorsque le programme est en attente d'une information provenant de l'utilisateur\&.
+.RE
+.PP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwindow_name\fP Le nom de la fenêtre\&. 
+.br
+\fIicone_name\fP Le nom de l'icône de la fenêtre\&. 
+.br
+\fIwidth\fP La largeur de la fenêtre\&. 
+.br
+\fIheight\fP La hauteur de la fenêtre\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBadvanced/02_font\&.c\fP, \fBadvanced/04_sound\&.c\fP, \fBadvanced/05_playlist\&.c\fP, \fBadvanced/06_image\&.c\fP, \fBadvanced/07_transparency\&.c\fP, \fBadvanced/08_zone_click\&.c\fP, \fBadvanced/09_animation\&.c\fP, \fBadvanced/11_animation_book\&.c\fP, \fBbeginner/01_hello_world\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, \fBbeginner/05_mouse\&.c\fP, \fBbeginner/06_keyboard\&.c\fP, \fBbeginner/07_input_box\&.c\fP, \fBbeginner/08_mouse_keyboard_timer\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBbeginner/10_library_informations\&.c\fP, \fBmedium/01_keyboard_events\&.c\fP, \fBmedium/02_mouse_events\&.c\fP, \fBmedium/03_input_box_events\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/06_colors\&.c\fP, \fBmedium/07_time\&.c\fP, \fBmedium/08_full_screen\&.c\fP, \fBmedium/09_keyboard_accents\&.c\fP, \fBmedium/10_mouse_or_keyboard_access\&.c\fP, \fBmedium/11_keys_codes\&.c\fP, et \fBmedium/12_desktop_size\&.c\fP\&.
+.SS "void MLV_create_window_with_default_font (const char * window_name, const char * icone_name, unsigned int width, unsigned int height, const char * path_to_font, unsigned int size_font)"
+
+.PP
+Même chose que \fBMLV_create_window()\fP, mais en utilisant une fonte de caractères particulière\&. 
+.br
+ 
+
+.PP
+\fBBogue\fP
+.RS 4
+Même bogues que la fonction \fBMLV_create_window()\fP\&.
+.RE
+.PP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwindow_name\fP Le nom de la fenêtre\&. 
+.br
+\fIicone_name\fP Le nom de l'icône de la fenêtre\&. 
+.br
+\fIwidth\fP La largeur de la fenêtre\&. 
+.br
+\fIheight\fP La hauteur de la fenêtre\&. 
+.br
+\fIpath_to_font\fP Le chemin d'accès vers une fonte de caratères au standard 'TrueType' (fichiers d'extension \&.ttf)\&. 
+.br
+\fIsize_font\fP La taille de la fonte de caractères\&. la hauteur de la fenêtre\&. 
+.RE
+.PP
+
+.SS "void MLV_enable_full_screen ()"
+
+.PP
+Affiche la fenêtre en plein ecran\&. 
+.br
+ 
+
+.PP
+La résolution de l'image est donnée alors par la taille de l'image\&. Pour que l'application soit en plein écran, il faut que la taille de la fenêtre soit compatible avec la résolution de l'écran\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBmedium/08_full_screen\&.c\fP\&.
+.SS "void MLV_execute_at_exit (void(* function )(void *), void * data)"
+
+.PP
+Exécute la fonction de call back donnée en paramètre lorsque le système envoie un signal d'arrêt, ou lorsque l'utilisateur clique sur la croix de la fenêtre\&. 
+.br
+ 
+
+.PP
+La fonction de call back est alors exécutée avec en paramêtre un pointeur vers une structure de donnée qui est aussi donné en paramètre à la fonction \fBMLV_execute_at_exit()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIfunction\fP Le pointeur de la fonction de call back qui doit être exécutée\&. 
+.br
+\fIdata\fP La Donnée à passer en paramètre à la fonction de call back lors de son exécution\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBmedium/05_exit\&.c\fP\&.
+.SS "void MLV_free_window ()"
+
+.PP
+Ferme la fenêtre de la bibliothèque MLV\&. Cette fonction libère correctement toutes les données qui ont été crées par la bibliothèque MLV 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBadvanced/02_font\&.c\fP, \fBadvanced/04_sound\&.c\fP, \fBadvanced/05_playlist\&.c\fP, \fBadvanced/06_image\&.c\fP, \fBadvanced/07_transparency\&.c\fP, \fBadvanced/08_zone_click\&.c\fP, \fBadvanced/09_animation\&.c\fP, \fBadvanced/11_animation_book\&.c\fP, \fBbeginner/01_hello_world\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, \fBbeginner/05_mouse\&.c\fP, \fBbeginner/06_keyboard\&.c\fP, \fBbeginner/07_input_box\&.c\fP, \fBbeginner/08_mouse_keyboard_timer\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBbeginner/10_library_informations\&.c\fP, \fBmedium/01_keyboard_events\&.c\fP, \fBmedium/02_mouse_events\&.c\fP, \fBmedium/03_input_box_events\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/06_colors\&.c\fP, \fBmedium/07_time\&.c\fP, \fBmedium/08_full_screen\&.c\fP, \fBmedium/09_keyboard_accents\&.c\fP, \fBmedium/10_mouse_or_keyboard_access\&.c\fP, \fBmedium/11_keys_codes\&.c\fP, et \fBmedium/12_desktop_size\&.c\fP\&.
+.SS "void MLV_get_desktop_size (unsigned int * width, unsigned int * height)"
+
+.PP
+Renvoie dans les paramètres, la hauteur et la largeur de l'environement de bureau de l'ordinateur\&. 
+.br
+ 
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwidth\fP La largeur du bureau\&. 
+.br
+\fIheight\fP La hauteur du bureau\&. 
+.RE
+.PP
+
+.SS "void MLV_get_window_size (unsigned int * width, unsigned int * height)"
+
+.PP
+Renvoie dans les paramètres, la hauteur et la largeur de la fentre\&. 
+.br
+ 
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIwidth\fP La largeur de la fenêtre\&. 
+.br
+\fIheight\fP La hauteur de la fenêtre\&. 
+.RE
+.PP
+
+.SS "int MLV_is_full_screen ()"
+
+.PP
+Test si l'affichage est en mode plein écran ou en mode fenêtre\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+Renvoie 1 si l'affichage est en mode plein écran, 0 sinon\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBmedium/08_full_screen\&.c\fP\&.
+.SS "void MLV_update_window ()"
+
+.PP
+Met à jour l'affichage de la fenêtre\&. 
+.br
+ 
+
+.PP
+Lorsque vous utilisez des fonctions de dessins, les différents changements effectués ne sont pas visibles\&. Pour les afficher vous devez utiliser cette fonction\&. 
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

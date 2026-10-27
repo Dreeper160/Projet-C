@@ -1,0 +1,328 @@
+.TH "MLV_xml.h" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_xml.h \- Ce fichier définit les prototypes des fonctions permettant de lire des fichiers xml\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _MLV_Xml \fBMLV_Xml\fP"
+.br
+.RI "Définit le type de donnée stockée au format xml dans la bibliothèque MLV\&. "
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMLV_Xml_error\fP { \fBMLV_XML_NONE\fP, \fBMLV_XML_THE_FIELD_DOESNT_EXIST\fP, \fBMLV_XML_THE_FIELD_IS_NOT_A_REAL\fP, \fBMLV_XML_THE_FIELD_IS_NOT_AN_INTEGER\fP, \fBMLV_XML_THE_FIELD_IS_TOO_BIG\fP }"
+.br
+.RI "Énumère les différents codes d'erreurs que l'on peut rencontrer lorsque l'ordinateur lit un document xml\&. "
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBMLV_Xml\fP * \fBMLV_load_xml\fP (const char *xml_file_path)"
+.br
+.RI "Charge en mémoire un fichier au format xml\&. "
+.ti -1c
+.RI "void \fBMLV_free_xml\fP (\fBMLV_Xml\fP *xml_data)"
+.br
+.RI "Libère la mémoire utilisée par les données du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_string_value_from_xml\fP (const \fBMLV_Xml\fP *xml_data, char **result, const char *xpath,\&.\&.\&.)"
+.br
+.RI "Permet d'accéder à l'interieur d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_integer_value_from_xml\fP (const \fBMLV_Xml\fP *xml_data, int *result, const char *xpath,\&.\&.\&.)"
+.br
+.RI "Permet de récupérer l'entier d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_double_value_from_xml\fP (const \fBMLV_Xml\fP *xml_data, double *result, const char *xpath,\&.\&.\&.)"
+.br
+.RI "Permet de récupérer le reel d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_float_value_from_xml\fP (const \fBMLV_Xml\fP *xml_data, float *result, const char *xpath,\&.\&.\&.)"
+.br
+.RI "Permet de récupérer le réel d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "int \fBMLV_get_number_of_objects_from_xml\fP (const \fBMLV_Xml\fP *xml_data, const char *xpath,\&.\&.\&.)"
+.br
+.RI "Compte le nombre d'objets présents dans le fichier xml verifiant un certain nombre de critères passés en paramètre de la fonction\&. "
+.ti -1c
+.RI "\fBMLV_Xml\fP * \fBMLV_get_xml_object_of\fP (const \fBMLV_Xml\fP *xml_data, const char *xpath,\&.\&.\&.)"
+.br
+.RI "Permet de récupérer un noeud interne de l'arbre représentant le fichier XML\&. "
+.ti -1c
+.RI "void \fBMLV_print_xml\fP (const \fBMLV_Xml\fP *xml_data)"
+.br
+.RI "Écrit sur le terminal le contenu d'un fichier xml\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit les prototypes des fonctions permettant de lire des fichiers xml\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.PP
+Les fichiers xml sont utilisés pour stocker les données nécessaires au fonctionnement d'un programme\&. Ils permettent de modifier facilement l'exécution du programme sans avoir à le modifier\&. En effet, ils sont lisibles par l'homme et par la machine en même temps\&. Ils constituent donc une interface pratique entre l'ordinateur et l'utilisateur\&. 
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBMLV_Xml_error\fP"
+
+.PP
+Énumère les différents codes d'erreurs que l'on peut rencontrer lorsque l'ordinateur lit un document xml\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\f(BIMLV_XML_NONE \fP
+Aucune erreur detectée\&. 
+.TP
+\f(BIMLV_XML_THE_FIELD_DOESNT_EXIST \fP
+Le champs n'existe pas dans le document xml\&. 
+.TP
+\f(BIMLV_XML_THE_FIELD_IS_NOT_A_REAL \fP
+Le champs ne contient pas une chaîne de caractères codant un reel\&. 
+.TP
+\f(BIMLV_XML_THE_FIELD_IS_NOT_AN_INTEGER \fP
+Le champs ne contient pas un chaîne de caractères codant un entier\&. 
+.TP
+\f(BIMLV_XML_THE_FIELD_IS_TOO_BIG \fP
+La chaîne code un réel/entier trop long pour être stocké dans la variable\&. 
+.SH "Documentation des fonctions"
+.PP 
+.SS "void MLV_free_xml (\fBMLV_Xml\fP * xml_data)"
+
+.PP
+Libère la mémoire utilisée par les données du fichier xml\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml a supprimer\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/10_read_xml_file\&.c\fP\&.
+.SS "\fBMLV_Xml_error\fP MLV_get_double_value_from_xml (const \fBMLV_Xml\fP * xml_data, double * result, const char * xpath,  \&.\&.\&.)"
+
+.PP
+Permet de récupérer le reel d'un champs donné du fichier xml\&. Tout comme la fonction \fBMLV_get_string_value_from_xml()\fP, cette fonction peut contenir un nombre variable de paramètres\&. Pour plus d'informations, veuillez lire la documentation de la fonction \fBMLV_get_string_value_from_xml()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers un réel dans lequel le résultat de la fonction sera enregistré\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur (voir \fBMLV_Xml_error\fP) si la fonction n'a pas reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/10_read_xml_file\&.c\fP\&.
+.SS "\fBMLV_Xml_error\fP MLV_get_float_value_from_xml (const \fBMLV_Xml\fP * xml_data, float * result, const char * xpath,  \&.\&.\&.)"
+
+.PP
+Permet de récupérer le réel d'un champs donné du fichier xml\&. Tout comme la fonction \fBMLV_get_string_value_from_xml()\fP, cette fonction peut contenir un nombre variable de paramètres\&. Pour plus d'informations, veuillez lire la documentation de la fonction \fBMLV_get_string_value_from_xml()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers un réel dans lequel le résultat de la fonction sera enregistré\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur (voir \fBMLV_Xml_error\fP) si la fonction n'a pas reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Xml_error\fP MLV_get_integer_value_from_xml (const \fBMLV_Xml\fP * xml_data, int * result, const char * xpath,  \&.\&.\&.)"
+
+.PP
+Permet de récupérer l'entier d'un champs donné du fichier xml\&. Tout comme la fonction \fBMLV_get_string_value_from_xml()\fP, cette fonction peut contenir un nombre variable de paramètres\&. Pour plus d'informations, veuillez lire la documentation de la fonction \fBMLV_get_string_value_from_xml()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers un entier dans lequel le résultat de la fonction sera enregistré\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur si la fonction n'a pa reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/10_read_xml_file\&.c\fP\&.
+.SS "int MLV_get_number_of_objects_from_xml (const \fBMLV_Xml\fP * xml_data, const char * xpath,  \&.\&.\&.)"
+
+.PP
+Compte le nombre d'objets présents dans le fichier xml verifiant un certain nombre de critères passés en paramètre de la fonction\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fI\&.\&.\&.\fP Les paramètres de la fonction\&.
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Cette fonction renvoie le nombre d'objet ayant pour chemin d'accès "xpath"\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/10_read_xml_file\&.c\fP\&.
+.SS "\fBMLV_Xml_error\fP MLV_get_string_value_from_xml (const \fBMLV_Xml\fP * xml_data, char ** result, const char * xpath,  \&.\&.\&.)"
+
+.PP
+Permet d'accéder à l'interieur d'un champs donné du fichier xml\&. Cette fonction peut contenir un nombre variable de paramètres\&. Comme avec la fonction printf les paramètres suplémentaires, situées après le paramètre xpath, permettent de construire des requêtes xpath évolué\&.
+
+.PP
+Par exemple,
+
+.PP
+.PP
+.nf
+int id_batiment = 2;
+char * type_salle = "informatique"
+int id_salle = 4;
+char* nom_salle;
+MLV_get_string_value_from_xml(
+        xml_data, &(nom_salle),
+     "/batiment[%d]/salle[type=%s][%d]/nom",
+     id_batiment, type_salle, id_salle
+)
+free( nom_salle ); // on oublie pas de libérer la mémoire après avoir 
+                   // utilisé nom_salle
+.fi
+.PP
+
+.PP
+permet de recupérer le contenu du champs "nom" situé dans la 4eme salle informatique du 2eme batiment\&.
+
+.PP
+Attention: Il ne faut pas oublier de libérer la mémoire associée au champs result\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers une addresse vide qui contiendra l'addresse de la chaîne de caractères correspondant au résultat de la fonction\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur si la fonction n'a pa reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/10_read_xml_file\&.c\fP\&.
+.SS "\fBMLV_Xml\fP * MLV_get_xml_object_of (const \fBMLV_Xml\fP * xml_data, const char * xpath,  \&.\&.\&.)"
+
+.PP
+Permet de récupérer un noeud interne de l'arbre représentant le fichier XML\&. Cette fonction n'est pas encore implémentée\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fI\&.\&.\&.\fP Les paramètres de la fonction\&.
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Un noeud interne de l'arbre XML\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Xml\fP * MLV_load_xml (const char * xml_file_path)"
+
+.PP
+Charge en mémoire un fichier au format xml\&. Cette fonction renvoi NULL, lorsque le fichier n'a pas pu être correctement chargé\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_file_path\fP Chemin d'accès du fichier xml\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Le fichier xml lu, analysé et chargé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/10_read_xml_file\&.c\fP\&.
+.SS "void MLV_print_xml (const \fBMLV_Xml\fP * xml_data)"
+
+.PP
+Écrit sur le terminal le contenu d'un fichier xml\&. Cette fonction n'est pas encore implémentée\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fI\&.\&.\&.\fP Les paramètres de la fonction\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Compiler un programme utilisant MLV sous Windows </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Cette page explique comment compiler votre programme de trois façons diférentes:</p><ul>
+<li>la section <a class="el" href="#compilation_dev_cpp">Compilation à l'aide de Dev-C++</a> explique comment le faire avec dev-cpp, un autre IDE.</li>
+<li>la section <a class="el" href="#compilation_code_blocks">Compilation à l'aide de Code::Blocks</a> explique comment compiler votre programme avec Code:Blocks qui est un IDE. (Actuellement cette partie ne fonctionne plus, utilisez dev-cpp à la place)</li>
+<li>la section <a class="el" href="#compilation_gcc">Options de compilation pour gcc</a> explique quelles sont les options de configurations qu'il faut utiliser pour pouvoir compiler votre programme directement avec gcc.</li>
+</ul>
+<p>Si vous ne savez pas quoi choisir, nous vous conseillons de choisir la méthode <a class="el" href="#compilation_dev_cpp">Compilation à l'aide de Dev-C++</a> qui est la méthode la plus simple à mettre en oeuvre.</p>
+<h1 class="doxsection"><a class="anchor" id="compilation_dev_cpp"></a>
+Compilation à l'aide de Dev-C++</h1>
+<p>Comencer par installer la bibliothèque MLV avec Dev-C++ en allant à la page : <a class="el" href="installation_windows.html#windows_dev_cpp">Installer MLV avec Dev-C++</a>.</p>
+<p>Éxécutez le programme <em class="arg">devcpp.exe</em> et ouvrez les projets concernants les exemples de la bibliothèque MLV ( les exemples se trouvent dans le répertoire : <em class="arg">MLV_examples</em>).</p>
+<p>Vous pouvez compiler puis éxécuter ces différents projets en utilisant la barre d'icône du programme.</p>
+<p>Pour créer votre propre projet, recopiez le répertoire, <em class="arg">mon_projet</em>, éditez le fichier <em class="arg">mon_projet.dev</em> et adaptez le pour ce que vous voulez faire.</p>
+<p>Pour distribuer le programme que vous avez obtenu, il vous suffit de copier le répertoire <em class="arg">final_product</em> qui se trouve dans le répertoire de votre projet. Ce répertoire contient toute l'infrastructure nécessaire au bon fonctionnement du programme. Il n'est pas nécessaire d'installer Dec-C++ pour faire fonctionner votre application ainsi crée.</p>
+<h1 class="doxsection"><a class="anchor" id="compilation_code_blocks"></a>
+Compilation à l'aide de Code::Blocks</h1>
+<p>Actuellement cette partie ne fonctionne plus, utilisez dev-cpp à la place !</p>
+<p>Comencez par installer la bibliothèque MLV avec Code::Blocks en allant à la page : <a class="el" href="installation_windows.html#windows_code_blocks">Installer MLV avec Code:Blocks</a>.</p>
+<p>Éxécutez le programme <em class="arg">codeblocks.exe</em> et ouvrez les projets concernants les exemples de la bibliothèque MLV ( les exemples se trouvent dans le répertoire : <em class="arg">MLV_examples</em> ).</p>
+<p>Vous pouvez compiler puis éxécuter ces différents projets en cliquant respectivement sur la roue dentée et le triangle de lecture.</p>
+<p>Pour créer votre propre projet, ouvrez le projet situé dans le répertoire, <em class="arg">mon_projet</em>. Puis sauvegardez le projet comme un "user template".</p>
+<p>Une fois fait, vous pouvez créer un nouveau projet en utilisant ce template. Attention ! Vous devez créer ce projet dans le même répertoire que le répertoire mon_projet !</p>
+<p>Si vous voulez créer votre projet dans un nouveau répertoire, alors vous devez recopier intégralement le contenu de <em class="arg">mon_projet</em> et le placer dans le nouveau répertoire. Vous pourez alors obtenir votre nouveau projet en utilisant le template créé précédement.</p>
+<p>Pour distribuer le programme que vous avez obtenu, il vous suffit de copier le répertoire <em class="arg">final_product</em> qui se trouve dans le répertoire de votre projet. Ce répertoire contient toute l'infrastructure nécessaire au bon fonctionnement du programme. Il n'est pas nécessaire d'installer Dec-C++ pour faire fonctionner votre application ainsi crée.</p>
+<h1 class="doxsection"><a class="anchor" id="compilation_gcc"></a>
+Options de compilation pour gcc</h1>
+<p>Dans cette section, nous expliquons comment configurer les options de gcc pour réaliser un compilation avec gcc.</p>
+<p>Code::block et Dec-C++ utilisent le compilateur gcc. Ainsi, les expliquations qui vont suivre correspondent aux configurations présentes dans les projets Code:blocks et Dev-C++.</p>
+<p>Pour que la compilation de votre programme fonctionne, il faut installer tous les binaries présent dans le paquet mlv-2.0.2-win32.</p>
+<p>Dans ce cas, les options de compilation sout les suivantes :</p><ul>
+<li>Pour la compilation : <pre class="fragment">-I./include </pre></li>
+<li>Pour les flags de l'édition de liens : <pre class="fragment">-L./lib -L./final_product </pre></li>
+<li>Pour les bibliothèques de l'édition de liens : <pre class="fragment">-lMLV-0 -lSDL -lmingw32 -lSDLmain ./lib/libmingwex.a </pre></li>
+</ul>
+<p>Ainsi, si vous avez écrit un programme <em class="arg">demo.c</em>, vous pouvez le compiler en tapant la commande suivante:</p>
+<pre class="fragment">gcc -I./include -Wall -O2 -g -L./lib -L./final_product demo.c -lMLV-0 -lSDL -lmingw32 -lSDLmain ./lib/libmingwex.a -o demo
+</pre> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

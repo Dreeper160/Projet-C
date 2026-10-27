@@ -1,0 +1,4 @@
+libMLV_la-mathematics.lo: mathematics.c /usr/include/stdc-predef.h \
+ mathematics.h
+/usr/include/stdc-predef.h:
+mathematics.h:

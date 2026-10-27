@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier MLV_xml.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce fichier définit les prototypes des fonctions permettant de lire des fichiers xml.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="MLV__xml_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a35ae1c0fc125f8568bab50b5f002fd78" id="r_a35ae1c0fc125f8568bab50b5f002fd78"><td class="memItemLeft" align="right" valign="top"><a id="a35ae1c0fc125f8568bab50b5f002fd78" name="a35ae1c0fc125f8568bab50b5f002fd78"></a>
+typedef struct _MLV_Xml&#160;</td><td class="memItemRight" valign="bottom"><b>MLV_Xml</b></td></tr>
+<tr class="memdesc:a35ae1c0fc125f8568bab50b5f002fd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit le type de donnée stockée au format xml dans la bibliothèque MLV. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:aba8887be420eae556f7d4074d5f8cf40" id="r_aba8887be420eae556f7d4074d5f8cf40"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40">MLV_Xml_error</a> { <br />
+&#160;&#160;<a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40a7a1da5920fd4ab114329bb469e142f9a">MLV_XML_NONE</a>
+, <a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40ace28ba573637f4b3472e13910ff3300f">MLV_XML_THE_FIELD_DOESNT_EXIST</a>
+, <a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40aa0ce5f673715b0f2e9da27e00011f59f">MLV_XML_THE_FIELD_IS_NOT_A_REAL</a>
+, <a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40ab76be4d5db18740969b846ba30f525fa">MLV_XML_THE_FIELD_IS_NOT_AN_INTEGER</a>
+, <br />
+&#160;&#160;<a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40a689a383fd7a71ec423a5d63ea6fa379f">MLV_XML_THE_FIELD_IS_TOO_BIG</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aba8887be420eae556f7d4074d5f8cf40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Énumère les différents codes d'erreurs que l'on peut rencontrer lorsque l'ordinateur lit un document xml.  <a href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40">Plus de détails...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2c499a3b0ea22d3ad1d7c9b88fce16c6" id="r_a2c499a3b0ea22d3ad1d7c9b88fce16c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_a2c499a3b0ea22d3ad1d7c9b88fce16c6.html#a2c499a3b0ea22d3ad1d7c9b88fce16c6">MLV_load_xml</a> (const char *xml_file_path)</td></tr>
+<tr class="memdesc:a2c499a3b0ea22d3ad1d7c9b88fce16c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge en mémoire un fichier au format xml.  <br /></td></tr>
+<tr class="memitem:acfec323734b0816afe7e9e4ec30990ee" id="r_acfec323734b0816afe7e9e4ec30990ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_acfec323734b0816afe7e9e4ec30990ee.html#acfec323734b0816afe7e9e4ec30990ee">MLV_free_xml</a> (<a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data)</td></tr>
+<tr class="memdesc:acfec323734b0816afe7e9e4ec30990ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère la mémoire utilisée par les données du fichier xml.  <br /></td></tr>
+<tr class="memitem:af29286864b5651b438792943e2b7b7a5" id="r_af29286864b5651b438792943e2b7b7a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40">MLV_Xml_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_af29286864b5651b438792943e2b7b7a5.html#af29286864b5651b438792943e2b7b7a5">MLV_get_string_value_from_xml</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data, char **result, const char *xpath,...)</td></tr>
+<tr class="memdesc:af29286864b5651b438792943e2b7b7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'accéder à l'interieur d'un champs donné du fichier xml.  <br /></td></tr>
+<tr class="memitem:a7c806fa1368970962ea96f231dd74eb0" id="r_a7c806fa1368970962ea96f231dd74eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40">MLV_Xml_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_a7c806fa1368970962ea96f231dd74eb0.html#a7c806fa1368970962ea96f231dd74eb0">MLV_get_integer_value_from_xml</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data, int *result, const char *xpath,...)</td></tr>
+<tr class="memdesc:a7c806fa1368970962ea96f231dd74eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récupérer l'entier d'un champs donné du fichier xml.  <br /></td></tr>
+<tr class="memitem:a0ab0000626fbf9739c30f2dec0eb468f" id="r_a0ab0000626fbf9739c30f2dec0eb468f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40">MLV_Xml_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_a0ab0000626fbf9739c30f2dec0eb468f.html#a0ab0000626fbf9739c30f2dec0eb468f">MLV_get_double_value_from_xml</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data, double *result, const char *xpath,...)</td></tr>
+<tr class="memdesc:a0ab0000626fbf9739c30f2dec0eb468f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récupérer le reel d'un champs donné du fichier xml.  <br /></td></tr>
+<tr class="memitem:a139b2de7c84b097f46b109a1da2002e1" id="r_a139b2de7c84b097f46b109a1da2002e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MLV__xml_8h_aba8887be420eae556f7d4074d5f8cf40.html#aba8887be420eae556f7d4074d5f8cf40">MLV_Xml_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_a139b2de7c84b097f46b109a1da2002e1.html#a139b2de7c84b097f46b109a1da2002e1">MLV_get_float_value_from_xml</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data, float *result, const char *xpath,...)</td></tr>
+<tr class="memdesc:a139b2de7c84b097f46b109a1da2002e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récupérer le réel d'un champs donné du fichier xml.  <br /></td></tr>
+<tr class="memitem:ac62e969b6f15d73cc6907ef76cd01eaf" id="r_ac62e969b6f15d73cc6907ef76cd01eaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_ac62e969b6f15d73cc6907ef76cd01eaf.html#ac62e969b6f15d73cc6907ef76cd01eaf">MLV_get_number_of_objects_from_xml</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data, const char *xpath,...)</td></tr>
+<tr class="memdesc:ac62e969b6f15d73cc6907ef76cd01eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre d'objets présents dans le fichier xml verifiant un certain nombre de critères passés en paramètre de la fonction.  <br /></td></tr>
+<tr class="memitem:a8eff5d8bbb74ce43cfd0be20a13d1df2" id="r_a8eff5d8bbb74ce43cfd0be20a13d1df2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_a8eff5d8bbb74ce43cfd0be20a13d1df2.html#a8eff5d8bbb74ce43cfd0be20a13d1df2">MLV_get_xml_object_of</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data, const char *xpath,...)</td></tr>
+<tr class="memdesc:a8eff5d8bbb74ce43cfd0be20a13d1df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récupérer un noeud interne de l'arbre représentant le fichier XML.  <br /></td></tr>
+<tr class="memitem:a67a3eda0366c297f457a043833e165ae" id="r_a67a3eda0366c297f457a043833e165ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__xml_8h_a67a3eda0366c297f457a043833e165ae.html#a67a3eda0366c297f457a043833e165ae">MLV_print_xml</a> (const <a class="el" href="#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a> *xml_data)</td></tr>
+<tr class="memdesc:a67a3eda0366c297f457a043833e165ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrit sur le terminal le contenu d'un fichier xml.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce fichier définit les prototypes des fonctions permettant de lire des fichiers xml. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Adrien Boussicault </dd>
+<dd>
+Marc Zipstein</dd></dl>
+<p>Les fichiers xml sont utilisés pour stocker les données nécessaires au fonctionnement d'un programme. Ils permettent de modifier facilement l'exécution du programme sans avoir à le modifier. En effet, ils sont lisibles par l'homme et par la machine en même temps. Ils constituent donc une interface pratique entre l'ordinateur et l'utilisateur. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

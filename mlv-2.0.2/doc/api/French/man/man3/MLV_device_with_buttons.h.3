@@ -1,0 +1,54 @@
+.TH "MLV_device_with_buttons.h" 3 "Mardi 27 Octobre 2026 16:46:18" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_device_with_buttons.h \- Ce fichier définit des énumérations et des prototypes de fonctions pour manipuler des boutons de différents matériels (bouttons de souris, boutons de claviers, etc \&.\&.\&.)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMLV_Button_state\fP { \fBMLV_PRESSED\fP, \fBMLV_RELEASED\fP }"
+.br
+.RI "Énumère les différents états possibles d'un bouton\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit des énumérations et des prototypes de fonctions pour manipuler des boutons de différents matériels (bouttons de souris, boutons de claviers, etc \&.\&.\&.)\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.SH "Documentation du type de l'énumération"
+.PP 
+.SS "enum \fBMLV_Button_state\fP"
+
+.PP
+Énumère les différents états possibles d'un bouton\&. 
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\f(BIMLV_PRESSED \fP
+Le bouton est en position appuyée 
+.TP
+\f(BIMLV_RELEASED \fP
+Le bouton est en position relachée 
+.PP
+\fBExemples\fP
+.in +1c
+\fBmedium/01_keyboard_events\&.c\fP, \fBmedium/04_events\&.c\fP, et \fBmedium/06_colors\&.c\fP\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

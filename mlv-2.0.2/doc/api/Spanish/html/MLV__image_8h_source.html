@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentación de la biblioteca MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentación</span></a></li>
+		<li><a href="download.html"><span>Descargar</span></a></li>
+		<li><a href="installation.html"><span>Instalación</span></a></li>
+		<li><a href="compilation.html"><span>Compilatción</span></a></li>
+		<li><a href="examples.html"><span>Ejemplos</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Lista de las subrutinas</span></a></li>
+		<li><a href="bug.html"><span>bugs</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>Contactos</span></a></li>
+	</ul>
+</div>
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">MLV_image.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *   Copyright (C) 2010,2011,2012 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef __MLV__MLV_IMAGE_H__</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define __MLV__MLV_IMAGE_H__</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;MLV_color.h&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">typedef</span> <span class="keyword">struct </span>_MLV_Image MLV_Image;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>MLV_Image* MLV_load_image( <span class="keyword">const</span> <span class="keywordtype">char</span>* file_image );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">int</span> MLV_save_image_as_bmp( <span class="keyword">const</span> MLV_Image* image,  <span class="keyword">const</span> <span class="keywordtype">char</span>* file_image );</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>MLV_Image* MLV_create_image( <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height );</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keywordtype">void</span> MLV_free_image( MLV_Image *image );</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>MLV_Image* MLV_copy_image( <span class="keyword">const</span> MLV_Image* image );</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>MLV_Image* MLV_copy_partial_image(</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">const</span> MLV_Image* image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keywordtype">void</span> MLV_get_image_size( <span class="keyword">const</span> MLV_Image* image, <span class="keywordtype">int</span>* width, <span class="keywordtype">int</span>* height );</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keywordtype">int</span> MLV_get_image_width( <span class="keyword">const</span> MLV_Image* image );</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">int</span> MLV_get_image_height( <span class="keyword">const</span> MLV_Image* image );</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keywordtype">void</span> MLV_resize_image( MLV_Image* image, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height );</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">void</span> MLV_vertical_image_mirror( MLV_Image* image );</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keywordtype">void</span> MLV_horizontal_image_mirror( MLV_Image* image );</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keywordtype">void</span> MLV_resize_image_with_proportions(</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        MLV_Image* image, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keywordtype">void</span> MLV_scale_image( MLV_Image* image, <span class="keywordtype">double</span> scalar );</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keywordtype">void</span> MLV_rotate_image( MLV_Image* image, <span class="keywordtype">double</span> rotation );</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keywordtype">void</span> MLV_rotate_and_scale_image( MLV_Image* image, <span class="keywordtype">double</span> rotation, <span class="keywordtype">double</span> scalar );</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="keywordtype">void</span> MLV_scale_xy_image( MLV_Image* image, <span class="keywordtype">double</span> scalar_x, <span class="keywordtype">double</span> scalar_y );</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keywordtype">void</span> MLV_rotate_and_scale_xy_image(</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        MLV_Image* image, <span class="keywordtype">double</span> rotation, <span class="keywordtype">double</span> scalar_x, <span class="keywordtype">double</span> scalar_y </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keywordtype">void</span> MLV_draw_image( <span class="keyword">const</span> MLV_Image *image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y );</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="keywordtype">void</span> MLV_draw_partial_image(</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keyword">const</span> MLV_Image *image, <span class="keywordtype">int</span> x_source, <span class="keywordtype">int</span> y_source, </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        <span class="keywordtype">int</span> width_source, <span class="keywordtype">int</span> height_source, </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="keywordtype">void</span> MLV_set_alpha_on_image( MLV_Alpha alpha, MLV_Image *image );</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="keywordtype">void</span> MLV_set_pixel_on_image(</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y,</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        MLV_Color color, </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        MLV_Image *image</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="keywordtype">void</span> MLV_get_pixel(</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span>* red, <span class="keywordtype">int</span>* green, <span class="keywordtype">int</span>* blue, <span class="keywordtype">int</span>* alpha</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="keywordtype">void</span> MLV_get_pixel_on_image(</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        <span class="keyword">const</span> MLV_Image* image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y,</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keywordtype">int</span>* red, <span class="keywordtype">int</span>* green, <span class="keywordtype">int</span>* blue, <span class="keywordtype">int</span>* alpha</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span></div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="keywordtype">void</span> MLV_draw_partial_image_on_image(</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        <span class="keyword">const</span> MLV_Image* source_image,</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        <span class="keywordtype">int</span> source_x, <span class="keywordtype">int</span> source_y,</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height,</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        MLV_Image* destination_image,</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        <span class="keywordtype">int</span> destination_x, <span class="keywordtype">int</span> destination_y</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>);</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="keywordtype">void</span> MLV_draw_image_on_image(</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keyword">const</span> MLV_Image* source_image,</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        MLV_Image* destination_image,</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        <span class="keywordtype">int</span> destination_x, <span class="keywordtype">int</span> destination_y</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>);</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span></div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>SDL_Surface* MLV_get_image_data( MLV_Image* image );</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span></div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span><span class="keywordtype">void</span> MLV_save_screen();</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span></div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span><span class="keywordtype">void</span> MLV_load_screen();</div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span> </div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span><span class="comment">// TODO</span></div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span><span class="preprocessor">#if 0</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>        MLV_NONE,</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>        MLV_REPLACE,</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>        MLV_MAX,</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        MLV_MIN,</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>        MLV_BARYCENTER</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>} MLV_Mathematic_operations;</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span></div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span><span class="keywordtype">void</span> MLV_draw_partial_image_on_image(</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        <span class="keyword">const</span> MLV_Image* source_image,</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        <span class="keywordtype">int</span> source_x, <span class="keywordtype">int</span> source_y,</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        <span class="keywordtype">int</span> with, <span class="keywordtype">int</span> height,</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        MLV_Image* destination_image,</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keywordtype">int</span> destination_x, <span class="keywordtype">int</span> destination_y,</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        MLV_Mathematic_operations rgb_treatment,</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        MLV_Mathematic_operations alpha_treatment</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span></div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="keywordtype">void</span> MLV_draw_partial_image_on_image_FAST(</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        <span class="keyword">const</span> MLV_Image* source_image,</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        <span class="keywordtype">int</span> source_x, <span class="keywordtype">int</span> source_y,</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        <span class="keywordtype">int</span> with, <span class="keywordtype">int</span> height,</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        <span class="keyword">const</span> MLV_Image* destination_image,</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>        <span class="keywordtype">int</span> destination_x, <span class="keywordtype">int</span> destination_y</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>);</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span> </div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span><span class="comment">/* TODO  : A Vérifier !</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="comment">void MLV_draw_rotated_image(  MLV_Image *image, int x, int y, double rotation );</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="comment">void MLV_draw_scaled_image(  MLV_Image *image, int x, int y, double scalar );</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="comment">void MLV_draw_scaled_rotated_image(  MLV_Image *image, int x, int y, double roation, double scalar );</span></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>}</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span> </div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el <span class="timestamp"></span> para MLV-2.0.2 por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

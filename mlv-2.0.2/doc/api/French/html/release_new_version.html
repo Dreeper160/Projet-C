@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Procédure pour sortir une nouvelle version de MLV </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Cette page explique la procédure à suivre pour publier officiellement une nouvelleversion en provenance de la branche de développement de MLV du serveur git.</p>
+<p>On supposera, dans la suite de ce document que votre depôt git est nettoyé, comme si vous veniez de le cloner.</p>
+<h1 class="doxsection"><a class="anchor" id="merge_develop_release"></a>
+Fusionner la branche develop dans celle de release</h1>
+<p>Commencez par fusionner la branche develop dans celle de release : </p><pre class="fragment">git checkout release
+git merge develop
+</pre><h1 class="doxsection"><a class="anchor" id="change_version"></a>
+Changer le numéro de version</h1>
+<p>Commencez par enlever le suffixe -dev du numéro de version. Pour cela, cherchez la ligne qui commence par, </p><pre class="fragment">AC_INIT([MLV], [2.0.2-dev], [adrien.boussicault@labri.fr], [], [http://www-igm.univ-mlv.fr/~boussica/mlv/index.html])
+</pre><p> et remplacez là par </p><pre class="fragment">AC_INIT([MLV], [2.0.2], [adrien.boussicault@labri.fr], [], [http://www-igm.univ-mlv.fr/~boussica/mlv/index.html])
+</pre><p>Modifiez ensuite les numéros de version <code>mlvcurrent</code>, <code>mlvrevision</code> et <code>mlvage</code> situés dans le fichier <code>configure.ac</code>.</p>
+<p>La logique à suivre est expliquée en commentaire dans le fichier. Pour cela, vous aurez à conaître les modifications qui ont été réalisé depuis la dernière version. POur cela, consultez le fichier <code>ChangeLog</code> situé dans à la racine. Regardez les modifications faites dans la version courrente de développement : </p><pre class="fragment">mlv-2.0.2-dev
+</pre><p>Les lignes à modifier sont les suivantes : </p><pre class="fragment">define([mlvcurrent], [2])dnl                                                    
+define([mlvrevision], [0])dnl                                                   
+define([mlvage], [2])dnl
+</pre><p>Mettez à jour, dans le fichier <code>configure.ac</code> de la racine de mlv, les versions pour MacOSX et Fedora: </p><pre class="fragment">AC_SUBST(MLV_MACOSX_VERSION,[10.10])
+</pre><p> Mettez à la place la version actuelle de MacOSX.</p>
+<pre class="fragment">AC_SUBST(MLV_FEDORA_VERSION,[22])
+</pre><p> Mettez à la place la version actuelle de Fedora.</p>
+<h1 class="doxsection"><a class="anchor" id="update_new_todo"></a>
+Mettre à jour les fichiers ChangeLog et todo</h1>
+<p>Modifiez le fichier <code>ChangeLog</code> situé à la racine de la bibliothèque. Pour cela, mettez à jour, le numéro de version apparaissant dans la première ligne de ChangeLog. Cette ligne ressemble à : </p><pre class="fragment">mlv-2.0.2-dev
+</pre><p>Vous devez mettre le même numéro de version que celui que vous avez mis dans la section : <a class="el" href="#change_version">Changer le numéro de version</a> Changer, et vous devez enlever le suffixe -dev.</p>
+<p>Mettez à jour le fichier <code>todo</code> situé à la racine de la bibliothèque.</p>
+<p>Pour la suite du document, pour que les numéros de versions coincident avec les nouveaux numéros de version que vous venez de renseigner, nous vous conseillons de recompiler la documentation et de continuer avec la nouvelle documentation ainsi générée. Pour cela tapez les commandes suivantes : </p><pre class="fragment">make distclean
+./autogen.sh
+./configure
+make
+</pre><p>La nouvelle version de la page que vous êtes en train de lire se trouve dans le fichier </p><pre class="fragment">./doc/api/French/html/release_new_version.html
+</pre><p> à partir de la racine de la bibliothèque MLV.</p>
+<h1 class="doxsection"><a class="anchor" id="key_gen"></a>
+Préparer une clé pour signer les différents paquets d'indstallation</h1>
+<p>Créez uen clé qui servira à signer tous les paquets d'installation. Pour cela, tapez la commande suivante : </p><pre class="fragment">gpg --gen-key
+</pre><p> et choisisez une clef RSA de 4096 bits, mettez un temps d'expiration de 3 jours (temps que vous vous donnez pour créer et tester l'ensemble des paquets de distribution) et choisissez comme commentaire: <code>mlv-2.0.2 key</code>.</p>
+<p>Vérifier que la clé est dans votre liste de clés en tapant : </p><pre class="fragment">gpg --list-key
+</pre><p>Vous devriez obtenir l'affichage suivant : </p><pre class="fragment">/home/boussica/.gnupg/pubring.gpg
+---------------------------------
+pub   4096R/E594D293 2014-02-25 [expire : 2014-02-28]
+uid                  Adrien Boussicault (mlv-2.0.2 key) &lt;boussica@labri.fr&gt;
+sub   4096R/4B3F1834 2014-02-25 [expire : 2014-02-28]
+</pre><p>L'identifiant de la clé est ici <code>E594D293</code></p>
+<p>Exportez la clé publique pour pouvoir la comuniquer à différents utilisateurs </p><pre class="fragment">gpg --export --armor IDENTIFIANT_CLE &gt; mlv-2.0.2-packaging-gpg-key-VOTRE_NOM
+</pre><p> où <code>IDENTIFIANT_CLE</code> est l'identifiant de la clé vu précédement.</p>
+<p>Exportez votre clé privé pour pouvoir l'importer dans toutes les machines qui vont créer les paquets de distribution (notament pour debian et fedora). </p><pre class="fragment">gpg --export-secret-keys --armor IDENTIFIANT_CLE &gt; mlv-2.0.2-packaging-gpg-secretkey-VOTRE_NOM
+</pre><p> où <code>IDENTIFIANT_CLE</code> est l'identifiant de la clé vu précédement.</p>
+<p>Vous ne devez JAMAIS comuniquer cette clé. C'est elle qui sert à crypter les messages et à réaliser les signatures de vos paquets.</p>
+<p>Archivez dans vos archives personnelles (et secrète) la clé publique et la clé privée.</p>
+<h1 class="doxsection"><a class="anchor" id="verify_lib"></a>
+Verifiez le bon fonctionnement de la bibliothèque (optionel)</h1>
+<p>Vérifiez maintenant le bon fonctionement de la bibliothèque.</p>
+<p>Pour cela, créez tout les paquets de distribution en suivant les procédures présentes à la page : <a class="el" href="documentation_paquet.html">Créer des paquets distribuables de la bibliothèque MLV</a> .</p>
+<p>Testez ensuite tous les paquets crées et vérifiez le bon fonctionnement des programmes en compilant et testant tous les exemples présents dans le dossier <code>example</code> du dossier de documentation qui a été installé par le paquet. Sous linux, il est situé dans <code>/usr/share/doc/mlv/</code>.</p>
+<p>Vous prendrez bien soin de bien vérifier que les programmes qui utilisent le son fonctionne correctement (notament sous Mac OS X et windows).</p>
+<p>Vous vérifiez aussi que la documentation est bien à jour en verifiant que les nouveaux numéros de version sont à jour, notament dans la partie téléchargement de la documentation. Pour cela, il suffit de suivre les différents liens présents à la page <code>doc/index.html</code>.</p>
+<h1 class="doxsection"><a class="anchor" id="merge_release_master_develop"></a>
+Fusionner la branche release dans master et dans develop</h1>
+<p>Quand la bibliothèque est prête à être publiée, il ne reste plus qu'à fusionner release dans master.</p>
+<p>Commencez par bien vérifier que vous avez sauvegardé les dernières modifications de release : </p><pre class="fragment">git status
+</pre><p>Ensuite, procédez à la fusion de merge dans master en tapant : </p><pre class="fragment">git checkout master
+git merge release
+</pre><p>Ajouter un tag pour préciser que ce dernier commit est une nouvelle version. </p><pre class="fragment">git tag -a v2.0.2 -m 'The version 2.0.2 of MLV.'
+</pre><p> où 2.0.2 est normalement le nouveau numéro de version de la bibliothèque. Si ce n'est pas le cas, c'est que vous n'avez pas recompilé cette documentation après avoir changé les numéros de version.</p>
+<p>Vous pouvez éventuellement, ajoutez des commentaires dans l'opition -m.</p>
+<p>Il ne reste plus qu'à envoyer tous les changements sur le dépot git. </p><pre class="fragment">git push --follow-tags
+</pre><p>Il ne rest plus qu'à mettre en place une nouvelle version en developpement. Commencez par mettre à jour la branche de developpement : </p><pre class="fragment">git checkout develop
+git merge release
+</pre><p>Mettez à jour le numéro de version : dans le fichier <code>configure.ac</code> ajoutez le suffixe -dev au numéro de version. Pour cela, cherchez la ligne </p><pre class="fragment">AC_INIT([MLV], [2.0.2], [adrien.boussicault@labri.fr], [], [http://www-igm.univ-mlv.fr/~boussica/mlv/index.html])
+</pre><p>et remplacez-là par </p><pre class="fragment">AC_INIT([MLV], [2.0.2-dev], [adrien.boussicault@labri.fr], [], [http://www-igm.univ-mlv.fr/~boussica/mlv/index.html])
+</pre><p>Enfin, créer un nouveau paragraphe dans le fichier <code>ChangeLog</code> situé à la racine de la bibliothèque. Ce paragraphe doit commencer par : </p><pre class="fragment">mlv-2.0.2-dev
+</pre><p> Normalement, ce paragraphe ne doit pas déjà exister. Si c'est le cas, c'est que vous n'avez pas recompilé cette documentation après avoir mis à jour les numéros de version.</p>
+<p>Mettez à jour le fichier <code>todo</code> situé à la racine de la bibliothèque.</p>
+<p>Enregistrez dans git les modifications, en mettant le commentaire d'une ligne "New developement version of MLV." lorsque cela est demandé : </p><pre class="fragment">git add configure.ac
+git commit
+</pre><p>Enfin envoyez les modification sur le serveur git officiel. </p><pre class="fragment">git push
+</pre><p>Basculez de nouveau sur la branche master, pour la suite de document. </p><pre class="fragment">git checkout master
+</pre><h1 class="doxsection"><a class="anchor" id="build_package"></a>
+Créer les nouveaux paquets de distributions</h1>
+<p>Vérifiez que vous êtes bien sur la branche master du depot git de MLV. Tapez les commandes : </p><pre class="fragment">git checkout master   # pour charger la branche master
+git status            # pour vérifier que vous êtes sur la branche master
+</pre><p>Commencez par créer un paquet de distribution pour le code source, à partir de la branche master : </p><pre class="fragment">./configure
+make dist
+</pre><p>Normalement le fichier <code>mlv-2.0.2.tar.gz</code> a du être créé. Il est très important d'exécuter le script <code>./configure</code>, même s'il existait déjà. En effet, son exécution permet de mettre à jour le numéro de révision git situé dans le code source.</p>
+<p>Ensuite, à partir de ce dernier fichier, recréez l'ensemble des paquets de distribution.</p>
+<p>Pour cela vous pouvez utiliser l'émulateur <code>virt-manageur</code> pour installer localement une debian 32 bit, une debian 64 bit, un fedora 32 bits et 64 bits.</p>
+<p>Pour chaque distribution (debian, fedora, window, MacOSX), créez des paquets d'installation en suivant les instructions suivantes :</p><ul>
+<li>utilisez les procédure de créations des paquets de la page <a class="el" href="documentation_paquet.html">Créer des paquets distribuables de la bibliothèque MLV</a></li>
+<li>quand, dans ces procédures, une clée pour signer des fichiers est utilisée, vous devez toujours utiliser la clé <code>mlv-2.0.2-packaging-gpg-secretkey-VOTRE_NOM</code>, qui a été générée précédement. Pour importer cette clé, il vous suffit de taper la commande suivante : <pre class="fragment">  gpg --import mlv-2.0.2-packaging-gpg-secretkey-VOTRE_NOM
+</pre></li>
+</ul>
+<p>Vérifiez le bon fonctionnement de ces paquets.</p>
+<h1 class="doxsection"><a class="anchor" id="update_web_site"></a>
+Mettre a jour le site web officiel</h1>
+<p>Commencez par créer deux dossiers : <code>depot</code> et <code>site</code>, dans le répertoire <code>/tmp</code>.</p>
+<p>Dans le dossier <code>depot</code>, créez un dossier <code>mlv-2.0.2</code>.</p>
+<p>Mettez dans le dossier <code>depot</code> le fichier <code>mlv-2.0.2.tar.gz</code>.</p>
+<p>Ensuite, mettez les fichiers suivants, dans le dossier <code>depot/mlv-2.0.2</code>: </p><pre class="fragment">libmlv0_2.0.2-1_i386.deb
+libmlv0-dev_2.0.2-1_i386.deb
+libmlv0_2.0.2-1_amd64.deb
+libmlv0-dev_2.0.2-1_amd64.deb
+mlv-2.0.2-0.fc22.i686.rpm
+mlv-devel-2.0.2-0.fc22.i686.rpm
+mlv-static-2.0.2-0.fc22.i686.rpm
+mlv-2.0.2-0.fc22.src.rpm
+mlv-2.0.2-0.fc22.x86_64.rpm
+mlv-devel-2.0.2-0.fc22.x86_64.rpm
+mlv-static-2.0.2-0.fc22.x86_64.rpm
+mlv-2.0.2-0.fc22.src.rpm
+RPM-GPG-KEY-Boussicault
+mlv-2.0.2-win32.zip
+mlv-2.0.2-code_blocks.zip
+mlv-2.0.2-dev-cpp.zip
+mlv-2.0.2_macos-10.10.pkg
+mlv-2.0.2.tar.gz
+</pre><p> N'oubliez surtout pas de mettre de nouveau le fichier <code>mlv-2.0.2.tar.gz</code>.</p>
+<p>Il faut maintenant signer tous les fichiers qui n'ont pas encore été signés : </p><pre class="fragment">cd /tmp/depot
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2.0.2.tar.gz
+cd /tmp/depot/mlv-2.0.2
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2.0.2-win32.zip
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2.0.2-code_blocks.zip
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2.0.2-dev-cpp.zip
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2.0.2_macos-10.10.pkg
+gpg -b --use-agent --local-user IDENTIFIANT_CLE mlv-2.0.2.tar.gz
+</pre><p> où <code>IDENtiFIANT_CLE</code> est l'identifiant de la clé créé dans la partie "Préparer une clé pour signer ...".</p>
+<p>Puis on vérifie les signatures créés : </p><pre class="fragment">cd /tmp/depot
+gpg  --verify mlv-2.0.2.tar.gz.sig
+cd /tmp/depot/mlv-2.0.2
+gpg --verify mlv-2.0.2-win32.zip.sig
+gpg --verify mlv-2.0.2-code_blocks.zip.sig
+gpg --verify mlv-2.0.2-dev-cpp.zip.sig
+gpg --verify mlv-2.0.2_macos-10.10.pkg.sig
+gpg --verify mlv-2.0.2.tar.gz.sig
+</pre><p>Copiez le fichier <code>mlv-2.0.2.tar.gz</code> dans le dossier <code>/tmp</code> et générez la documentation de la bibliothèque en tapant les commandes suivantes: </p><pre class="fragment">cd /tmp
+tar -xzf mlv-2.0.2.tar.gz
+cd mlv-2.0.2
+./configure
+make 
+cp -r doc/api /tmp/depot/mlv-2.0.2/
+</pre><p>Enfin, ajouter les programmes d'installation des ide Code-blocks et Dev-cpp en prenant soin de mettre la version de l'installateur correspondant au numéro de version qui se trouve sur la documentation.</p>
+<p>Préparons maintenant le code source du site. Pour cela, tapez les commandes suivantes </p><pre class="fragment">cd /tmp/mlv-2.0.2/doc
+cp -r index.html api /tmp/site
+</pre><p>Il ne reste plus qu'à télécharger les fichiers de distributions sur le serveur de Savannah en tapant les commandes suivantes : </p><pre class="fragment">cd /tmp/depot/
+chmod 644 *
+rsync -av /tmp/depot/. LOGIN@dl.sv.nongnu.org:/releases/mlv/.
+</pre><p> où LOGIN est votre login de developpeur et le mot de passe celui de votre clé RSA donné pour accéder au dépot git.</p>
+<p>Il faut maintenant mettre à jour le site web. Commencez par monter le dossier du code source de <a href="http://www-igm.univ-mlv.fr/~boussica/mlv/index.html sur">http://www-igm.univ-mlv.fr/~boussica/mlv/index.html sur</a> le dossier DOSSIER_SITE_WEB. Puis, tapez la commande suivante : </p><pre class="fragment">rsync -av --delete /tmp/site/. LE_SITE_WEB
+</pre><h1 class="doxsection"><a class="anchor" id="verify_documentation"></a>
+Verifier la documentation et les fichiers publiés officiellement</h1>
+<p>Testez un à un tous les liens présents dans la section téléchargement de la documentation.</p>
+<p>Vérifiez que les paquets s'installent correctement et vérifiez que les exemples s'executent correctement.</p>
+<p>Vérifiez que, lors de l'exécution du programme <code>example/beginner/10_library_information</code>, le numéro de version et la révision git qui apparaît à l'écran, correspond bien à la révision courante présente dans la branche master du dépôt git. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,104 @@
+.TH "compilation_windows" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+compilation_windows \- Compiler un programme utilisant MLV sous Windows 
+.PP
+Cette page explique comment compiler votre programme de trois façons diférentes:
+.IP "\(bu" 2
+la section \fBCompilation à l'aide de Dev-C++\fP explique comment le faire avec dev-cpp, un autre IDE\&.
+.IP "\(bu" 2
+la section \fBCompilation à l'aide de Code::Blocks\fP explique comment compiler votre programme avec Code:Blocks qui est un IDE\&. (Actuellement cette partie ne fonctionne plus, utilisez dev-cpp à la place)
+.IP "\(bu" 2
+la section \fBOptions de compilation pour gcc\fP explique quelles sont les options de configurations qu'il faut utiliser pour pouvoir compiler votre programme directement avec gcc\&.
+.PP
+
+.PP
+Si vous ne savez pas quoi choisir, nous vous conseillons de choisir la méthode \fBCompilation à l'aide de Dev-C++\fP qui est la méthode la plus simple à mettre en oeuvre\&.
+.SH "Compilation à l'aide de Dev-C++"
+.PP
+Comencer par installer la bibliothèque MLV avec Dev-C++ en allant à la page : \fBInstaller MLV avec Dev-C++\fP\&.
+
+.PP
+Éxécutez le programme \fIdevcpp\&.exe\fP et ouvrez les projets concernants les exemples de la bibliothèque MLV ( les exemples se trouvent dans le répertoire : \fIMLV_examples\fP)\&.
+
+.PP
+Vous pouvez compiler puis éxécuter ces différents projets en utilisant la barre d'icône du programme\&.
+
+.PP
+Pour créer votre propre projet, recopiez le répertoire, \fImon_projet\fP, éditez le fichier \fImon_projet\&.dev\fP et adaptez le pour ce que vous voulez faire\&.
+
+.PP
+Pour distribuer le programme que vous avez obtenu, il vous suffit de copier le répertoire \fIfinal_product\fP qui se trouve dans le répertoire de votre projet\&. Ce répertoire contient toute l'infrastructure nécessaire au bon fonctionnement du programme\&. Il n'est pas nécessaire d'installer Dec-C++ pour faire fonctionner votre application ainsi crée\&.
+.SH "Compilation à l'aide de Code::Blocks"
+.PP
+Actuellement cette partie ne fonctionne plus, utilisez dev-cpp à la place !
+
+.PP
+Comencez par installer la bibliothèque MLV avec Code::Blocks en allant à la page : \fBInstaller MLV avec Code:Blocks\fP\&.
+
+.PP
+Éxécutez le programme \fIcodeblocks\&.exe\fP et ouvrez les projets concernants les exemples de la bibliothèque MLV ( les exemples se trouvent dans le répertoire : \fIMLV_examples\fP )\&.
+
+.PP
+Vous pouvez compiler puis éxécuter ces différents projets en cliquant respectivement sur la roue dentée et le triangle de lecture\&.
+
+.PP
+Pour créer votre propre projet, ouvrez le projet situé dans le répertoire, \fImon_projet\fP\&. Puis sauvegardez le projet comme un "user template"\&.
+
+.PP
+Une fois fait, vous pouvez créer un nouveau projet en utilisant ce template\&. Attention ! Vous devez créer ce projet dans le même répertoire que le répertoire mon_projet !
+
+.PP
+Si vous voulez créer votre projet dans un nouveau répertoire, alors vous devez recopier intégralement le contenu de \fImon_projet\fP et le placer dans le nouveau répertoire\&. Vous pourez alors obtenir votre nouveau projet en utilisant le template créé précédement\&.
+
+.PP
+Pour distribuer le programme que vous avez obtenu, il vous suffit de copier le répertoire \fIfinal_product\fP qui se trouve dans le répertoire de votre projet\&. Ce répertoire contient toute l'infrastructure nécessaire au bon fonctionnement du programme\&. Il n'est pas nécessaire d'installer Dec-C++ pour faire fonctionner votre application ainsi crée\&.
+.SH "Options de compilation pour gcc"
+.PP
+Dans cette section, nous expliquons comment configurer les options de gcc pour réaliser un compilation avec gcc\&.
+
+.PP
+Code::block et Dec-C++ utilisent le compilateur gcc\&. Ainsi, les expliquations qui vont suivre correspondent aux configurations présentes dans les projets Code:blocks et Dev-C++\&.
+
+.PP
+Pour que la compilation de votre programme fonctionne, il faut installer tous les binaries présent dans le paquet mlv-2\&.0\&.2-win32\&.
+
+.PP
+Dans ce cas, les options de compilation sout les suivantes :
+.IP "\(bu" 2
+Pour la compilation : 
+.PP
+.nf
+-I\&./include 
+.fi
+.PP
+
+.IP "\(bu" 2
+Pour les flags de l'édition de liens : 
+.PP
+.nf
+-L\&./lib -L\&./final_product 
+.fi
+.PP
+
+.IP "\(bu" 2
+Pour les bibliothèques de l'édition de liens : 
+.PP
+.nf
+-lMLV-0 -lSDL -lmingw32 -lSDLmain \&./lib/libmingwex\&.a 
+.fi
+.PP
+
+.PP
+
+.PP
+Ainsi, si vous avez écrit un programme \fIdemo\&.c\fP, vous pouvez le compiler en tapant la commande suivante:
+
+.PP
+.PP
+.nf
+gcc -I\&./include -Wall -O2 -g -L\&./lib -L\&./final_product demo\&.c -lMLV-0 -lSDL -lmingw32 -lSDLmain \&./lib/libmingwex\&.a -o demo
+.fi
+.PP
+ 

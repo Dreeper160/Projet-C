@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">advanced/12_paths.c</div></div>
+</div><!--header-->
+<div class="contents">
+<p>Cette dmonstration explique comment l'utilisateur peut faire pour travailler avec les chemins d'acces des fichiers.</p>
+<div class="fragment"><div class="line"></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="MLV__all_8h.html">MLV/MLV_all.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// Attention ! </span></div>
+<div class="line"><span class="comment">// Pour pouvoir compiler ce programme sous windows et sous macintosh,</span></div>
+<div class="line"><span class="comment">// il faut, pour la déclaration du main, respecter strictement la syntaxe</span></div>
+<div class="line"><span class="comment">// suivante :</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]){</div>
+<div class="line"> </div>
+<div class="line">        printf( <span class="stringliteral">&quot;\n&quot;</span> );</div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span> *current_directory, *temporary_directory, *home_directory;</div>
+<div class="line">        </div>
+<div class="line">        current_directory = <a id="a0" name="a0"></a><a class="code hl_function" href="MLV__path_8h_a120c8c71d041de13de1977a225438c05.html#a120c8c71d041de13de1977a225438c05">MLV_get_current_directory</a>( );</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Répertoire courant : %s \n&quot;</span>, current_directory);</div>
+<div class="line"> </div>
+<div class="line">        temporary_directory = <a id="a1" name="a1"></a><a class="code hl_function" href="MLV__path_8h_adfd1cccb18201486ccec1e75b045f803.html#adfd1cccb18201486ccec1e75b045f803">MLV_get_temporary_directory</a>( );</div>
+<div class="line">        printf( <span class="stringliteral">&quot;Répertoire temporaire : %s\n&quot;</span>, temporary_directory );</div>
+<div class="line"> </div>
+<div class="line">        home_directory = <a id="a2" name="a2"></a><a class="code hl_function" href="MLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af.html#a2a6f2f67413b1df25a51f1e5e987e4af">MLV_get_home_directory</a>( );</div>
+<div class="line">        printf( <span class="stringliteral">&quot;Répertoire personnel : %s\n&quot;</span>, home_directory );</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* path = <span class="stringliteral">&quot;./creature.png&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">if</span>( <a id="a3" name="a3"></a><a class="code hl_function" href="MLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b.html#a67c5e7b9660d7f0c365628c1c41f591b">MLV_path_exists</a>( path ) ){</div>
+<div class="line">                printf(<span class="stringliteral">&quot;Le chemin %s existe.\n&quot;</span>, path );</div>
+<div class="line">        }<span class="keywordflow">else</span>{</div>
+<div class="line">                printf(<span class="stringliteral">&quot;Le chemin %s n&#39;existe pas.i\n&quot;</span>, path );</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span>( <a id="a4" name="a4"></a><a class="code hl_function" href="MLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d.html#acdc0f26a3dd64e2f904a9be96ca37e4d">MLV_path_is_a_file</a>( path ) ){</div>
+<div class="line">                printf(<span class="stringliteral">&quot;%s est un fichier.\n&quot;</span>, path );</div>
+<div class="line">        }<span class="keywordflow">else</span>{</div>
+<div class="line">                printf(<span class="stringliteral">&quot;%s n&#39;est pas un fichier.\n&quot;</span>, path );</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span>( <a id="a5" name="a5"></a><a class="code hl_function" href="MLV__path_8h_a30273c88874016c5035c5d04d80e9060.html#a30273c88874016c5035c5d04d80e9060">MLV_path_is_a_directory</a>( path ) ){</div>
+<div class="line">                printf(<span class="stringliteral">&quot;%s est un répertoire.\n&quot;</span>, path );</div>
+<div class="line">        }<span class="keywordflow">else</span>{</div>
+<div class="line">                printf(<span class="stringliteral">&quot;%s n&#39;est pas un repertoire.\n&quot;</span>, path );</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span>(</div>
+<div class="line">                <a id="a6" name="a6"></a><a class="code hl_function" href="MLV__path_8h_ad6071b399dba0791301744c2031d3baf.html#ad6071b399dba0791301744c2031d3baf">MLV_path_is_absolute</a>( path )</div>
+<div class="line">        ){</div>
+<div class="line">                printf( <span class="stringliteral">&quot;%s  est un chemin absolu.\n&quot;</span>, path );</div>
+<div class="line">        }<span class="keywordflow">else</span>{</div>
+<div class="line">                printf( <span class="stringliteral">&quot;%s est un chemin relatif.\n&quot;</span>, path );</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordtype">char</span>* build_path = <a id="a7" name="a7"></a><a class="code hl_function" href="MLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0.html#a5a61f23cbb2f4f4bb3014e0bc2e631b0">MLV_build_path</a>( current_directory, path, NULL );</div>
+<div class="line">        <span class="keywordflow">if</span>(</div>
+<div class="line">                <a id="a8" name="a8"></a><a class="code hl_function" href="MLV__path_8h_a202173342c357310673bbfbd4fcd49a3.html#a202173342c357310673bbfbd4fcd49a3">MLV_path_is_relative</a>( build_path )</div>
+<div class="line">        ){</div>
+<div class="line">                printf( <span class="stringliteral">&quot;%s est un chemin relatif.\n&quot;</span>, build_path );</div>
+<div class="line">        }<span class="keywordflow">else</span>{</div>
+<div class="line">                printf( <span class="stringliteral">&quot;%s est un chemin absolu.\n&quot;</span>, build_path );</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">char</span>* basename = <a id="a9" name="a9"></a><a class="code hl_function" href="MLV__path_8h_a180c405f10c2af7ab0537f959db68aaf.html#a180c405f10c2af7ab0537f959db68aaf">MLV_get_base_name</a>( build_path );</div>
+<div class="line">        <span class="keywordtype">char</span>* dirname = <a id="a10" name="a10"></a><a class="code hl_function" href="MLV__path_8h_ae670375158b797dd5f869eb477f308a1.html#ae670375158b797dd5f869eb477f308a1">MLV_get_directory_name</a>( build_path );</div>
+<div class="line">        printf( <span class="stringliteral">&quot;Dans la chemin précédent,\n&quot;</span> );</div>
+<div class="line">        printf( <span class="stringliteral">&quot;La chaîne de texte se trouvant après le dernier séparateur / est : %s\n&quot;</span>, basename );</div>
+<div class="line">        printf( <span class="stringliteral">&quot;La chaîne de texte s&#39;étendant jusqu&#39;au dernier séparateur / est : %s\n&quot;</span>, dirname );</div>
+<div class="line"> </div>
+<div class="line">        printf( <span class="stringliteral">&quot;\n&quot;</span> );</div>
+<div class="line">        </div>
+<div class="line">        free( build_path );</div>
+<div class="line">        free( basename );</div>
+<div class="line">        free( dirname );</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *   Copyright (C) 2010,2011,2012,2013 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="ttc" id="aMLV__all_8h_html"><div class="ttname"><a href="MLV__all_8h.html">MLV_all.h</a></div><div class="ttdoc">Fichier d&#39;entête principal incluant tous les autres fichiers entêtes de la bibliothèque MLV.</div></div>
+<div class="ttc" id="aMLV__path_8h_a120c8c71d041de13de1977a225438c05_html_a120c8c71d041de13de1977a225438c05"><div class="ttname"><a href="MLV__path_8h_a120c8c71d041de13de1977a225438c05.html#a120c8c71d041de13de1977a225438c05">MLV_get_current_directory</a></div><div class="ttdeci">char * MLV_get_current_directory()</div><div class="ttdoc">Détermine le répertoire courant.</div></div>
+<div class="ttc" id="aMLV__path_8h_a180c405f10c2af7ab0537f959db68aaf_html_a180c405f10c2af7ab0537f959db68aaf"><div class="ttname"><a href="MLV__path_8h_a180c405f10c2af7ab0537f959db68aaf.html#a180c405f10c2af7ab0537f959db68aaf">MLV_get_base_name</a></div><div class="ttdeci">char * MLV_get_base_name(const char *path)</div><div class="ttdoc">Renvoie la chaîne de caractères après le dernier séparteur / dans un chemin donné en paramètre.</div></div>
+<div class="ttc" id="aMLV__path_8h_a202173342c357310673bbfbd4fcd49a3_html_a202173342c357310673bbfbd4fcd49a3"><div class="ttname"><a href="MLV__path_8h_a202173342c357310673bbfbd4fcd49a3.html#a202173342c357310673bbfbd4fcd49a3">MLV_path_is_relative</a></div><div class="ttdeci">int MLV_path_is_relative(const char *path)</div><div class="ttdoc">Teste si un chemin est relatif.</div></div>
+<div class="ttc" id="aMLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af_html_a2a6f2f67413b1df25a51f1e5e987e4af"><div class="ttname"><a href="MLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af.html#a2a6f2f67413b1df25a51f1e5e987e4af">MLV_get_home_directory</a></div><div class="ttdeci">const char * MLV_get_home_directory()</div><div class="ttdoc">Détermine le répertoire personnel de l&#39;utilisateur courant.</div></div>
+<div class="ttc" id="aMLV__path_8h_a30273c88874016c5035c5d04d80e9060_html_a30273c88874016c5035c5d04d80e9060"><div class="ttname"><a href="MLV__path_8h_a30273c88874016c5035c5d04d80e9060.html#a30273c88874016c5035c5d04d80e9060">MLV_path_is_a_directory</a></div><div class="ttdeci">int MLV_path_is_a_directory(const char *path)</div><div class="ttdoc">Vérifie si un chemin est associé à un répertoire.</div></div>
+<div class="ttc" id="aMLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0_html_a5a61f23cbb2f4f4bb3014e0bc2e631b0"><div class="ttname"><a href="MLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0.html#a5a61f23cbb2f4f4bb3014e0bc2e631b0">MLV_build_path</a></div><div class="ttdeci">char * MLV_build_path(const char *first_element,...)</div><div class="ttdoc">Construit en concaténant différents textes, une chaîne de caractères représentant un chemin dont les ...</div></div>
+<div class="ttc" id="aMLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b_html_a67c5e7b9660d7f0c365628c1c41f591b"><div class="ttname"><a href="MLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b.html#a67c5e7b9660d7f0c365628c1c41f591b">MLV_path_exists</a></div><div class="ttdeci">int MLV_path_exists(const char *path)</div><div class="ttdoc">Teste si le chemin corespond au chemin d&#39;un fichier ou dossier existant.</div></div>
+<div class="ttc" id="aMLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d_html_acdc0f26a3dd64e2f904a9be96ca37e4d"><div class="ttname"><a href="MLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d.html#acdc0f26a3dd64e2f904a9be96ca37e4d">MLV_path_is_a_file</a></div><div class="ttdeci">int MLV_path_is_a_file(const char *path)</div><div class="ttdoc">Vérifie si un chemin est associé à un fichier.</div></div>
+<div class="ttc" id="aMLV__path_8h_ad6071b399dba0791301744c2031d3baf_html_ad6071b399dba0791301744c2031d3baf"><div class="ttname"><a href="MLV__path_8h_ad6071b399dba0791301744c2031d3baf.html#ad6071b399dba0791301744c2031d3baf">MLV_path_is_absolute</a></div><div class="ttdeci">int MLV_path_is_absolute(const char *path)</div><div class="ttdoc">Teste si un chemin est absolu.</div></div>
+<div class="ttc" id="aMLV__path_8h_adfd1cccb18201486ccec1e75b045f803_html_adfd1cccb18201486ccec1e75b045f803"><div class="ttname"><a href="MLV__path_8h_adfd1cccb18201486ccec1e75b045f803.html#adfd1cccb18201486ccec1e75b045f803">MLV_get_temporary_directory</a></div><div class="ttdeci">const char * MLV_get_temporary_directory()</div><div class="ttdoc">Détermine le répertoire temporaire.</div></div>
+<div class="ttc" id="aMLV__path_8h_ae670375158b797dd5f869eb477f308a1_html_ae670375158b797dd5f869eb477f308a1"><div class="ttname"><a href="MLV__path_8h_ae670375158b797dd5f869eb477f308a1.html#ae670375158b797dd5f869eb477f308a1">MLV_get_directory_name</a></div><div class="ttdeci">char * MLV_get_directory_name(const char *path)</div><div class="ttdoc">Renvoie la chaîne de caractères s&#39;étendant jusqu&#39;au dernier séparateur / du chemin donné en paramètre...</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

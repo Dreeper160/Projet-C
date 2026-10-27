@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">advanced/05_playlist.c</div></div>
+</div><!--header-->
+<div class="contents">
+<p>A ECRIRE</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="MLV__all_8h.html">MLV/MLV_all.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// Attention ! </span></div>
+<div class="line"><span class="comment">// Pour pouvoir compiler ce programme sous windows et sous macintosh,</span></div>
+<div class="line"><span class="comment">// il faut, pour la déclaration du main, respecter strictement la syntaxe</span></div>
+<div class="line"><span class="comment">// suivante :</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[] ){</div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// Les playlists ne sont pas encore implémentées.</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        printf(</div>
+<div class="line">                <span class="stringliteral">&quot;Les playlists ne sont pas encore implémentées dans la librairie MLV.\n&quot;</span></div>
+<div class="line">        );</div>
+<div class="line"> </div>
+<div class="line">        <a id="a0" name="a0"></a><a class="code hl_function" href="MLV__window_8h_a5f4ed8b1e1ac8ee176d08c3fc5dea1f1.html#a5f4ed8b1e1ac8ee176d08c3fc5dea1f1">MLV_create_window</a>( <span class="stringliteral">&quot;beginner - 1 - hello world&quot;</span>, <span class="stringliteral">&quot;hello world&quot;</span>, 640, 480 );</div>
+<div class="line"> </div>
+<div class="line">        <a id="a1" name="a1"></a><a class="code hl_function" href="MLV__text_8h_a549f2391ffb2c6c9bd4c8675a6a534f3.html#a549f2391ffb2c6c9bd4c8675a6a534f3">MLV_draw_text</a>(</div>
+<div class="line">                10, 120, </div>
+<div class="line">                <span class="stringliteral">&quot;Les playlists ne sont pas encore implémentées !&quot;</span>,</div>
+<div class="line">                <a id="_a2" name="_a2"></a><a class="code hl_define" href="MLV__color_8h_a885b6b2a0f95049cbe798c877078ed37.html#a885b6b2a0f95049cbe798c877078ed37">MLV_COLOR_MAGENTA</a></div>
+<div class="line">        );</div>
+<div class="line"> </div>
+<div class="line">        <a id="a3" name="a3"></a><a class="code hl_function" href="MLV__window_8h_a989a543c725ea5278334e5642c53c837.html#a989a543c725ea5278334e5642c53c837">MLV_actualise_window</a>();</div>
+<div class="line"> </div>
+<div class="line">        <a id="a4" name="a4"></a><a class="code hl_function" href="MLV__time_8h_ac628f6783be5d11bee510f4e06a2c2a7.html#ac628f6783be5d11bee510f4e06a2c2a7">MLV_wait_seconds</a>( 10 );</div>
+<div class="line"> </div>
+<div class="line">        <a id="a5" name="a5"></a><a class="code hl_function" href="MLV__window_8h_a139eec0093ed1ced7f49b0f35a5b65e5.html#a139eec0093ed1ced7f49b0f35a5b65e5">MLV_free_window</a>();</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *   Copyright (C) 2010,2011,2012,2013 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="ttc" id="aMLV__all_8h_html"><div class="ttname"><a href="MLV__all_8h.html">MLV_all.h</a></div><div class="ttdoc">Fichier d&#39;entête principal incluant tous les autres fichiers entêtes de la bibliothèque MLV.</div></div>
+<div class="ttc" id="aMLV__color_8h_a885b6b2a0f95049cbe798c877078ed37_html_a885b6b2a0f95049cbe798c877078ed37"><div class="ttname"><a href="MLV__color_8h_a885b6b2a0f95049cbe798c877078ed37.html#a885b6b2a0f95049cbe798c877078ed37">MLV_COLOR_MAGENTA</a></div><div class="ttdeci">#define MLV_COLOR_MAGENTA</div><div class="ttdef"><b>Definition</b> MLV_color.h:1387</div></div>
+<div class="ttc" id="aMLV__text_8h_a549f2391ffb2c6c9bd4c8675a6a534f3_html_a549f2391ffb2c6c9bd4c8675a6a534f3"><div class="ttname"><a href="MLV__text_8h_a549f2391ffb2c6c9bd4c8675a6a534f3.html#a549f2391ffb2c6c9bd4c8675a6a534f3">MLV_draw_text</a></div><div class="ttdeci">void MLV_draw_text(int x, int y, const char *text, MLV_Color color,...)</div><div class="ttdoc">Imprime un texte donné à une position et une couleur données.</div></div>
+<div class="ttc" id="aMLV__time_8h_ac628f6783be5d11bee510f4e06a2c2a7_html_ac628f6783be5d11bee510f4e06a2c2a7"><div class="ttname"><a href="MLV__time_8h_ac628f6783be5d11bee510f4e06a2c2a7.html#ac628f6783be5d11bee510f4e06a2c2a7">MLV_wait_seconds</a></div><div class="ttdeci">void MLV_wait_seconds(int seconds)</div><div class="ttdoc">Le programme s&#39;intérompt pendant un nombre de secondes.</div></div>
+<div class="ttc" id="aMLV__window_8h_a139eec0093ed1ced7f49b0f35a5b65e5_html_a139eec0093ed1ced7f49b0f35a5b65e5"><div class="ttname"><a href="MLV__window_8h_a139eec0093ed1ced7f49b0f35a5b65e5.html#a139eec0093ed1ced7f49b0f35a5b65e5">MLV_free_window</a></div><div class="ttdeci">void MLV_free_window()</div><div class="ttdoc">Ferme la fenêtre de la bibliothèque MLV.</div></div>
+<div class="ttc" id="aMLV__window_8h_a5f4ed8b1e1ac8ee176d08c3fc5dea1f1_html_a5f4ed8b1e1ac8ee176d08c3fc5dea1f1"><div class="ttname"><a href="MLV__window_8h_a5f4ed8b1e1ac8ee176d08c3fc5dea1f1.html#a5f4ed8b1e1ac8ee176d08c3fc5dea1f1">MLV_create_window</a></div><div class="ttdeci">void MLV_create_window(const char *window_name, const char *icone_name, unsigned int width, unsigned int height)</div><div class="ttdoc">Créé une fenêtre dont la taille, et les différents noms sont passés en paramètres.</div></div>
+<div class="ttc" id="aMLV__window_8h_a989a543c725ea5278334e5642c53c837_html_a989a543c725ea5278334e5642c53c837"><div class="ttname"><a href="MLV__window_8h_a989a543c725ea5278334e5642c53c837.html#a989a543c725ea5278334e5642c53c837">MLV_actualise_window</a></div><div class="ttdeci">void MLV_actualise_window()</div><div class="ttdoc">Actualise l&#39;affichage de la fenêtre.</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

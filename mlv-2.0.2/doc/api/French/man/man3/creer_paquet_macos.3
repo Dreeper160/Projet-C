@@ -1,0 +1,759 @@
+.TH "creer_paquet_macos" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+creer_paquet_macos \- Créer des paquets contenant la bibliothèque MLV pour MacOS X 
+.PP
+Dans cette partie, nous allons expliquer comment créer des paquets d'installation pour MacOS X à l'aide de l'outil PackageMaker\&.
+
+.PP
+Pour pouvoir créer ces paquets, nous allons compiler et installer des outils et des bibliothèques nécessaires à la compilation, l'installation et l'exécution de la bibliothèque MLV\&.
+
+.PP
+Avant d'être mis en paquet, ces bibliothèques et ces outils doivent être installés dans différents répertoires :
+.IP "\(bu" 2
+Les outils et bibliothèques nécessaires uniquement à la compilation de MLV sont installés dans le répertoire $HOME/fakeroot_to_compile_mlv-2\&.0\&.2;
+.IP "\(bu" 2
+Les bibliothèques et les outils nécessaires à l'utilisation de MLV sont installés simultanément dans /usr et dans $HOME/mlv-2\&.0\&.2_macos-10\&.10\&.
+.PP
+
+.PP
+Le repertoire fakeroot_to_compile_mlv-2\&.0\&.2 est un repertoire temporaire de construction\&. Le repertoire /usr est le repertoire d'installation de la bibliothèque\&. Dans notre cas, il est utilisé pour pouvoir configurer et tester en conditions réelles l'infrastructure MLV\&. Le repertoire $HOME/mlv-2\&.0\&.2_macos-10\&.10 contient exactement les même composantes que ceux qui sont installées dans /usr\&. Nous utiliserons ce dernier repertoire pour construire le paquet d'installation pour MacOS X\&.
+
+.PP
+Il est important de travailler avec les deux repertoires /usr et $HOME/mlv-2\&.0\&.2_macos-10\&.10\&. En effet, /usr fait partie du système d'exploitation et contient déjà d'autres bibliothèques\&. On ne peut donc pas distribuer /usr, d'où l'obligation de créer une copie de /usr qui ne contient que l'infrastucture de MLV\&.
+
+.PP
+Il est important de noter que nous allons modifier /usr\&. Pour ce faire, nous devrons utiliser les droits "administrateur"\&. Il faudra donc être extrèmement vigilant car une mauvaise manipulation dans /usr peu détruire le système tout entier\&.
+.SH "Préparation et installation de la chaîne de compilation pour la bibliothèque MLV"
+.PP
+Commencez par créer les repetroires d'installation en tapant les commandes suivantes :
+.SS "Installation des outils de développement de MacOSX"
+Commencez par installer l'environnement de programmation d'Apple\&. Pour cela, au choix,
+.IP "\(bu" 2
+Installez Xcode depuis le site de téléchargement de Apple\&.
+.IP "\(bu" 2
+chargez le second dvd d'installation du système d'exploitation de votre ordinateur, puis installez XCode Tool\&.
+.PP
+
+.PP
+Cet environnement contient entre autre gcc, et make\&.
+.SS "Mis en place d'un environnement de développement pour MLV"
+Nous allons installer la bibliothèque MLV ainsi que ses dépendances dans un répertoire de votre dossier personnel\&.
+
+.PP
+Créez les répertoires suivants en tapant les commandes suivantes :
+
+.PP
+.PP
+.nf
+mkdir $HOME/fakeroot_to_compile_mlv-2\&.0\&.2
+mkdir $HOME/fakeroot_to_compile_mlv-2\&.0\&.2/src
+mkdir $HOME/mlv-2\&.0\&.2_macos-10\&.10
+.fi
+.PP
+
+.PP
+Il est nécessaire de configurer le système d'exploitation, pour qu'il sache que de nouvelles bibliothèques sont installées dans le répertoire fakeroot\&. Pour cela, il suffit de définir quelques variables d'environnement dans un fichier qui est exécuté à chaque démarrage du terminal\&.
+
+.PP
+Ce fichier est $HOME/\&.bash_profile
+
+.PP
+Ajoutez, à la fin du fichier, les commandes suivantes:
+
+.PP
+.PP
+.nf
+export FAKEROOT="$HOME/fakeroot_to_compile_mlv-2\&.0\&.2" 
+export SYSROOT="/usr" 
+export LOCALSYSROOT="/usr/local/MLV" 
+export MACOS_PACKAGE="$HOME/mlv-2\&.0\&.2_macos-10\&.10"
+export PATH="$FAKEROOT/bin:$LOCALSYSROOT/bin:$SYSROOT/bin:$PATH"
+export DYLD_LIBRARY_PATH="$FAKEROOT/lib:$LOCALSYSROOT/lib:$SYSROOT/lib:$DYLD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="$FAKEROOT/lib/pkgconfig:$LOCALSYSROOT/lib/pkgconfig:$SYSROOT/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH="$FAKEROOT/lib:$LOCALSYSROOT/lib:$SYSROOT/lib:$LD_LIBRARY_PATH"
+export ACLOCAL="aclocal -I $FAKEROOT/share/aclocal  -I $LOCALSYSROOT/share/aclocal  -I $SYSROOT/share/aclocal  -I /usr/share/aclocal"
+export PKG_CONFIG="$SYSROOT/bin/pkg-config"
+export CPPFLAGS="-I$FAKEROOT/include -I$LOCALSYSROOT/include -I$SYSROOT/include"
+export LDFLAGS="-L$FAKEROOT/lib -L$LOCALSYSROOT/lib -L$SYSROOT/lib"
+.fi
+.PP
+
+.PP
+Si le fichier n'existe pas, créez le\&.
+
+.PP
+Vous devez maintenant redémarrer votre terminal pour prendre en compte les changements\&.
+
+.PP
+Vérifiez que les variables d'environnement ont bien été installées en tapant la commande:
+
+.PP
+.PP
+.nf
+export
+.fi
+.PP
+
+.PP
+qui devrait afficher toutes les variables d'environnement existantes\&.
+
+.PP
+Vous pouvez aussi les examiner une à une en tapant la commande:
+
+.PP
+.PP
+.nf
+echo $FAKEROOT
+echo $PATH
+etc \&.\&.\&.
+.fi
+.PP
+.SS "Installation des dépendances de MLV"
+Nous allons maintenant installer différents programmes et bibliothèques qui sont nécessaires au fonctionnement de MLV\&.
+.SS "Installation de pkg-config"
+Commencez par télécharger pkg-config-X\&.X\&.tar\&.gz en allant sur le site :
+
+.PP
+http://pkgconfig.freedesktop.org/releases/
+
+.PP
+et en le mettant dans le répertoire $FAKEROOT/src\&.
+
+.PP
+Il est important de PRENDRE LA DERNIÈRE VERSION DE PKG-CONFIG\&. En effet, pkg-config utilise une autre bibliothèque qui n'est jamais incluse dans les anciennes versions\&.
+
+.PP
+Désarchivez le fichier en tapant la ligne de commande suivante:
+
+.PP
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf pkg-config-X\&.X\&.tar\&.gz
+.fi
+.PP
+
+.PP
+où X\&.X est le numéro de la version de la bibliothèque que vous avez téléchargé\&.
+
+.PP
+Nous allons maintenant compiler pkg-config :
+
+.PP
+.PP
+.nf
+cd \&./pkg-config-X\&.X
+\&./configure --with-internal-glib --prefix=$SYSROOT
+make
+.fi
+.PP
+
+.PP
+La deuxième ligne de commande configure le code source de pkg-config pour que le code source prenne en compte les caractéristiques de l'architecture de votre ordinateur\&. L'option --prefix permet de dire au code source que le résultat de la compilation doit être installé dans le répertoire $SYSROOT, car c'est un outil qui sera necessaire à la compilation de MLV, mais aussi à l'utilisation de MLV\&. La 3ème commande compile le programme\&.
+
+.PP
+Installez la bibliothèque\&. Pour cela, tapez la commande : 
+.PP
+.nf
+sudo make install
+
+.fi
+.PP
+
+.PP
+Comme vous modifiez le sytème (à cause du --prefix=$SYSROOT), l'ordinateur vous demande un mot de passe\&. Tapez le mot de passe administrateur de l'ordinateur (ne vous inquiétez pas si le mot de passe ne s'affiche pas)\&.
+
+.PP
+Installez ensuite pkg-config dans le répertoire destiné au paquet d'installation de MLV en tapant : 
+.PP
+.nf
+make install DESTDIR=$MACOS_PACKAGE
+
+.fi
+.PP
+
+.PP
+Voilà, pkg-config est installé\&.
+.SS "Installation de M4"
+M4 est un outil d'aide à la compilation\&.
+
+.PP
+L'installation de M4 est identique à celle de pkg-config\&. Commencez par télécharger m4-X\&.X\&.X\&.tar\&.gz sur le site : http://ftp.gnu.org/gnu/m4/
+
+.PP
+Puis tapez les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xf m4-X\&.X\&.X\&.tar\&.gz
+cd m4\&.X\&.X\&.X
+\&./configure --prefix=$FAKEROOT
+make
+make install
+
+.fi
+.PP
+
+.PP
+Ici, m4 est nécessaire pour compiler MLV, mais pas pour son utilisation\&. Les commandes précédentes l'ont installée uniquement dans le repertoire $FAKEROOT\&.
+.SS "Installation de autoconf"
+Autoconf est un outil d'aide à la compilation\&.
+
+.PP
+Commencez par télécharger autoconf-X\&.X\&.tar\&.gz sur le site : http://ftp.gnu.org/gnu/autoconf/
+
+.PP
+Puis tapez les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf autoconf-X\&.X\&.tar\&.gz
+cd autoconf-X\&.X
+\&./configure --prefix=$FAKEROOT
+make
+make install
+
+.fi
+.PP
+.SS "Installation de autoconf-archive"
+Autoconf-archives est une bibliothèque de script pour autoconf\&.
+
+.PP
+Commencez par télécharger autoconf-archive-X\&.X\&.X\&.tar\&.gz sur le site : http://ftp.gnu.org/gnu/autoconf-archive/
+
+.PP
+Puis tapez les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf autoconf-archive-X\&.X\&.X\&.tar\&.gz
+cd autoconf-archive-X\&.X\&.X
+\&./configure --prefix=$FAKEROOT
+make
+make install
+
+.fi
+.PP
+.SS "Installation de automake"
+Automake est un outil d'aide à la compilation\&.
+
+.PP
+Commencez par télécharger automake-X\&.X\&.tar\&.gz sur le site : http://ftp.gnu.org/gnu/automake/
+
+.PP
+Puis tapez les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf automake-X\&.X\&.tar\&.gz
+cd automake-X\&.X
+\&./configure --prefix=$FAKEROOT
+make
+make install
+
+.fi
+.PP
+.SS "Installation de libtool"
+Libtool est un outil d'aide à la compilation\&.
+
+.PP
+L'installation de libtool est identique à celle de pkg-config\&. Commencez par télécharger libtool-X-X\&.tar\&.gz sur le site : http://ftp.gnu.org/gnu/libtool/\&.
+
+.PP
+Puis tapez les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xf libtool-X-X\&.tar\&.gz
+cd libtool-X-X
+\&./configure --prefix=$FAKEROOT
+make
+make install
+
+.fi
+.PP
+.SS "Installation de libxml2"
+Il n'est pas nécessaire d'installer cette bibliothèque\&. En effet, elle est déjà présente dans l'installation de base de MacOS X\&.
+.SS "Installation de libffi"
+Commencez par télécharger libffi-X\&.X\&.tar\&.gz en allant sur le site : http://sourceware.org/libffi/
+
+.PP
+Puis tapez les lignes de commandes suivantes:
+
+.PP
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf libffi-X\&.X\&.tar\&.gz
+cd libffi-X\&.X
+\&./configure --prefix=$LOCALSYSROOT
+cd x86_64-apple-darwinX\&.X\&.X
+make
+sudo make install
+make install DESTDIR=$MACOS_PACKAGE
+.fi
+.PP
+.SS "Installation de gettext"
+Commencez par télécharger gettext-X\&.tar\&.gz en allant sur le site : http://www.gnu.org/software/gettext/
+
+.PP
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf gettext-X\&.X\&.X\&.X\&.tar\&.gz
+.fi
+.PP
+
+.PP
+Ensuite, compilez et installez la bibliothèque en tapant les commandes suivantes: 
+.PP
+.nf
+cd gettext-X\&.X\&.X\&.X
+\&./configure --prefix=$LOCALSYSROOT
+make
+sudo make install
+make install DESTDIR=$MACOS_PACKAGE
+
+.fi
+.PP
+.SS "Installation de glib2"
+Téléchargez la bibliothèque sur le site http://ftp.gtk.org/pub/glib/
+
+.PP
+Désarchivez ensuite la bibliothèque en tapant les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf glib-2\&.X\&.X\&.tar\&.gz
+cd glib-2\&.X\&.X
+\&./configure --prefix=$LOCALSYSROOT
+make
+sudo make install
+make install DESTDIR=$MACOS_PACKAGE
+
+.fi
+.PP
+.SS "Installation de SDL"
+Téléchargez le paquet d'installation pour MacOSX de la bibliothèque sur le site http://www.libsdl.org/download-1.2.php
+
+.PP
+Ce paquet a pour nom : SDL-1\&.2\&.X\&.dmg (Intel10\&.5+)
+
+.PP
+Puis, installez le paquet en tapant les commandes suivantes : 
+.PP
+.nf
+mkdir -p $MACOS_PACKAGE/Library/Frameworks
+hdiutil attach SDL-1\&.2\&.X\&.dmg
+sudo cp -r /Volumes/SDL/SDL\&.framework /Library/Frameworks/
+cp -r /Volumes/SDL/SDL\&.framework $MACOS_PACKAGE/Library/Frameworks/
+hdiutil detach /Volumes/SDL
+
+.fi
+.PP
+.SS "Installation de SDL_image"
+Téléchargez le paquet d'installation pour MacOSX de la bibliothèque sur le site http://www.libsdl.org/projects/SDL_image/release-1.2.html
+
+.PP
+Ce paquet a pour nom : SDL_image-1\&.2\&.X\&.dmg (Intel10\&.5+)
+
+.PP
+Puis, installez le paquet en tapant les commandes suivantes : 
+.PP
+.nf
+hdiutil attach SDL_image-1\&.2\&.X\&.dmg
+sudo cp -r /Volumes/SDL_image/SDL_image\&.framework /Library/Frameworks/
+cp -r /Volumes/SDL_image/SDL_image\&.framework $MACOS_PACKAGE/Library/Frameworks/
+hdiutil detach /Volumes/SDL_image
+
+.fi
+.PP
+.SS "Installation de SDL_mixer"
+Téléchargez le paquet d'installation pour MacOSX de la bibliothèque sur le site http://www.libsdl.org/projects/SDL_mixer/release-1.2.html
+
+.PP
+Ce paquet a pour nom : SDL_mixer-1\&.2\&.X\&.dmg (Intel10\&.5+)
+
+.PP
+Puis, installez le paquet en tapant les commandes suivantes : 
+.PP
+.nf
+hdiutil attach SDL_mixer-1\&.2\&.X\&.dmg
+sudo cp -r /Volumes/SDL_mixer/SDL_mixer\&.framework /Library/Frameworks/
+cp -r /Volumes/SDL_mixer/SDL_mixer\&.framework $MACOS_PACKAGE/Library/Frameworks/
+hdiutil detach /Volumes/SDL_mixer
+
+.fi
+.PP
+.SS "Installation de SDL_ttf"
+Téléchargez le paquet d'installation pour MacOSX de la bibliothèque sur le site http://www.libsdl.org/projects/SDL_ttf/release-1.2.html
+
+.PP
+Ce paquet a pour nom : SDL_ttf-X\&.X\&.X\&.dmg (Intel10\&.5+)
+
+.PP
+Puis, installez le paquet en tapant les commandes suivantes : 
+.PP
+.nf
+hdiutil attach SDL_ttf-X\&.X\&.X\&.dmg
+sudo cp -r /Volumes/SDL_ttf/SDL_ttf\&.framework /Library/Frameworks/
+cp -r /Volumes/SDL_ttf/SDL_ttf\&.framework $MACOS_PACKAGE/Library/Frameworks/
+hdiutil detach /Volumes/SDL_ttf
+
+.fi
+.PP
+.SS "Installation de SDL_gfx"
+Téléchargez le code source de la bibliothèque sur le site : http://www.ferzkopp.net/joomla/content/view/19/14/ 
+.PP
+.nf
+cd  $FAKEROOT/src
+tar -xzf SDL_gfx-X\&.X\&.tar\&.gz
+
+.fi
+.PP
+
+.PP
+ATTENTION ! Il est important de télécharger la verions de SDL_gfx qui a été prévu pour la version 1\&.2 de SDL (il ne faut surtout pas prendre SDL2_gfx qui est prévue pour la version 2\&.0 de SDL ) !
+
+.PP
+Modifiez le configure\&.in en remplacant les lignes 
+.PP
+.nf
+dnl Check for SDL
+AM_PATH_SDL($SDL_VERSION,
+            :,
+        AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!])
+)
+CFLAGS="$CFLAGS $SDL_CFLAGS"
+# Remove dependencies from 'sdl-config' not meant for us libraries:
+SDL_LIBS=$(echo "$SDL_LIBS" |sed -e 's/-lmingw32//' -e 's/-lSDLmain//')
+LIBS="$LIBS $SDL_LIBS"
+
+.fi
+.PP
+ par les lignes 
+.PP
+.nf
+SDL_CFLAGS="-I/Library/Frameworks/SDL\&.framework/Headers -framework SDL" 
+SDL_LIBS="-framework SDL" 
+CFLAGS="$CFLAGS $SDL_CFLAGS" 
+LIBS="$LIBS $SDL_LIBS -framework SDL"
+
+.fi
+.PP
+
+.PP
+Reconfigurez la bibliothèque en exécutant la commande: 
+.PP
+.nf
+cd SDL_gfx-X\&.X
+autoreconf --install
+
+.fi
+.PP
+
+.PP
+Finissez la compilation et l'installation de la bibliothèque en tapant les commandes suivantes: 
+.PP
+.nf
+\&./configure --prefix=$LOCALSYSROOT --without-x
+make
+sudo make install
+make install DESTDIR=$MACOS_PACKAGE
+
+.fi
+.PP
+.SS "Installation de Cmake"
+Téléchargez le code source de Cmake, contenu dans le fichier cmake-X\&.X\&.X\&.tar\&.gz situé sur le site : http://www.cmake.org/download/
+
+.PP
+Installez le paquet en tapant les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf cmake-X\&.X\&.X\&.src\&.tar\&.gz
+cd cmake-X\&.X\&.X
+\&./configure --prefix=$FAKEROOT
+make
+make install
+
+.fi
+.PP
+.SS "Installation de Doxygen"
+Téléchargez le code source de Doxygen, contenu dans le fichier doxygen-X\&.X\&.X\&.src\&.tar\&.gz situé sur le site : http://www.stack.nl/~dimitri/doxygen/download.html#latestsrc
+
+.PP
+Installez le paquet en tapant les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf doxygen-X\&.X\&.X\&.src\&.tar\&.gz
+cd doxygen-X\&.X\&.X
+cmake -DCMAKE_INSTALL_PREFIX:PATH=$FAKEROOT -G "Unix Makefiles"
+make
+make install
+
+.fi
+.PP
+.SS "Installation de la bibliothèque MLV"
+Commencez par télécharger le code source de la bibliothèque MLV\&. Téléchargez la bibliothèque située à l'adresse : http://download.savannah.gnu.org/releases/mlv/mlv-2.0.2/mlv-2.0.2.tar.gz
+
+.PP
+Installez la bibliothèque en tapant les commandes suivantes: 
+.PP
+.nf
+cd $FAKEROOT/src
+tar -xzf mlv-2\&.0\&.2\&.tar\&.gz
+cd mlv-2\&.0\&.2
+\&./configure --prefix=$SYSROOT libxml_LIBS=-lxml2 libxml_CFLAGS=-I/usr/include/libxml2
+make
+sudo make install
+make install DESTDIR=$MACOS_PACKAGE
+
+.fi
+.PP
+.SH "Création du paquet d'installation de MLV pour MacOX"
+.PP
+Installer PackageMaker en allant sur le site: https://developer.apple.com/downloads/index.action
+
+.PP
+Installer PackageMaker\&.
+
+.PP
+Executez PackageMaker\&.
+
+.PP
+Dans le champs Organisation, remplissez: 
+.PP
+.nf
+multimedia\&.library
+
+.fi
+.PP
+
+.PP
+Et choisissez la cible : 
+.PP
+.nf
+Mac OS X v10\&.5 Leopard
+
+.fi
+.PP
+
+.PP
+Cliquez sur "Untitled", puis sur Configuration\&.
+
+.PP
+Modifiez le titre de sorte qu'il devienne: "mlv-2\&.0\&.2_macos-10\&.10"
+
+.PP
+Dans "Install Destination", décochez l'option "Volume selected by user" et remplacez le par "System volume"\&.
+
+.PP
+Pour la description, mettez: 
+.PP
+.nf
+The MLV library is a simplified multimedia library\&. This library has been designed for beginner students in C, and it allows to add graphical and audio effects on the student program\&. The library is useful to:
+- draw figures, display text and dialog boxes,
+- display images,
+- play sounds and musics,
+- catch mouse and keyboard events,
+- get informations from dialog boxes\&.
+These tools are simplified interfaces of the SDL library\&. If you are not a C beginner, better use the SDL librairy (SDL, SDL_gfx, SDL_sound, SDL_ttf)\&. 
+
+.fi
+.PP
+
+.PP
+Ensuite, ajouter le dossier $MACOS_PACKAGE/usr (à l'aide de l'icône en forme de plus)\&.
+
+.PP
+Réalisez ensuite les opérations suivantes:
+.IP "\(bu" 2
+Allez dans l'onglet contents et selectionnez l'option : "include root in package"
+.IP "\(bu" 2
+Cliquez sur le dossier usr en dessous de path, puis cliquez sur "Apply Recommendations"\&. Normalement, owner a du recursivement etre positionné à root et Group à Wheel
+.IP "\(bu" 2
+Cliquez sur "Configuration" et remplacez le champ "Package Identifier" par "multimedia\&.library\&.mlv\&.mlv_infrastructure\&.pkg"
+.IP "\(bu" 2
+Toujours dans "Configuration" , remplacez le champ "Package Version" par "2\&.0\&.2"
+.IP "\(bu" 2
+Cliquez sur le nom "usr" et renomez-le en "MLV Infrastructure"
+.IP "\(bu" 2
+Ajoutez la description suivante: 
+.PP
+.nf
+This package installs the MLV library\&.
+
+This package installs files in /usr and /usr/local\&.
+He can potentially break the system\&.
+
+.fi
+.PP
+
+.PP
+
+.PP
+Ajoutez maintenant le dossier $MACOS_PACKAGE/LIBRARY\&.
+
+.PP
+Réalisez ensuite les opérations suivantes:
+.IP "\(bu" 2
+Allez dans l'onglet contents et selectionnez l'option : "include root in package"
+.IP "\(bu" 2
+Cliquez sur le dossier Library en dessous de path, puis cliquez sur "Apply Recommendations"\&. Normalement, owner a du recursivement être positionné à root et Group à Wheel\&.
+.IP "\(bu" 2
+Cliquez sur "Configuration" et remplacez le champ "Package Identifier" par "multimedia\&.library\&.mlv\&.sdl_framework\&.pkg"
+.IP "\(bu" 2
+Toujours dans "Configuration" , remplacez le champ "Package Version" par "2\&.0\&.2"
+.IP "\(bu" 2
+Cliquez sur le nom "Library" et renomez le en "SDL Framework"
+.IP "\(bu" 2
+Ajoutez la descrition suivante: 
+.PP
+.nf
+This package installs the SDL Framework\&.
+If you have yet installed the SDL Framework, you are not obliged to install this component\&.
+
+This package installs files in /Library/Framework
+He can potentially break the system\&.
+
+.fi
+.PP
+
+.PP
+
+.PP
+Une fois fait, cliquez sur le bouton Build et enregistrez le paquet dans le dossier de votre choix\&.
+
+.PP
+Le paquet est prêt !
+.SH "Tester le bon fonctionnement des paquets d'installation"
+.PP
+Commencer par vérifier que votre paquet d'installation est correcte en copiant le paquet dans un repertoire de test\&. Décompressez le paquet à l'aide de la commande : 
+.PP
+.nf
+tar -xzf mlv-2\&.0\&.2_macos-10\&.10\&.pkg
+tar -xzf usr\&.pkg/Payload
+tar -xzf library\&.pkg/Payload
+
+.fi
+.PP
+
+.PP
+Normalement, vous devriez avoir deux répertoires : Library et usr\&. Il doivent au moins contenir les dossiers et fichiers suivants : 
+.PP
+.nf
+Library
+`-- Frameworks
+    |-- SDL\&.framework
+    |-- SDL_image\&.framework
+    |-- SDL_mixer\&.framework
+    `-- SDL_ttf\&.framework
+usr
+|-- bin
+|   `-- pkg-config
+|-- include
+|   `-- MLV
+|-- lib
+|   |-- libMLV\&.0\&.dylib
+|   |-- libMLV\&.a
+|   |-- libMLV\&.dylib
+|   |-- libMLV\&.la
+|   |-- libMLVMain\&.0\&.dylib
+|   |-- libMLVMain\&.a
+|   |-- libMLVMain\&.dylib
+|   |-- libMLVMain\&.la
+|   `-- pkgconfig
+|-- local
+|   `-- MLV
+`-- share
+    |-- aclocal
+    |-- doc
+    |-- man
+    `-- MLV
+
+.fi
+.PP
+ Si tel est le cas, c'est que le paquet a correctement été généré\&.
+
+.PP
+Commencez par désinstaller l'infrastructure de compilation du paquet : 
+.PP
+.nf
+cd $FAKEROOT/src/pkg-config-X\&.X && sudo make uninstall
+cd $FAKEROOT/src/libffi-X\&.X/x86_64-apple-darwinX\&.X\&.X && sudo make uninstall
+cd $FAKEROOT/src/gettext-X\&.X\&.X\&.X && sudo make uninstall
+cd $FAKEROOT/src/glib-2\&.X\&.X && sudo make uninstall
+sudo rm -rf /Library/Frameworks/SDL_ttf\&.framework
+sudo rm -rf /Library/Frameworks/SDL_mixer\&.framework
+sudo rm -rf /Library/Frameworks/SDL_image\&.framework
+sudo rm -rf /Library/Frameworks/SDL\&.framework
+cd $FAKEROOT/src/SDL_gfx-X\&.X && sudo make uninstall
+cd $FAKEROOT/src/mlv-2\&.0\&.2 && sudo make uninstall
+
+.fi
+.PP
+
+.PP
+Supprimez les lignes qui ont été ajoutées dans le fichier \&.bash_profile au debut du document\&.
+
+.PP
+Voilà, on peut maintenant tester l'installation du paquet\&.
+
+.PP
+Pour installer le paquet, il vous suffit de cliquer sur le fichier et de suivre les instructions\&.
+
+.PP
+Testez maintenant la bibliothèque en tapant les commandes suivantes: 
+.PP
+.nf
+cp -r /usr/share/doc/mlv/examples /tmp
+cd /tmp/examples/beginner
+make
+
+.fi
+.PP
+
+.PP
+Si la compilation se fait sans erreur, c'est que l'installation s'est correctement déroulée\&.
+
+.PP
+Vous pouvez maitnenant vérifier que chaque programme s'exécute correctement\&. Vérifiez aussi tous les autres exemples\&.
+.SH "Désinstaller le paquet pour remettre le système dans son état d'origine"
+.PP
+Il n'y a pas d'outil de désinstallation sous mac\&. Pour désinstaller un paquet, il faut supprimer les fichiers à la main en tapant les commandes: 
+.PP
+.nf
+sudo rm -rf /Library/Frameworks/SDL\&.framework
+sudo rm -rf /Library/Frameworks/SDL_image\&.framework
+sudo rm -rf /Library/Frameworks/SDL_mixer\&.framework
+sudo rm -rf /Library/Frameworks/SDL_ttf\&.framework
+sudo rm -rf /usr/include/MLV
+sudo rm -rf /usr/lib/libMLV*
+sudo rm -rf /usr/lib/pkgconfig/MLV\&.pc
+sudo rm -rf /usr/local/MLV
+sudo rm -rf /usr/share/MLV
+sudo rm -rf /usr/share/doc/mlv
+sudo rm -rf /usr/share/man/man3/MLV_*\&.h\&.3
+sudo rm -rf /usr/bin/pkg-config
+sudo rm -rf /usr/bin/x86_64-apple-darwin13\&.0\&.0-pkg-config
+sudo rm -rf /usr/share/aclocal/pkg\&.m4
+sudo rm -rf /usr/share/doc/pkg-config
+sudo rm -rf /usr/share/man/man1/pkg-config\&.1
+
+.fi
+.PP
+
+.PP
+Puis, il faut juste dire au système d'oublier l'existence du paquet en question en tapant la commande: 
+.PP
+.nf
+sudo pkgutil --forget multimedia\&.library\&.mlv\&.mlv_infrastructure\&.pkg
+sudo pkgutil --forget multimedia\&.library\&.mlv\&.sdl_framework\&.pkg
+
+.fi
+.PP
+ 

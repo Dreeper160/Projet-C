@@ -1,0 +1,262 @@
+.TH "MLV_audio.h" 3 "Mardi 27 Octobre 2026 16:46:18" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_audio.h \- Ce fichier définit les prototypes des fonctions permettant de faire jouer de la musique et des échantillons sonores à l'aide de la bibliothèque MLV\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _MLV_Music \fBMLV_Music\fP"
+.br
+.RI "Ce type code un morceau de musique\&. "
+.ti -1c
+.RI "typedef struct _MLV_Sound \fBMLV_Sound\fP"
+.br
+.RI "Ce type code un échantillon sonore\&. "
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "int \fBMLV_init_audio\fP ()"
+.br
+.RI "Cette fonction initialise la bibliothèque MLV pour pouvoir jouer de la musique et des sons\&. "
+.ti -1c
+.RI "void \fBMLV_free_audio\fP ()"
+.br
+.RI "Ferme proprement les différents périphériques audios\&. "
+.ti -1c
+.RI "int \fBMLV_change_audio_buffer_size\fP (int buffer_size)"
+.br
+.RI "Change la taille du buffer audio\&. La taille doit être une puissance de 2\&. "
+.ti -1c
+.RI "void \fBMLV_change_number_of_parallel_sounds\fP (unsigned int n)"
+.br
+.RI "Change le nombre d'écahantillons sonores qui peuvent être joués en même temps\&. "
+.ti -1c
+.RI "\fBMLV_Music\fP * \fBMLV_load_music\fP (const char *file_music)"
+.br
+.RI "Charge un ficher contenant de la musique en mémoire\&. "
+.ti -1c
+.RI "void \fBMLV_free_music\fP (\fBMLV_Music\fP *music)"
+.br
+.RI "Ferme un morceau de musique chargé en mémoire\&. "
+.ti -1c
+.RI "void \fBMLV_play_music\fP (const \fBMLV_Music\fP *music, float volume, int loop)"
+.br
+.RI "Joue un morceau de musique qui est chargée en mémoire\&. "
+.ti -1c
+.RI "void \fBMLV_stop_music\fP ()"
+.br
+.RI "Arrête toutes les musiques\&. "
+.ti -1c
+.RI "\fBMLV_Sound\fP * \fBMLV_load_sound\fP (const char *file_sound)"
+.br
+.RI "Charge un ficher contenant un échantillon sonore en mémoire\&. "
+.ti -1c
+.RI "void \fBMLV_free_sound\fP (\fBMLV_Sound\fP *sound)"
+.br
+.RI "Ferme un échantillon sonore chargé en mémoire\&. "
+.ti -1c
+.RI "void \fBMLV_play_sound\fP (const \fBMLV_Sound\fP *sound, float volume)"
+.br
+.RI "Joue un échantillon sonore chargé en mémoire\&. "
+.ti -1c
+.RI "void \fBMLV_stop_all_sounds\fP ()"
+.br
+.RI "Arrête tous les échantillons sonores\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit les prototypes des fonctions permettant de faire jouer de la musique et des échantillons sonores à l'aide de la bibliothèque MLV\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein 
+.RE
+.PP
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "int MLV_change_audio_buffer_size (int buffer_size)"
+
+.PP
+Change la taille du buffer audio\&. La taille doit être une puissance de 2\&. Le porgramme rempli périodiquement un buffer audio à faire jouer par la carte son\&. Plus la taille du buffer audio est grande, plus le programme à le temps de remplir le buffer avant qu'il se vide\&. Plus le buffer est grand, plus le programme met du temps à le remplir\&.
+
+.PP
+Ainsi, si il y a un temps de latence entre une action et l'execution sonore du son correspondant, c'est que vous devez réduire la taille du buffer audio\&.
+
+.PP
+Si le son est coupé et crépite, c'est que le buffer est trop petit et que le processeur est trop lent pour remplir le buffer avant qu'il se vide\&. Vous devez donc agrandir la taille du buffer\&.
+
+.PP
+MLV_change_buffer_size vous permet d'ajuster la taille de ce buffer\&. par default la taille du buffer est mis à 1024\&.
+
+.PP
+Si vous utilisez le programme uniquement pour jouer de la musique, nous vous vous conseillons de configurer la taille du buffer à 4096\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbuffer_size\fP Taille du buffer audio ( une puissance de 2 )
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Renvoie 0 si l'infrastructure audio a été correctement initialisé, renvoie -1 sinon\&. 
+.RE
+.PP
+
+.SS "void MLV_change_number_of_parallel_sounds (unsigned int n)"
+
+.PP
+Change le nombre d'écahantillons sonores qui peuvent être joués en même temps\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIn\fP Le nombre d'échantillons sonores\&. 
+.RE
+.PP
+
+.SS "void MLV_free_music (\fBMLV_Music\fP * music)"
+
+.PP
+Ferme un morceau de musique chargé en mémoire\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fImusic\fP Le morceau de musique à fermer 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/03_music\&.c\fP\&.
+.SS "void MLV_free_sound (\fBMLV_Sound\fP * sound)"
+
+.PP
+Ferme un échantillon sonore chargé en mémoire\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsound\fP L'échantillon sonore à fermer 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/04_sound\&.c\fP\&.
+.SS "int MLV_init_audio ()"
+
+.PP
+Cette fonction initialise la bibliothèque MLV pour pouvoir jouer de la musique et des sons\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+Renvoie 0 si l'infrastructure audio a été correctement initialisé, renvoie -1 sinon\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/03_music\&.c\fP, \fBadvanced/04_sound\&.c\fP, \fBadvanced/09_animation\&.c\fP, et \fBadvanced/11_animation_book\&.c\fP\&.
+.SS "\fBMLV_Music\fP * MLV_load_music (const char * file_music)"
+
+.PP
+Charge un ficher contenant de la musique en mémoire\&. Cette fonction prends en paramètre le chemin d'accès du fichier contenant la musique et renvoie un pointeur vers l'espace mémoire où a été chargé la musique\&.
+
+.PP
+Les formats de fichier acceptés sont les suivants \&.ogg, \&.mp3, \&.wav, etc \&.\&.\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIfile_music\fP Chemin d'accès vers un fichier contenant de la musique codée en format \&.wav\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Un pointeur vers la musique chargée en mémoire, ou NULL si la bibliothèque n'a pas réussi à charger la musique en mémoire\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/03_music\&.c\fP\&.
+.SS "\fBMLV_Sound\fP * MLV_load_sound (const char * file_sound)"
+
+.PP
+Charge un ficher contenant un échantillon sonore en mémoire\&. Cette fonction prends en paramètre le chemin d'accès du fichier contenant l'échantillon sonore et renvoie un pointeur vers l'espace mémoire où a été chargé l'échantillon sonore\&.
+
+.PP
+Les formats de fichier acceptés sont les suivants : WAVE, AIFF, RIFF, OGG, and VOC\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIfile_sound\fP Chemin d'accès vers un fichier contenant un échantillon sonore\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Null si le fichier n'a pas pu être chargé en mémoire\&. Un pointeur vers l'échantllon sonore sinon\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/04_sound\&.c\fP, et \fBadvanced/09_animation\&.c\fP\&.
+.SS "void MLV_play_music (const \fBMLV_Music\fP * music, float volume, int loop)"
+
+.PP
+Joue un morceau de musique qui est chargée en mémoire\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fImusic\fP Le morceau de musique à jouer\&. 
+.br
+\fIvolume\fP Le volume sonore\&. 
+.br
+\fIloop\fP Le nombre de fois que le morceau doit être joué\&. Si loop est strictement négatif, le morceau sera joué indéfiniment\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/03_music\&.c\fP\&.
+.SS "void MLV_play_sound (const \fBMLV_Sound\fP * sound, float volume)"
+
+.PP
+Joue un échantillon sonore chargé en mémoire\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsound\fP L'échantillon sonore à jouer\&. 
+.br
+\fIvolume\fP Le volume sonore\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/04_sound\&.c\fP\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

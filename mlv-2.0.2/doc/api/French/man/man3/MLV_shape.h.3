@@ -1,0 +1,643 @@
+.TH "MLV_shape.h" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_shape.h \- Ce fichier définit tout les prototypes des fonctions permettant de dessiner des figures\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMLV_draw_circle\fP (int x, int y, int radius, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un cercle à une position et un rayon spécifiés en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_circle\fP (int x, int y, int radius, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un disque plein dont le centre et le rayon sont passés en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_draw_ellipse\fP (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine une ellipse\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_ellipse\fP (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine une ellipse pleine\&. "
+.ti -1c
+.RI "void \fBMLV_draw_polygon\fP (const int *vx, const int *vy, int nb_points, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un polygone à partir d'une liste de sommets\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_polygon\fP (const int *vx, const int *vy, int nb_points, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un polygone plein à partir d'une liste de sommets\&. "
+.ti -1c
+.RI "void \fBMLV_draw_bezier_curve\fP (const int *vx, const int *vy, int nb_points, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine une courbe de Bézier à partir d'une liste de sommets\&. "
+.ti -1c
+.RI "void \fBMLV_draw_rectangle\fP (int x, int y, int width, int height, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un rectangle dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_rectangle\fP (int x, int y, int width, int height, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un rectangle plein dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_draw_line\fP (int x1, int y1, int x2, int y2, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine une ligne\&. "
+.ti -1c
+.RI "void \fBMLV_draw_pixel\fP (int x, int y, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un pixel dont les coordonnées sont passées en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_draw_point\fP (int x, int y, \fBMLV_Color\fP color)"
+.br
+.RI "Dessine un point dont les coordonnées sont passées en paramètres\&. Cette fonction est identique à MLV_draw_pixel\&. "
+.ti -1c
+.RI "void \fBMLV_draw_circle_on_image\fP (int x, int y, int radius, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un cercle à une position et un rayon spécifiés en paramètres dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_circle_on_image\fP (int x, int y, int radius, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un disque plein dont le centre et le rayon sont passés en parametres dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_ellipse_on_image\fP (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine une ellipse dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_ellipse_on_image\fP (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine une ellipse pleine dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_polygon_on_image\fP (const int *vx, const int *vy, int nb_points, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un polygone à partir d'une liste de sommets dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_polygon_on_image\fP (const int *vx, const int *vy, int nb_points, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un polygone plein à partir d'une liste de sommets dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_bezier_curve_on_image\fP (const int *vx, const int *vy, int nb_points, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine une courbe de Bézier à partir d'une liste de sommets dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_rectangle_on_image\fP (int x, int y, int width, int height, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un rectangle dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_filled_rectangle_on_image\fP (int x, int y, int width, int height, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un rectangle plein dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_line_on_image\fP (int x1, int y1, int x2, int y2, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine une ligne dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_pixel_on_image\fP (int x, int y, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un pixel dont les coordonnées sont passées en paramètres dans une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_point_on_image\fP (int x, int y, \fBMLV_Color\fP color, \fBMLV_Image\fP *image)"
+.br
+.RI "Dessine un point dont les coordonnées sont passées en paramètres\&. Cette fonction est identique à MLV_draw_pixel dans une image\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit tout les prototypes des fonctions permettant de dessiner des figures\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void MLV_draw_bezier_curve (const int * vx, const int * vy, int nb_points, \fBMLV_Color\fP color)"
+
+.PP
+Dessine une courbe de Bézier à partir d'une liste de sommets\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIvx\fP La liste des coordonnées en X des différents sommets de la courbe\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets de la courbe\&. 
+.br
+\fInb_points\fP Le nombre de sommets disponibles pour dessiner la courbe de Bézier\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP\&.
+.SS "void MLV_draw_bezier_curve_on_image (const int * vx, const int * vy, int nb_points, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine une courbe de Bézier à partir d'une liste de sommets dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIvx\fP La liste des coordonnées en X des différents sommets de la courbe\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets de la courbe\&. 
+.br
+\fInb_points\fP Le nombre de sommets disponibles pour dessiner la courbe de Bézier\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP image dans laquelle la figure est dessinée 
+.RE
+.PP
+
+.SS "void MLV_draw_circle (int x, int y, int radius, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un cercle à une position et un rayon spécifiés en paramètres\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre\&. 
+.br
+\fIy\fP La coordonnée en Y du centre\&. 
+.br
+\fIradius\fP Le rayon du cercle\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBbeginner/05_mouse\&.c\fP\&.
+.SS "void MLV_draw_circle_on_image (int x, int y, int radius, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un cercle à une position et un rayon spécifiés en paramètres dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre\&. 
+.br
+\fIy\fP La coordonnée en Y du centre\&. 
+.br
+\fIradius\fP Le rayon du cercle\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_ellipse (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color)"
+
+.PP
+Dessine une ellipse\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre de l'ellipse\&. 
+.br
+\fIy\fP La coordonnée en Y du centre de l'ellipse\&. 
+.br
+\fIradius_x\fP Le rayon en X de l'ellipse\&. 
+.br
+\fIradius_y\fP Le rayon en Y de l'ellipse\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP\&.
+.SS "void MLV_draw_ellipse_on_image (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine une ellipse dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre de l'ellipse\&. 
+.br
+\fIy\fP La coordonnée en Y du centre de l'ellipse\&. 
+.br
+\fIradius_x\fP Le rayon en X de l'ellipse\&. 
+.br
+\fIradius_y\fP Le rayon en Y de l'ellipse\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_filled_circle (int x, int y, int radius, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un disque plein dont le centre et le rayon sont passés en paramètres\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre\&. 
+.br
+\fIy\fP La coordonnée en Y du centre\&. 
+.br
+\fIradius\fP Le rayon du cercle\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP\&.
+.SS "void MLV_draw_filled_circle_on_image (int x, int y, int radius, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un disque plein dont le centre et le rayon sont passés en parametres dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre\&. 
+.br
+\fIy\fP La coordonnée en Y du centre\&. 
+.br
+\fIradius\fP Le rayon du cercle\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_filled_ellipse (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color)"
+
+.PP
+Dessine une ellipse pleine\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre de l'ellipse\&. 
+.br
+\fIy\fP La coordonnée en Y du centre de l'ellipse\&. 
+.br
+\fIradius_x\fP Le rayon en X de l'ellipse\&. 
+.br
+\fIradius_y\fP Le rayon en Y de l'ellipse\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP\&.
+.SS "void MLV_draw_filled_ellipse_on_image (int x, int y, int radius_x, int radius_y, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine une ellipse pleine dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du centre de l'ellipse\&. 
+.br
+\fIy\fP La coordonnée en Y du centre de l'ellipse\&. 
+.br
+\fIradius_x\fP Le rayon en X de l'ellipse\&. 
+.br
+\fIradius_y\fP Le rayon en Y de l'ellipse\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_filled_polygon (const int * vx, const int * vy, int nb_points, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un polygone plein à partir d'une liste de sommets\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIvx\fP La liste des coordonnées en X des différents sommets du polygone\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets du polygone\&. 
+.br
+\fInb_points\fP Le nombre de sommets du polygone\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP\&.
+.SS "void MLV_draw_filled_polygon_on_image (const int * vx, const int * vy, int nb_points, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un polygone plein à partir d'une liste de sommets dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIvx\fP La liste des coordonnées en X des différents sommets du polygone\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets du polygone\&. 
+.br
+\fInb_points\fP Le nombre de sommets du polygone\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&.
+.br
+\fIvx\fP La liste des coordonnées en X des différents sommets du polygone\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets du polygone\&. 
+.br
+\fInb_points\fP Le nombre de sommets du polygone\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée 
+.RE
+.PP
+
+.SS "void MLV_draw_filled_rectangle (int x, int y, int width, int height, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un rectangle plein dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIy\fP La coordonnée en Y du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIwidth\fP La largeur du rectangle\&. 
+.br
+\fIheight\fP La hauteur du rectangle\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/09_animation\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBmedium/06_colors\&.c\fP, et \fBmedium/09_keyboard_accents\&.c\fP\&.
+.SS "void MLV_draw_filled_rectangle_on_image (int x, int y, int width, int height, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un rectangle plein dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIy\fP La coordonnée en Y du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIwidth\fP La largeur du rectangle\&. 
+.br
+\fIheight\fP La hauteur du rectangle\&. 
+.br
+\fIcolor\fP La couleur du rectangle\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/08_zone_click\&.c\fP\&.
+.SS "void MLV_draw_line (int x1, int y1, int x2, int y2, \fBMLV_Color\fP color)"
+
+.PP
+Dessine une ligne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx1\fP La coordonnée en X de la première extrémité de la ligne\&. 
+.br
+\fIy1\fP La coordonnée en Y de la première extrémité de la ligne\&. 
+.br
+\fIx2\fP La coordonnée en X de la deuxième extrémité de la ligne\&. 
+.br
+\fIy2\fP La coordonnée en Y de la deuxième extrémité de la ligne\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBbeginner/02_shapes\&.c\fP, et \fBmedium/06_colors\&.c\fP\&.
+.SS "void MLV_draw_line_on_image (int x1, int y1, int x2, int y2, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine une ligne dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx1\fP La coordonnée en X de la première extrémité de la ligne\&. 
+.br
+\fIy1\fP La coordonnée en Y de la première extrémité de la ligne\&. 
+.br
+\fIx2\fP La coordonnée en X de la deuxième extrémité de la ligne\&. 
+.br
+\fIy2\fP La coordonnée en Y de la deuxième extrémité de la ligne\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_pixel (int x, int y, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un pixel dont les coordonnées sont passées en paramètres\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du pixel\&. 
+.br
+\fIy\fP La coordonnée en Y du pixel\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_pixel_on_image (int x, int y, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un pixel dont les coordonnées sont passées en paramètres dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP Coordonnée en X du pixel 
+.br
+\fIy\fP Coordonnée en Y du pixel 
+.br
+\fIcolor\fP Couleur du tracé 
+.br
+\fIimage\fP image dans laquelle la figure est dessinée 
+.RE
+.PP
+
+.SS "void MLV_draw_point (int x, int y, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un point dont les coordonnées sont passées en paramètres\&. Cette fonction est identique à MLV_draw_pixel\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du point\&. 
+.br
+\fIy\fP La coordonnée en Y du point\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBmedium/06_colors\&.c\fP\&.
+.SS "void MLV_draw_point_on_image (int x, int y, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un point dont les coordonnées sont passées en paramètres\&. Cette fonction est identique à MLV_draw_pixel dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du point\&. 
+.br
+\fIy\fP La coordonnée en Y du point\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_polygon (const int * vx, const int * vy, int nb_points, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un polygone à partir d'une liste de sommets\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIvx\fP La liste des coordonnées en X des différents sommets du polygone\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets du polygone\&. 
+.br
+\fInb_points\fP Le nombre de sommets du polygone\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP\&.
+.SS "void MLV_draw_polygon_on_image (const int * vx, const int * vy, int nb_points, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un polygone à partir d'une liste de sommets dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIvx\fP La liste des coordonnées en X des différents sommets du polygone\&. 
+.br
+\fIvy\fP La liste des coordonnées en Y des différents sommets du polygone\&. 
+.br
+\fInb_points\fP Le nombre de sommets du polygone\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SS "void MLV_draw_rectangle (int x, int y, int width, int height, \fBMLV_Color\fP color)"
+
+.PP
+Dessine un rectangle dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIy\fP La coordonnée en Y du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIwidth\fP La largeur du rectangle\&. 
+.br
+\fIheight\fP La hauteur du rectangle\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBmedium/08_full_screen\&.c\fP\&.
+.SS "void MLV_draw_rectangle_on_image (int x, int y, int width, int height, \fBMLV_Color\fP color, \fBMLV_Image\fP * image)"
+
+.PP
+Dessine un rectangle dont la taille, la couleur et la position du sommet Nord-Ouest sont données en paramètres dans une image\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIy\fP La coordonnée en Y du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIwidth\fP La largeur du rectangle\&. 
+.br
+\fIheight\fP La hauteur du rectangle\&. 
+.br
+\fIcolor\fP La couleur du rectangle\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée \&.
+.br
+\fIx\fP La coordonnée en X du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIy\fP La coordonnée en Y du sommet Nord-Ouest du rectangle\&. 
+.br
+\fIwidth\fP La largeur du rectangle\&. 
+.br
+\fIheight\fP La hauteur du rectangle\&. 
+.br
+\fIcolor\fP La couleur du rectangle\&. 
+.br
+\fIimage\fP L'image dans laquelle la figure est dessinée\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier MLV_keyboard.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ce fichier définit les prototypes des fonctions permettant d'utiliser le clavier.  
+<a href="#details">Plus de détails...</a></p>
+
+<p><a href="MLV__keyboard_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a216eb844b6a872c8cdf1a2923e7b72b3" id="r_a216eb844b6a872c8cdf1a2923e7b72b3"><td class="memItemLeft" align="right" valign="top"><a id="a216eb844b6a872c8cdf1a2923e7b72b3" name="a216eb844b6a872c8cdf1a2923e7b72b3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> { <br />
+&#160;&#160;<b>MLV_KEYBOARD_NONE</b> = SDLK_UNKNOWN
+, <b>MLV_KEYBOARD_UNKNOWN</b> = SDLK_UNKNOWN
+, <b>MLV_KEYBOARD_FIRST</b> = SDLK_FIRST
+, <b>MLV_KEYBOARD_BACKSPACE</b> = SDLK_BACKSPACE
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_TAB</b> = SDLK_TAB
+, <b>MLV_KEYBOARD_CLEAR</b> = SDLK_CLEAR
+, <b>MLV_KEYBOARD_RETURN</b> = SDLK_RETURN
+, <b>MLV_KEYBOARD_PAUSE</b> = SDLK_PAUSE
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_ESCAPE</b> = SDLK_ESCAPE
+, <b>MLV_KEYBOARD_SPACE</b> = SDLK_SPACE
+, <b>MLV_KEYBOARD_EXCLAIM</b> = SDLK_EXCLAIM
+, <b>MLV_KEYBOARD_QUOTEDBL</b> = SDLK_QUOTEDBL
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_HASH</b> = SDLK_HASH
+, <b>MLV_KEYBOARD_DOLLAR</b> = SDLK_DOLLAR
+, <b>MLV_KEYBOARD_AMPERSAND</b> = SDLK_AMPERSAND
+, <b>MLV_KEYBOARD_QUOTE</b> = SDLK_QUOTE
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_LEFTPAREN</b> = SDLK_LEFTPAREN
+, <b>MLV_KEYBOARD_RIGHTPAREN</b> = SDLK_RIGHTPAREN
+, <b>MLV_KEYBOARD_ASTERISK</b> = SDLK_ASTERISK
+, <b>MLV_KEYBOARD_PLUS</b> = SDLK_PLUS
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_COMMA</b> = SDLK_COMMA
+, <b>MLV_KEYBOARD_MINUS</b> = SDLK_MINUS
+, <b>MLV_KEYBOARD_PERIOD</b> = SDLK_PERIOD
+, <b>MLV_KEYBOARD_SLASH</b> = SDLK_SLASH
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_0</b> = SDLK_0
+, <b>MLV_KEYBOARD_1</b> = SDLK_1
+, <b>MLV_KEYBOARD_2</b> = SDLK_2
+, <b>MLV_KEYBOARD_3</b> = SDLK_3
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_4</b> = SDLK_4
+, <b>MLV_KEYBOARD_5</b> = SDLK_5
+, <b>MLV_KEYBOARD_6</b> = SDLK_6
+, <b>MLV_KEYBOARD_7</b> = SDLK_7
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_8</b> = SDLK_8
+, <b>MLV_KEYBOARD_9</b> = SDLK_9
+, <b>MLV_KEYBOARD_COLON</b> = SDLK_COLON
+, <b>MLV_KEYBOARD_SEMICOLON</b> = SDLK_SEMICOLON
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_LESS</b> = SDLK_LESS
+, <b>MLV_KEYBOARD_EQUALS</b> = SDLK_EQUALS
+, <b>MLV_KEYBOARD_GREATER</b> = SDLK_GREATER
+, <b>MLV_KEYBOARD_QUESTION</b> = SDLK_QUESTION
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_AT</b> = SDLK_AT
+, <b>MLV_KEYBOARD_LEFTBRACKET</b> = SDLK_LEFTBRACKET
+, <b>MLV_KEYBOARD_BACKSLASH</b> = SDLK_BACKSLASH
+, <b>MLV_KEYBOARD_RIGHTBRACKET</b> = SDLK_RIGHTBRACKET
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_CARET</b> = SDLK_CARET
+, <b>MLV_KEYBOARD_UNDERSCORE</b> = SDLK_UNDERSCORE
+, <b>MLV_KEYBOARD_BACKQUOTE</b> = SDLK_BACKQUOTE
+, <b>MLV_KEYBOARD_a</b> = SDLK_a
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_b</b> = SDLK_b
+, <b>MLV_KEYBOARD_c</b> = SDLK_c
+, <b>MLV_KEYBOARD_d</b> = SDLK_d
+, <b>MLV_KEYBOARD_e</b> = SDLK_e
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_f</b> = SDLK_f
+, <b>MLV_KEYBOARD_g</b> = SDLK_g
+, <b>MLV_KEYBOARD_h</b> = SDLK_h
+, <b>MLV_KEYBOARD_i</b> = SDLK_i
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_j</b> = SDLK_j
+, <b>MLV_KEYBOARD_k</b> = SDLK_k
+, <b>MLV_KEYBOARD_l</b> = SDLK_l
+, <b>MLV_KEYBOARD_m</b> = SDLK_m
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_n</b> = SDLK_n
+, <b>MLV_KEYBOARD_o</b> = SDLK_o
+, <b>MLV_KEYBOARD_p</b> = SDLK_p
+, <b>MLV_KEYBOARD_q</b> = SDLK_q
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_r</b> = SDLK_r
+, <b>MLV_KEYBOARD_s</b> = SDLK_s
+, <b>MLV_KEYBOARD_t</b> = SDLK_t
+, <b>MLV_KEYBOARD_u</b> = SDLK_u
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_v</b> = SDLK_v
+, <b>MLV_KEYBOARD_w</b> = SDLK_w
+, <b>MLV_KEYBOARD_x</b> = SDLK_x
+, <b>MLV_KEYBOARD_y</b> = SDLK_y
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_z</b> = SDLK_z
+, <b>MLV_KEYBOARD_DELETE</b> = SDLK_DELETE
+, <b>MLV_KEYBOARD_WORLD_0</b> = SDLK_WORLD_0
+, <b>MLV_KEYBOARD_WORLD_1</b> = SDLK_WORLD_1
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_2</b> = SDLK_WORLD_2
+, <b>MLV_KEYBOARD_WORLD_3</b> = SDLK_WORLD_3
+, <b>MLV_KEYBOARD_WORLD_4</b> = SDLK_WORLD_4
+, <b>MLV_KEYBOARD_WORLD_5</b> = SDLK_WORLD_5
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_6</b> = SDLK_WORLD_6
+, <b>MLV_KEYBOARD_WORLD_7</b> = SDLK_WORLD_7
+, <b>MLV_KEYBOARD_WORLD_8</b> = SDLK_WORLD_8
+, <b>MLV_KEYBOARD_WORLD_9</b> = SDLK_WORLD_9
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_10</b> = SDLK_WORLD_10
+, <b>MLV_KEYBOARD_WORLD_11</b> = SDLK_WORLD_11
+, <b>MLV_KEYBOARD_WORLD_12</b> = SDLK_WORLD_12
+, <b>MLV_KEYBOARD_WORLD_13</b> = SDLK_WORLD_13
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_14</b> = SDLK_WORLD_14
+, <b>MLV_KEYBOARD_WORLD_15</b> = SDLK_WORLD_15
+, <b>MLV_KEYBOARD_WORLD_16</b> = SDLK_WORLD_16
+, <b>MLV_KEYBOARD_WORLD_17</b> = SDLK_WORLD_17
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_18</b> = SDLK_WORLD_18
+, <b>MLV_KEYBOARD_WORLD_19</b> = SDLK_WORLD_19
+, <b>MLV_KEYBOARD_WORLD_20</b> = SDLK_WORLD_20
+, <b>MLV_KEYBOARD_WORLD_21</b> = SDLK_WORLD_21
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_22</b> = SDLK_WORLD_22
+, <b>MLV_KEYBOARD_WORLD_23</b> = SDLK_WORLD_23
+, <b>MLV_KEYBOARD_WORLD_24</b> = SDLK_WORLD_24
+, <b>MLV_KEYBOARD_WORLD_25</b> = SDLK_WORLD_25
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_26</b> = SDLK_WORLD_26
+, <b>MLV_KEYBOARD_WORLD_27</b> = SDLK_WORLD_27
+, <b>MLV_KEYBOARD_WORLD_28</b> = SDLK_WORLD_28
+, <b>MLV_KEYBOARD_WORLD_29</b> = SDLK_WORLD_29
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_30</b> = SDLK_WORLD_30
+, <b>MLV_KEYBOARD_WORLD_31</b> = SDLK_WORLD_31
+, <b>MLV_KEYBOARD_WORLD_32</b> = SDLK_WORLD_32
+, <b>MLV_KEYBOARD_WORLD_33</b> = SDLK_WORLD_33
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_34</b> = SDLK_WORLD_34
+, <b>MLV_KEYBOARD_WORLD_35</b> = SDLK_WORLD_35
+, <b>MLV_KEYBOARD_WORLD_36</b> = SDLK_WORLD_36
+, <b>MLV_KEYBOARD_WORLD_37</b> = SDLK_WORLD_37
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_38</b> = SDLK_WORLD_38
+, <b>MLV_KEYBOARD_WORLD_39</b> = SDLK_WORLD_39
+, <b>MLV_KEYBOARD_WORLD_40</b> = SDLK_WORLD_40
+, <b>MLV_KEYBOARD_WORLD_41</b> = SDLK_WORLD_41
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_42</b> = SDLK_WORLD_42
+, <b>MLV_KEYBOARD_WORLD_43</b> = SDLK_WORLD_43
+, <b>MLV_KEYBOARD_WORLD_44</b> = SDLK_WORLD_44
+, <b>MLV_KEYBOARD_WORLD_45</b> = SDLK_WORLD_45
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_46</b> = SDLK_WORLD_46
+, <b>MLV_KEYBOARD_WORLD_47</b> = SDLK_WORLD_47
+, <b>MLV_KEYBOARD_WORLD_48</b> = SDLK_WORLD_48
+, <b>MLV_KEYBOARD_WORLD_49</b> = SDLK_WORLD_49
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_50</b> = SDLK_WORLD_50
+, <b>MLV_KEYBOARD_WORLD_51</b> = SDLK_WORLD_51
+, <b>MLV_KEYBOARD_WORLD_52</b> = SDLK_WORLD_52
+, <b>MLV_KEYBOARD_WORLD_53</b> = SDLK_WORLD_53
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_54</b> = SDLK_WORLD_54
+, <b>MLV_KEYBOARD_WORLD_55</b> = SDLK_WORLD_55
+, <b>MLV_KEYBOARD_WORLD_56</b> = SDLK_WORLD_56
+, <b>MLV_KEYBOARD_WORLD_57</b> = SDLK_WORLD_57
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_58</b> = SDLK_WORLD_58
+, <b>MLV_KEYBOARD_WORLD_59</b> = SDLK_WORLD_59
+, <b>MLV_KEYBOARD_WORLD_60</b> = SDLK_WORLD_60
+, <b>MLV_KEYBOARD_WORLD_61</b> = SDLK_WORLD_61
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_62</b> = SDLK_WORLD_62
+, <b>MLV_KEYBOARD_WORLD_63</b> = SDLK_WORLD_63
+, <b>MLV_KEYBOARD_WORLD_64</b> = SDLK_WORLD_64
+, <b>MLV_KEYBOARD_WORLD_65</b> = SDLK_WORLD_65
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_66</b> = SDLK_WORLD_66
+, <b>MLV_KEYBOARD_WORLD_67</b> = SDLK_WORLD_67
+, <b>MLV_KEYBOARD_WORLD_68</b> = SDLK_WORLD_68
+, <b>MLV_KEYBOARD_WORLD_69</b> = SDLK_WORLD_69
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_70</b> = SDLK_WORLD_70
+, <b>MLV_KEYBOARD_WORLD_71</b> = SDLK_WORLD_71
+, <b>MLV_KEYBOARD_WORLD_72</b> = SDLK_WORLD_72
+, <b>MLV_KEYBOARD_WORLD_73</b> = SDLK_WORLD_73
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_74</b> = SDLK_WORLD_74
+, <b>MLV_KEYBOARD_WORLD_75</b> = SDLK_WORLD_75
+, <b>MLV_KEYBOARD_WORLD_76</b> = SDLK_WORLD_76
+, <b>MLV_KEYBOARD_WORLD_77</b> = SDLK_WORLD_77
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_78</b> = SDLK_WORLD_78
+, <b>MLV_KEYBOARD_WORLD_79</b> = SDLK_WORLD_79
+, <b>MLV_KEYBOARD_WORLD_80</b> = SDLK_WORLD_80
+, <b>MLV_KEYBOARD_WORLD_81</b> = SDLK_WORLD_81
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_82</b> = SDLK_WORLD_82
+, <b>MLV_KEYBOARD_WORLD_83</b> = SDLK_WORLD_83
+, <b>MLV_KEYBOARD_WORLD_84</b> = SDLK_WORLD_84
+, <b>MLV_KEYBOARD_WORLD_85</b> = SDLK_WORLD_85
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_86</b> = SDLK_WORLD_86
+, <b>MLV_KEYBOARD_WORLD_87</b> = SDLK_WORLD_87
+, <b>MLV_KEYBOARD_WORLD_88</b> = SDLK_WORLD_88
+, <b>MLV_KEYBOARD_WORLD_89</b> = SDLK_WORLD_89
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_90</b> = SDLK_WORLD_90
+, <b>MLV_KEYBOARD_WORLD_91</b> = SDLK_WORLD_91
+, <b>MLV_KEYBOARD_WORLD_92</b> = SDLK_WORLD_92
+, <b>MLV_KEYBOARD_WORLD_93</b> = SDLK_WORLD_93
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_WORLD_94</b> = SDLK_WORLD_94
+, <b>MLV_KEYBOARD_WORLD_95</b> = SDLK_WORLD_95
+, <b>MLV_KEYBOARD_KP0</b> = SDLK_KP0
+, <b>MLV_KEYBOARD_KP1</b> = SDLK_KP1
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KP2</b> = SDLK_KP2
+, <b>MLV_KEYBOARD_KP3</b> = SDLK_KP3
+, <b>MLV_KEYBOARD_KP4</b> = SDLK_KP4
+, <b>MLV_KEYBOARD_KP5</b> = SDLK_KP5
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KP6</b> = SDLK_KP6
+, <b>MLV_KEYBOARD_KP7</b> = SDLK_KP7
+, <b>MLV_KEYBOARD_KP8</b> = SDLK_KP8
+, <b>MLV_KEYBOARD_KP9</b> = SDLK_KP9
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KP_PERIOD</b> = SDLK_KP_PERIOD
+, <b>MLV_KEYBOARD_KP_DIVIDE</b> = SDLK_KP_DIVIDE
+, <b>MLV_KEYBOARD_KP_MULTIPLY</b> = SDLK_KP_MULTIPLY
+, <b>MLV_KEYBOARD_KP_MINUS</b> = SDLK_KP_MINUS
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KP_PLUS</b> = SDLK_KP_PLUS
+, <b>MLV_KEYBOARD_KP_ENTER</b> = SDLK_KP_ENTER
+, <b>MLV_KEYBOARD_KP_EQUALS</b> = SDLK_KP_EQUALS
+, <b>MLV_KEYBOARD_UP</b> = SDLK_UP
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_DOWN</b> = SDLK_DOWN
+, <b>MLV_KEYBOARD_RIGHT</b> = SDLK_RIGHT
+, <b>MLV_KEYBOARD_LEFT</b> = SDLK_LEFT
+, <b>MLV_KEYBOARD_INSERT</b> = SDLK_INSERT
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_HOME</b> = SDLK_HOME
+, <b>MLV_KEYBOARD_END</b> = SDLK_END
+, <b>MLV_KEYBOARD_PAGEUP</b> = SDLK_PAGEUP
+, <b>MLV_KEYBOARD_PAGEDOWN</b> = SDLK_PAGEDOWN
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_F1</b> = SDLK_F1
+, <b>MLV_KEYBOARD_F2</b> = SDLK_F2
+, <b>MLV_KEYBOARD_F3</b> = SDLK_F3
+, <b>MLV_KEYBOARD_F4</b> = SDLK_F4
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_F5</b> = SDLK_F5
+, <b>MLV_KEYBOARD_F6</b> = SDLK_F6
+, <b>MLV_KEYBOARD_F7</b> = SDLK_F7
+, <b>MLV_KEYBOARD_F8</b> = SDLK_F8
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_F9</b> = SDLK_F9
+, <b>MLV_KEYBOARD_F10</b> = SDLK_F10
+, <b>MLV_KEYBOARD_F11</b> = SDLK_F11
+, <b>MLV_KEYBOARD_F12</b> = SDLK_F12
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_F13</b> = SDLK_F13
+, <b>MLV_KEYBOARD_F14</b> = SDLK_F14
+, <b>MLV_KEYBOARD_F15</b> = SDLK_F15
+, <b>MLV_KEYBOARD_NUMLOCK</b> = SDLK_NUMLOCK
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_CAPSLOCK</b> = SDLK_CAPSLOCK
+, <b>MLV_KEYBOARD_SCROLLOCK</b> = SDLK_SCROLLOCK
+, <b>MLV_KEYBOARD_RSHIFT</b> = SDLK_RSHIFT
+, <b>MLV_KEYBOARD_LSHIFT</b> = SDLK_LSHIFT
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_RCTRL</b> = SDLK_RCTRL
+, <b>MLV_KEYBOARD_LCTRL</b> = SDLK_LCTRL
+, <b>MLV_KEYBOARD_RALT</b> = SDLK_RALT
+, <b>MLV_KEYBOARD_LALT</b> = SDLK_LALT
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_RMETA</b> = SDLK_RMETA
+, <b>MLV_KEYBOARD_LMETA</b> = SDLK_LMETA
+, <b>MLV_KEYBOARD_LSUPER</b> = SDLK_LSUPER
+, <b>MLV_KEYBOARD_RSUPER</b> = SDLK_RSUPER
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_MODE</b> = SDLK_MODE
+, <b>MLV_KEYBOARD_COMPOSE</b> = SDLK_COMPOSE
+, <b>MLV_KEYBOARD_HELP</b> = SDLK_HELP
+, <b>MLV_KEYBOARD_PRINT</b> = SDLK_PRINT
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_SYSREQ</b> = SDLK_SYSREQ
+, <b>MLV_KEYBOARD_BREAK</b> = SDLK_BREAK
+, <b>MLV_KEYBOARD_MENU</b> = SDLK_MENU
+, <b>MLV_KEYBOARD_POWER</b> = SDLK_POWER
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_EURO</b> = SDLK_EURO
+, <b>MLV_KEYBOARD_UNDO</b> = SDLK_UNDO
+, <b>MLV_KEYBOARD_LAST</b> = SDLK_LAST
+<br />
+ }</td></tr>
+<tr class="memdesc:a216eb844b6a872c8cdf1a2923e7b72b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Énumère l'ensemble des codes des touches du clavier. <br /></td></tr>
+<tr class="memitem:ae679aa50e1df531008a239fdde77b347" id="r_ae679aa50e1df531008a239fdde77b347"><td class="memItemLeft" align="right" valign="top"><a id="ae679aa50e1df531008a239fdde77b347" name="ae679aa50e1df531008a239fdde77b347"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> { <br />
+&#160;&#160;<b>MLV_KEYBOARD_KMOD_NONE</b> = KMOD_NONE
+, <b>MLV_KEYBOARD_KMOD_LSHIFT</b> = KMOD_LSHIFT
+, <b>MLV_KEYBOARD_KMOD_RSHIFT</b> = KMOD_RSHIFT
+, <b>MLV_KEYBOARD_KMOD_LCTRL</b> = KMOD_LCTRL
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KMOD_RCTRL</b> = KMOD_RCTRL
+, <b>MLV_KEYBOARD_KMOD_LALT</b> = KMOD_LALT
+, <b>MLV_KEYBOARD_KMOD_RALT</b> = KMOD_RALT
+, <b>MLV_KEYBOARD_KMOD_LMETA</b> = KMOD_LMETA
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KMOD_RMETA</b> = KMOD_RMETA
+, <b>MLV_KEYBOARD_KMOD_NUM</b> = KMOD_NUM
+, <b>MLV_KEYBOARD_KMOD_CAPS</b> = KMOD_CAPS
+, <b>MLV_KEYBOARD_KMOD_MODE</b> = KMOD_MODE
+, <br />
+&#160;&#160;<b>MLV_KEYBOARD_KMOD_RESERVED</b> = KMOD_RESERVED
+<br />
+ }</td></tr>
+<tr class="memdesc:ae679aa50e1df531008a239fdde77b347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Énumère l'ensemble des codes associées aux différents modes du clavier. <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a8ce4ab3f9c39d780ebbc68a6bd8c83c0" id="r_a8ce4ab3f9c39d780ebbc68a6bd8c83c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a8ce4ab3f9c39d780ebbc68a6bd8c83c0.html#a8ce4ab3f9c39d780ebbc68a6bd8c83c0">MLV_wait_keyboard</a> (<a class="el" href="#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> *sym, <a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> *mod, int *unicode)</td></tr>
+<tr class="memdesc:a8ce4ab3f9c39d780ebbc68a6bd8c83c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend l'exécution jusqu'à ce que l'utilisateur appuie sur une touche du clavier.  <br /></td></tr>
+<tr class="memitem:a94c1a5e575d1c074f673b7729a345b25" id="r_a94c1a5e575d1c074f673b7729a345b25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a94c1a5e575d1c074f673b7729a345b25.html#a94c1a5e575d1c074f673b7729a345b25">MLV_wait_keyboard_or_seconds</a> (<a class="el" href="#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> *sym, <a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> *mod, int *unicode, int seconds)</td></tr>
+<tr class="memdesc:a94c1a5e575d1c074f673b7729a345b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend l'exécution jusqu'à ce que l'utilisateur appuie sur une touche du clavier ou jusq'à ce q'un nombre de secondes passées en paramètres soient écoulées.  <br /></td></tr>
+<tr class="memitem:a662e4c18cb9e4b2ca541863d7236dbea" id="r_a662e4c18cb9e4b2ca541863d7236dbea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a662e4c18cb9e4b2ca541863d7236dbea.html#a662e4c18cb9e4b2ca541863d7236dbea">MLV_convert_string_to_keyboard_button</a> (const char *key_string)</td></tr>
+<tr class="memdesc:a662e4c18cb9e4b2ca541863d7236dbea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le code de la touche clavier correspondant au type clavier passé en paramètre.  <br /></td></tr>
+<tr class="memitem:ac6047e95f50a22e4a362fb0f10d45cb8" id="r_ac6047e95f50a22e4a362fb0f10d45cb8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_ac6047e95f50a22e4a362fb0f10d45cb8.html#ac6047e95f50a22e4a362fb0f10d45cb8">MLV_convert_keyboard_button_to_string</a> (<a class="el" href="#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> key_code)</td></tr>
+<tr class="memdesc:ac6047e95f50a22e4a362fb0f10d45cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la chaîne de caractères correspondant au code de la touche passé en paramètre.  <br /></td></tr>
+<tr class="memitem:a353fba9684051e1a53806777c992b498" id="r_a353fba9684051e1a53806777c992b498"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a353fba9684051e1a53806777c992b498.html#a353fba9684051e1a53806777c992b498">MLV_convert_keyboard_mod_to_string</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> keymod_code)</td></tr>
+<tr class="memdesc:a353fba9684051e1a53806777c992b498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la chaîne de caractères correspondant au mode du clavier passé en paramètre.  <br /></td></tr>
+<tr class="memitem:aef763811b62bf2282e7a509a29011935" id="r_aef763811b62bf2282e7a509a29011935"><td class="memItemLeft" align="right" valign="top"><a class="el" href="MLV__device__with__buttons_8h_a414d4f89d60b1215a254975dc4059779.html#a414d4f89d60b1215a254975dc4059779">MLV_Button_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_aef763811b62bf2282e7a509a29011935.html#aef763811b62bf2282e7a509a29011935">MLV_get_keyboard_state</a> (<a class="el" href="#a216eb844b6a872c8cdf1a2923e7b72b3">MLV_Keyboard_button</a> keyboard_code)</td></tr>
+<tr class="memdesc:aef763811b62bf2282e7a509a29011935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie l'état (préssé ou relaché) d'une touche donnée d'un clavier.  <br /></td></tr>
+<tr class="memitem:a4d85b85e4935d674f141a18c884d98dc" id="r_a4d85b85e4935d674f141a18c884d98dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a4d85b85e4935d674f141a18c884d98dc.html#a4d85b85e4935d674f141a18c884d98dc">MLV_shift_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a4d85b85e4935d674f141a18c884d98dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison shift du clavier.  <br /></td></tr>
+<tr class="memitem:a88815c79ed1846fdecb44bcc301a726c" id="r_a88815c79ed1846fdecb44bcc301a726c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a88815c79ed1846fdecb44bcc301a726c.html#a88815c79ed1846fdecb44bcc301a726c">MLV_left_shift_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a88815c79ed1846fdecb44bcc301a726c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison shift gauche du clavier.  <br /></td></tr>
+<tr class="memitem:a5accdbfd616497349e799ba4c1366a04" id="r_a5accdbfd616497349e799ba4c1366a04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a5accdbfd616497349e799ba4c1366a04.html#a5accdbfd616497349e799ba4c1366a04">MLV_right_shift_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a5accdbfd616497349e799ba4c1366a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison shift droit du clavier.  <br /></td></tr>
+<tr class="memitem:a377a77210787137c7cd613becc30083c" id="r_a377a77210787137c7cd613becc30083c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a377a77210787137c7cd613becc30083c.html#a377a77210787137c7cd613becc30083c">MLV_left_ctrl_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a377a77210787137c7cd613becc30083c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison ctrl gauche du clavier.  <br /></td></tr>
+<tr class="memitem:a4add0503b4b2236cc4a95ff882da5be5" id="r_a4add0503b4b2236cc4a95ff882da5be5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a4add0503b4b2236cc4a95ff882da5be5.html#a4add0503b4b2236cc4a95ff882da5be5">MLV_right_ctrl_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a4add0503b4b2236cc4a95ff882da5be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison ctrl droit du clavier.  <br /></td></tr>
+<tr class="memitem:a38577035e0e376851ad5be9c3ec63ad7" id="r_a38577035e0e376851ad5be9c3ec63ad7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a38577035e0e376851ad5be9c3ec63ad7.html#a38577035e0e376851ad5be9c3ec63ad7">MLV_ctrl_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a38577035e0e376851ad5be9c3ec63ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison ctrl du clavier.  <br /></td></tr>
+<tr class="memitem:abd3aed025fbdef9c9beb18ee9cfa6cfc" id="r_abd3aed025fbdef9c9beb18ee9cfa6cfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_abd3aed025fbdef9c9beb18ee9cfa6cfc.html#abd3aed025fbdef9c9beb18ee9cfa6cfc">MLV_left_alt_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:abd3aed025fbdef9c9beb18ee9cfa6cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison alt gauche du clavier.  <br /></td></tr>
+<tr class="memitem:a3fb44a41b3cb98688f5fbd0887246929" id="r_a3fb44a41b3cb98688f5fbd0887246929"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a3fb44a41b3cb98688f5fbd0887246929.html#a3fb44a41b3cb98688f5fbd0887246929">MLV_right_alt_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a3fb44a41b3cb98688f5fbd0887246929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison alt droit du clavier.  <br /></td></tr>
+<tr class="memitem:a315229f023590666197d81a4be13b1b4" id="r_a315229f023590666197d81a4be13b1b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a315229f023590666197d81a4be13b1b4.html#a315229f023590666197d81a4be13b1b4">MLV_alt_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a315229f023590666197d81a4be13b1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison alt du clavier.  <br /></td></tr>
+<tr class="memitem:adb52122b7f6910bc54a4f7adb49a908b" id="r_adb52122b7f6910bc54a4f7adb49a908b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_adb52122b7f6910bc54a4f7adb49a908b.html#adb52122b7f6910bc54a4f7adb49a908b">MLV_left_meta_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:adb52122b7f6910bc54a4f7adb49a908b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison meta gauche du clavier.  <br /></td></tr>
+<tr class="memitem:a30c777d2f9e031e9697e595e04ed21ca" id="r_a30c777d2f9e031e9697e595e04ed21ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a30c777d2f9e031e9697e595e04ed21ca.html#a30c777d2f9e031e9697e595e04ed21ca">MLV_right_meta_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a30c777d2f9e031e9697e595e04ed21ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison meta droit du clavier.  <br /></td></tr>
+<tr class="memitem:aabff2ae11b6493e651c26c569defc990" id="r_aabff2ae11b6493e651c26c569defc990"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_aabff2ae11b6493e651c26c569defc990.html#aabff2ae11b6493e651c26c569defc990">MLV_meta_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:aabff2ae11b6493e651c26c569defc990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison meta du clavier.  <br /></td></tr>
+<tr class="memitem:a5ef4a283784f481da9a53eb4c0bd47b9" id="r_a5ef4a283784f481da9a53eb4c0bd47b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a5ef4a283784f481da9a53eb4c0bd47b9.html#a5ef4a283784f481da9a53eb4c0bd47b9">MLV_num_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a5ef4a283784f481da9a53eb4c0bd47b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison num du clavier.  <br /></td></tr>
+<tr class="memitem:ab16a8cb4894baa1d464063f4909b8396" id="r_ab16a8cb4894baa1d464063f4909b8396"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_ab16a8cb4894baa1d464063f4909b8396.html#ab16a8cb4894baa1d464063f4909b8396">MLV_caps_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:ab16a8cb4894baa1d464063f4909b8396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison cpas du clavier.  <br /></td></tr>
+<tr class="memitem:a1167756fb522ea90819d52807a5ee34d" id="r_a1167756fb522ea90819d52807a5ee34d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MLV__keyboard_8h_a1167756fb522ea90819d52807a5ee34d.html#a1167756fb522ea90819d52807a5ee34d">MLV_mode_key_was_pressed</a> (<a class="el" href="#ae679aa50e1df531008a239fdde77b347">MLV_Keyboard_modifier</a> modifier_code)</td></tr>
+<tr class="memdesc:a1167756fb522ea90819d52807a5ee34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie vrai si le code, passé en paramètre, correspond à l'état appuyé de la touche de combinaison mode du clavier.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Ce fichier définit les prototypes des fonctions permettant d'utiliser le clavier. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Adrien Boussicault </dd>
+<dd>
+Marc Zipstein</dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

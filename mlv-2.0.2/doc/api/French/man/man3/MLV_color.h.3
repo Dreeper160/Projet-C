@@ -1,0 +1,6973 @@
+.TH "MLV_color.h" 3 "Mardi 27 Octobre 2026 16:46:18" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_color.h \- Définit toutes les couleurs disponibles dans la bibliothèque MLV\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMLV_COLOR_SNOW\fP   \fBMLV_rgba\fP(255,250,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GHOST_WHITE\fP   \fBMLV_rgba\fP(248,248,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GHOSTWHITE\fP   \fBMLV_rgba\fP(248,248,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHITE_SMOKE\fP   \fBMLV_rgba\fP(245,245,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHITESMOKE\fP   \fBMLV_rgba\fP(245,245,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GAINSBORO\fP   \fBMLV_rgba\fP(220,220,220,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FLORAL_WHITE\fP   \fBMLV_rgba\fP(255,250,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FLORALWHITE\fP   \fBMLV_rgba\fP(255,250,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLD_LACE\fP   \fBMLV_rgba\fP(253,245,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLDLACE\fP   \fBMLV_rgba\fP(253,245,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LINEN\fP   \fBMLV_rgba\fP(250,240,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ANTIQUE_WHITE\fP   \fBMLV_rgba\fP(250,235,215,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ANTIQUEWHITE\fP   \fBMLV_rgba\fP(250,235,215,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PAPAYA_WHIP\fP   \fBMLV_rgba\fP(255,239,213,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PAPAYAWHIP\fP   \fBMLV_rgba\fP(255,239,213,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLANCHED_ALMOND\fP   \fBMLV_rgba\fP(255,235,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLANCHEDALMOND\fP   \fBMLV_rgba\fP(255,235,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BISQUE\fP   \fBMLV_rgba\fP(255,228,196,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PEACH_PUFF\fP   \fBMLV_rgba\fP(255,218,185,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PEACHPUFF\fP   \fBMLV_rgba\fP(255,218,185,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVAJO_WHITE\fP   \fBMLV_rgba\fP(255,222,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVAJOWHITE\fP   \fBMLV_rgba\fP(255,222,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MOCCASIN\fP   \fBMLV_rgba\fP(255,228,181,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNSILK\fP   \fBMLV_rgba\fP(255,248,220,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_IVORY\fP   \fBMLV_rgba\fP(255,255,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LEMON_CHIFFON\fP   \fBMLV_rgba\fP(255,250,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LEMONCHIFFON\fP   \fBMLV_rgba\fP(255,250,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEASHELL\fP   \fBMLV_rgba\fP(255,245,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HONEYDEW\fP   \fBMLV_rgba\fP(240,255,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MINT_CREAM\fP   \fBMLV_rgba\fP(245,255,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MINTCREAM\fP   \fBMLV_rgba\fP(245,255,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AZURE\fP   \fBMLV_rgba\fP(240,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ALICE_BLUE\fP   \fBMLV_rgba\fP(240,248,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ALICEBLUE\fP   \fBMLV_rgba\fP(240,248,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDER\fP   \fBMLV_rgba\fP(230,230,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDER_BLUSH\fP   \fBMLV_rgba\fP(255,240,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDERBLUSH\fP   \fBMLV_rgba\fP(255,240,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MISTY_ROSE\fP   \fBMLV_rgba\fP(255,228,225,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MISTYROSE\fP   \fBMLV_rgba\fP(255,228,225,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHITE\fP   \fBMLV_rgba\fP(255,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLACK\fP   \fBMLV_rgba\fP(0,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_SLATE_GRAY\fP   \fBMLV_rgba\fP(47,79,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEGRAY\fP   \fBMLV_rgba\fP(47,79,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_SLATE_GREY\fP   \fBMLV_rgba\fP(47,79,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEGREY\fP   \fBMLV_rgba\fP(47,79,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DIM_GRAY\fP   \fBMLV_rgba\fP(105,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DIMGRAY\fP   \fBMLV_rgba\fP(105,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DIM_GREY\fP   \fBMLV_rgba\fP(105,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DIMGREY\fP   \fBMLV_rgba\fP(105,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATE_GRAY\fP   \fBMLV_rgba\fP(112,128,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEGRAY\fP   \fBMLV_rgba\fP(112,128,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATE_GREY\fP   \fBMLV_rgba\fP(112,128,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEGREY\fP   \fBMLV_rgba\fP(112,128,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_SLATE_GRAY\fP   \fBMLV_rgba\fP(119,136,153,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSLATEGRAY\fP   \fBMLV_rgba\fP(119,136,153,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_SLATE_GREY\fP   \fBMLV_rgba\fP(119,136,153,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSLATEGREY\fP   \fBMLV_rgba\fP(119,136,153,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY\fP   \fBMLV_rgba\fP(190,190,190,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY\fP   \fBMLV_rgba\fP(190,190,190,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_GREY\fP   \fBMLV_rgba\fP(211,211,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGREY\fP   \fBMLV_rgba\fP(211,211,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_GRAY\fP   \fBMLV_rgba\fP(211,211,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGRAY\fP   \fBMLV_rgba\fP(211,211,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MIDNIGHT_BLUE\fP   \fBMLV_rgba\fP(25,25,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MIDNIGHTBLUE\fP   \fBMLV_rgba\fP(25,25,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVY\fP   \fBMLV_rgba\fP(0,0,128,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVY_BLUE\fP   \fBMLV_rgba\fP(0,0,128,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVYBLUE\fP   \fBMLV_rgba\fP(0,0,128,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNFLOWER_BLUE\fP   \fBMLV_rgba\fP(100,149,237,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNFLOWERBLUE\fP   \fBMLV_rgba\fP(100,149,237,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_SLATE_BLUE\fP   \fBMLV_rgba\fP(72,61,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEBLUE\fP   \fBMLV_rgba\fP(72,61,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATE_BLUE\fP   \fBMLV_rgba\fP(106,90,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEBLUE\fP   \fBMLV_rgba\fP(106,90,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_SLATE_BLUE\fP   \fBMLV_rgba\fP(123,104,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMSLATEBLUE\fP   \fBMLV_rgba\fP(123,104,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_SLATE_BLUE\fP   \fBMLV_rgba\fP(132,112,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSLATEBLUE\fP   \fBMLV_rgba\fP(132,112,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_BLUE\fP   \fBMLV_rgba\fP(0,0,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMBLUE\fP   \fBMLV_rgba\fP(0,0,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROYAL_BLUE\fP   \fBMLV_rgba\fP(65,105,225,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROYALBLUE\fP   \fBMLV_rgba\fP(65,105,225,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUE\fP   \fBMLV_rgba\fP(0,0,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DODGER_BLUE\fP   \fBMLV_rgba\fP(30,144,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DODGERBLUE\fP   \fBMLV_rgba\fP(30,144,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEP_SKY_BLUE\fP   \fBMLV_rgba\fP(0,191,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPSKYBLUE\fP   \fBMLV_rgba\fP(0,191,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SKY_BLUE\fP   \fBMLV_rgba\fP(135,206,235,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SKYBLUE\fP   \fBMLV_rgba\fP(135,206,235,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_SKY_BLUE\fP   \fBMLV_rgba\fP(135,206,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSKYBLUE\fP   \fBMLV_rgba\fP(135,206,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_STEEL_BLUE\fP   \fBMLV_rgba\fP(70,130,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_STEELBLUE\fP   \fBMLV_rgba\fP(70,130,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_STEEL_BLUE\fP   \fBMLV_rgba\fP(176,196,222,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSTEELBLUE\fP   \fBMLV_rgba\fP(176,196,222,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_BLUE\fP   \fBMLV_rgba\fP(173,216,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTBLUE\fP   \fBMLV_rgba\fP(173,216,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_POWDER_BLUE\fP   \fBMLV_rgba\fP(176,224,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_POWDERBLUE\fP   \fBMLV_rgba\fP(176,224,230,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALE_TURQUOISE\fP   \fBMLV_rgba\fP(175,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALETURQUOISE\fP   \fBMLV_rgba\fP(175,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_TURQUOISE\fP   \fBMLV_rgba\fP(0,206,209,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKTURQUOISE\fP   \fBMLV_rgba\fP(0,206,209,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_TURQUOISE\fP   \fBMLV_rgba\fP(72,209,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMTURQUOISE\fP   \fBMLV_rgba\fP(72,209,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TURQUOISE\fP   \fBMLV_rgba\fP(64,224,208,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CYAN\fP   \fBMLV_rgba\fP(0,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_CYAN\fP   \fBMLV_rgba\fP(224,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTCYAN\fP   \fBMLV_rgba\fP(224,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CADET_BLUE\fP   \fBMLV_rgba\fP(95,158,160,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CADETBLUE\fP   \fBMLV_rgba\fP(95,158,160,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_AQUAMARINE\fP   \fBMLV_rgba\fP(102,205,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMAQUAMARINE\fP   \fBMLV_rgba\fP(102,205,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AQUAMARINE\fP   \fBMLV_rgba\fP(127,255,212,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_GREEN\fP   \fBMLV_rgba\fP(0,100,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGREEN\fP   \fBMLV_rgba\fP(0,100,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_OLIVE_GREEN\fP   \fBMLV_rgba\fP(85,107,47,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKOLIVEGREEN\fP   \fBMLV_rgba\fP(85,107,47,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_SEA_GREEN\fP   \fBMLV_rgba\fP(143,188,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSEAGREEN\fP   \fBMLV_rgba\fP(143,188,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEA_GREEN\fP   \fBMLV_rgba\fP(46,139,87,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEAGREEN\fP   \fBMLV_rgba\fP(46,139,87,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_SEA_GREEN\fP   \fBMLV_rgba\fP(60,179,113,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMSEAGREEN\fP   \fBMLV_rgba\fP(60,179,113,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_SEA_GREEN\fP   \fBMLV_rgba\fP(32,178,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSEAGREEN\fP   \fBMLV_rgba\fP(32,178,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALE_GREEN\fP   \fBMLV_rgba\fP(152,251,152,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEGREEN\fP   \fBMLV_rgba\fP(152,251,152,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SPRING_GREEN\fP   \fBMLV_rgba\fP(0,255,127,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SPRINGGREEN\fP   \fBMLV_rgba\fP(0,255,127,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAWN_GREEN\fP   \fBMLV_rgba\fP(124,252,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAWNGREEN\fP   \fBMLV_rgba\fP(124,252,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREEN\fP   \fBMLV_rgba\fP(0,255,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHARTREUSE\fP   \fBMLV_rgba\fP(127,255,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_SPRING_GREEN\fP   \fBMLV_rgba\fP(0,250,154,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMSPRINGGREEN\fP   \fBMLV_rgba\fP(0,250,154,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREEN_YELLOW\fP   \fBMLV_rgba\fP(173,255,47,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREENYELLOW\fP   \fBMLV_rgba\fP(173,255,47,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIME_GREEN\fP   \fBMLV_rgba\fP(50,205,50,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIMEGREEN\fP   \fBMLV_rgba\fP(50,205,50,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOW_GREEN\fP   \fBMLV_rgba\fP(154,205,50,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOWGREEN\fP   \fBMLV_rgba\fP(154,205,50,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FOREST_GREEN\fP   \fBMLV_rgba\fP(34,139,34,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FORESTGREEN\fP   \fBMLV_rgba\fP(34,139,34,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLIVE_DRAB\fP   \fBMLV_rgba\fP(107,142,35,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLIVEDRAB\fP   \fBMLV_rgba\fP(107,142,35,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_KHAKI\fP   \fBMLV_rgba\fP(189,183,107,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKKHAKI\fP   \fBMLV_rgba\fP(189,183,107,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_KHAKI\fP   \fBMLV_rgba\fP(240,230,140,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALE_GOLDENROD\fP   \fBMLV_rgba\fP(238,232,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEGOLDENROD\fP   \fBMLV_rgba\fP(238,232,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_GOLDENROD_YELLOW\fP   \fBMLV_rgba\fP(250,250,210,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGOLDENRODYELLOW\fP   \fBMLV_rgba\fP(250,250,210,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_YELLOW\fP   \fBMLV_rgba\fP(255,255,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTYELLOW\fP   \fBMLV_rgba\fP(255,255,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOW\fP   \fBMLV_rgba\fP(255,255,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLD\fP   \fBMLV_rgba\fP(255,215,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_GOLDENROD\fP   \fBMLV_rgba\fP(238,221,130,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGOLDENROD\fP   \fBMLV_rgba\fP(238,221,130,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLDENROD\fP   \fBMLV_rgba\fP(218,165,32,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_GOLDENROD\fP   \fBMLV_rgba\fP(184,134,11,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGOLDENROD\fP   \fBMLV_rgba\fP(184,134,11,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROSY_BROWN\fP   \fBMLV_rgba\fP(188,143,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROSYBROWN\fP   \fBMLV_rgba\fP(188,143,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_INDIAN_RED\fP   \fBMLV_rgba\fP(205,92,92,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_INDIANRED\fP   \fBMLV_rgba\fP(205,92,92,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SADDLE_BROWN\fP   \fBMLV_rgba\fP(139,69,19,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SADDLEBROWN\fP   \fBMLV_rgba\fP(139,69,19,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SIENNA\fP   \fBMLV_rgba\fP(160,82,45,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PERU\fP   \fBMLV_rgba\fP(205,133,63,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BURLYWOOD\fP   \fBMLV_rgba\fP(222,184,135,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BEIGE\fP   \fBMLV_rgba\fP(245,245,220,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHEAT\fP   \fBMLV_rgba\fP(245,222,179,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SANDY_BROWN\fP   \fBMLV_rgba\fP(244,164,96,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SANDYBROWN\fP   \fBMLV_rgba\fP(244,164,96,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TAN\fP   \fBMLV_rgba\fP(210,180,140,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHOCOLATE\fP   \fBMLV_rgba\fP(210,105,30,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FIREBRICK\fP   \fBMLV_rgba\fP(178,34,34,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BROWN\fP   \fBMLV_rgba\fP(165,42,42,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_SALMON\fP   \fBMLV_rgba\fP(233,150,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSALMON\fP   \fBMLV_rgba\fP(233,150,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SALMON\fP   \fBMLV_rgba\fP(250,128,114,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_SALMON\fP   \fBMLV_rgba\fP(255,160,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSALMON\fP   \fBMLV_rgba\fP(255,160,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGE\fP   \fBMLV_rgba\fP(255,165,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_ORANGE\fP   \fBMLV_rgba\fP(255,140,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORANGE\fP   \fBMLV_rgba\fP(255,140,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORAL\fP   \fBMLV_rgba\fP(255,127,80,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_CORAL\fP   \fBMLV_rgba\fP(240,128,128,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTCORAL\fP   \fBMLV_rgba\fP(240,128,128,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TOMATO\fP   \fBMLV_rgba\fP(255,99,71,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGE_RED\fP   \fBMLV_rgba\fP(255,69,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGERED\fP   \fBMLV_rgba\fP(255,69,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_RED\fP   \fBMLV_rgba\fP(255,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HOT_PINK\fP   \fBMLV_rgba\fP(255,105,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HOTPINK\fP   \fBMLV_rgba\fP(255,105,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEP_PINK\fP   \fBMLV_rgba\fP(255,20,147,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPPINK\fP   \fBMLV_rgba\fP(255,20,147,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PINK\fP   \fBMLV_rgba\fP(255,192,203,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_PINK\fP   \fBMLV_rgba\fP(255,182,193,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTPINK\fP   \fBMLV_rgba\fP(255,182,193,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALE_VIOLET_RED\fP   \fBMLV_rgba\fP(219,112,147,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEVIOLETRED\fP   \fBMLV_rgba\fP(219,112,147,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAROON\fP   \fBMLV_rgba\fP(176,48,96,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_VIOLET_RED\fP   \fBMLV_rgba\fP(199,21,133,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMVIOLETRED\fP   \fBMLV_rgba\fP(199,21,133,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLET_RED\fP   \fBMLV_rgba\fP(208,32,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLETRED\fP   \fBMLV_rgba\fP(208,32,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAGENTA\fP   \fBMLV_rgba\fP(255,0,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLET\fP   \fBMLV_rgba\fP(238,130,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PLUM\fP   \fBMLV_rgba\fP(221,160,221,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORCHID\fP   \fBMLV_rgba\fP(218,112,214,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_ORCHID\fP   \fBMLV_rgba\fP(186,85,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMORCHID\fP   \fBMLV_rgba\fP(186,85,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_ORCHID\fP   \fBMLV_rgba\fP(153,50,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORCHID\fP   \fBMLV_rgba\fP(153,50,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_VIOLET\fP   \fBMLV_rgba\fP(148,0,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKVIOLET\fP   \fBMLV_rgba\fP(148,0,211,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUE_VIOLET\fP   \fBMLV_rgba\fP(138,43,226,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUEVIOLET\fP   \fBMLV_rgba\fP(138,43,226,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PURPLE\fP   \fBMLV_rgba\fP(160,32,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUM_PURPLE\fP   \fBMLV_rgba\fP(147,112,219,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMPURPLE\fP   \fBMLV_rgba\fP(147,112,219,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_THISTLE\fP   \fBMLV_rgba\fP(216,191,216,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SNOW1\fP   \fBMLV_rgba\fP(255,250,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SNOW2\fP   \fBMLV_rgba\fP(238,233,233,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SNOW3\fP   \fBMLV_rgba\fP(205,201,201,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SNOW4\fP   \fBMLV_rgba\fP(139,137,137,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEASHELL1\fP   \fBMLV_rgba\fP(255,245,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEASHELL2\fP   \fBMLV_rgba\fP(238,229,222,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEASHELL3\fP   \fBMLV_rgba\fP(205,197,191,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEASHELL4\fP   \fBMLV_rgba\fP(139,134,130,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ANTIQUEWHITE1\fP   \fBMLV_rgba\fP(255,239,219,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ANTIQUEWHITE2\fP   \fBMLV_rgba\fP(238,223,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ANTIQUEWHITE3\fP   \fBMLV_rgba\fP(205,192,176,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ANTIQUEWHITE4\fP   \fBMLV_rgba\fP(139,131,120,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BISQUE1\fP   \fBMLV_rgba\fP(255,228,196,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BISQUE2\fP   \fBMLV_rgba\fP(238,213,183,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BISQUE3\fP   \fBMLV_rgba\fP(205,183,158,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BISQUE4\fP   \fBMLV_rgba\fP(139,125,107,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PEACHPUFF1\fP   \fBMLV_rgba\fP(255,218,185,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PEACHPUFF2\fP   \fBMLV_rgba\fP(238,203,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PEACHPUFF3\fP   \fBMLV_rgba\fP(205,175,149,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PEACHPUFF4\fP   \fBMLV_rgba\fP(139,119,101,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVAJOWHITE1\fP   \fBMLV_rgba\fP(255,222,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVAJOWHITE2\fP   \fBMLV_rgba\fP(238,207,161,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVAJOWHITE3\fP   \fBMLV_rgba\fP(205,179,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_NAVAJOWHITE4\fP   \fBMLV_rgba\fP(139,121,94,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LEMONCHIFFON1\fP   \fBMLV_rgba\fP(255,250,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LEMONCHIFFON2\fP   \fBMLV_rgba\fP(238,233,191,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LEMONCHIFFON3\fP   \fBMLV_rgba\fP(205,201,165,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LEMONCHIFFON4\fP   \fBMLV_rgba\fP(139,137,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNSILK1\fP   \fBMLV_rgba\fP(255,248,220,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNSILK2\fP   \fBMLV_rgba\fP(238,232,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNSILK3\fP   \fBMLV_rgba\fP(205,200,177,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORNSILK4\fP   \fBMLV_rgba\fP(139,136,120,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_IVORY1\fP   \fBMLV_rgba\fP(255,255,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_IVORY2\fP   \fBMLV_rgba\fP(238,238,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_IVORY3\fP   \fBMLV_rgba\fP(205,205,193,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_IVORY4\fP   \fBMLV_rgba\fP(139,139,131,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HONEYDEW1\fP   \fBMLV_rgba\fP(240,255,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HONEYDEW2\fP   \fBMLV_rgba\fP(224,238,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HONEYDEW3\fP   \fBMLV_rgba\fP(193,205,193,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HONEYDEW4\fP   \fBMLV_rgba\fP(131,139,131,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDERBLUSH1\fP   \fBMLV_rgba\fP(255,240,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDERBLUSH2\fP   \fBMLV_rgba\fP(238,224,229,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDERBLUSH3\fP   \fBMLV_rgba\fP(205,193,197,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LAVENDERBLUSH4\fP   \fBMLV_rgba\fP(139,131,134,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MISTYROSE1\fP   \fBMLV_rgba\fP(255,228,225,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MISTYROSE2\fP   \fBMLV_rgba\fP(238,213,210,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MISTYROSE3\fP   \fBMLV_rgba\fP(205,183,181,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MISTYROSE4\fP   \fBMLV_rgba\fP(139,125,123,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AZURE1\fP   \fBMLV_rgba\fP(240,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AZURE2\fP   \fBMLV_rgba\fP(224,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AZURE3\fP   \fBMLV_rgba\fP(193,205,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AZURE4\fP   \fBMLV_rgba\fP(131,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEBLUE1\fP   \fBMLV_rgba\fP(131,111,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEBLUE2\fP   \fBMLV_rgba\fP(122,103,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEBLUE3\fP   \fBMLV_rgba\fP(105,89,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEBLUE4\fP   \fBMLV_rgba\fP(71,60,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROYALBLUE1\fP   \fBMLV_rgba\fP(72,118,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROYALBLUE2\fP   \fBMLV_rgba\fP(67,110,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROYALBLUE3\fP   \fBMLV_rgba\fP(58,95,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROYALBLUE4\fP   \fBMLV_rgba\fP(39,64,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUE1\fP   \fBMLV_rgba\fP(0,0,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUE2\fP   \fBMLV_rgba\fP(0,0,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUE3\fP   \fBMLV_rgba\fP(0,0,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BLUE4\fP   \fBMLV_rgba\fP(0,0,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DODGERBLUE1\fP   \fBMLV_rgba\fP(30,144,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DODGERBLUE2\fP   \fBMLV_rgba\fP(28,134,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DODGERBLUE3\fP   \fBMLV_rgba\fP(24,116,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DODGERBLUE4\fP   \fBMLV_rgba\fP(16,78,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_STEELBLUE1\fP   \fBMLV_rgba\fP(99,184,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_STEELBLUE2\fP   \fBMLV_rgba\fP(92,172,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_STEELBLUE3\fP   \fBMLV_rgba\fP(79,148,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_STEELBLUE4\fP   \fBMLV_rgba\fP(54,100,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPSKYBLUE1\fP   \fBMLV_rgba\fP(0,191,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPSKYBLUE2\fP   \fBMLV_rgba\fP(0,178,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPSKYBLUE3\fP   \fBMLV_rgba\fP(0,154,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPSKYBLUE4\fP   \fBMLV_rgba\fP(0,104,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SKYBLUE1\fP   \fBMLV_rgba\fP(135,206,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SKYBLUE2\fP   \fBMLV_rgba\fP(126,192,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SKYBLUE3\fP   \fBMLV_rgba\fP(108,166,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SKYBLUE4\fP   \fBMLV_rgba\fP(74,112,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSKYBLUE1\fP   \fBMLV_rgba\fP(176,226,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSKYBLUE2\fP   \fBMLV_rgba\fP(164,211,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSKYBLUE3\fP   \fBMLV_rgba\fP(141,182,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSKYBLUE4\fP   \fBMLV_rgba\fP(96,123,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEGRAY1\fP   \fBMLV_rgba\fP(198,226,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEGRAY2\fP   \fBMLV_rgba\fP(185,211,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEGRAY3\fP   \fBMLV_rgba\fP(159,182,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SLATEGRAY4\fP   \fBMLV_rgba\fP(108,123,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSTEELBLUE1\fP   \fBMLV_rgba\fP(202,225,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSTEELBLUE2\fP   \fBMLV_rgba\fP(188,210,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSTEELBLUE3\fP   \fBMLV_rgba\fP(162,181,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSTEELBLUE4\fP   \fBMLV_rgba\fP(110,123,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTBLUE1\fP   \fBMLV_rgba\fP(191,239,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTBLUE2\fP   \fBMLV_rgba\fP(178,223,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTBLUE3\fP   \fBMLV_rgba\fP(154,192,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTBLUE4\fP   \fBMLV_rgba\fP(104,131,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTCYAN1\fP   \fBMLV_rgba\fP(224,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTCYAN2\fP   \fBMLV_rgba\fP(209,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTCYAN3\fP   \fBMLV_rgba\fP(180,205,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTCYAN4\fP   \fBMLV_rgba\fP(122,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALETURQUOISE1\fP   \fBMLV_rgba\fP(187,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALETURQUOISE2\fP   \fBMLV_rgba\fP(174,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALETURQUOISE3\fP   \fBMLV_rgba\fP(150,205,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALETURQUOISE4\fP   \fBMLV_rgba\fP(102,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CADETBLUE1\fP   \fBMLV_rgba\fP(152,245,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CADETBLUE2\fP   \fBMLV_rgba\fP(142,229,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CADETBLUE3\fP   \fBMLV_rgba\fP(122,197,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CADETBLUE4\fP   \fBMLV_rgba\fP(83,134,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TURQUOISE1\fP   \fBMLV_rgba\fP(0,245,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TURQUOISE2\fP   \fBMLV_rgba\fP(0,229,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TURQUOISE3\fP   \fBMLV_rgba\fP(0,197,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TURQUOISE4\fP   \fBMLV_rgba\fP(0,134,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CYAN1\fP   \fBMLV_rgba\fP(0,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CYAN2\fP   \fBMLV_rgba\fP(0,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CYAN3\fP   \fBMLV_rgba\fP(0,205,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CYAN4\fP   \fBMLV_rgba\fP(0,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEGRAY1\fP   \fBMLV_rgba\fP(151,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEGRAY2\fP   \fBMLV_rgba\fP(141,238,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEGRAY3\fP   \fBMLV_rgba\fP(121,205,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSLATEGRAY4\fP   \fBMLV_rgba\fP(82,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AQUAMARINE1\fP   \fBMLV_rgba\fP(127,255,212,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AQUAMARINE2\fP   \fBMLV_rgba\fP(118,238,198,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AQUAMARINE3\fP   \fBMLV_rgba\fP(102,205,170,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_AQUAMARINE4\fP   \fBMLV_rgba\fP(69,139,116,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSEAGREEN1\fP   \fBMLV_rgba\fP(193,255,193,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSEAGREEN2\fP   \fBMLV_rgba\fP(180,238,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSEAGREEN3\fP   \fBMLV_rgba\fP(155,205,155,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKSEAGREEN4\fP   \fBMLV_rgba\fP(105,139,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEAGREEN1\fP   \fBMLV_rgba\fP(84,255,159,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEAGREEN2\fP   \fBMLV_rgba\fP(78,238,148,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEAGREEN3\fP   \fBMLV_rgba\fP(67,205,128,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SEAGREEN4\fP   \fBMLV_rgba\fP(46,139,87,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEGREEN1\fP   \fBMLV_rgba\fP(154,255,154,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEGREEN2\fP   \fBMLV_rgba\fP(144,238,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEGREEN3\fP   \fBMLV_rgba\fP(124,205,124,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEGREEN4\fP   \fBMLV_rgba\fP(84,139,84,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SPRINGGREEN1\fP   \fBMLV_rgba\fP(0,255,127,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SPRINGGREEN2\fP   \fBMLV_rgba\fP(0,238,118,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SPRINGGREEN3\fP   \fBMLV_rgba\fP(0,205,102,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SPRINGGREEN4\fP   \fBMLV_rgba\fP(0,139,69,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREEN1\fP   \fBMLV_rgba\fP(0,255,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREEN2\fP   \fBMLV_rgba\fP(0,238,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREEN3\fP   \fBMLV_rgba\fP(0,205,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREEN4\fP   \fBMLV_rgba\fP(0,139,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHARTREUSE1\fP   \fBMLV_rgba\fP(127,255,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHARTREUSE2\fP   \fBMLV_rgba\fP(118,238,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHARTREUSE3\fP   \fBMLV_rgba\fP(102,205,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHARTREUSE4\fP   \fBMLV_rgba\fP(69,139,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLIVEDRAB1\fP   \fBMLV_rgba\fP(192,255,62,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLIVEDRAB2\fP   \fBMLV_rgba\fP(179,238,58,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLIVEDRAB3\fP   \fBMLV_rgba\fP(154,205,50,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_OLIVEDRAB4\fP   \fBMLV_rgba\fP(105,139,34,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKOLIVEGREEN1\fP   \fBMLV_rgba\fP(202,255,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKOLIVEGREEN2\fP   \fBMLV_rgba\fP(188,238,104,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKOLIVEGREEN3\fP   \fBMLV_rgba\fP(162,205,90,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKOLIVEGREEN4\fP   \fBMLV_rgba\fP(110,139,61,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_KHAKI1\fP   \fBMLV_rgba\fP(255,246,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_KHAKI2\fP   \fBMLV_rgba\fP(238,230,133,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_KHAKI3\fP   \fBMLV_rgba\fP(205,198,115,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_KHAKI4\fP   \fBMLV_rgba\fP(139,134,78,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGOLDENROD1\fP   \fBMLV_rgba\fP(255,236,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGOLDENROD2\fP   \fBMLV_rgba\fP(238,220,130,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGOLDENROD3\fP   \fBMLV_rgba\fP(205,190,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGOLDENROD4\fP   \fBMLV_rgba\fP(139,129,76,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTYELLOW1\fP   \fBMLV_rgba\fP(255,255,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTYELLOW2\fP   \fBMLV_rgba\fP(238,238,209,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTYELLOW3\fP   \fBMLV_rgba\fP(205,205,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTYELLOW4\fP   \fBMLV_rgba\fP(139,139,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOW1\fP   \fBMLV_rgba\fP(255,255,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOW2\fP   \fBMLV_rgba\fP(238,238,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOW3\fP   \fBMLV_rgba\fP(205,205,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_YELLOW4\fP   \fBMLV_rgba\fP(139,139,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLD1\fP   \fBMLV_rgba\fP(255,215,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLD2\fP   \fBMLV_rgba\fP(238,201,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLD3\fP   \fBMLV_rgba\fP(205,173,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLD4\fP   \fBMLV_rgba\fP(139,117,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLDENROD1\fP   \fBMLV_rgba\fP(255,193,37,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLDENROD2\fP   \fBMLV_rgba\fP(238,180,34,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLDENROD3\fP   \fBMLV_rgba\fP(205,155,29,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GOLDENROD4\fP   \fBMLV_rgba\fP(139,105,20,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGOLDENROD1\fP   \fBMLV_rgba\fP(255,185,15,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGOLDENROD2\fP   \fBMLV_rgba\fP(238,173,14,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGOLDENROD3\fP   \fBMLV_rgba\fP(205,149,12,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGOLDENROD4\fP   \fBMLV_rgba\fP(139,101,8,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROSYBROWN1\fP   \fBMLV_rgba\fP(255,193,193,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROSYBROWN2\fP   \fBMLV_rgba\fP(238,180,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROSYBROWN3\fP   \fBMLV_rgba\fP(205,155,155,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ROSYBROWN4\fP   \fBMLV_rgba\fP(139,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_INDIANRED1\fP   \fBMLV_rgba\fP(255,106,106,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_INDIANRED2\fP   \fBMLV_rgba\fP(238,99,99,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_INDIANRED3\fP   \fBMLV_rgba\fP(205,85,85,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_INDIANRED4\fP   \fBMLV_rgba\fP(139,58,58,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SIENNA1\fP   \fBMLV_rgba\fP(255,130,71,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SIENNA2\fP   \fBMLV_rgba\fP(238,121,66,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SIENNA3\fP   \fBMLV_rgba\fP(205,104,57,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SIENNA4\fP   \fBMLV_rgba\fP(139,71,38,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BURLYWOOD1\fP   \fBMLV_rgba\fP(255,211,155,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BURLYWOOD2\fP   \fBMLV_rgba\fP(238,197,145,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BURLYWOOD3\fP   \fBMLV_rgba\fP(205,170,125,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BURLYWOOD4\fP   \fBMLV_rgba\fP(139,115,85,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHEAT1\fP   \fBMLV_rgba\fP(255,231,186,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHEAT2\fP   \fBMLV_rgba\fP(238,216,174,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHEAT3\fP   \fBMLV_rgba\fP(205,186,150,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_WHEAT4\fP   \fBMLV_rgba\fP(139,126,102,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TAN1\fP   \fBMLV_rgba\fP(255,165,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TAN2\fP   \fBMLV_rgba\fP(238,154,73,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TAN3\fP   \fBMLV_rgba\fP(205,133,63,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TAN4\fP   \fBMLV_rgba\fP(139,90,43,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHOCOLATE1\fP   \fBMLV_rgba\fP(255,127,36,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHOCOLATE2\fP   \fBMLV_rgba\fP(238,118,33,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHOCOLATE3\fP   \fBMLV_rgba\fP(205,102,29,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CHOCOLATE4\fP   \fBMLV_rgba\fP(139,69,19,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FIREBRICK1\fP   \fBMLV_rgba\fP(255,48,48,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FIREBRICK2\fP   \fBMLV_rgba\fP(238,44,44,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FIREBRICK3\fP   \fBMLV_rgba\fP(205,38,38,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_FIREBRICK4\fP   \fBMLV_rgba\fP(139,26,26,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BROWN1\fP   \fBMLV_rgba\fP(255,64,64,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BROWN2\fP   \fBMLV_rgba\fP(238,59,59,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BROWN3\fP   \fBMLV_rgba\fP(205,51,51,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_BROWN4\fP   \fBMLV_rgba\fP(139,35,35,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SALMON1\fP   \fBMLV_rgba\fP(255,140,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SALMON2\fP   \fBMLV_rgba\fP(238,130,98,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SALMON3\fP   \fBMLV_rgba\fP(205,112,84,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_SALMON4\fP   \fBMLV_rgba\fP(139,76,57,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSALMON1\fP   \fBMLV_rgba\fP(255,160,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSALMON2\fP   \fBMLV_rgba\fP(238,149,114,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSALMON3\fP   \fBMLV_rgba\fP(205,129,98,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTSALMON4\fP   \fBMLV_rgba\fP(139,87,66,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGE1\fP   \fBMLV_rgba\fP(255,165,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGE2\fP   \fBMLV_rgba\fP(238,154,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGE3\fP   \fBMLV_rgba\fP(205,133,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGE4\fP   \fBMLV_rgba\fP(139,90,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORANGE1\fP   \fBMLV_rgba\fP(255,127,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORANGE2\fP   \fBMLV_rgba\fP(238,118,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORANGE3\fP   \fBMLV_rgba\fP(205,102,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORANGE4\fP   \fBMLV_rgba\fP(139,69,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORAL1\fP   \fBMLV_rgba\fP(255,114,86,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORAL2\fP   \fBMLV_rgba\fP(238,106,80,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORAL3\fP   \fBMLV_rgba\fP(205,91,69,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_CORAL4\fP   \fBMLV_rgba\fP(139,62,47,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TOMATO1\fP   \fBMLV_rgba\fP(255,99,71,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TOMATO2\fP   \fBMLV_rgba\fP(238,92,66,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TOMATO3\fP   \fBMLV_rgba\fP(205,79,57,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_TOMATO4\fP   \fBMLV_rgba\fP(139,54,38,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGERED1\fP   \fBMLV_rgba\fP(255,69,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGERED2\fP   \fBMLV_rgba\fP(238,64,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGERED3\fP   \fBMLV_rgba\fP(205,55,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORANGERED4\fP   \fBMLV_rgba\fP(139,37,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_RED1\fP   \fBMLV_rgba\fP(255,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_RED2\fP   \fBMLV_rgba\fP(238,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_RED3\fP   \fBMLV_rgba\fP(205,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_RED4\fP   \fBMLV_rgba\fP(139,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPPINK1\fP   \fBMLV_rgba\fP(255,20,147,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPPINK2\fP   \fBMLV_rgba\fP(238,18,137,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPPINK3\fP   \fBMLV_rgba\fP(205,16,118,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DEEPPINK4\fP   \fBMLV_rgba\fP(139,10,80,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HOTPINK1\fP   \fBMLV_rgba\fP(255,110,180,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HOTPINK2\fP   \fBMLV_rgba\fP(238,106,167,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HOTPINK3\fP   \fBMLV_rgba\fP(205,96,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_HOTPINK4\fP   \fBMLV_rgba\fP(139,58,98,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PINK1\fP   \fBMLV_rgba\fP(255,181,197,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PINK2\fP   \fBMLV_rgba\fP(238,169,184,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PINK3\fP   \fBMLV_rgba\fP(205,145,158,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PINK4\fP   \fBMLV_rgba\fP(139,99,108,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTPINK1\fP   \fBMLV_rgba\fP(255,174,185,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTPINK2\fP   \fBMLV_rgba\fP(238,162,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTPINK3\fP   \fBMLV_rgba\fP(205,140,149,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTPINK4\fP   \fBMLV_rgba\fP(139,95,101,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEVIOLETRED1\fP   \fBMLV_rgba\fP(255,130,171,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEVIOLETRED2\fP   \fBMLV_rgba\fP(238,121,159,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEVIOLETRED3\fP   \fBMLV_rgba\fP(205,104,137,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PALEVIOLETRED4\fP   \fBMLV_rgba\fP(139,71,93,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAROON1\fP   \fBMLV_rgba\fP(255,52,179,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAROON2\fP   \fBMLV_rgba\fP(238,48,167,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAROON3\fP   \fBMLV_rgba\fP(205,41,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAROON4\fP   \fBMLV_rgba\fP(139,28,98,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLETRED1\fP   \fBMLV_rgba\fP(255,62,150,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLETRED2\fP   \fBMLV_rgba\fP(238,58,140,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLETRED3\fP   \fBMLV_rgba\fP(205,50,120,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_VIOLETRED4\fP   \fBMLV_rgba\fP(139,34,82,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAGENTA1\fP   \fBMLV_rgba\fP(255,0,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAGENTA2\fP   \fBMLV_rgba\fP(238,0,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAGENTA3\fP   \fBMLV_rgba\fP(205,0,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MAGENTA4\fP   \fBMLV_rgba\fP(139,0,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORCHID1\fP   \fBMLV_rgba\fP(255,131,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORCHID2\fP   \fBMLV_rgba\fP(238,122,233,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORCHID3\fP   \fBMLV_rgba\fP(205,105,201,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_ORCHID4\fP   \fBMLV_rgba\fP(139,71,137,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PLUM1\fP   \fBMLV_rgba\fP(255,187,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PLUM2\fP   \fBMLV_rgba\fP(238,174,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PLUM3\fP   \fBMLV_rgba\fP(205,150,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PLUM4\fP   \fBMLV_rgba\fP(139,102,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMORCHID1\fP   \fBMLV_rgba\fP(224,102,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMORCHID2\fP   \fBMLV_rgba\fP(209,95,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMORCHID3\fP   \fBMLV_rgba\fP(180,82,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMORCHID4\fP   \fBMLV_rgba\fP(122,55,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORCHID1\fP   \fBMLV_rgba\fP(191,62,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORCHID2\fP   \fBMLV_rgba\fP(178,58,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORCHID3\fP   \fBMLV_rgba\fP(154,50,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKORCHID4\fP   \fBMLV_rgba\fP(104,34,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PURPLE1\fP   \fBMLV_rgba\fP(155,48,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PURPLE2\fP   \fBMLV_rgba\fP(145,44,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PURPLE3\fP   \fBMLV_rgba\fP(125,38,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_PURPLE4\fP   \fBMLV_rgba\fP(85,26,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMPURPLE1\fP   \fBMLV_rgba\fP(171,130,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMPURPLE2\fP   \fBMLV_rgba\fP(159,121,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMPURPLE3\fP   \fBMLV_rgba\fP(137,104,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_MEDIUMPURPLE4\fP   \fBMLV_rgba\fP(93,71,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_THISTLE1\fP   \fBMLV_rgba\fP(255,225,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_THISTLE2\fP   \fBMLV_rgba\fP(238,210,238,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_THISTLE3\fP   \fBMLV_rgba\fP(205,181,205,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_THISTLE4\fP   \fBMLV_rgba\fP(139,123,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY0\fP   \fBMLV_rgba\fP(0,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY0\fP   \fBMLV_rgba\fP(0,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY1\fP   \fBMLV_rgba\fP(3,3,3,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY1\fP   \fBMLV_rgba\fP(3,3,3,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY2\fP   \fBMLV_rgba\fP(5,5,5,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY2\fP   \fBMLV_rgba\fP(5,5,5,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY3\fP   \fBMLV_rgba\fP(8,8,8,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY3\fP   \fBMLV_rgba\fP(8,8,8,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY4\fP   \fBMLV_rgba\fP(10,10,10,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY4\fP   \fBMLV_rgba\fP(10,10,10,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY5\fP   \fBMLV_rgba\fP(13,13,13,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY5\fP   \fBMLV_rgba\fP(13,13,13,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY6\fP   \fBMLV_rgba\fP(15,15,15,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY6\fP   \fBMLV_rgba\fP(15,15,15,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY7\fP   \fBMLV_rgba\fP(18,18,18,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY7\fP   \fBMLV_rgba\fP(18,18,18,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY8\fP   \fBMLV_rgba\fP(20,20,20,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY8\fP   \fBMLV_rgba\fP(20,20,20,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY9\fP   \fBMLV_rgba\fP(23,23,23,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY9\fP   \fBMLV_rgba\fP(23,23,23,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY10\fP   \fBMLV_rgba\fP(26,26,26,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY10\fP   \fBMLV_rgba\fP(26,26,26,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY11\fP   \fBMLV_rgba\fP(28,28,28,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY11\fP   \fBMLV_rgba\fP(28,28,28,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY12\fP   \fBMLV_rgba\fP(31,31,31,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY12\fP   \fBMLV_rgba\fP(31,31,31,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY13\fP   \fBMLV_rgba\fP(33,33,33,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY13\fP   \fBMLV_rgba\fP(33,33,33,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY14\fP   \fBMLV_rgba\fP(36,36,36,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY14\fP   \fBMLV_rgba\fP(36,36,36,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY15\fP   \fBMLV_rgba\fP(38,38,38,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY15\fP   \fBMLV_rgba\fP(38,38,38,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY16\fP   \fBMLV_rgba\fP(41,41,41,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY16\fP   \fBMLV_rgba\fP(41,41,41,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY17\fP   \fBMLV_rgba\fP(43,43,43,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY17\fP   \fBMLV_rgba\fP(43,43,43,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY18\fP   \fBMLV_rgba\fP(46,46,46,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY18\fP   \fBMLV_rgba\fP(46,46,46,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY19\fP   \fBMLV_rgba\fP(48,48,48,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY19\fP   \fBMLV_rgba\fP(48,48,48,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY20\fP   \fBMLV_rgba\fP(51,51,51,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY20\fP   \fBMLV_rgba\fP(51,51,51,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY21\fP   \fBMLV_rgba\fP(54,54,54,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY21\fP   \fBMLV_rgba\fP(54,54,54,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY22\fP   \fBMLV_rgba\fP(56,56,56,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY22\fP   \fBMLV_rgba\fP(56,56,56,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY23\fP   \fBMLV_rgba\fP(59,59,59,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY23\fP   \fBMLV_rgba\fP(59,59,59,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY24\fP   \fBMLV_rgba\fP(61,61,61,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY24\fP   \fBMLV_rgba\fP(61,61,61,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY25\fP   \fBMLV_rgba\fP(64,64,64,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY25\fP   \fBMLV_rgba\fP(64,64,64,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY26\fP   \fBMLV_rgba\fP(66,66,66,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY26\fP   \fBMLV_rgba\fP(66,66,66,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY27\fP   \fBMLV_rgba\fP(69,69,69,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY27\fP   \fBMLV_rgba\fP(69,69,69,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY28\fP   \fBMLV_rgba\fP(71,71,71,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY28\fP   \fBMLV_rgba\fP(71,71,71,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY29\fP   \fBMLV_rgba\fP(74,74,74,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY29\fP   \fBMLV_rgba\fP(74,74,74,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY30\fP   \fBMLV_rgba\fP(77,77,77,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY30\fP   \fBMLV_rgba\fP(77,77,77,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY31\fP   \fBMLV_rgba\fP(79,79,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY31\fP   \fBMLV_rgba\fP(79,79,79,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY32\fP   \fBMLV_rgba\fP(82,82,82,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY32\fP   \fBMLV_rgba\fP(82,82,82,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY33\fP   \fBMLV_rgba\fP(84,84,84,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY33\fP   \fBMLV_rgba\fP(84,84,84,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY34\fP   \fBMLV_rgba\fP(87,87,87,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY34\fP   \fBMLV_rgba\fP(87,87,87,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY35\fP   \fBMLV_rgba\fP(89,89,89,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY35\fP   \fBMLV_rgba\fP(89,89,89,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY36\fP   \fBMLV_rgba\fP(92,92,92,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY36\fP   \fBMLV_rgba\fP(92,92,92,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY37\fP   \fBMLV_rgba\fP(94,94,94,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY37\fP   \fBMLV_rgba\fP(94,94,94,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY38\fP   \fBMLV_rgba\fP(97,97,97,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY38\fP   \fBMLV_rgba\fP(97,97,97,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY39\fP   \fBMLV_rgba\fP(99,99,99,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY39\fP   \fBMLV_rgba\fP(99,99,99,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY40\fP   \fBMLV_rgba\fP(102,102,102,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY40\fP   \fBMLV_rgba\fP(102,102,102,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY41\fP   \fBMLV_rgba\fP(105,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY41\fP   \fBMLV_rgba\fP(105,105,105,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY42\fP   \fBMLV_rgba\fP(107,107,107,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY42\fP   \fBMLV_rgba\fP(107,107,107,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY43\fP   \fBMLV_rgba\fP(110,110,110,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY43\fP   \fBMLV_rgba\fP(110,110,110,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY44\fP   \fBMLV_rgba\fP(112,112,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY44\fP   \fBMLV_rgba\fP(112,112,112,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY45\fP   \fBMLV_rgba\fP(115,115,115,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY45\fP   \fBMLV_rgba\fP(115,115,115,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY46\fP   \fBMLV_rgba\fP(117,117,117,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY46\fP   \fBMLV_rgba\fP(117,117,117,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY47\fP   \fBMLV_rgba\fP(120,120,120,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY47\fP   \fBMLV_rgba\fP(120,120,120,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY48\fP   \fBMLV_rgba\fP(122,122,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY48\fP   \fBMLV_rgba\fP(122,122,122,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY49\fP   \fBMLV_rgba\fP(125,125,125,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY49\fP   \fBMLV_rgba\fP(125,125,125,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY50\fP   \fBMLV_rgba\fP(127,127,127,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY50\fP   \fBMLV_rgba\fP(127,127,127,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY51\fP   \fBMLV_rgba\fP(130,130,130,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY51\fP   \fBMLV_rgba\fP(130,130,130,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY52\fP   \fBMLV_rgba\fP(133,133,133,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY52\fP   \fBMLV_rgba\fP(133,133,133,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY53\fP   \fBMLV_rgba\fP(135,135,135,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY53\fP   \fBMLV_rgba\fP(135,135,135,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY54\fP   \fBMLV_rgba\fP(138,138,138,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY54\fP   \fBMLV_rgba\fP(138,138,138,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY55\fP   \fBMLV_rgba\fP(140,140,140,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY55\fP   \fBMLV_rgba\fP(140,140,140,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY56\fP   \fBMLV_rgba\fP(143,143,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY56\fP   \fBMLV_rgba\fP(143,143,143,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY57\fP   \fBMLV_rgba\fP(145,145,145,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY57\fP   \fBMLV_rgba\fP(145,145,145,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY58\fP   \fBMLV_rgba\fP(148,148,148,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY58\fP   \fBMLV_rgba\fP(148,148,148,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY59\fP   \fBMLV_rgba\fP(150,150,150,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY59\fP   \fBMLV_rgba\fP(150,150,150,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY60\fP   \fBMLV_rgba\fP(153,153,153,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY60\fP   \fBMLV_rgba\fP(153,153,153,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY61\fP   \fBMLV_rgba\fP(156,156,156,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY61\fP   \fBMLV_rgba\fP(156,156,156,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY62\fP   \fBMLV_rgba\fP(158,158,158,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY62\fP   \fBMLV_rgba\fP(158,158,158,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY63\fP   \fBMLV_rgba\fP(161,161,161,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY63\fP   \fBMLV_rgba\fP(161,161,161,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY64\fP   \fBMLV_rgba\fP(163,163,163,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY64\fP   \fBMLV_rgba\fP(163,163,163,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY65\fP   \fBMLV_rgba\fP(166,166,166,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY65\fP   \fBMLV_rgba\fP(166,166,166,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY66\fP   \fBMLV_rgba\fP(168,168,168,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY66\fP   \fBMLV_rgba\fP(168,168,168,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY67\fP   \fBMLV_rgba\fP(171,171,171,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY67\fP   \fBMLV_rgba\fP(171,171,171,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY68\fP   \fBMLV_rgba\fP(173,173,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY68\fP   \fBMLV_rgba\fP(173,173,173,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY69\fP   \fBMLV_rgba\fP(176,176,176,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY69\fP   \fBMLV_rgba\fP(176,176,176,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY70\fP   \fBMLV_rgba\fP(179,179,179,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY70\fP   \fBMLV_rgba\fP(179,179,179,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY71\fP   \fBMLV_rgba\fP(181,181,181,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY71\fP   \fBMLV_rgba\fP(181,181,181,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY72\fP   \fBMLV_rgba\fP(184,184,184,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY72\fP   \fBMLV_rgba\fP(184,184,184,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY73\fP   \fBMLV_rgba\fP(186,186,186,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY73\fP   \fBMLV_rgba\fP(186,186,186,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY74\fP   \fBMLV_rgba\fP(189,189,189,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY74\fP   \fBMLV_rgba\fP(189,189,189,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY75\fP   \fBMLV_rgba\fP(191,191,191,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY75\fP   \fBMLV_rgba\fP(191,191,191,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY76\fP   \fBMLV_rgba\fP(194,194,194,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY76\fP   \fBMLV_rgba\fP(194,194,194,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY77\fP   \fBMLV_rgba\fP(196,196,196,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY77\fP   \fBMLV_rgba\fP(196,196,196,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY78\fP   \fBMLV_rgba\fP(199,199,199,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY78\fP   \fBMLV_rgba\fP(199,199,199,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY79\fP   \fBMLV_rgba\fP(201,201,201,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY79\fP   \fBMLV_rgba\fP(201,201,201,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY80\fP   \fBMLV_rgba\fP(204,204,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY80\fP   \fBMLV_rgba\fP(204,204,204,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY81\fP   \fBMLV_rgba\fP(207,207,207,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY81\fP   \fBMLV_rgba\fP(207,207,207,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY82\fP   \fBMLV_rgba\fP(209,209,209,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY82\fP   \fBMLV_rgba\fP(209,209,209,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY83\fP   \fBMLV_rgba\fP(212,212,212,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY83\fP   \fBMLV_rgba\fP(212,212,212,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY84\fP   \fBMLV_rgba\fP(214,214,214,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY84\fP   \fBMLV_rgba\fP(214,214,214,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY85\fP   \fBMLV_rgba\fP(217,217,217,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY85\fP   \fBMLV_rgba\fP(217,217,217,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY86\fP   \fBMLV_rgba\fP(219,219,219,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY86\fP   \fBMLV_rgba\fP(219,219,219,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY87\fP   \fBMLV_rgba\fP(222,222,222,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY87\fP   \fBMLV_rgba\fP(222,222,222,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY88\fP   \fBMLV_rgba\fP(224,224,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY88\fP   \fBMLV_rgba\fP(224,224,224,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY89\fP   \fBMLV_rgba\fP(227,227,227,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY89\fP   \fBMLV_rgba\fP(227,227,227,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY90\fP   \fBMLV_rgba\fP(229,229,229,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY90\fP   \fBMLV_rgba\fP(229,229,229,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY91\fP   \fBMLV_rgba\fP(232,232,232,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY91\fP   \fBMLV_rgba\fP(232,232,232,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY92\fP   \fBMLV_rgba\fP(235,235,235,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY92\fP   \fBMLV_rgba\fP(235,235,235,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY93\fP   \fBMLV_rgba\fP(237,237,237,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY93\fP   \fBMLV_rgba\fP(237,237,237,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY94\fP   \fBMLV_rgba\fP(240,240,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY94\fP   \fBMLV_rgba\fP(240,240,240,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY95\fP   \fBMLV_rgba\fP(242,242,242,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY95\fP   \fBMLV_rgba\fP(242,242,242,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY96\fP   \fBMLV_rgba\fP(245,245,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY96\fP   \fBMLV_rgba\fP(245,245,245,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY97\fP   \fBMLV_rgba\fP(247,247,247,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY97\fP   \fBMLV_rgba\fP(247,247,247,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY98\fP   \fBMLV_rgba\fP(250,250,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY98\fP   \fBMLV_rgba\fP(250,250,250,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY99\fP   \fBMLV_rgba\fP(252,252,252,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY99\fP   \fBMLV_rgba\fP(252,252,252,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GRAY100\fP   \fBMLV_rgba\fP(255,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_GREY100\fP   \fBMLV_rgba\fP(255,255,255,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_GREY\fP   \fBMLV_rgba\fP(169,169,169,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGREY\fP   \fBMLV_rgba\fP(169,169,169,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_GRAY\fP   \fBMLV_rgba\fP(169,169,169,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKGRAY\fP   \fBMLV_rgba\fP(169,169,169,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_BLUE\fP   \fBMLV_rgba\fP(0,0,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKBLUE\fP   \fBMLV_rgba\fP(0,0,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_CYAN\fP   \fBMLV_rgba\fP(0,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKCYAN\fP   \fBMLV_rgba\fP(0,139,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_MAGENTA\fP   \fBMLV_rgba\fP(139,0,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKMAGENTA\fP   \fBMLV_rgba\fP(139,0,139,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARK_RED\fP   \fBMLV_rgba\fP(139,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_DARKRED\fP   \fBMLV_rgba\fP(139,0,0,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHT_GREEN\fP   \fBMLV_rgba\fP(144,238,144,255)"
+.br
+.ti -1c
+.RI "#define \fBMLV_COLOR_LIGHTGREEN\fP   \fBMLV_rgba\fP(144,238,144,255)"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef Uint32 \fBMLV_Color\fP"
+.br
+.RI "Définit un type couleur pour la bibliothèque MLV\&. "
+.ti -1c
+.RI "typedef Uint8 \fBMLV_Alpha\fP"
+.br
+.RI "Type codant la transparence dans MLV\&. "
+.in -1c
+.SS "Énumérations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBMLV_ALPHA_TRANSPARENT\fP = SDL_ALPHA_TRANSPARENT, \fBMLV_ALPHA_OPAQUE\fP = SDL_ALPHA_OPAQUE }"
+.br
+.RI "Énumère les valeurs de transparence et d'opacité (codés sur 8 bits )\&. "
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBMLV_Color\fP \fBMLV_rgba\fP (Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)"
+.br
+.RI "Raccourci vers \fBMLV_Color\fP MLV_get_color_from_rgba\&. "
+.ti -1c
+.RI "\fBMLV_Color\fP \fBMLV_convert_rgba_to_color\fP (Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)"
+.br
+.RI "Convertit une couleur codée sur 4 entier de 8 bits représentant les composantes rouge, bleue et verte en un entier 32 bits\&. "
+.ti -1c
+.RI "void \fBMLV_convert_color_to_rgba\fP (\fBMLV_Color\fP color, Uint8 *red, Uint8 *green, Uint8 *blue, Uint8 *alpha)"
+.br
+.RI "Convertit une couleur MLV en une couleur codée sur 4 entier de 8 bits représentant les composantes rouge, bleue et verte en un entier 32 bits\&. "
+.ti -1c
+.RI "const char * \fBMLV_convert_color_to_string\fP (\fBMLV_Color\fP color)"
+.br
+.RI "Convertit une couleur en un chaine de caractères\&. "
+.ti -1c
+.RI "\fBMLV_Color\fP \fBMLV_convert_string_to_color\fP (const char *color_name)"
+.br
+.RI "Convertit un nom de couleur en son code couleur\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définit toutes les couleurs disponibles dans la bibliothèque MLV\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.SH "Documentation des macros"
+.PP 
+.SS "#define MLV_COLOR_ALICE_BLUE   \fBMLV_rgba\fP(240,248,255,255)"
+Define the ALICE_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ALICEBLUE   \fBMLV_rgba\fP(240,248,255,255)"
+Define the ALICEBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ANTIQUE_WHITE   \fBMLV_rgba\fP(250,235,215,255)"
+Define the ANTIQUE_WHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ANTIQUEWHITE   \fBMLV_rgba\fP(250,235,215,255)"
+Define the ANTIQUEWHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ANTIQUEWHITE1   \fBMLV_rgba\fP(255,239,219,255)"
+Define the ANTIQUEWHITE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ANTIQUEWHITE2   \fBMLV_rgba\fP(238,223,204,255)"
+Define the ANTIQUEWHITE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ANTIQUEWHITE3   \fBMLV_rgba\fP(205,192,176,255)"
+Define the ANTIQUEWHITE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ANTIQUEWHITE4   \fBMLV_rgba\fP(139,131,120,255)"
+Define the ANTIQUEWHITE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AQUAMARINE   \fBMLV_rgba\fP(127,255,212,255)"
+Define the AQUAMARINE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AQUAMARINE1   \fBMLV_rgba\fP(127,255,212,255)"
+Define the AQUAMARINE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AQUAMARINE2   \fBMLV_rgba\fP(118,238,198,255)"
+Define the AQUAMARINE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AQUAMARINE3   \fBMLV_rgba\fP(102,205,170,255)"
+Define the AQUAMARINE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AQUAMARINE4   \fBMLV_rgba\fP(69,139,116,255)"
+Define the AQUAMARINE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AZURE   \fBMLV_rgba\fP(240,255,255,255)"
+Define the AZURE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AZURE1   \fBMLV_rgba\fP(240,255,255,255)"
+Define the AZURE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AZURE2   \fBMLV_rgba\fP(224,238,238,255)"
+Define the AZURE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AZURE3   \fBMLV_rgba\fP(193,205,205,255)"
+Define the AZURE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_AZURE4   \fBMLV_rgba\fP(131,139,139,255)"
+Define the AZURE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BEIGE   \fBMLV_rgba\fP(245,245,220,255)"
+Define the BEIGE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BISQUE   \fBMLV_rgba\fP(255,228,196,255)"
+Define the BISQUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BISQUE1   \fBMLV_rgba\fP(255,228,196,255)"
+Define the BISQUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BISQUE2   \fBMLV_rgba\fP(238,213,183,255)"
+Define the BISQUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BISQUE3   \fBMLV_rgba\fP(205,183,158,255)"
+Define the BISQUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BISQUE4   \fBMLV_rgba\fP(139,125,107,255)"
+Define the BISQUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLACK   \fBMLV_rgba\fP(0,0,0,255)"
+Define the BLACK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBadvanced/07_transparency\&.c\fP, \fBadvanced/08_zone_click\&.c\fP, \fBadvanced/11_animation_book\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, \fBbeginner/07_input_box\&.c\fP, \fBbeginner/08_mouse_keyboard_timer\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBbeginner/10_library_informations\&.c\fP, \fBmedium/01_keyboard_events\&.c\fP, \fBmedium/02_mouse_events\&.c\fP, \fBmedium/03_input_box_events\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/06_colors\&.c\fP, \fBmedium/07_time\&.c\fP, \fBmedium/08_full_screen\&.c\fP, \fBmedium/09_keyboard_accents\&.c\fP, \fBmedium/10_mouse_or_keyboard_access\&.c\fP, et \fBmedium/11_keys_codes\&.c\fP\&.
+.SS "#define MLV_COLOR_BLANCHED_ALMOND   \fBMLV_rgba\fP(255,235,205,255)"
+Define the BLANCHED_ALMOND color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLANCHEDALMOND   \fBMLV_rgba\fP(255,235,205,255)"
+Define the BLANCHEDALMOND color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUE   \fBMLV_rgba\fP(0,0,255,255)"
+Define the BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, \fBbeginner/09_colors\&.c\fP, et \fBmedium/04_events\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUE1   \fBMLV_rgba\fP(0,0,255,255)"
+Define the BLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUE2   \fBMLV_rgba\fP(0,0,238,255)"
+Define the BLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUE3   \fBMLV_rgba\fP(0,0,205,255)"
+Define the BLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUE4   \fBMLV_rgba\fP(0,0,139,255)"
+Define the BLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUE_VIOLET   \fBMLV_rgba\fP(138,43,226,255)"
+Define the BLUE_VIOLET color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BLUEVIOLET   \fBMLV_rgba\fP(138,43,226,255)"
+Define the BLUEVIOLET color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BROWN   \fBMLV_rgba\fP(165,42,42,255)"
+Define the BROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/09_animation\&.c\fP, \fBadvanced/11_animation_book\&.c\fP, \fBbeginner/02_shapes\&.c\fP, et \fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BROWN1   \fBMLV_rgba\fP(255,64,64,255)"
+Define the BROWN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BROWN2   \fBMLV_rgba\fP(238,59,59,255)"
+Define the BROWN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BROWN3   \fBMLV_rgba\fP(205,51,51,255)"
+Define the BROWN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BROWN4   \fBMLV_rgba\fP(139,35,35,255)"
+Define the BROWN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BURLYWOOD   \fBMLV_rgba\fP(222,184,135,255)"
+Define the BURLYWOOD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BURLYWOOD1   \fBMLV_rgba\fP(255,211,155,255)"
+Define the BURLYWOOD1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BURLYWOOD2   \fBMLV_rgba\fP(238,197,145,255)"
+Define the BURLYWOOD2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BURLYWOOD3   \fBMLV_rgba\fP(205,170,125,255)"
+Define the BURLYWOOD3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_BURLYWOOD4   \fBMLV_rgba\fP(139,115,85,255)"
+Define the BURLYWOOD4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CADET_BLUE   \fBMLV_rgba\fP(95,158,160,255)"
+Define the CADET_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CADETBLUE   \fBMLV_rgba\fP(95,158,160,255)"
+Define the CADETBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CADETBLUE1   \fBMLV_rgba\fP(152,245,255,255)"
+Define the CADETBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CADETBLUE2   \fBMLV_rgba\fP(142,229,238,255)"
+Define the CADETBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CADETBLUE3   \fBMLV_rgba\fP(122,197,205,255)"
+Define the CADETBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CADETBLUE4   \fBMLV_rgba\fP(83,134,139,255)"
+Define the CADETBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHARTREUSE   \fBMLV_rgba\fP(127,255,0,255)"
+Define the CHARTREUSE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHARTREUSE1   \fBMLV_rgba\fP(127,255,0,255)"
+Define the CHARTREUSE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHARTREUSE2   \fBMLV_rgba\fP(118,238,0,255)"
+Define the CHARTREUSE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHARTREUSE3   \fBMLV_rgba\fP(102,205,0,255)"
+Define the CHARTREUSE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHARTREUSE4   \fBMLV_rgba\fP(69,139,0,255)"
+Define the CHARTREUSE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHOCOLATE   \fBMLV_rgba\fP(210,105,30,255)"
+Define the CHOCOLATE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHOCOLATE1   \fBMLV_rgba\fP(255,127,36,255)"
+Define the CHOCOLATE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHOCOLATE2   \fBMLV_rgba\fP(238,118,33,255)"
+Define the CHOCOLATE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHOCOLATE3   \fBMLV_rgba\fP(205,102,29,255)"
+Define the CHOCOLATE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CHOCOLATE4   \fBMLV_rgba\fP(139,69,19,255)"
+Define the CHOCOLATE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORAL   \fBMLV_rgba\fP(255,127,80,255)"
+Define the CORAL color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORAL1   \fBMLV_rgba\fP(255,114,86,255)"
+Define the CORAL1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORAL2   \fBMLV_rgba\fP(238,106,80,255)"
+Define the CORAL2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORAL3   \fBMLV_rgba\fP(205,91,69,255)"
+Define the CORAL3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORAL4   \fBMLV_rgba\fP(139,62,47,255)"
+Define the CORAL4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNFLOWER_BLUE   \fBMLV_rgba\fP(100,149,237,255)"
+Define the CORNFLOWER_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNFLOWERBLUE   \fBMLV_rgba\fP(100,149,237,255)"
+Define the CORNFLOWERBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNSILK   \fBMLV_rgba\fP(255,248,220,255)"
+Define the CORNSILK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNSILK1   \fBMLV_rgba\fP(255,248,220,255)"
+Define the CORNSILK1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNSILK2   \fBMLV_rgba\fP(238,232,205,255)"
+Define the CORNSILK2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNSILK3   \fBMLV_rgba\fP(205,200,177,255)"
+Define the CORNSILK3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CORNSILK4   \fBMLV_rgba\fP(139,136,120,255)"
+Define the CORNSILK4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CYAN   \fBMLV_rgba\fP(0,255,255,255)"
+Define the CYAN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CYAN1   \fBMLV_rgba\fP(0,255,255,255)"
+Define the CYAN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CYAN2   \fBMLV_rgba\fP(0,238,238,255)"
+Define the CYAN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CYAN3   \fBMLV_rgba\fP(0,205,205,255)"
+Define the CYAN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_CYAN4   \fBMLV_rgba\fP(0,139,139,255)"
+Define the CYAN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_BLUE   \fBMLV_rgba\fP(0,0,139,255)"
+Define the DARK_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_CYAN   \fBMLV_rgba\fP(0,139,139,255)"
+Define the DARK_CYAN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_GOLDENROD   \fBMLV_rgba\fP(184,134,11,255)"
+Define the DARK_GOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_GRAY   \fBMLV_rgba\fP(169,169,169,255)"
+Define the DARK_GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_GREEN   \fBMLV_rgba\fP(0,100,0,255)"
+Define the DARK_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_GREY   \fBMLV_rgba\fP(169,169,169,255)"
+Define the DARK_GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_KHAKI   \fBMLV_rgba\fP(189,183,107,255)"
+Define the DARK_KHAKI color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_MAGENTA   \fBMLV_rgba\fP(139,0,139,255)"
+Define the DARK_MAGENTA color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_OLIVE_GREEN   \fBMLV_rgba\fP(85,107,47,255)"
+Define the DARK_OLIVE_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_ORANGE   \fBMLV_rgba\fP(255,140,0,255)"
+Define the DARK_ORANGE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_ORCHID   \fBMLV_rgba\fP(153,50,204,255)"
+Define the DARK_ORCHID color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_RED   \fBMLV_rgba\fP(139,0,0,255)"
+Define the DARK_RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_SALMON   \fBMLV_rgba\fP(233,150,122,255)"
+Define the DARK_SALMON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_SEA_GREEN   \fBMLV_rgba\fP(143,188,143,255)"
+Define the DARK_SEA_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_SLATE_BLUE   \fBMLV_rgba\fP(72,61,139,255)"
+Define the DARK_SLATE_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_SLATE_GRAY   \fBMLV_rgba\fP(47,79,79,255)"
+Define the DARK_SLATE_GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_SLATE_GREY   \fBMLV_rgba\fP(47,79,79,255)"
+Define the DARK_SLATE_GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_TURQUOISE   \fBMLV_rgba\fP(0,206,209,255)"
+Define the DARK_TURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARK_VIOLET   \fBMLV_rgba\fP(148,0,211,255)"
+Define the DARK_VIOLET color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKBLUE   \fBMLV_rgba\fP(0,0,139,255)"
+Define the DARKBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKCYAN   \fBMLV_rgba\fP(0,139,139,255)"
+Define the DARKCYAN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGOLDENROD   \fBMLV_rgba\fP(184,134,11,255)"
+Define the DARKGOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGOLDENROD1   \fBMLV_rgba\fP(255,185,15,255)"
+Define the DARKGOLDENROD1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGOLDENROD2   \fBMLV_rgba\fP(238,173,14,255)"
+Define the DARKGOLDENROD2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGOLDENROD3   \fBMLV_rgba\fP(205,149,12,255)"
+Define the DARKGOLDENROD3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGOLDENROD4   \fBMLV_rgba\fP(139,101,8,255)"
+Define the DARKGOLDENROD4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGRAY   \fBMLV_rgba\fP(169,169,169,255)"
+Define the DARKGRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGREEN   \fBMLV_rgba\fP(0,100,0,255)"
+Define the DARKGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKGREY   \fBMLV_rgba\fP(169,169,169,255)"
+Define the DARKGREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKKHAKI   \fBMLV_rgba\fP(189,183,107,255)"
+Define the DARKKHAKI color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKMAGENTA   \fBMLV_rgba\fP(139,0,139,255)"
+Define the DARKMAGENTA color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKOLIVEGREEN   \fBMLV_rgba\fP(85,107,47,255)"
+Define the DARKOLIVEGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKOLIVEGREEN1   \fBMLV_rgba\fP(202,255,112,255)"
+Define the DARKOLIVEGREEN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKOLIVEGREEN2   \fBMLV_rgba\fP(188,238,104,255)"
+Define the DARKOLIVEGREEN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKOLIVEGREEN3   \fBMLV_rgba\fP(162,205,90,255)"
+Define the DARKOLIVEGREEN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKOLIVEGREEN4   \fBMLV_rgba\fP(110,139,61,255)"
+Define the DARKOLIVEGREEN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORANGE   \fBMLV_rgba\fP(255,140,0,255)"
+Define the DARKORANGE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORANGE1   \fBMLV_rgba\fP(255,127,0,255)"
+Define the DARKORANGE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORANGE2   \fBMLV_rgba\fP(238,118,0,255)"
+Define the DARKORANGE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORANGE3   \fBMLV_rgba\fP(205,102,0,255)"
+Define the DARKORANGE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORANGE4   \fBMLV_rgba\fP(139,69,0,255)"
+Define the DARKORANGE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORCHID   \fBMLV_rgba\fP(153,50,204,255)"
+Define the DARKORCHID color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORCHID1   \fBMLV_rgba\fP(191,62,255,255)"
+Define the DARKORCHID1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORCHID2   \fBMLV_rgba\fP(178,58,238,255)"
+Define the DARKORCHID2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORCHID3   \fBMLV_rgba\fP(154,50,205,255)"
+Define the DARKORCHID3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKORCHID4   \fBMLV_rgba\fP(104,34,139,255)"
+Define the DARKORCHID4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKRED   \fBMLV_rgba\fP(139,0,0,255)"
+Define the DARKRED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSALMON   \fBMLV_rgba\fP(233,150,122,255)"
+Define the DARKSALMON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSEAGREEN   \fBMLV_rgba\fP(143,188,143,255)"
+Define the DARKSEAGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSEAGREEN1   \fBMLV_rgba\fP(193,255,193,255)"
+Define the DARKSEAGREEN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSEAGREEN2   \fBMLV_rgba\fP(180,238,180,255)"
+Define the DARKSEAGREEN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSEAGREEN3   \fBMLV_rgba\fP(155,205,155,255)"
+Define the DARKSEAGREEN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSEAGREEN4   \fBMLV_rgba\fP(105,139,105,255)"
+Define the DARKSEAGREEN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEBLUE   \fBMLV_rgba\fP(72,61,139,255)"
+Define the DARKSLATEBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEGRAY   \fBMLV_rgba\fP(47,79,79,255)"
+Define the DARKSLATEGRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEGRAY1   \fBMLV_rgba\fP(151,255,255,255)"
+Define the DARKSLATEGRAY1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEGRAY2   \fBMLV_rgba\fP(141,238,238,255)"
+Define the DARKSLATEGRAY2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEGRAY3   \fBMLV_rgba\fP(121,205,205,255)"
+Define the DARKSLATEGRAY3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEGRAY4   \fBMLV_rgba\fP(82,139,139,255)"
+Define the DARKSLATEGRAY4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKSLATEGREY   \fBMLV_rgba\fP(47,79,79,255)"
+Define the DARKSLATEGREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKTURQUOISE   \fBMLV_rgba\fP(0,206,209,255)"
+Define the DARKTURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DARKVIOLET   \fBMLV_rgba\fP(148,0,211,255)"
+Define the DARKVIOLET color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEP_PINK   \fBMLV_rgba\fP(255,20,147,255)"
+Define the DEEP_PINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEP_SKY_BLUE   \fBMLV_rgba\fP(0,191,255,255)"
+Define the DEEP_SKY_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPPINK   \fBMLV_rgba\fP(255,20,147,255)"
+Define the DEEPPINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPPINK1   \fBMLV_rgba\fP(255,20,147,255)"
+Define the DEEPPINK1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPPINK2   \fBMLV_rgba\fP(238,18,137,255)"
+Define the DEEPPINK2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPPINK3   \fBMLV_rgba\fP(205,16,118,255)"
+Define the DEEPPINK3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPPINK4   \fBMLV_rgba\fP(139,10,80,255)"
+Define the DEEPPINK4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPSKYBLUE   \fBMLV_rgba\fP(0,191,255,255)"
+Define the DEEPSKYBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPSKYBLUE1   \fBMLV_rgba\fP(0,191,255,255)"
+Define the DEEPSKYBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPSKYBLUE2   \fBMLV_rgba\fP(0,178,238,255)"
+Define the DEEPSKYBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPSKYBLUE3   \fBMLV_rgba\fP(0,154,205,255)"
+Define the DEEPSKYBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DEEPSKYBLUE4   \fBMLV_rgba\fP(0,104,139,255)"
+Define the DEEPSKYBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DIM_GRAY   \fBMLV_rgba\fP(105,105,105,255)"
+Define the DIM_GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DIM_GREY   \fBMLV_rgba\fP(105,105,105,255)"
+Define the DIM_GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DIMGRAY   \fBMLV_rgba\fP(105,105,105,255)"
+Define the DIMGRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DIMGREY   \fBMLV_rgba\fP(105,105,105,255)"
+Define the DIMGREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DODGER_BLUE   \fBMLV_rgba\fP(30,144,255,255)"
+Define the DODGER_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DODGERBLUE   \fBMLV_rgba\fP(30,144,255,255)"
+Define the DODGERBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DODGERBLUE1   \fBMLV_rgba\fP(30,144,255,255)"
+Define the DODGERBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DODGERBLUE2   \fBMLV_rgba\fP(28,134,238,255)"
+Define the DODGERBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DODGERBLUE3   \fBMLV_rgba\fP(24,116,205,255)"
+Define the DODGERBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_DODGERBLUE4   \fBMLV_rgba\fP(16,78,139,255)"
+Define the DODGERBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FIREBRICK   \fBMLV_rgba\fP(178,34,34,255)"
+Define the FIREBRICK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FIREBRICK1   \fBMLV_rgba\fP(255,48,48,255)"
+Define the FIREBRICK1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FIREBRICK2   \fBMLV_rgba\fP(238,44,44,255)"
+Define the FIREBRICK2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FIREBRICK3   \fBMLV_rgba\fP(205,38,38,255)"
+Define the FIREBRICK3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FIREBRICK4   \fBMLV_rgba\fP(139,26,26,255)"
+Define the FIREBRICK4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FLORAL_WHITE   \fBMLV_rgba\fP(255,250,240,255)"
+Define the FLORAL_WHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FLORALWHITE   \fBMLV_rgba\fP(255,250,240,255)"
+Define the FLORALWHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FOREST_GREEN   \fBMLV_rgba\fP(34,139,34,255)"
+Define the FOREST_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_FORESTGREEN   \fBMLV_rgba\fP(34,139,34,255)"
+Define the FORESTGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GAINSBORO   \fBMLV_rgba\fP(220,220,220,255)"
+Define the GAINSBORO color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GHOST_WHITE   \fBMLV_rgba\fP(248,248,255,255)"
+Define the GHOST_WHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GHOSTWHITE   \fBMLV_rgba\fP(248,248,255,255)"
+Define the GHOSTWHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLD   \fBMLV_rgba\fP(255,215,0,255)"
+Define the GOLD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLD1   \fBMLV_rgba\fP(255,215,0,255)"
+Define the GOLD1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLD2   \fBMLV_rgba\fP(238,201,0,255)"
+Define the GOLD2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLD3   \fBMLV_rgba\fP(205,173,0,255)"
+Define the GOLD3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLD4   \fBMLV_rgba\fP(139,117,0,255)"
+Define the GOLD4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLDENROD   \fBMLV_rgba\fP(218,165,32,255)"
+Define the GOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLDENROD1   \fBMLV_rgba\fP(255,193,37,255)"
+Define the GOLDENROD1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLDENROD2   \fBMLV_rgba\fP(238,180,34,255)"
+Define the GOLDENROD2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLDENROD3   \fBMLV_rgba\fP(205,155,29,255)"
+Define the GOLDENROD3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GOLDENROD4   \fBMLV_rgba\fP(139,105,20,255)"
+Define the GOLDENROD4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY   \fBMLV_rgba\fP(190,190,190,255)"
+Define the GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY0   \fBMLV_rgba\fP(0,0,0,255)"
+Define the GRAY0 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY1   \fBMLV_rgba\fP(3,3,3,255)"
+Define the GRAY1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY10   \fBMLV_rgba\fP(26,26,26,255)"
+Define the GRAY10 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY100   \fBMLV_rgba\fP(255,255,255,255)"
+Define the GRAY100 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY11   \fBMLV_rgba\fP(28,28,28,255)"
+Define the GRAY11 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY12   \fBMLV_rgba\fP(31,31,31,255)"
+Define the GRAY12 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY13   \fBMLV_rgba\fP(33,33,33,255)"
+Define the GRAY13 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY14   \fBMLV_rgba\fP(36,36,36,255)"
+Define the GRAY14 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY15   \fBMLV_rgba\fP(38,38,38,255)"
+Define the GRAY15 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY16   \fBMLV_rgba\fP(41,41,41,255)"
+Define the GRAY16 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY17   \fBMLV_rgba\fP(43,43,43,255)"
+Define the GRAY17 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY18   \fBMLV_rgba\fP(46,46,46,255)"
+Define the GRAY18 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY19   \fBMLV_rgba\fP(48,48,48,255)"
+Define the GRAY19 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY2   \fBMLV_rgba\fP(5,5,5,255)"
+Define the GRAY2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY20   \fBMLV_rgba\fP(51,51,51,255)"
+Define the GRAY20 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY21   \fBMLV_rgba\fP(54,54,54,255)"
+Define the GRAY21 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY22   \fBMLV_rgba\fP(56,56,56,255)"
+Define the GRAY22 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY23   \fBMLV_rgba\fP(59,59,59,255)"
+Define the GRAY23 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY24   \fBMLV_rgba\fP(61,61,61,255)"
+Define the GRAY24 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY25   \fBMLV_rgba\fP(64,64,64,255)"
+Define the GRAY25 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY26   \fBMLV_rgba\fP(66,66,66,255)"
+Define the GRAY26 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY27   \fBMLV_rgba\fP(69,69,69,255)"
+Define the GRAY27 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY28   \fBMLV_rgba\fP(71,71,71,255)"
+Define the GRAY28 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY29   \fBMLV_rgba\fP(74,74,74,255)"
+Define the GRAY29 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY3   \fBMLV_rgba\fP(8,8,8,255)"
+Define the GRAY3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY30   \fBMLV_rgba\fP(77,77,77,255)"
+Define the GRAY30 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY31   \fBMLV_rgba\fP(79,79,79,255)"
+Define the GRAY31 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY32   \fBMLV_rgba\fP(82,82,82,255)"
+Define the GRAY32 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY33   \fBMLV_rgba\fP(84,84,84,255)"
+Define the GRAY33 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY34   \fBMLV_rgba\fP(87,87,87,255)"
+Define the GRAY34 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY35   \fBMLV_rgba\fP(89,89,89,255)"
+Define the GRAY35 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY36   \fBMLV_rgba\fP(92,92,92,255)"
+Define the GRAY36 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY37   \fBMLV_rgba\fP(94,94,94,255)"
+Define the GRAY37 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY38   \fBMLV_rgba\fP(97,97,97,255)"
+Define the GRAY38 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY39   \fBMLV_rgba\fP(99,99,99,255)"
+Define the GRAY39 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY4   \fBMLV_rgba\fP(10,10,10,255)"
+Define the GRAY4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY40   \fBMLV_rgba\fP(102,102,102,255)"
+Define the GRAY40 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY41   \fBMLV_rgba\fP(105,105,105,255)"
+Define the GRAY41 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY42   \fBMLV_rgba\fP(107,107,107,255)"
+Define the GRAY42 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY43   \fBMLV_rgba\fP(110,110,110,255)"
+Define the GRAY43 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY44   \fBMLV_rgba\fP(112,112,112,255)"
+Define the GRAY44 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY45   \fBMLV_rgba\fP(115,115,115,255)"
+Define the GRAY45 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY46   \fBMLV_rgba\fP(117,117,117,255)"
+Define the GRAY46 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY47   \fBMLV_rgba\fP(120,120,120,255)"
+Define the GRAY47 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY48   \fBMLV_rgba\fP(122,122,122,255)"
+Define the GRAY48 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY49   \fBMLV_rgba\fP(125,125,125,255)"
+Define the GRAY49 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY5   \fBMLV_rgba\fP(13,13,13,255)"
+Define the GRAY5 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY50   \fBMLV_rgba\fP(127,127,127,255)"
+Define the GRAY50 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY51   \fBMLV_rgba\fP(130,130,130,255)"
+Define the GRAY51 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY52   \fBMLV_rgba\fP(133,133,133,255)"
+Define the GRAY52 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY53   \fBMLV_rgba\fP(135,135,135,255)"
+Define the GRAY53 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY54   \fBMLV_rgba\fP(138,138,138,255)"
+Define the GRAY54 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY55   \fBMLV_rgba\fP(140,140,140,255)"
+Define the GRAY55 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY56   \fBMLV_rgba\fP(143,143,143,255)"
+Define the GRAY56 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY57   \fBMLV_rgba\fP(145,145,145,255)"
+Define the GRAY57 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY58   \fBMLV_rgba\fP(148,148,148,255)"
+Define the GRAY58 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY59   \fBMLV_rgba\fP(150,150,150,255)"
+Define the GRAY59 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY6   \fBMLV_rgba\fP(15,15,15,255)"
+Define the GRAY6 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY60   \fBMLV_rgba\fP(153,153,153,255)"
+Define the GRAY60 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY61   \fBMLV_rgba\fP(156,156,156,255)"
+Define the GRAY61 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY62   \fBMLV_rgba\fP(158,158,158,255)"
+Define the GRAY62 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY63   \fBMLV_rgba\fP(161,161,161,255)"
+Define the GRAY63 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY64   \fBMLV_rgba\fP(163,163,163,255)"
+Define the GRAY64 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY65   \fBMLV_rgba\fP(166,166,166,255)"
+Define the GRAY65 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY66   \fBMLV_rgba\fP(168,168,168,255)"
+Define the GRAY66 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY67   \fBMLV_rgba\fP(171,171,171,255)"
+Define the GRAY67 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY68   \fBMLV_rgba\fP(173,173,173,255)"
+Define the GRAY68 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY69   \fBMLV_rgba\fP(176,176,176,255)"
+Define the GRAY69 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY7   \fBMLV_rgba\fP(18,18,18,255)"
+Define the GRAY7 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY70   \fBMLV_rgba\fP(179,179,179,255)"
+Define the GRAY70 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY71   \fBMLV_rgba\fP(181,181,181,255)"
+Define the GRAY71 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY72   \fBMLV_rgba\fP(184,184,184,255)"
+Define the GRAY72 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY73   \fBMLV_rgba\fP(186,186,186,255)"
+Define the GRAY73 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY74   \fBMLV_rgba\fP(189,189,189,255)"
+Define the GRAY74 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY75   \fBMLV_rgba\fP(191,191,191,255)"
+Define the GRAY75 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY76   \fBMLV_rgba\fP(194,194,194,255)"
+Define the GRAY76 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY77   \fBMLV_rgba\fP(196,196,196,255)"
+Define the GRAY77 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY78   \fBMLV_rgba\fP(199,199,199,255)"
+Define the GRAY78 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY79   \fBMLV_rgba\fP(201,201,201,255)"
+Define the GRAY79 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY8   \fBMLV_rgba\fP(20,20,20,255)"
+Define the GRAY8 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY80   \fBMLV_rgba\fP(204,204,204,255)"
+Define the GRAY80 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY81   \fBMLV_rgba\fP(207,207,207,255)"
+Define the GRAY81 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY82   \fBMLV_rgba\fP(209,209,209,255)"
+Define the GRAY82 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY83   \fBMLV_rgba\fP(212,212,212,255)"
+Define the GRAY83 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY84   \fBMLV_rgba\fP(214,214,214,255)"
+Define the GRAY84 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY85   \fBMLV_rgba\fP(217,217,217,255)"
+Define the GRAY85 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY86   \fBMLV_rgba\fP(219,219,219,255)"
+Define the GRAY86 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY87   \fBMLV_rgba\fP(222,222,222,255)"
+Define the GRAY87 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY88   \fBMLV_rgba\fP(224,224,224,255)"
+Define the GRAY88 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY89   \fBMLV_rgba\fP(227,227,227,255)"
+Define the GRAY89 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY9   \fBMLV_rgba\fP(23,23,23,255)"
+Define the GRAY9 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY90   \fBMLV_rgba\fP(229,229,229,255)"
+Define the GRAY90 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY91   \fBMLV_rgba\fP(232,232,232,255)"
+Define the GRAY91 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY92   \fBMLV_rgba\fP(235,235,235,255)"
+Define the GRAY92 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY93   \fBMLV_rgba\fP(237,237,237,255)"
+Define the GRAY93 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY94   \fBMLV_rgba\fP(240,240,240,255)"
+Define the GRAY94 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY95   \fBMLV_rgba\fP(242,242,242,255)"
+Define the GRAY95 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY96   \fBMLV_rgba\fP(245,245,245,255)"
+Define the GRAY96 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY97   \fBMLV_rgba\fP(247,247,247,255)"
+Define the GRAY97 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY98   \fBMLV_rgba\fP(250,250,250,255)"
+Define the GRAY98 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GRAY99   \fBMLV_rgba\fP(252,252,252,255)"
+Define the GRAY99 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREEN   \fBMLV_rgba\fP(0,255,0,255)"
+Define the GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBadvanced/02_font\&.c\fP, \fBadvanced/04_sound\&.c\fP, \fBadvanced/07_transparency\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, \fBbeginner/05_mouse\&.c\fP, \fBbeginner/06_keyboard\&.c\fP, \fBbeginner/07_input_box\&.c\fP, \fBbeginner/08_mouse_keyboard_timer\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBbeginner/10_library_informations\&.c\fP, \fBmedium/01_keyboard_events\&.c\fP, \fBmedium/02_mouse_events\&.c\fP, \fBmedium/03_input_box_events\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/07_time\&.c\fP, \fBmedium/09_keyboard_accents\&.c\fP, \fBmedium/10_mouse_or_keyboard_access\&.c\fP, \fBmedium/11_keys_codes\&.c\fP, et \fBmedium/12_desktop_size\&.c\fP\&.
+.SS "#define MLV_COLOR_GREEN1   \fBMLV_rgba\fP(0,255,0,255)"
+Define the GREEN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREEN2   \fBMLV_rgba\fP(0,238,0,255)"
+Define the GREEN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREEN3   \fBMLV_rgba\fP(0,205,0,255)"
+Define the GREEN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREEN4   \fBMLV_rgba\fP(0,139,0,255)"
+Define the GREEN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREEN_YELLOW   \fBMLV_rgba\fP(173,255,47,255)"
+Define the GREEN_YELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREENYELLOW   \fBMLV_rgba\fP(173,255,47,255)"
+Define the GREENYELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY   \fBMLV_rgba\fP(190,190,190,255)"
+Define the GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY0   \fBMLV_rgba\fP(0,0,0,255)"
+Define the GREY0 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY1   \fBMLV_rgba\fP(3,3,3,255)"
+Define the GREY1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY10   \fBMLV_rgba\fP(26,26,26,255)"
+Define the GREY10 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY100   \fBMLV_rgba\fP(255,255,255,255)"
+Define the GREY100 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY11   \fBMLV_rgba\fP(28,28,28,255)"
+Define the GREY11 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY12   \fBMLV_rgba\fP(31,31,31,255)"
+Define the GREY12 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY13   \fBMLV_rgba\fP(33,33,33,255)"
+Define the GREY13 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY14   \fBMLV_rgba\fP(36,36,36,255)"
+Define the GREY14 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY15   \fBMLV_rgba\fP(38,38,38,255)"
+Define the GREY15 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY16   \fBMLV_rgba\fP(41,41,41,255)"
+Define the GREY16 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY17   \fBMLV_rgba\fP(43,43,43,255)"
+Define the GREY17 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY18   \fBMLV_rgba\fP(46,46,46,255)"
+Define the GREY18 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY19   \fBMLV_rgba\fP(48,48,48,255)"
+Define the GREY19 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY2   \fBMLV_rgba\fP(5,5,5,255)"
+Define the GREY2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY20   \fBMLV_rgba\fP(51,51,51,255)"
+Define the GREY20 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY21   \fBMLV_rgba\fP(54,54,54,255)"
+Define the GREY21 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY22   \fBMLV_rgba\fP(56,56,56,255)"
+Define the GREY22 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY23   \fBMLV_rgba\fP(59,59,59,255)"
+Define the GREY23 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY24   \fBMLV_rgba\fP(61,61,61,255)"
+Define the GREY24 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY25   \fBMLV_rgba\fP(64,64,64,255)"
+Define the GREY25 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY26   \fBMLV_rgba\fP(66,66,66,255)"
+Define the GREY26 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY27   \fBMLV_rgba\fP(69,69,69,255)"
+Define the GREY27 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY28   \fBMLV_rgba\fP(71,71,71,255)"
+Define the GREY28 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY29   \fBMLV_rgba\fP(74,74,74,255)"
+Define the GREY29 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY3   \fBMLV_rgba\fP(8,8,8,255)"
+Define the GREY3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY30   \fBMLV_rgba\fP(77,77,77,255)"
+Define the GREY30 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY31   \fBMLV_rgba\fP(79,79,79,255)"
+Define the GREY31 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY32   \fBMLV_rgba\fP(82,82,82,255)"
+Define the GREY32 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY33   \fBMLV_rgba\fP(84,84,84,255)"
+Define the GREY33 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY34   \fBMLV_rgba\fP(87,87,87,255)"
+Define the GREY34 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY35   \fBMLV_rgba\fP(89,89,89,255)"
+Define the GREY35 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY36   \fBMLV_rgba\fP(92,92,92,255)"
+Define the GREY36 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY37   \fBMLV_rgba\fP(94,94,94,255)"
+Define the GREY37 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY38   \fBMLV_rgba\fP(97,97,97,255)"
+Define the GREY38 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY39   \fBMLV_rgba\fP(99,99,99,255)"
+Define the GREY39 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY4   \fBMLV_rgba\fP(10,10,10,255)"
+Define the GREY4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY40   \fBMLV_rgba\fP(102,102,102,255)"
+Define the GREY40 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY41   \fBMLV_rgba\fP(105,105,105,255)"
+Define the GREY41 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY42   \fBMLV_rgba\fP(107,107,107,255)"
+Define the GREY42 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY43   \fBMLV_rgba\fP(110,110,110,255)"
+Define the GREY43 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY44   \fBMLV_rgba\fP(112,112,112,255)"
+Define the GREY44 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY45   \fBMLV_rgba\fP(115,115,115,255)"
+Define the GREY45 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY46   \fBMLV_rgba\fP(117,117,117,255)"
+Define the GREY46 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY47   \fBMLV_rgba\fP(120,120,120,255)"
+Define the GREY47 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY48   \fBMLV_rgba\fP(122,122,122,255)"
+Define the GREY48 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY49   \fBMLV_rgba\fP(125,125,125,255)"
+Define the GREY49 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY5   \fBMLV_rgba\fP(13,13,13,255)"
+Define the GREY5 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY50   \fBMLV_rgba\fP(127,127,127,255)"
+Define the GREY50 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY51   \fBMLV_rgba\fP(130,130,130,255)"
+Define the GREY51 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY52   \fBMLV_rgba\fP(133,133,133,255)"
+Define the GREY52 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY53   \fBMLV_rgba\fP(135,135,135,255)"
+Define the GREY53 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY54   \fBMLV_rgba\fP(138,138,138,255)"
+Define the GREY54 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY55   \fBMLV_rgba\fP(140,140,140,255)"
+Define the GREY55 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY56   \fBMLV_rgba\fP(143,143,143,255)"
+Define the GREY56 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY57   \fBMLV_rgba\fP(145,145,145,255)"
+Define the GREY57 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY58   \fBMLV_rgba\fP(148,148,148,255)"
+Define the GREY58 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY59   \fBMLV_rgba\fP(150,150,150,255)"
+Define the GREY59 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY6   \fBMLV_rgba\fP(15,15,15,255)"
+Define the GREY6 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY60   \fBMLV_rgba\fP(153,153,153,255)"
+Define the GREY60 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY61   \fBMLV_rgba\fP(156,156,156,255)"
+Define the GREY61 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY62   \fBMLV_rgba\fP(158,158,158,255)"
+Define the GREY62 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY63   \fBMLV_rgba\fP(161,161,161,255)"
+Define the GREY63 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY64   \fBMLV_rgba\fP(163,163,163,255)"
+Define the GREY64 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY65   \fBMLV_rgba\fP(166,166,166,255)"
+Define the GREY65 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY66   \fBMLV_rgba\fP(168,168,168,255)"
+Define the GREY66 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY67   \fBMLV_rgba\fP(171,171,171,255)"
+Define the GREY67 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY68   \fBMLV_rgba\fP(173,173,173,255)"
+Define the GREY68 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY69   \fBMLV_rgba\fP(176,176,176,255)"
+Define the GREY69 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY7   \fBMLV_rgba\fP(18,18,18,255)"
+Define the GREY7 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY70   \fBMLV_rgba\fP(179,179,179,255)"
+Define the GREY70 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY71   \fBMLV_rgba\fP(181,181,181,255)"
+Define the GREY71 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY72   \fBMLV_rgba\fP(184,184,184,255)"
+Define the GREY72 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY73   \fBMLV_rgba\fP(186,186,186,255)"
+Define the GREY73 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY74   \fBMLV_rgba\fP(189,189,189,255)"
+Define the GREY74 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY75   \fBMLV_rgba\fP(191,191,191,255)"
+Define the GREY75 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY76   \fBMLV_rgba\fP(194,194,194,255)"
+Define the GREY76 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY77   \fBMLV_rgba\fP(196,196,196,255)"
+Define the GREY77 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY78   \fBMLV_rgba\fP(199,199,199,255)"
+Define the GREY78 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY79   \fBMLV_rgba\fP(201,201,201,255)"
+Define the GREY79 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY8   \fBMLV_rgba\fP(20,20,20,255)"
+Define the GREY8 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY80   \fBMLV_rgba\fP(204,204,204,255)"
+Define the GREY80 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY81   \fBMLV_rgba\fP(207,207,207,255)"
+Define the GREY81 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY82   \fBMLV_rgba\fP(209,209,209,255)"
+Define the GREY82 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY83   \fBMLV_rgba\fP(212,212,212,255)"
+Define the GREY83 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY84   \fBMLV_rgba\fP(214,214,214,255)"
+Define the GREY84 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY85   \fBMLV_rgba\fP(217,217,217,255)"
+Define the GREY85 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY86   \fBMLV_rgba\fP(219,219,219,255)"
+Define the GREY86 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY87   \fBMLV_rgba\fP(222,222,222,255)"
+Define the GREY87 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY88   \fBMLV_rgba\fP(224,224,224,255)"
+Define the GREY88 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY89   \fBMLV_rgba\fP(227,227,227,255)"
+Define the GREY89 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY9   \fBMLV_rgba\fP(23,23,23,255)"
+Define the GREY9 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY90   \fBMLV_rgba\fP(229,229,229,255)"
+Define the GREY90 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY91   \fBMLV_rgba\fP(232,232,232,255)"
+Define the GREY91 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY92   \fBMLV_rgba\fP(235,235,235,255)"
+Define the GREY92 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY93   \fBMLV_rgba\fP(237,237,237,255)"
+Define the GREY93 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY94   \fBMLV_rgba\fP(240,240,240,255)"
+Define the GREY94 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY95   \fBMLV_rgba\fP(242,242,242,255)"
+Define the GREY95 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY96   \fBMLV_rgba\fP(245,245,245,255)"
+Define the GREY96 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY97   \fBMLV_rgba\fP(247,247,247,255)"
+Define the GREY97 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY98   \fBMLV_rgba\fP(250,250,250,255)"
+Define the GREY98 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_GREY99   \fBMLV_rgba\fP(252,252,252,255)"
+Define the GREY99 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HONEYDEW   \fBMLV_rgba\fP(240,255,240,255)"
+Define the HONEYDEW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HONEYDEW1   \fBMLV_rgba\fP(240,255,240,255)"
+Define the HONEYDEW1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HONEYDEW2   \fBMLV_rgba\fP(224,238,224,255)"
+Define the HONEYDEW2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HONEYDEW3   \fBMLV_rgba\fP(193,205,193,255)"
+Define the HONEYDEW3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HONEYDEW4   \fBMLV_rgba\fP(131,139,131,255)"
+Define the HONEYDEW4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HOT_PINK   \fBMLV_rgba\fP(255,105,180,255)"
+Define the HOT_PINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HOTPINK   \fBMLV_rgba\fP(255,105,180,255)"
+Define the HOTPINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HOTPINK1   \fBMLV_rgba\fP(255,110,180,255)"
+Define the HOTPINK1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HOTPINK2   \fBMLV_rgba\fP(238,106,167,255)"
+Define the HOTPINK2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HOTPINK3   \fBMLV_rgba\fP(205,96,144,255)"
+Define the HOTPINK3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_HOTPINK4   \fBMLV_rgba\fP(139,58,98,255)"
+Define the HOTPINK4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_INDIAN_RED   \fBMLV_rgba\fP(205,92,92,255)"
+Define the INDIAN_RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_INDIANRED   \fBMLV_rgba\fP(205,92,92,255)"
+Define the INDIANRED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_INDIANRED1   \fBMLV_rgba\fP(255,106,106,255)"
+Define the INDIANRED1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_INDIANRED2   \fBMLV_rgba\fP(238,99,99,255)"
+Define the INDIANRED2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_INDIANRED3   \fBMLV_rgba\fP(205,85,85,255)"
+Define the INDIANRED3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_INDIANRED4   \fBMLV_rgba\fP(139,58,58,255)"
+Define the INDIANRED4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_IVORY   \fBMLV_rgba\fP(255,255,240,255)"
+Define the IVORY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_IVORY1   \fBMLV_rgba\fP(255,255,240,255)"
+Define the IVORY1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_IVORY2   \fBMLV_rgba\fP(238,238,224,255)"
+Define the IVORY2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_IVORY3   \fBMLV_rgba\fP(205,205,193,255)"
+Define the IVORY3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_IVORY4   \fBMLV_rgba\fP(139,139,131,255)"
+Define the IVORY4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_KHAKI   \fBMLV_rgba\fP(240,230,140,255)"
+Define the KHAKI color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_KHAKI1   \fBMLV_rgba\fP(255,246,143,255)"
+Define the KHAKI1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_KHAKI2   \fBMLV_rgba\fP(238,230,133,255)"
+Define the KHAKI2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_KHAKI3   \fBMLV_rgba\fP(205,198,115,255)"
+Define the KHAKI3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_KHAKI4   \fBMLV_rgba\fP(139,134,78,255)"
+Define the KHAKI4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDER   \fBMLV_rgba\fP(230,230,250,255)"
+Define the LAVENDER color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDER_BLUSH   \fBMLV_rgba\fP(255,240,245,255)"
+Define the LAVENDER_BLUSH color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDERBLUSH   \fBMLV_rgba\fP(255,240,245,255)"
+Define the LAVENDERBLUSH color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDERBLUSH1   \fBMLV_rgba\fP(255,240,245,255)"
+Define the LAVENDERBLUSH1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDERBLUSH2   \fBMLV_rgba\fP(238,224,229,255)"
+Define the LAVENDERBLUSH2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDERBLUSH3   \fBMLV_rgba\fP(205,193,197,255)"
+Define the LAVENDERBLUSH3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAVENDERBLUSH4   \fBMLV_rgba\fP(139,131,134,255)"
+Define the LAVENDERBLUSH4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAWN_GREEN   \fBMLV_rgba\fP(124,252,0,255)"
+Define the LAWN_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LAWNGREEN   \fBMLV_rgba\fP(124,252,0,255)"
+Define the LAWNGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LEMON_CHIFFON   \fBMLV_rgba\fP(255,250,205,255)"
+Define the LEMON_CHIFFON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LEMONCHIFFON   \fBMLV_rgba\fP(255,250,205,255)"
+Define the LEMONCHIFFON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LEMONCHIFFON1   \fBMLV_rgba\fP(255,250,205,255)"
+Define the LEMONCHIFFON1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LEMONCHIFFON2   \fBMLV_rgba\fP(238,233,191,255)"
+Define the LEMONCHIFFON2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LEMONCHIFFON3   \fBMLV_rgba\fP(205,201,165,255)"
+Define the LEMONCHIFFON3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LEMONCHIFFON4   \fBMLV_rgba\fP(139,137,112,255)"
+Define the LEMONCHIFFON4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_BLUE   \fBMLV_rgba\fP(173,216,230,255)"
+Define the LIGHT_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_CORAL   \fBMLV_rgba\fP(240,128,128,255)"
+Define the LIGHT_CORAL color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_CYAN   \fBMLV_rgba\fP(224,255,255,255)"
+Define the LIGHT_CYAN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_GOLDENROD   \fBMLV_rgba\fP(238,221,130,255)"
+Define the LIGHT_GOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_GOLDENROD_YELLOW   \fBMLV_rgba\fP(250,250,210,255)"
+Define the LIGHT_GOLDENROD_YELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_GRAY   \fBMLV_rgba\fP(211,211,211,255)"
+Define the LIGHT_GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_GREEN   \fBMLV_rgba\fP(144,238,144,255)"
+Define the LIGHT_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_GREY   \fBMLV_rgba\fP(211,211,211,255)"
+Define the LIGHT_GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_PINK   \fBMLV_rgba\fP(255,182,193,255)"
+Define the LIGHT_PINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_SALMON   \fBMLV_rgba\fP(255,160,122,255)"
+Define the LIGHT_SALMON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_SEA_GREEN   \fBMLV_rgba\fP(32,178,170,255)"
+Define the LIGHT_SEA_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_SKY_BLUE   \fBMLV_rgba\fP(135,206,250,255)"
+Define the LIGHT_SKY_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_SLATE_BLUE   \fBMLV_rgba\fP(132,112,255,255)"
+Define the LIGHT_SLATE_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_SLATE_GRAY   \fBMLV_rgba\fP(119,136,153,255)"
+Define the LIGHT_SLATE_GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_SLATE_GREY   \fBMLV_rgba\fP(119,136,153,255)"
+Define the LIGHT_SLATE_GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_STEEL_BLUE   \fBMLV_rgba\fP(176,196,222,255)"
+Define the LIGHT_STEEL_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHT_YELLOW   \fBMLV_rgba\fP(255,255,224,255)"
+Define the LIGHT_YELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTBLUE   \fBMLV_rgba\fP(173,216,230,255)"
+Define the LIGHTBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTBLUE1   \fBMLV_rgba\fP(191,239,255,255)"
+Define the LIGHTBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTBLUE2   \fBMLV_rgba\fP(178,223,238,255)"
+Define the LIGHTBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTBLUE3   \fBMLV_rgba\fP(154,192,205,255)"
+Define the LIGHTBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTBLUE4   \fBMLV_rgba\fP(104,131,139,255)"
+Define the LIGHTBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTCORAL   \fBMLV_rgba\fP(240,128,128,255)"
+Define the LIGHTCORAL color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTCYAN   \fBMLV_rgba\fP(224,255,255,255)"
+Define the LIGHTCYAN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTCYAN1   \fBMLV_rgba\fP(224,255,255,255)"
+Define the LIGHTCYAN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTCYAN2   \fBMLV_rgba\fP(209,238,238,255)"
+Define the LIGHTCYAN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTCYAN3   \fBMLV_rgba\fP(180,205,205,255)"
+Define the LIGHTCYAN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTCYAN4   \fBMLV_rgba\fP(122,139,139,255)"
+Define the LIGHTCYAN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGOLDENROD   \fBMLV_rgba\fP(238,221,130,255)"
+Define the LIGHTGOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGOLDENROD1   \fBMLV_rgba\fP(255,236,139,255)"
+Define the LIGHTGOLDENROD1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGOLDENROD2   \fBMLV_rgba\fP(238,220,130,255)"
+Define the LIGHTGOLDENROD2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGOLDENROD3   \fBMLV_rgba\fP(205,190,112,255)"
+Define the LIGHTGOLDENROD3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGOLDENROD4   \fBMLV_rgba\fP(139,129,76,255)"
+Define the LIGHTGOLDENROD4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGOLDENRODYELLOW   \fBMLV_rgba\fP(250,250,210,255)"
+Define the LIGHTGOLDENRODYELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGRAY   \fBMLV_rgba\fP(211,211,211,255)"
+Define the LIGHTGRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGREEN   \fBMLV_rgba\fP(144,238,144,255)"
+Define the LIGHTGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTGREY   \fBMLV_rgba\fP(211,211,211,255)"
+Define the LIGHTGREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTPINK   \fBMLV_rgba\fP(255,182,193,255)"
+Define the LIGHTPINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTPINK1   \fBMLV_rgba\fP(255,174,185,255)"
+Define the LIGHTPINK1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTPINK2   \fBMLV_rgba\fP(238,162,173,255)"
+Define the LIGHTPINK2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTPINK3   \fBMLV_rgba\fP(205,140,149,255)"
+Define the LIGHTPINK3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTPINK4   \fBMLV_rgba\fP(139,95,101,255)"
+Define the LIGHTPINK4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSALMON   \fBMLV_rgba\fP(255,160,122,255)"
+Define the LIGHTSALMON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSALMON1   \fBMLV_rgba\fP(255,160,122,255)"
+Define the LIGHTSALMON1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSALMON2   \fBMLV_rgba\fP(238,149,114,255)"
+Define the LIGHTSALMON2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSALMON3   \fBMLV_rgba\fP(205,129,98,255)"
+Define the LIGHTSALMON3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSALMON4   \fBMLV_rgba\fP(139,87,66,255)"
+Define the LIGHTSALMON4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSEAGREEN   \fBMLV_rgba\fP(32,178,170,255)"
+Define the LIGHTSEAGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSKYBLUE   \fBMLV_rgba\fP(135,206,250,255)"
+Define the LIGHTSKYBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSKYBLUE1   \fBMLV_rgba\fP(176,226,255,255)"
+Define the LIGHTSKYBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSKYBLUE2   \fBMLV_rgba\fP(164,211,238,255)"
+Define the LIGHTSKYBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSKYBLUE3   \fBMLV_rgba\fP(141,182,205,255)"
+Define the LIGHTSKYBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSKYBLUE4   \fBMLV_rgba\fP(96,123,139,255)"
+Define the LIGHTSKYBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSLATEBLUE   \fBMLV_rgba\fP(132,112,255,255)"
+Define the LIGHTSLATEBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSLATEGRAY   \fBMLV_rgba\fP(119,136,153,255)"
+Define the LIGHTSLATEGRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSLATEGREY   \fBMLV_rgba\fP(119,136,153,255)"
+Define the LIGHTSLATEGREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSTEELBLUE   \fBMLV_rgba\fP(176,196,222,255)"
+Define the LIGHTSTEELBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSTEELBLUE1   \fBMLV_rgba\fP(202,225,255,255)"
+Define the LIGHTSTEELBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSTEELBLUE2   \fBMLV_rgba\fP(188,210,238,255)"
+Define the LIGHTSTEELBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSTEELBLUE3   \fBMLV_rgba\fP(162,181,205,255)"
+Define the LIGHTSTEELBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTSTEELBLUE4   \fBMLV_rgba\fP(110,123,139,255)"
+Define the LIGHTSTEELBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTYELLOW   \fBMLV_rgba\fP(255,255,224,255)"
+Define the LIGHTYELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTYELLOW1   \fBMLV_rgba\fP(255,255,224,255)"
+Define the LIGHTYELLOW1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTYELLOW2   \fBMLV_rgba\fP(238,238,209,255)"
+Define the LIGHTYELLOW2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTYELLOW3   \fBMLV_rgba\fP(205,205,180,255)"
+Define the LIGHTYELLOW3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIGHTYELLOW4   \fBMLV_rgba\fP(139,139,122,255)"
+Define the LIGHTYELLOW4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIME_GREEN   \fBMLV_rgba\fP(50,205,50,255)"
+Define the LIME_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LIMEGREEN   \fBMLV_rgba\fP(50,205,50,255)"
+Define the LIMEGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_LINEN   \fBMLV_rgba\fP(250,240,230,255)"
+Define the LINEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAGENTA   \fBMLV_rgba\fP(255,0,255,255)"
+Define the MAGENTA color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/05_playlist\&.c\fP, \fBbeginner/01_hello_world\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, et \fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAGENTA1   \fBMLV_rgba\fP(255,0,255,255)"
+Define the MAGENTA1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAGENTA2   \fBMLV_rgba\fP(238,0,238,255)"
+Define the MAGENTA2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAGENTA3   \fBMLV_rgba\fP(205,0,205,255)"
+Define the MAGENTA3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAGENTA4   \fBMLV_rgba\fP(139,0,139,255)"
+Define the MAGENTA4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAROON   \fBMLV_rgba\fP(176,48,96,255)"
+Define the MAROON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAROON1   \fBMLV_rgba\fP(255,52,179,255)"
+Define the MAROON1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAROON2   \fBMLV_rgba\fP(238,48,167,255)"
+Define the MAROON2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAROON3   \fBMLV_rgba\fP(205,41,144,255)"
+Define the MAROON3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MAROON4   \fBMLV_rgba\fP(139,28,98,255)"
+Define the MAROON4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_AQUAMARINE   \fBMLV_rgba\fP(102,205,170,255)"
+Define the MEDIUM_AQUAMARINE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_BLUE   \fBMLV_rgba\fP(0,0,205,255)"
+Define the MEDIUM_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_ORCHID   \fBMLV_rgba\fP(186,85,211,255)"
+Define the MEDIUM_ORCHID color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_PURPLE   \fBMLV_rgba\fP(147,112,219,255)"
+Define the MEDIUM_PURPLE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_SEA_GREEN   \fBMLV_rgba\fP(60,179,113,255)"
+Define the MEDIUM_SEA_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_SLATE_BLUE   \fBMLV_rgba\fP(123,104,238,255)"
+Define the MEDIUM_SLATE_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_SPRING_GREEN   \fBMLV_rgba\fP(0,250,154,255)"
+Define the MEDIUM_SPRING_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_TURQUOISE   \fBMLV_rgba\fP(72,209,204,255)"
+Define the MEDIUM_TURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUM_VIOLET_RED   \fBMLV_rgba\fP(199,21,133,255)"
+Define the MEDIUM_VIOLET_RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMAQUAMARINE   \fBMLV_rgba\fP(102,205,170,255)"
+Define the MEDIUMAQUAMARINE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMBLUE   \fBMLV_rgba\fP(0,0,205,255)"
+Define the MEDIUMBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMORCHID   \fBMLV_rgba\fP(186,85,211,255)"
+Define the MEDIUMORCHID color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMORCHID1   \fBMLV_rgba\fP(224,102,255,255)"
+Define the MEDIUMORCHID1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMORCHID2   \fBMLV_rgba\fP(209,95,238,255)"
+Define the MEDIUMORCHID2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMORCHID3   \fBMLV_rgba\fP(180,82,205,255)"
+Define the MEDIUMORCHID3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMORCHID4   \fBMLV_rgba\fP(122,55,139,255)"
+Define the MEDIUMORCHID4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMPURPLE   \fBMLV_rgba\fP(147,112,219,255)"
+Define the MEDIUMPURPLE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMPURPLE1   \fBMLV_rgba\fP(171,130,255,255)"
+Define the MEDIUMPURPLE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMPURPLE2   \fBMLV_rgba\fP(159,121,238,255)"
+Define the MEDIUMPURPLE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMPURPLE3   \fBMLV_rgba\fP(137,104,205,255)"
+Define the MEDIUMPURPLE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMPURPLE4   \fBMLV_rgba\fP(93,71,139,255)"
+Define the MEDIUMPURPLE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMSEAGREEN   \fBMLV_rgba\fP(60,179,113,255)"
+Define the MEDIUMSEAGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMSLATEBLUE   \fBMLV_rgba\fP(123,104,238,255)"
+Define the MEDIUMSLATEBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMSPRINGGREEN   \fBMLV_rgba\fP(0,250,154,255)"
+Define the MEDIUMSPRINGGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMTURQUOISE   \fBMLV_rgba\fP(72,209,204,255)"
+Define the MEDIUMTURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MEDIUMVIOLETRED   \fBMLV_rgba\fP(199,21,133,255)"
+Define the MEDIUMVIOLETRED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MIDNIGHT_BLUE   \fBMLV_rgba\fP(25,25,112,255)"
+Define the MIDNIGHT_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MIDNIGHTBLUE   \fBMLV_rgba\fP(25,25,112,255)"
+Define the MIDNIGHTBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MINT_CREAM   \fBMLV_rgba\fP(245,255,250,255)"
+Define the MINT_CREAM color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MINTCREAM   \fBMLV_rgba\fP(245,255,250,255)"
+Define the MINTCREAM color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MISTY_ROSE   \fBMLV_rgba\fP(255,228,225,255)"
+Define the MISTY_ROSE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MISTYROSE   \fBMLV_rgba\fP(255,228,225,255)"
+Define the MISTYROSE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MISTYROSE1   \fBMLV_rgba\fP(255,228,225,255)"
+Define the MISTYROSE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MISTYROSE2   \fBMLV_rgba\fP(238,213,210,255)"
+Define the MISTYROSE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MISTYROSE3   \fBMLV_rgba\fP(205,183,181,255)"
+Define the MISTYROSE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MISTYROSE4   \fBMLV_rgba\fP(139,125,123,255)"
+Define the MISTYROSE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_MOCCASIN   \fBMLV_rgba\fP(255,228,181,255)"
+Define the MOCCASIN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVAJO_WHITE   \fBMLV_rgba\fP(255,222,173,255)"
+Define the NAVAJO_WHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVAJOWHITE   \fBMLV_rgba\fP(255,222,173,255)"
+Define the NAVAJOWHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVAJOWHITE1   \fBMLV_rgba\fP(255,222,173,255)"
+Define the NAVAJOWHITE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVAJOWHITE2   \fBMLV_rgba\fP(238,207,161,255)"
+Define the NAVAJOWHITE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVAJOWHITE3   \fBMLV_rgba\fP(205,179,139,255)"
+Define the NAVAJOWHITE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVAJOWHITE4   \fBMLV_rgba\fP(139,121,94,255)"
+Define the NAVAJOWHITE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVY   \fBMLV_rgba\fP(0,0,128,255)"
+Define the NAVY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVY_BLUE   \fBMLV_rgba\fP(0,0,128,255)"
+Define the NAVY_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_NAVYBLUE   \fBMLV_rgba\fP(0,0,128,255)"
+Define the NAVYBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLD_LACE   \fBMLV_rgba\fP(253,245,230,255)"
+Define the OLD_LACE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLDLACE   \fBMLV_rgba\fP(253,245,230,255)"
+Define the OLDLACE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLIVE_DRAB   \fBMLV_rgba\fP(107,142,35,255)"
+Define the OLIVE_DRAB color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLIVEDRAB   \fBMLV_rgba\fP(107,142,35,255)"
+Define the OLIVEDRAB color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLIVEDRAB1   \fBMLV_rgba\fP(192,255,62,255)"
+Define the OLIVEDRAB1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLIVEDRAB2   \fBMLV_rgba\fP(179,238,58,255)"
+Define the OLIVEDRAB2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLIVEDRAB3   \fBMLV_rgba\fP(154,205,50,255)"
+Define the OLIVEDRAB3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_OLIVEDRAB4   \fBMLV_rgba\fP(105,139,34,255)"
+Define the OLIVEDRAB4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGE   \fBMLV_rgba\fP(255,165,0,255)"
+Define the ORANGE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGE1   \fBMLV_rgba\fP(255,165,0,255)"
+Define the ORANGE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGE2   \fBMLV_rgba\fP(238,154,0,255)"
+Define the ORANGE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGE3   \fBMLV_rgba\fP(205,133,0,255)"
+Define the ORANGE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGE4   \fBMLV_rgba\fP(139,90,0,255)"
+Define the ORANGE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGE_RED   \fBMLV_rgba\fP(255,69,0,255)"
+Define the ORANGE_RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGERED   \fBMLV_rgba\fP(255,69,0,255)"
+Define the ORANGERED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGERED1   \fBMLV_rgba\fP(255,69,0,255)"
+Define the ORANGERED1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGERED2   \fBMLV_rgba\fP(238,64,0,255)"
+Define the ORANGERED2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGERED3   \fBMLV_rgba\fP(205,55,0,255)"
+Define the ORANGERED3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORANGERED4   \fBMLV_rgba\fP(139,37,0,255)"
+Define the ORANGERED4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORCHID   \fBMLV_rgba\fP(218,112,214,255)"
+Define the ORCHID color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORCHID1   \fBMLV_rgba\fP(255,131,250,255)"
+Define the ORCHID1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORCHID2   \fBMLV_rgba\fP(238,122,233,255)"
+Define the ORCHID2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORCHID3   \fBMLV_rgba\fP(205,105,201,255)"
+Define the ORCHID3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ORCHID4   \fBMLV_rgba\fP(139,71,137,255)"
+Define the ORCHID4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALE_GOLDENROD   \fBMLV_rgba\fP(238,232,170,255)"
+Define the PALE_GOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALE_GREEN   \fBMLV_rgba\fP(152,251,152,255)"
+Define the PALE_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALE_TURQUOISE   \fBMLV_rgba\fP(175,238,238,255)"
+Define the PALE_TURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALE_VIOLET_RED   \fBMLV_rgba\fP(219,112,147,255)"
+Define the PALE_VIOLET_RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEGOLDENROD   \fBMLV_rgba\fP(238,232,170,255)"
+Define the PALEGOLDENROD color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEGREEN   \fBMLV_rgba\fP(152,251,152,255)"
+Define the PALEGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEGREEN1   \fBMLV_rgba\fP(154,255,154,255)"
+Define the PALEGREEN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEGREEN2   \fBMLV_rgba\fP(144,238,144,255)"
+Define the PALEGREEN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEGREEN3   \fBMLV_rgba\fP(124,205,124,255)"
+Define the PALEGREEN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEGREEN4   \fBMLV_rgba\fP(84,139,84,255)"
+Define the PALEGREEN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALETURQUOISE   \fBMLV_rgba\fP(175,238,238,255)"
+Define the PALETURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALETURQUOISE1   \fBMLV_rgba\fP(187,255,255,255)"
+Define the PALETURQUOISE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALETURQUOISE2   \fBMLV_rgba\fP(174,238,238,255)"
+Define the PALETURQUOISE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALETURQUOISE3   \fBMLV_rgba\fP(150,205,205,255)"
+Define the PALETURQUOISE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALETURQUOISE4   \fBMLV_rgba\fP(102,139,139,255)"
+Define the PALETURQUOISE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEVIOLETRED   \fBMLV_rgba\fP(219,112,147,255)"
+Define the PALEVIOLETRED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEVIOLETRED1   \fBMLV_rgba\fP(255,130,171,255)"
+Define the PALEVIOLETRED1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEVIOLETRED2   \fBMLV_rgba\fP(238,121,159,255)"
+Define the PALEVIOLETRED2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEVIOLETRED3   \fBMLV_rgba\fP(205,104,137,255)"
+Define the PALEVIOLETRED3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PALEVIOLETRED4   \fBMLV_rgba\fP(139,71,93,255)"
+Define the PALEVIOLETRED4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PAPAYA_WHIP   \fBMLV_rgba\fP(255,239,213,255)"
+Define the PAPAYA_WHIP color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PAPAYAWHIP   \fBMLV_rgba\fP(255,239,213,255)"
+Define the PAPAYAWHIP color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PEACH_PUFF   \fBMLV_rgba\fP(255,218,185,255)"
+Define the PEACH_PUFF color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PEACHPUFF   \fBMLV_rgba\fP(255,218,185,255)"
+Define the PEACHPUFF color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PEACHPUFF1   \fBMLV_rgba\fP(255,218,185,255)"
+Define the PEACHPUFF1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PEACHPUFF2   \fBMLV_rgba\fP(238,203,173,255)"
+Define the PEACHPUFF2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PEACHPUFF3   \fBMLV_rgba\fP(205,175,149,255)"
+Define the PEACHPUFF3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PEACHPUFF4   \fBMLV_rgba\fP(139,119,101,255)"
+Define the PEACHPUFF4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PERU   \fBMLV_rgba\fP(205,133,63,255)"
+Define the PERU color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PINK   \fBMLV_rgba\fP(255,192,203,255)"
+Define the PINK color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PINK1   \fBMLV_rgba\fP(255,181,197,255)"
+Define the PINK1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PINK2   \fBMLV_rgba\fP(238,169,184,255)"
+Define the PINK2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PINK3   \fBMLV_rgba\fP(205,145,158,255)"
+Define the PINK3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PINK4   \fBMLV_rgba\fP(139,99,108,255)"
+Define the PINK4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PLUM   \fBMLV_rgba\fP(221,160,221,255)"
+Define the PLUM color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PLUM1   \fBMLV_rgba\fP(255,187,255,255)"
+Define the PLUM1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PLUM2   \fBMLV_rgba\fP(238,174,238,255)"
+Define the PLUM2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PLUM3   \fBMLV_rgba\fP(205,150,205,255)"
+Define the PLUM3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PLUM4   \fBMLV_rgba\fP(139,102,139,255)"
+Define the PLUM4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_POWDER_BLUE   \fBMLV_rgba\fP(176,224,230,255)"
+Define the POWDER_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_POWDERBLUE   \fBMLV_rgba\fP(176,224,230,255)"
+Define the POWDERBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PURPLE   \fBMLV_rgba\fP(160,32,240,255)"
+Define the PURPLE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PURPLE1   \fBMLV_rgba\fP(155,48,255,255)"
+Define the PURPLE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PURPLE2   \fBMLV_rgba\fP(145,44,238,255)"
+Define the PURPLE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PURPLE3   \fBMLV_rgba\fP(125,38,205,255)"
+Define the PURPLE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_PURPLE4   \fBMLV_rgba\fP(85,26,139,255)"
+Define the PURPLE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_RED   \fBMLV_rgba\fP(255,0,0,255)"
+Define the RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBbeginner/02_shapes\&.c\fP, \fBbeginner/04_texts_and_boxes\&.c\fP, \fBbeginner/05_mouse\&.c\fP, \fBbeginner/07_input_box\&.c\fP, \fBbeginner/09_colors\&.c\fP, \fBmedium/04_events\&.c\fP, \fBmedium/05_exit\&.c\fP, \fBmedium/06_colors\&.c\fP, et \fBmedium/08_full_screen\&.c\fP\&.
+.SS "#define MLV_COLOR_RED1   \fBMLV_rgba\fP(255,0,0,255)"
+Define the RED1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_RED2   \fBMLV_rgba\fP(238,0,0,255)"
+Define the RED2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_RED3   \fBMLV_rgba\fP(205,0,0,255)"
+Define the RED3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_RED4   \fBMLV_rgba\fP(139,0,0,255)"
+Define the RED4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROSY_BROWN   \fBMLV_rgba\fP(188,143,143,255)"
+Define the ROSY_BROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROSYBROWN   \fBMLV_rgba\fP(188,143,143,255)"
+Define the ROSYBROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROSYBROWN1   \fBMLV_rgba\fP(255,193,193,255)"
+Define the ROSYBROWN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROSYBROWN2   \fBMLV_rgba\fP(238,180,180,255)"
+Define the ROSYBROWN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROSYBROWN3   \fBMLV_rgba\fP(205,155,155,255)"
+Define the ROSYBROWN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROSYBROWN4   \fBMLV_rgba\fP(139,105,105,255)"
+Define the ROSYBROWN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROYAL_BLUE   \fBMLV_rgba\fP(65,105,225,255)"
+Define the ROYAL_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROYALBLUE   \fBMLV_rgba\fP(65,105,225,255)"
+Define the ROYALBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROYALBLUE1   \fBMLV_rgba\fP(72,118,255,255)"
+Define the ROYALBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROYALBLUE2   \fBMLV_rgba\fP(67,110,238,255)"
+Define the ROYALBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROYALBLUE3   \fBMLV_rgba\fP(58,95,205,255)"
+Define the ROYALBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_ROYALBLUE4   \fBMLV_rgba\fP(39,64,139,255)"
+Define the ROYALBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SADDLE_BROWN   \fBMLV_rgba\fP(139,69,19,255)"
+Define the SADDLE_BROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SADDLEBROWN   \fBMLV_rgba\fP(139,69,19,255)"
+Define the SADDLEBROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SALMON   \fBMLV_rgba\fP(250,128,114,255)"
+Define the SALMON color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SALMON1   \fBMLV_rgba\fP(255,140,105,255)"
+Define the SALMON1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SALMON2   \fBMLV_rgba\fP(238,130,98,255)"
+Define the SALMON2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SALMON3   \fBMLV_rgba\fP(205,112,84,255)"
+Define the SALMON3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SALMON4   \fBMLV_rgba\fP(139,76,57,255)"
+Define the SALMON4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SANDY_BROWN   \fBMLV_rgba\fP(244,164,96,255)"
+Define the SANDY_BROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SANDYBROWN   \fBMLV_rgba\fP(244,164,96,255)"
+Define the SANDYBROWN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEA_GREEN   \fBMLV_rgba\fP(46,139,87,255)"
+Define the SEA_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEAGREEN   \fBMLV_rgba\fP(46,139,87,255)"
+Define the SEAGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEAGREEN1   \fBMLV_rgba\fP(84,255,159,255)"
+Define the SEAGREEN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEAGREEN2   \fBMLV_rgba\fP(78,238,148,255)"
+Define the SEAGREEN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEAGREEN3   \fBMLV_rgba\fP(67,205,128,255)"
+Define the SEAGREEN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEAGREEN4   \fBMLV_rgba\fP(46,139,87,255)"
+Define the SEAGREEN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEASHELL   \fBMLV_rgba\fP(255,245,238,255)"
+Define the SEASHELL color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEASHELL1   \fBMLV_rgba\fP(255,245,238,255)"
+Define the SEASHELL1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEASHELL2   \fBMLV_rgba\fP(238,229,222,255)"
+Define the SEASHELL2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEASHELL3   \fBMLV_rgba\fP(205,197,191,255)"
+Define the SEASHELL3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SEASHELL4   \fBMLV_rgba\fP(139,134,130,255)"
+Define the SEASHELL4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SIENNA   \fBMLV_rgba\fP(160,82,45,255)"
+Define the SIENNA color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SIENNA1   \fBMLV_rgba\fP(255,130,71,255)"
+Define the SIENNA1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SIENNA2   \fBMLV_rgba\fP(238,121,66,255)"
+Define the SIENNA2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SIENNA3   \fBMLV_rgba\fP(205,104,57,255)"
+Define the SIENNA3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SIENNA4   \fBMLV_rgba\fP(139,71,38,255)"
+Define the SIENNA4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SKY_BLUE   \fBMLV_rgba\fP(135,206,235,255)"
+Define the SKY_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SKYBLUE   \fBMLV_rgba\fP(135,206,235,255)"
+Define the SKYBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SKYBLUE1   \fBMLV_rgba\fP(135,206,255,255)"
+Define the SKYBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SKYBLUE2   \fBMLV_rgba\fP(126,192,238,255)"
+Define the SKYBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SKYBLUE3   \fBMLV_rgba\fP(108,166,205,255)"
+Define the SKYBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SKYBLUE4   \fBMLV_rgba\fP(74,112,139,255)"
+Define the SKYBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATE_BLUE   \fBMLV_rgba\fP(106,90,205,255)"
+Define the SLATE_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATE_GRAY   \fBMLV_rgba\fP(112,128,144,255)"
+Define the SLATE_GRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATE_GREY   \fBMLV_rgba\fP(112,128,144,255)"
+Define the SLATE_GREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEBLUE   \fBMLV_rgba\fP(106,90,205,255)"
+Define the SLATEBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEBLUE1   \fBMLV_rgba\fP(131,111,255,255)"
+Define the SLATEBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEBLUE2   \fBMLV_rgba\fP(122,103,238,255)"
+Define the SLATEBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEBLUE3   \fBMLV_rgba\fP(105,89,205,255)"
+Define the SLATEBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEBLUE4   \fBMLV_rgba\fP(71,60,139,255)"
+Define the SLATEBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEGRAY   \fBMLV_rgba\fP(112,128,144,255)"
+Define the SLATEGRAY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEGRAY1   \fBMLV_rgba\fP(198,226,255,255)"
+Define the SLATEGRAY1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEGRAY2   \fBMLV_rgba\fP(185,211,238,255)"
+Define the SLATEGRAY2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEGRAY3   \fBMLV_rgba\fP(159,182,205,255)"
+Define the SLATEGRAY3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEGRAY4   \fBMLV_rgba\fP(108,123,139,255)"
+Define the SLATEGRAY4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SLATEGREY   \fBMLV_rgba\fP(112,128,144,255)"
+Define the SLATEGREY color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SNOW   \fBMLV_rgba\fP(255,250,250,255)"
+Define the SNOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SNOW1   \fBMLV_rgba\fP(255,250,250,255)"
+Define the SNOW1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SNOW2   \fBMLV_rgba\fP(238,233,233,255)"
+Define the SNOW2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SNOW3   \fBMLV_rgba\fP(205,201,201,255)"
+Define the SNOW3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SNOW4   \fBMLV_rgba\fP(139,137,137,255)"
+Define the SNOW4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SPRING_GREEN   \fBMLV_rgba\fP(0,255,127,255)"
+Define the SPRING_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SPRINGGREEN   \fBMLV_rgba\fP(0,255,127,255)"
+Define the SPRINGGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SPRINGGREEN1   \fBMLV_rgba\fP(0,255,127,255)"
+Define the SPRINGGREEN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SPRINGGREEN2   \fBMLV_rgba\fP(0,238,118,255)"
+Define the SPRINGGREEN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SPRINGGREEN3   \fBMLV_rgba\fP(0,205,102,255)"
+Define the SPRINGGREEN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_SPRINGGREEN4   \fBMLV_rgba\fP(0,139,69,255)"
+Define the SPRINGGREEN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_STEEL_BLUE   \fBMLV_rgba\fP(70,130,180,255)"
+Define the STEEL_BLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_STEELBLUE   \fBMLV_rgba\fP(70,130,180,255)"
+Define the STEELBLUE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_STEELBLUE1   \fBMLV_rgba\fP(99,184,255,255)"
+Define the STEELBLUE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_STEELBLUE2   \fBMLV_rgba\fP(92,172,238,255)"
+Define the STEELBLUE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_STEELBLUE3   \fBMLV_rgba\fP(79,148,205,255)"
+Define the STEELBLUE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_STEELBLUE4   \fBMLV_rgba\fP(54,100,139,255)"
+Define the STEELBLUE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TAN   \fBMLV_rgba\fP(210,180,140,255)"
+Define the TAN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TAN1   \fBMLV_rgba\fP(255,165,79,255)"
+Define the TAN1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TAN2   \fBMLV_rgba\fP(238,154,73,255)"
+Define the TAN2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TAN3   \fBMLV_rgba\fP(205,133,63,255)"
+Define the TAN3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TAN4   \fBMLV_rgba\fP(139,90,43,255)"
+Define the TAN4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_THISTLE   \fBMLV_rgba\fP(216,191,216,255)"
+Define the THISTLE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_THISTLE1   \fBMLV_rgba\fP(255,225,255,255)"
+Define the THISTLE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_THISTLE2   \fBMLV_rgba\fP(238,210,238,255)"
+Define the THISTLE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_THISTLE3   \fBMLV_rgba\fP(205,181,205,255)"
+Define the THISTLE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_THISTLE4   \fBMLV_rgba\fP(139,123,139,255)"
+Define the THISTLE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TOMATO   \fBMLV_rgba\fP(255,99,71,255)"
+Define the TOMATO color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TOMATO1   \fBMLV_rgba\fP(255,99,71,255)"
+Define the TOMATO1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TOMATO2   \fBMLV_rgba\fP(238,92,66,255)"
+Define the TOMATO2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TOMATO3   \fBMLV_rgba\fP(205,79,57,255)"
+Define the TOMATO3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TOMATO4   \fBMLV_rgba\fP(139,54,38,255)"
+Define the TOMATO4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TURQUOISE   \fBMLV_rgba\fP(64,224,208,255)"
+Define the TURQUOISE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TURQUOISE1   \fBMLV_rgba\fP(0,245,255,255)"
+Define the TURQUOISE1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TURQUOISE2   \fBMLV_rgba\fP(0,229,238,255)"
+Define the TURQUOISE2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TURQUOISE3   \fBMLV_rgba\fP(0,197,205,255)"
+Define the TURQUOISE3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_TURQUOISE4   \fBMLV_rgba\fP(0,134,139,255)"
+Define the TURQUOISE4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLET   \fBMLV_rgba\fP(238,130,238,255)"
+Define the VIOLET color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLET_RED   \fBMLV_rgba\fP(208,32,144,255)"
+Define the VIOLET_RED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLETRED   \fBMLV_rgba\fP(208,32,144,255)"
+Define the VIOLETRED color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLETRED1   \fBMLV_rgba\fP(255,62,150,255)"
+Define the VIOLETRED1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLETRED2   \fBMLV_rgba\fP(238,58,140,255)"
+Define the VIOLETRED2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLETRED3   \fBMLV_rgba\fP(205,50,120,255)"
+Define the VIOLETRED3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_VIOLETRED4   \fBMLV_rgba\fP(139,34,82,255)"
+Define the VIOLETRED4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHEAT   \fBMLV_rgba\fP(245,222,179,255)"
+Define the WHEAT color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHEAT1   \fBMLV_rgba\fP(255,231,186,255)"
+Define the WHEAT1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHEAT2   \fBMLV_rgba\fP(238,216,174,255)"
+Define the WHEAT2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHEAT3   \fBMLV_rgba\fP(205,186,150,255)"
+Define the WHEAT3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHEAT4   \fBMLV_rgba\fP(139,126,102,255)"
+Define the WHEAT4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHITE   \fBMLV_rgba\fP(255,255,255,255)"
+Define the WHITE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/02_shapes\&.c\fP, et \fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHITE_SMOKE   \fBMLV_rgba\fP(245,245,245,255)"
+Define the WHITE_SMOKE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_WHITESMOKE   \fBMLV_rgba\fP(245,245,245,255)"
+Define the WHITESMOKE color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOW   \fBMLV_rgba\fP(255,255,0,255)"
+Define the YELLOW color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/09_animation\&.c\fP, \fBbeginner/09_colors\&.c\fP, et \fBmedium/08_full_screen\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOW1   \fBMLV_rgba\fP(255,255,0,255)"
+Define the YELLOW1 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOW2   \fBMLV_rgba\fP(238,238,0,255)"
+Define the YELLOW2 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOW3   \fBMLV_rgba\fP(205,205,0,255)"
+Define the YELLOW3 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOW4   \fBMLV_rgba\fP(139,139,0,255)"
+Define the YELLOW4 color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOW_GREEN   \fBMLV_rgba\fP(154,205,50,255)"
+Define the YELLOW_GREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SS "#define MLV_COLOR_YELLOWGREEN   \fBMLV_rgba\fP(154,205,50,255)"
+Define the YELLOWGREEN color\&. 
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/09_colors\&.c\fP\&.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef Uint32 \fBMLV_Color\fP"
+
+.PP
+Définit un type couleur pour la bibliothèque MLV\&. Les couleurs sont définies à l'aide de 4 entiers compris entre 0 et 256 exclu, que l'on appelle composantes :
+.IP "\(bu" 2
+la composante Rouge ( R );
+.IP "\(bu" 2
+la composante Verte ( G );
+.IP "\(bu" 2
+la composant Blue ( B );
+.IP "\(bu" 2
+la composante Alpha, c'est la transparence ( A )\&. 
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/01_texts_and_boxes\&.c\fP, \fBbeginner/09_colors\&.c\fP, et \fBmedium/06_colors\&.c\fP\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "void MLV_convert_color_to_rgba (\fBMLV_Color\fP color, Uint8 * red, Uint8 * green, Uint8 * blue, Uint8 * alpha)"
+
+.PP
+Convertit une couleur MLV en une couleur codée sur 4 entier de 8 bits représentant les composantes rouge, bleue et verte en un entier 32 bits\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcolor\fP La couleur à convertir 
+.br
+\fIred\fP La composante rouge de la couleur 
+.br
+\fIgreen\fP La composante verte de la couleur 
+.br
+\fIblue\fP La composante bleue de la couleur 
+.br
+\fIalpha\fP La composante alpha (transparence) de la couleur 
+.RE
+.PP
+
+.SS "const char * MLV_convert_color_to_string (\fBMLV_Color\fP color)"
+
+.PP
+Convertit une couleur en un chaine de caractères\&. Cette fonction est de complexité lineaire par rapport au nombre de couleurs\&. ( environ 700 )
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcolor\fP Le code de la couleur 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+La chaîne associée au code de la couleur 
+.RE
+.PP
+
+.SS "\fBMLV_Color\fP MLV_convert_rgba_to_color (Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)"
+
+.PP
+Convertit une couleur codée sur 4 entier de 8 bits représentant les composantes rouge, bleue et verte en un entier 32 bits\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIred\fP La composante rouge de la couleur 
+.br
+\fIgreen\fP La composante verte de la couleur 
+.br
+\fIblue\fP La composante bleue de la couleur 
+.br
+\fIalpha\fP La composante alpha (transparence) de la couleur 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+La couleur codée sur 32 bits\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Color\fP MLV_convert_string_to_color (const char * color_name)"
+
+.PP
+Convertit un nom de couleur en son code couleur\&. Cette fonction est de complexité lineaire par rapport au nombre de couleurs\&. ( environ 700 )
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcolor_name\fP Le nom de la couleur 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Le code couleur associée au nom passé en paramètre\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Color\fP MLV_rgba (Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha)"
+
+.PP
+Raccourci vers \fBMLV_Color\fP MLV_get_color_from_rgba\&. 
+.PP
+\fBVoir également\fP
+.RS 4
+MLV_get_color_from_rgba
+.RE
+.PP
+\fBParamètres\fP
+.RS 4
+\fIred\fP La composante rouge de la couleur 
+.br
+\fIgreen\fP La composante verte de la couleur 
+.br
+\fIblue\fP La composante bleue de la couleur 
+.br
+\fIalpha\fP La composante alpha (transparence) de la couleur 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+La couleur codée sur 32 bits\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBadvanced/08_zone_click\&.c\fP, et \fBmedium/06_colors\&.c\fP\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

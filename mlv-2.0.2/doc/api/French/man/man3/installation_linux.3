@@ -1,0 +1,153 @@
+.TH "installation_linux" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+installation_linux \- Installer MLV sous Linux 
+.PP
+Repérez dans liste qui suit la distribution que vous utilisez, suivez ensuite les instructions d'installation\&. Si, votre distribution n'est pas présente dans la liste, choisissez alors l'installation à partir du code source\&. Si vous rencontrez des problèmes avec les paquets d'installation, utilisez alors l'installation à partir du code source\&. Cette méthode fonctionnera toujours\&.
+
+.PP
+.IP "\(bu" 2
+\fBDebian et Ubuntu\fP
+.IP "\(bu" 2
+\fBFedora\fP
+.IP "\(bu" 2
+\fBÀ partir du code source\fP
+.PP
+.SH "Debian et Ubuntu"
+.PP
+Commencez par installer les bibliothèques sdl, sdl-gfx, sdl-mixer, sdl-ttf, sdl-image, sdl-image, xml2 et glib2\&.0 en tapant la commande suivante:
+
+.PP
+.PP
+.nf
+sudo apt-get install libsdl-gfx1\&.2-dev libsdl1\&.2-dev libsdl-mixer1\&.2-dev 
+sudo apt-get install libsdl-ttf2\&.0-dev libglib2\&.0-dev libxml2-dev 
+sudo apt-get install libsdl-image1\&.2-dev
+.fi
+.PP
+
+.PP
+Téléchargez ensuite les paquets de la bibliothèque :
+.IP "\(bu" 2
+\fRlibmlv0_2\&.0\&.2-1_amd64\&.deb\fP
+.IP "\(bu" 2
+\fRlibmlv0-dev_2\&.0\&.2-1_amd64\&.deb\fP
+.PP
+
+.PP
+(si vous utilisez un ordinateur 32 bits, vous devez utilisez les paquets \fRlibmlv0_2\&.0\&.2-1_i386\&.deb\fP et \fRlibmlv0-dev_2\&.0\&.2-1_i386\&.deb\fP à la place)
+
+.PP
+et installez-les en tapant la commande suivante:
+
+.PP
+.PP
+.nf
+sudo dpkg -i libmlv0_2\&.0\&.2-1_amd64\&.deb libmlv0-dev_2\&.0\&.2-1_amd64\&.deb
+.fi
+.PP
+
+.PP
+La bibliothèque MLV est installée\&.
+
+.PP
+N'oubliez pas que pour compiler vos programme, il vous faut les outils de compilation\&. Si vous n'avez pas encore installé ces outils, tapez la commande suivante:
+
+.PP
+.PP
+.nf
+sudo apt-get install build-essential
+.fi
+.PP
+.SH "Fedora"
+.PP
+Nous supposerons que vous avez installer une ferdora 64 bits\&. Les utilisateurs utilisant une fedora 32 bits, devroint adapter le tutoriel en remplacant, la chaîne de caractere "x86_64" par "i686"\&.
+
+.PP
+Commencez par télécharger les paquets de la bibliothèque suivants:
+
+.PP
+.IP "\(bu" 2
+\fRmlv-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm\fP
+.IP "\(bu" 2
+\fRmlv-devel-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm\fP
+.IP "\(bu" 2
+\fRmlv-static-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm\fP
+.IP "\(bu" 2
+\fRRPM-GPG-KEY-Boussicault\fP
+.PP
+
+.PP
+et installez-les en tapant la commande suivante:
+
+.PP
+.PP
+.nf
+sudo yum update
+sudo rpm --import RPM-GPG-KEY-Boussicault
+sudo yum install mlv-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm
+sudo yum install mlv-devel-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm
+sudo yum install mlv-static-2\&.0\&.2-0\&.fc22\&.x86_64\&.rpm
+.fi
+.PP
+
+.PP
+La bibliothèque MLV est installée\&.
+.SH "À partir du code source"
+.PP
+Avant de commencer à compiler et installer la bibliothèque MLV,il faut que vous vérifiez que vous avez les bibliothèques de développement et les programmes suivants correctement installés:
+
+.PP
+.IP "\(bu" 2
+gcc
+.IP "\(bu" 2
+libtool
+.IP "\(bu" 2
+make
+.IP "\(bu" 2
+autoconf
+.IP "\(bu" 2
+doxygen
+.IP "\(bu" 2
+sdl1\&.2
+.IP "\(bu" 2
+sdl-gfx
+.IP "\(bu" 2
+sdl-mixer1\&.2
+.IP "\(bu" 2
+sdl-ttf
+.IP "\(bu" 2
+glib2\&.0
+.IP "\(bu" 2
+xml2
+.PP
+
+.PP
+Téléchargez le code source de la bibliothèque MLV : \fRmlv-2\&.0\&.2\&.tar\&.gz\fP\&.
+
+.PP
+Décompressez le code en tapant la commande suivante :
+
+.PP
+.PP
+.nf
+tar -xzf mlv-2\&.0\&.2\&.tar\&.gz
+.fi
+.PP
+
+.PP
+Installez la bibliothèque en tapant les commandes suivantes:
+
+.PP
+.PP
+.nf
+cd mlv-2\&.0\&.2
+\&./configure --prefix=/usr
+make
+sudo make install
+.fi
+.PP
+
+.PP
+Voilà, la bibliothèque est installée\&. 

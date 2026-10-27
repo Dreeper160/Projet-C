@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">advanced/10_read_xml_file.c</div></div>
+</div><!--header-->
+<div class="contents">
+<p>Ce programme explique commen utilise l'interface simplifié de la bibliothèque pour lire et recupere des informations contenu dans des fichiers écrits au format xml.</p>
+<div class="fragment"><div class="line"></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include  &lt;<a class="code" href="MLV__all_8h.html">MLV/MLV_all.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include  &lt;stdlib.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// Attention ! </span></div>
+<div class="line"><span class="comment">// Pour pouvoir compiler ce programme sous windows et sous macintosh,</span></div>
+<div class="line"><span class="comment">// il faut, pour la déclaration du main, respecter strictement la syntaxe</span></div>
+<div class="line"><span class="comment">// suivante :</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keywordtype">int</span> main( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[] ){</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">int</span> annee;</div>
+<div class="line">        <a id="_a0" name="_a0"></a><a class="code hl_typedef" href="MLV__xml_8h.html#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a>* config;</div>
+<div class="line">        <span class="keywordtype">char</span>* text;</div>
+<div class="line">        <span class="keywordtype">double</span> reel;</div>
+<div class="line">        <span class="keywordtype">int</span> nb_copains,i;       </div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// On charge en mémoire le fichier XML contenant toutes les informations</span></div>
+<div class="line">        <span class="comment">// nécessaires au fonctionnement du programme.</span></div>
+<div class="line">        <span class="comment">//      </span></div>
+<div class="line">        config = <a id="a1" name="a1"></a><a class="code hl_function" href="MLV__xml_8h_a2c499a3b0ea22d3ad1d7c9b88fce16c6.html#a2c499a3b0ea22d3ad1d7c9b88fce16c6">MLV_load_xml</a>( <span class="stringliteral">&quot;informations.xml&quot;</span> );</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// On récupère puis on affiche le texte contenu dans l&#39;élément </span></div>
+<div class="line">        <span class="comment">// informations/nom_programme</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="keywordflow">if</span>(</div>
+<div class="line">                <a id="a2" name="a2"></a><a class="code hl_function" href="MLV__xml_8h_af29286864b5651b438792943e2b7b7a5.html#af29286864b5651b438792943e2b7b7a5">MLV_get_string_value_from_xml</a>(</div>
+<div class="line">                        config, &amp;(text), <span class="stringliteral">&quot;/informations/nom_programme&quot;</span></div>
+<div class="line">                )</div>
+<div class="line">        ){</div>
+<div class="line">                fprintf( stderr, <span class="stringliteral">&quot;Le fichier XML n&#39;est pas valide, l&#39;élément /informations/nom_programme est manquant.\n&quot;</span> );</div>
+<div class="line">                exit(1);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        printf(<span class="stringliteral">&quot;Titre : %s\n&quot;</span>, text);</div>
+<div class="line">        free(text);</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// On récupère puis on affiche l&#39;entier contenu dans l&#39;élément </span></div>
+<div class="line">        <span class="comment">// informations/anne_production</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="keywordflow">if</span>(</div>
+<div class="line">                <a id="a3" name="a3"></a><a class="code hl_function" href="MLV__xml_8h_a7c806fa1368970962ea96f231dd74eb0.html#a7c806fa1368970962ea96f231dd74eb0">MLV_get_integer_value_from_xml</a>(</div>
+<div class="line">                        config, &amp;(annee), <span class="stringliteral">&quot;/informations/annee_production&quot;</span></div>
+<div class="line">                )</div>
+<div class="line">        ){</div>
+<div class="line">                fprintf( stderr, <span class="stringliteral">&quot;Le fichier XML n&#39;est pas valide, l&#39;élément /informations/annee_production est manquant ou ne contient pas d&#39;entier.\n&quot;</span> );</div>
+<div class="line">                exit(1);</div>
+<div class="line">        };</div>
+<div class="line"> </div>
+<div class="line">        printf(<span class="stringliteral">&quot;Annee de production : %d \n&quot;</span>, annee);</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// On récupère puis on affiche le réél contenu dans l&#39;élément </span></div>
+<div class="line">        <span class="comment">// informations/reel_prefere</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="keywordflow">if</span>(</div>
+<div class="line">                <a id="a4" name="a4"></a><a class="code hl_function" href="MLV__xml_8h_a0ab0000626fbf9739c30f2dec0eb468f.html#a0ab0000626fbf9739c30f2dec0eb468f">MLV_get_double_value_from_xml</a>(</div>
+<div class="line">                        config, &amp;(reel), <span class="stringliteral">&quot;/informations/reel_prefere&quot;</span></div>
+<div class="line">                )</div>
+<div class="line">        ){</div>
+<div class="line">                fprintf( stderr, <span class="stringliteral">&quot;Le fichier XML n&#39;est pas valide, l&#39;élément /informations/reel_prefere est manquant ou ne contient pas de réel.\n&quot;</span> );</div>
+<div class="line">                exit(1);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        printf(<span class="stringliteral">&quot;Mon réel préféré : %f \n&quot;</span>, reel);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// </span></div>
+<div class="line">        <span class="comment">// On affiche les copines.</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;Mes copines sont : \n&quot;</span>);</div>
+<div class="line">        nb_copains = <a id="a5" name="a5"></a><a class="code hl_function" href="MLV__xml_8h_ac62e969b6f15d73cc6907ef76cd01eaf.html#ac62e969b6f15d73cc6907ef76cd01eaf">MLV_get_number_of_objects_from_xml</a>( </div>
+<div class="line">                config, <span class="stringliteral">&quot;/informations/amis/ami[@sexe=&#39;femme&#39;]&quot;</span></div>
+<div class="line">        );</div>
+<div class="line">        <span class="keywordflow">for</span>( i = 0; i&lt; nb_copains; i++ ){</div>
+<div class="line">                <span class="keywordflow">if</span>(</div>
+<div class="line">                        <a class="code hl_function" href="MLV__xml_8h_af29286864b5651b438792943e2b7b7a5.html#af29286864b5651b438792943e2b7b7a5">MLV_get_string_value_from_xml</a>(</div>
+<div class="line">                                config, &amp;(text), <span class="stringliteral">&quot;/informations/amis/ami[@sexe=&#39;femme&#39;][%d]&quot;</span>,</div>
+<div class="line">                                i+1</div>
+<div class="line">                        )</div>
+<div class="line">                ){</div>
+<div class="line">                        fprintf( stderr, <span class="stringliteral">&quot;Le fichier XML n&#39;est pas valide, l&#39;élément /informations/amis/ami[@sexe=&#39;femme&#39;][%d] est manquant.\n&quot;</span>, i+1 );</div>
+<div class="line">                        exit(1);</div>
+<div class="line">                }</div>
+<div class="line">                printf(<span class="stringliteral">&quot;    - %s \n&quot;</span>, text);</div>
+<div class="line">                free( text );</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <span class="comment">// On libère l&#39;espace alloué pour le fichier xml.</span></div>
+<div class="line">        <span class="comment">//</span></div>
+<div class="line">        <a id="a6" name="a6"></a><a class="code hl_function" href="MLV__xml_8h_acfec323734b0816afe7e9e4ec30990ee.html#acfec323734b0816afe7e9e4ec30990ee">MLV_free_xml</a>( config );</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *   Copyright (C) 2010,2011,2012,2013 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="ttc" id="aMLV__all_8h_html"><div class="ttname"><a href="MLV__all_8h.html">MLV_all.h</a></div><div class="ttdoc">Fichier d&#39;entête principal incluant tous les autres fichiers entêtes de la bibliothèque MLV.</div></div>
+<div class="ttc" id="aMLV__xml_8h_a0ab0000626fbf9739c30f2dec0eb468f_html_a0ab0000626fbf9739c30f2dec0eb468f"><div class="ttname"><a href="MLV__xml_8h_a0ab0000626fbf9739c30f2dec0eb468f.html#a0ab0000626fbf9739c30f2dec0eb468f">MLV_get_double_value_from_xml</a></div><div class="ttdeci">MLV_Xml_error MLV_get_double_value_from_xml(const MLV_Xml *xml_data, double *result, const char *xpath,...)</div><div class="ttdoc">Permet de récupérer le reel d&#39;un champs donné du fichier xml.</div></div>
+<div class="ttc" id="aMLV__xml_8h_a2c499a3b0ea22d3ad1d7c9b88fce16c6_html_a2c499a3b0ea22d3ad1d7c9b88fce16c6"><div class="ttname"><a href="MLV__xml_8h_a2c499a3b0ea22d3ad1d7c9b88fce16c6.html#a2c499a3b0ea22d3ad1d7c9b88fce16c6">MLV_load_xml</a></div><div class="ttdeci">MLV_Xml * MLV_load_xml(const char *xml_file_path)</div><div class="ttdoc">Charge en mémoire un fichier au format xml.</div></div>
+<div class="ttc" id="aMLV__xml_8h_a7c806fa1368970962ea96f231dd74eb0_html_a7c806fa1368970962ea96f231dd74eb0"><div class="ttname"><a href="MLV__xml_8h_a7c806fa1368970962ea96f231dd74eb0.html#a7c806fa1368970962ea96f231dd74eb0">MLV_get_integer_value_from_xml</a></div><div class="ttdeci">MLV_Xml_error MLV_get_integer_value_from_xml(const MLV_Xml *xml_data, int *result, const char *xpath,...)</div><div class="ttdoc">Permet de récupérer l&#39;entier d&#39;un champs donné du fichier xml.</div></div>
+<div class="ttc" id="aMLV__xml_8h_ac62e969b6f15d73cc6907ef76cd01eaf_html_ac62e969b6f15d73cc6907ef76cd01eaf"><div class="ttname"><a href="MLV__xml_8h_ac62e969b6f15d73cc6907ef76cd01eaf.html#ac62e969b6f15d73cc6907ef76cd01eaf">MLV_get_number_of_objects_from_xml</a></div><div class="ttdeci">int MLV_get_number_of_objects_from_xml(const MLV_Xml *xml_data, const char *xpath,...)</div><div class="ttdoc">Compte le nombre d&#39;objets présents dans le fichier xml verifiant un certain nombre de critères passés...</div></div>
+<div class="ttc" id="aMLV__xml_8h_acfec323734b0816afe7e9e4ec30990ee_html_acfec323734b0816afe7e9e4ec30990ee"><div class="ttname"><a href="MLV__xml_8h_acfec323734b0816afe7e9e4ec30990ee.html#acfec323734b0816afe7e9e4ec30990ee">MLV_free_xml</a></div><div class="ttdeci">void MLV_free_xml(MLV_Xml *xml_data)</div><div class="ttdoc">Libère la mémoire utilisée par les données du fichier xml.</div></div>
+<div class="ttc" id="aMLV__xml_8h_af29286864b5651b438792943e2b7b7a5_html_af29286864b5651b438792943e2b7b7a5"><div class="ttname"><a href="MLV__xml_8h_af29286864b5651b438792943e2b7b7a5.html#af29286864b5651b438792943e2b7b7a5">MLV_get_string_value_from_xml</a></div><div class="ttdeci">MLV_Xml_error MLV_get_string_value_from_xml(const MLV_Xml *xml_data, char **result, const char *xpath,...)</div><div class="ttdoc">Permet d&#39;accéder à l&#39;interieur d&#39;un champs donné du fichier xml.</div></div>
+<div class="ttc" id="aMLV__xml_8h_html_a35ae1c0fc125f8568bab50b5f002fd78"><div class="ttname"><a href="MLV__xml_8h.html#a35ae1c0fc125f8568bab50b5f002fd78">MLV_Xml</a></div><div class="ttdeci">struct _MLV_Xml MLV_Xml</div><div class="ttdoc">Définit le type de donnée stockée au format xml dans la bibliothèque MLV.</div><div class="ttdef"><b>Definition</b> MLV_xml.h:51</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

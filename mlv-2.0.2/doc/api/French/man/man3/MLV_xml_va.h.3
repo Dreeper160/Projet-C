@@ -1,0 +1,192 @@
+.TH "MLV_xml_va.h" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_xml_va.h \- Ce fichier définit les même prototypes des fonctions que \fBMLV_xml\&.h\fP mais en utilisant en argument sulémentaire une liste de type va_list\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_string_value_from_xml_va\fP (const \fBMLV_Xml\fP *xml_data, char **result, const char *xpath, va_list pile)"
+.br
+.RI "Permet d'accéder à l'interieur d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_integer_value_from_xml_va\fP (const \fBMLV_Xml\fP *xml_data, int *result, const char *xpath, va_list pile)"
+.br
+.RI "Permet de récupérer l'entier d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_double_value_from_xml_va\fP (const \fBMLV_Xml\fP *xml_data, double *result, const char *xpath, va_list pile)"
+.br
+.RI "Permet de récupérer le reel d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "\fBMLV_Xml_error\fP \fBMLV_get_float_value_from_xml_va\fP (const \fBMLV_Xml\fP *xml_data, float *result, const char *xpath, va_list pile)"
+.br
+.RI "Permet de récupérer le réel d'un champs donné du fichier xml\&. "
+.ti -1c
+.RI "int \fBMLV_get_number_of_objects_from_xml_va\fP (const \fBMLV_Xml\fP *xml_data, const char *xpath, va_list pile)"
+.br
+.RI "Compte le nombre d'objets présents dans le fichier xml verifiant un certain nombre de critères passés en paramètre de la fonction\&. "
+.ti -1c
+.RI "\fBMLV_Xml\fP * \fBMLV_get_xml_object_of_va\fP (const \fBMLV_Xml\fP *xml_data, const char *xpath, va_list pile)"
+.br
+.RI "Permet de récupérer un noeud interne de l'arbre représentant le fichier XML\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit les même prototypes des fonctions que \fBMLV_xml\&.h\fP mais en utilisant en argument sulémentaire une liste de type va_list\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.PP
+Les fichiers xml sont utilisés pour stocker les données nécessaires au fonctionnement d'un programme\&. Ils permettent de modifier facilement l'exécution du programme sans avoir à le modifier\&. En effet, ils sont lisibles par l'homme et par la machine en même temps\&. Ils constituent donc une interface pratique entre l'ordinateur et l'utilisateur\&. 
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBMLV_Xml_error\fP MLV_get_double_value_from_xml_va (const \fBMLV_Xml\fP * xml_data, double * result, const char * xpath, va_list pile)"
+
+.PP
+Permet de récupérer le reel d'un champs donné du fichier xml\&. Tout comme la fonction \fBMLV_get_string_value_from_xml()\fP, cette fonction peut contenir un nombre variable de paramètres\&. Pour plus d'informations, veuillez lire la documentation de la fonction \fBMLV_get_string_value_from_xml()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers un réel dans lequel le résultat de la fonction sera enregistré\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fIpile\fP La pile des complements de paramètres comme dans vaprintf\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur (voir \fBMLV_Xml_error\fP) si la fonction n'a pas reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Xml_error\fP MLV_get_float_value_from_xml_va (const \fBMLV_Xml\fP * xml_data, float * result, const char * xpath, va_list pile)"
+
+.PP
+Permet de récupérer le réel d'un champs donné du fichier xml\&. Tout comme la fonction \fBMLV_get_string_value_from_xml()\fP, cette fonction peut contenir un nombre variable de paramètres\&. Pour plus d'informations, veuillez lire la documentation de la fonction \fBMLV_get_string_value_from_xml()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers un réel dans lequel le résultat de la fonction sera enregistré\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fIpile\fP La pile des complements de paramètres comme dans vaprintf\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur (voir \fBMLV_Xml_error\fP) si la fonction n'a pas reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Xml_error\fP MLV_get_integer_value_from_xml_va (const \fBMLV_Xml\fP * xml_data, int * result, const char * xpath, va_list pile)"
+
+.PP
+Permet de récupérer l'entier d'un champs donné du fichier xml\&. Tout comme la fonction \fBMLV_get_string_value_from_xml()\fP, cette fonction peut contenir un nombre variable de paramètres\&. Pour plus d'informations, veuillez lire la documentation de la fonction \fBMLV_get_string_value_from_xml()\fP\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers un entier dans lequel le résultat de la fonction sera enregistré\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fIpile\fP La pile des complements de paramètres comme dans vaprintf\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur si la fonction n'a pa reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.SS "int MLV_get_number_of_objects_from_xml_va (const \fBMLV_Xml\fP * xml_data, const char * xpath, va_list pile)"
+
+.PP
+Compte le nombre d'objets présents dans le fichier xml verifiant un certain nombre de critères passés en paramètre de la fonction\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fIpile\fP La pile des complements de paramètres comme dans vaprintf\&.
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Cette fonction renvoie le nombre d'objet ayant pour chemin d'accès "xpath"\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Xml_error\fP MLV_get_string_value_from_xml_va (const \fBMLV_Xml\fP * xml_data, char ** result, const char * xpath, va_list pile)"
+
+.PP
+Permet d'accéder à l'interieur d'un champs donné du fichier xml\&. Attention: Il ne faut pas oublier de libérer la mémoire associée au champs result\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIresult\fP Un pointeur vers une addresse vide qui contiendra l'addresse de la chaîne de caractères correspondant au résultat de la fonction\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fIpile\fP La pile des complements de paramètres comme dans vaprintf\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+renvoie un code d'erreur si la fonction n'a pa reussie à extraire la donnée souhaitée du document xml\&. 
+.RE
+.PP
+
+.SS "\fBMLV_Xml\fP * MLV_get_xml_object_of_va (const \fBMLV_Xml\fP * xml_data, const char * xpath, va_list pile)"
+
+.PP
+Permet de récupérer un noeud interne de l'arbre représentant le fichier XML\&. Cette fonction n'est pas encore implémentée\&.
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIxml_data\fP Les données xml\&. 
+.br
+\fIxpath\fP Le chemin d'accès\&. 
+.br
+\fIpile\fP La pile des complements de paramètres comme dans vaprintf\&.
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Un noeud interne de l'arbre XML\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+This file is part of the MLV Library.
+Copyright (C) 2012 Adrien Boussicault, Marc Zipstein
+This Library is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this Library.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>MLV-2.0.2</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<div class="headertitle">
+		<h1>Documentation de la bibliothèque MLV-2.0.2</h1>
+	</div>
+</div>
+<div class="tabs2">
+	<ul class="tablist">
+		<li><a href="index.html"><span>Presentation</span></a></li>
+		<li><a href="download.html"><span>Téléchargement</span></a></li>
+		<li><a href="installation.html"><span>Installation</span></a></li>
+		<li><a href="compilation.html"><span>Compilation</span></a></li>
+		<li><a href="examples.html"><span>Exemples</span></a></li>
+		<li><a href="files.html"><span>API</span></a></li>
+		<li><a href="globals_func.html"><span>Liste des fonctions</span></a></li>
+		<li><a href="bug.html"><span>bogues</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+		<li><a href="contact_auteur.html"><span>contacts</span></a></li>
+	</ul>
+</div>
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>MLV</b></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">MLV_path.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MLV__path_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *   This file is part of the MLV Library.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *   Copyright (C) 2010,2011,2012 Adrien Boussicault, Marc Zipstein</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *    This Library is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    (at your option) any later version.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    This Library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    GNU General Public License for more details.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *    along with this Library.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifndef __MLV__MLV_PATH_H__</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define __MLV__MLV_PATH_H__</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="MLV__path_8h_a180c405f10c2af7ab0537f959db68aaf.html#a180c405f10c2af7ab0537f959db68aaf">   50</a></span><span class="keywordtype">char</span>* <a class="code hl_function" href="MLV__path_8h_a180c405f10c2af7ab0537f959db68aaf.html#a180c405f10c2af7ab0537f959db68aaf">MLV_get_base_name</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="MLV__path_8h_ae670375158b797dd5f869eb477f308a1.html#ae670375158b797dd5f869eb477f308a1">   62</a></span><span class="keywordtype">char</span>* <a class="code hl_function" href="MLV__path_8h_ae670375158b797dd5f869eb477f308a1.html#ae670375158b797dd5f869eb477f308a1">MLV_get_directory_name</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="MLV__path_8h_ad6071b399dba0791301744c2031d3baf.html#ad6071b399dba0791301744c2031d3baf">   70</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__path_8h_ad6071b399dba0791301744c2031d3baf.html#ad6071b399dba0791301744c2031d3baf">MLV_path_is_absolute</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="MLV__path_8h_a202173342c357310673bbfbd4fcd49a3.html#a202173342c357310673bbfbd4fcd49a3">   78</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__path_8h_a202173342c357310673bbfbd4fcd49a3.html#a202173342c357310673bbfbd4fcd49a3">MLV_path_is_relative</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="MLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b.html#a67c5e7b9660d7f0c365628c1c41f591b">   89</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b.html#a67c5e7b9660d7f0c365628c1c41f591b">MLV_path_exists</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="MLV__path_8h_a30273c88874016c5035c5d04d80e9060.html#a30273c88874016c5035c5d04d80e9060">   97</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__path_8h_a30273c88874016c5035c5d04d80e9060.html#a30273c88874016c5035c5d04d80e9060">MLV_path_is_a_directory</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="MLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d.html#acdc0f26a3dd64e2f904a9be96ca37e4d">  105</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="MLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d.html#acdc0f26a3dd64e2f904a9be96ca37e4d">MLV_path_is_a_file</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* path );</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="MLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0.html#a5a61f23cbb2f4f4bb3014e0bc2e631b0">  124</a></span><span class="keywordtype">char</span>* <a class="code hl_function" href="MLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0.html#a5a61f23cbb2f4f4bb3014e0bc2e631b0">MLV_build_path</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* first_element, ... );</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="MLV__path_8h_aa2502286d6ca4e13388de6e04ede5262.html#aa2502286d6ca4e13388de6e04ede5262">  135</a></span><span class="keywordtype">char</span>* <a class="code hl_function" href="MLV__path_8h_aa2502286d6ca4e13388de6e04ede5262.html#aa2502286d6ca4e13388de6e04ede5262">MLV_build_path_v</a>( <span class="keywordtype">char</span>** elements );</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="MLV__path_8h_a120c8c71d041de13de1977a225438c05.html#a120c8c71d041de13de1977a225438c05">  144</a></span><span class="keywordtype">char</span> * <a class="code hl_function" href="MLV__path_8h_a120c8c71d041de13de1977a225438c05.html#a120c8c71d041de13de1977a225438c05">MLV_get_current_directory</a>( );</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="MLV__path_8h_adfd1cccb18201486ccec1e75b045f803.html#adfd1cccb18201486ccec1e75b045f803">  157</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_function" href="MLV__path_8h_adfd1cccb18201486ccec1e75b045f803.html#adfd1cccb18201486ccec1e75b045f803">MLV_get_temporary_directory</a>( );</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="MLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af.html#a2a6f2f67413b1df25a51f1e5e987e4af">  166</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_function" href="MLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af.html#a2a6f2f67413b1df25a51f1e5e987e4af">MLV_get_home_directory</a>( );</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>}</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMLV__path_8h_a120c8c71d041de13de1977a225438c05_html_a120c8c71d041de13de1977a225438c05"><div class="ttname"><a href="MLV__path_8h_a120c8c71d041de13de1977a225438c05.html#a120c8c71d041de13de1977a225438c05">MLV_get_current_directory</a></div><div class="ttdeci">char * MLV_get_current_directory()</div><div class="ttdoc">Détermine le répertoire courant.</div></div>
+<div class="ttc" id="aMLV__path_8h_a180c405f10c2af7ab0537f959db68aaf_html_a180c405f10c2af7ab0537f959db68aaf"><div class="ttname"><a href="MLV__path_8h_a180c405f10c2af7ab0537f959db68aaf.html#a180c405f10c2af7ab0537f959db68aaf">MLV_get_base_name</a></div><div class="ttdeci">char * MLV_get_base_name(const char *path)</div><div class="ttdoc">Renvoie la chaîne de caractères après le dernier séparteur / dans un chemin donné en paramètre.</div></div>
+<div class="ttc" id="aMLV__path_8h_a202173342c357310673bbfbd4fcd49a3_html_a202173342c357310673bbfbd4fcd49a3"><div class="ttname"><a href="MLV__path_8h_a202173342c357310673bbfbd4fcd49a3.html#a202173342c357310673bbfbd4fcd49a3">MLV_path_is_relative</a></div><div class="ttdeci">int MLV_path_is_relative(const char *path)</div><div class="ttdoc">Teste si un chemin est relatif.</div></div>
+<div class="ttc" id="aMLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af_html_a2a6f2f67413b1df25a51f1e5e987e4af"><div class="ttname"><a href="MLV__path_8h_a2a6f2f67413b1df25a51f1e5e987e4af.html#a2a6f2f67413b1df25a51f1e5e987e4af">MLV_get_home_directory</a></div><div class="ttdeci">const char * MLV_get_home_directory()</div><div class="ttdoc">Détermine le répertoire personnel de l&#39;utilisateur courant.</div></div>
+<div class="ttc" id="aMLV__path_8h_a30273c88874016c5035c5d04d80e9060_html_a30273c88874016c5035c5d04d80e9060"><div class="ttname"><a href="MLV__path_8h_a30273c88874016c5035c5d04d80e9060.html#a30273c88874016c5035c5d04d80e9060">MLV_path_is_a_directory</a></div><div class="ttdeci">int MLV_path_is_a_directory(const char *path)</div><div class="ttdoc">Vérifie si un chemin est associé à un répertoire.</div></div>
+<div class="ttc" id="aMLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0_html_a5a61f23cbb2f4f4bb3014e0bc2e631b0"><div class="ttname"><a href="MLV__path_8h_a5a61f23cbb2f4f4bb3014e0bc2e631b0.html#a5a61f23cbb2f4f4bb3014e0bc2e631b0">MLV_build_path</a></div><div class="ttdeci">char * MLV_build_path(const char *first_element,...)</div><div class="ttdoc">Construit en concaténant différents textes, une chaîne de caractères représentant un chemin dont les ...</div></div>
+<div class="ttc" id="aMLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b_html_a67c5e7b9660d7f0c365628c1c41f591b"><div class="ttname"><a href="MLV__path_8h_a67c5e7b9660d7f0c365628c1c41f591b.html#a67c5e7b9660d7f0c365628c1c41f591b">MLV_path_exists</a></div><div class="ttdeci">int MLV_path_exists(const char *path)</div><div class="ttdoc">Teste si le chemin corespond au chemin d&#39;un fichier ou dossier existant.</div></div>
+<div class="ttc" id="aMLV__path_8h_aa2502286d6ca4e13388de6e04ede5262_html_aa2502286d6ca4e13388de6e04ede5262"><div class="ttname"><a href="MLV__path_8h_aa2502286d6ca4e13388de6e04ede5262.html#aa2502286d6ca4e13388de6e04ede5262">MLV_build_path_v</a></div><div class="ttdeci">char * MLV_build_path_v(char **elements)</div><div class="ttdoc">Même chose que MLV_build_path.</div></div>
+<div class="ttc" id="aMLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d_html_acdc0f26a3dd64e2f904a9be96ca37e4d"><div class="ttname"><a href="MLV__path_8h_acdc0f26a3dd64e2f904a9be96ca37e4d.html#acdc0f26a3dd64e2f904a9be96ca37e4d">MLV_path_is_a_file</a></div><div class="ttdeci">int MLV_path_is_a_file(const char *path)</div><div class="ttdoc">Vérifie si un chemin est associé à un fichier.</div></div>
+<div class="ttc" id="aMLV__path_8h_ad6071b399dba0791301744c2031d3baf_html_ad6071b399dba0791301744c2031d3baf"><div class="ttname"><a href="MLV__path_8h_ad6071b399dba0791301744c2031d3baf.html#ad6071b399dba0791301744c2031d3baf">MLV_path_is_absolute</a></div><div class="ttdeci">int MLV_path_is_absolute(const char *path)</div><div class="ttdoc">Teste si un chemin est absolu.</div></div>
+<div class="ttc" id="aMLV__path_8h_adfd1cccb18201486ccec1e75b045f803_html_adfd1cccb18201486ccec1e75b045f803"><div class="ttname"><a href="MLV__path_8h_adfd1cccb18201486ccec1e75b045f803.html#adfd1cccb18201486ccec1e75b045f803">MLV_get_temporary_directory</a></div><div class="ttdeci">const char * MLV_get_temporary_directory()</div><div class="ttdoc">Détermine le répertoire temporaire.</div></div>
+<div class="ttc" id="aMLV__path_8h_ae670375158b797dd5f869eb477f308a1_html_ae670375158b797dd5f869eb477f308a1"><div class="ttname"><a href="MLV__path_8h_ae670375158b797dd5f869eb477f308a1.html#ae670375158b797dd5f869eb477f308a1">MLV_get_directory_name</a></div><div class="ttdeci">char * MLV_get_directory_name(const char *path)</div><div class="ttdoc">Renvoie la chaîne de caractères s&#39;étendant jusqu&#39;au dernier séparateur / du chemin donné en paramètre...</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le <span class="timestamp"></span> pour MLV-2.0.2 par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

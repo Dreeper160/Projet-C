@@ -1,0 +1,104 @@
+.TH "MLV_random.h" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_random.h \- Ce fichier définit tous les prototypes des fonctions concernant la manipulation des nombres aléatoires\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "int \fBMLV_get_random_boolean\fP ()"
+.br
+.RI "Renvoie 0 ou 1 aléatoirement\&. "
+.ti -1c
+.RI "int \fBMLV_get_random_integer\fP (int begin, int end)"
+.br
+.RI "Renvoie un entier aléatoire choisi dans un intervalle donné en paramètre\&. "
+.ti -1c
+.RI "double \fBMLV_get_random_double\fP (double begin, double end)"
+.br
+.RI "Renvoie un réel aléatoire choisi dans un intervalle donné en paramètre\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit tous les prototypes des fonctions concernant la manipulation des nombres aléatoires\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein
+.RE
+.PP
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "int MLV_get_random_boolean ()"
+
+.PP
+Renvoie 0 ou 1 aléatoirement\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+0 ou 1 aléatoirement\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/03_random\&.c\fP\&.
+.SS "double MLV_get_random_double (double begin, double end)"
+
+.PP
+Renvoie un réel aléatoire choisi dans un intervalle donné en paramètre\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbegin\fP Borne inférieur de l'intervalle ( inclusif ) 
+.br
+\fIend\fP Borne supérieur de l'intervalle ( inclusif ) 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Un réel aléatoire choisi dans l'intervalle [begin, end]\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/03_random\&.c\fP\&.
+.SS "int MLV_get_random_integer (int begin, int end)"
+
+.PP
+Renvoie un entier aléatoire choisi dans un intervalle donné en paramètre\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbegin\fP Borne inférieur de l'intervalle ( inclusif ) 
+.br
+\fIend\fP Borne supérieur de l'intervalle ( inclusif ) 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+Un entier aléatoire choisi dans l'intervalle [begin, end]\&. 
+.RE
+.PP
+
+.PP
+\fBExemples\fP
+.in +1c
+\fBbeginner/03_random\&.c\fP\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.

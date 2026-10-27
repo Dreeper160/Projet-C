@@ -1,0 +1,566 @@
+.TH "MLV_text_va.h" 3 "Mardi 27 Octobre 2026 16:46:19" "MLV-2.0.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MLV_text_va.h \- Ce fichier définit différents prototypes des fonctions permmettant d'afficher du texte et des boîtes de dialogues\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMLV_draw_text_va\fP (int x, int y, const char *text, \fBMLV_Color\fP color, va_list pile)"
+.br
+.RI "Imprime un texte donné à une position et une couleur données\&. "
+.ti -1c
+.RI "void \fBMLV_draw_text_with_font_va\fP (int x, int y, const char *text, const \fBMLV_Font\fP *font, \fBMLV_Color\fP color, va_list pile)"
+.br
+.RI "Écrit du texte sur l'écran en utilisant une couleur et une fonte de caractères données en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_draw_text_with_font_on_image_va\fP (int x, int y, const char *text, const \fBMLV_Font\fP *font, \fBMLV_Color\fP color, \fBMLV_Image\fP *image, va_list pile)"
+.br
+.RI "Écrit du texte sur une image en utilisant une couleur et une fonte de caractères données en paramètres\&. "
+.ti -1c
+.RI "void \fBMLV_get_size_of_text_va\fP (const char *text, int *width, int *height, va_list pile)"
+.br
+.RI "Cette fonction calcule la taille du texte qui sera affiché sur l'écran à l'aide de la fonction \fBMLV_draw_text()\fP\&. "
+.ti -1c
+.RI "void \fBMLV_get_size_of_text_with_font_va\fP (const char *text, int *width, int *height, const \fBMLV_Font\fP *font, va_list pile)"
+.br
+.RI "Cette fonction calcule la taille du texte qui sera affiché sur l'écran à l'aide de la fonction \fBMLV_draw_text_with_font()\fP\&. "
+.ti -1c
+.RI "void \fBMLV_draw_adapted_text_box_with_font_va\fP (int x, int y, const char *message, const \fBMLV_Font\fP *font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, va_list pile)"
+.br
+.RI "Même chose que \fBMLV_draw_adapted_text_box()\fP mis à part que le texte est rendu avec une fonte de caractères donnée en paramètre\&. "
+.ti -1c
+.RI "void \fBMLV_draw_adapted_text_box_va\fP (int x, int y, const char *message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, va_list pile)"
+.br
+.RI "Dessine une boîte contenant du texte\&. "
+.ti -1c
+.RI "void \fBMLV_draw_adapted_text_box_on_image_va\fP (int x, int y, const char *message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Image\fP *image, va_list pile)"
+.br
+.RI "Même chose que \fBMLV_draw_adapted_text_box()\fP mis à part que le texte est rendu avec une fonte de caractères donnée en paramètre\&. "
+.ti -1c
+.RI "void \fBMLV_draw_adapted_text_box_with_font_on_image_va\fP (int x, int y, const char *message, const \fBMLV_Font\fP *font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Image\fP *image, va_list pile)"
+.br
+.RI "Même chose que \fBMLV_draw_adapted_text_box_with_font()\fP mis à part que le texte est rendu sur une image et non directement à l'écran\&. "
+.ti -1c
+.RI "int \fBMLV_get_size_of_adapted_text_box_va\fP (const char *message, int sizeInterligne, int *result_width, int *result_height, va_list pile)"
+.br
+.RI "Cette fonction calcule la taille de la boîte de texte qui serait obtenue si vous utilisez la fonction : \fBMLV_draw_adapted_text_box()\fP\&. "
+.ti -1c
+.RI "int \fBMLV_get_size_of_adapted_text_box_with_font_va\fP (const char *message, const \fBMLV_Font\fP *font, int sizeInterligne, int *result_width, int *result_height, va_list pile)"
+.br
+.RI "Cette fonction calcule la taille de la boîte de texte qui serait obtenue si vous utilisez la fonction : \fBMLV_draw_adapted_text_box_with_font()\fP\&. "
+.ti -1c
+.RI "void \fBMLV_draw_text_box_with_font_va\fP (int x, int y, int width, int height, const char *message, const \fBMLV_Font\fP *font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, va_list pile)"
+.br
+.RI "Même chose que la fonction \fBMLV_draw_text_box()\fP mis à part que le texte est rendu avec une fonte de caractères donnée en paramètre par l'utilisateur\&. "
+.ti -1c
+.RI "void \fBMLV_draw_text_box_va\fP (int x, int y, int width, int height, const char *message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, va_list pile)"
+.br
+.RI "Dessine une boîte de taille donnée par l'utilisateur et contenant un texte donné par l'utilisateur\&. "
+.ti -1c
+.RI "void \fBMLV_draw_text_box_with_font_on_image_va\fP (int x, int y, int width, int height, const char *message, \fBMLV_Font\fP *font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, \fBMLV_Image\fP *image, va_list pile)"
+.br
+.RI "Même chose que la fonction \fBMLV_draw_text_box_with_font()\fP mis à part que le texte n'est pas dessinné directement sur l'ecran, mais sur une une image\&. "
+.ti -1c
+.RI "void \fBMLV_draw_text_box_on_image_va\fP (int x, int y, int width, int height, const char *message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, \fBMLV_Image\fP *image, va_list pile)"
+.br
+.RI "Même chose que \fBMLV_draw_text_box()\fP mis à part que le texte n'est pas écrit directement sur l'écran, mais sur une image à la place\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+Ce fichier définit différents prototypes des fonctions permmettant d'afficher du texte et des boîtes de dialogues\&. 
+
+
+.PP
+\fBAuteur\fP
+.RS 4
+Adrien Boussicault 
+
+.PP
+Marc Zipstein 
+.RE
+.PP
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void MLV_draw_adapted_text_box_on_image_va (int x, int y, const char * message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Image\fP * image, va_list pile)"
+
+.PP
+Même chose que \fBMLV_draw_adapted_text_box()\fP mis à part que le texte est rendu avec une fonte de caractères donnée en paramètre\&. Cette fonction est équivalente à la fonction \fBMLV_draw_adapted_text_box_on_image()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_adapted_text_box_on_image()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIimage\fP L'image sur laquel le texte doit être ecrit\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_adapted_text_box_va (int x, int y, const char * message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, va_list pile)"
+
+.PP
+Dessine une boîte contenant du texte\&. Cette fonction est équivalente à la fonction \fBMLV_draw_adapted_text_box()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_adapted_text_box()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_adapted_text_box_with_font_on_image_va (int x, int y, const char * message, const \fBMLV_Font\fP * font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Image\fP * image, va_list pile)"
+
+.PP
+Même chose que \fBMLV_draw_adapted_text_box_with_font()\fP mis à part que le texte est rendu sur une image et non directement à l'écran\&. Cette fonction est équivalente à la fonction \fBMLV_draw_adapted_text_box_with_font_on_image()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_adapted_text_box_with_font_on_image()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour dessiner le texte\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fIsizeInterligne\fP Le taille de l'interligne\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIimage\fP L'image sur laquel le texte doit être ecrit\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_adapted_text_box_with_font_va (int x, int y, const char * message, const \fBMLV_Font\fP * font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, va_list pile)"
+
+.PP
+Même chose que \fBMLV_draw_adapted_text_box()\fP mis à part que le texte est rendu avec une fonte de caractères donnée en paramètre\&. Cette fonction est équivalente à la fonction \fBMLV_draw_adapted_text_box_with_font()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_adapted_text_box_with_font()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour dessiner le texte\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_box_on_image_va (int x, int y, int width, int height, const char * message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, \fBMLV_Image\fP * image, va_list pile)"
+
+.PP
+Même chose que \fBMLV_draw_text_box()\fP mis à part que le texte n'est pas écrit directement sur l'écran, mais sur une image à la place\&. Cette fonction est équivalente à la fonction \fBMLV_draw_text_box_on_image()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text_box_on_image()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIwidth\fP La largeur de la boîte\&. 
+.br
+\fIheight\fP La hauteur de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIhorizontal_position\fP La position horizontale du texte dans la boîte\&. 
+.br
+\fIvertical_position\fP La position verticale du texte dans la boîte\&. 
+.br
+\fIimage\fP L'image sur laquel le texte doit être ecrit\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_box_va (int x, int y, int width, int height, const char * message, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, va_list pile)"
+
+.PP
+Dessine une boîte de taille donnée par l'utilisateur et contenant un texte donné par l'utilisateur\&. Cette fonction est équivalente à la fonction \fBMLV_draw_text_box()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text_box()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIwidth\fP La largeur de la boîte\&. 
+.br
+\fIheight\fP La hauteur de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIhorizontal_position\fP La position horizontale du texte dans la boîte\&. 
+.br
+\fIvertical_position\fP La position verticale du texte dans la boîte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_box_with_font_on_image_va (int x, int y, int width, int height, const char * message, \fBMLV_Font\fP * font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, \fBMLV_Image\fP * image, va_list pile)"
+
+.PP
+Même chose que la fonction \fBMLV_draw_text_box_with_font()\fP mis à part que le texte n'est pas dessinné directement sur l'ecran, mais sur une une image\&. Cette fonction est équivalente à la fonction \fBMLV_draw_text_box_with_font_on_image()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text_box_with_font_on_image()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIwidth\fP La largeur de la boîte\&. 
+.br
+\fIheight\fP La hauteur de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIfont\fP La fonte caractères utilisée pour dessiner le texte\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIhorizontal_position\fP La position horizontale du texte dans la boîte\&. 
+.br
+\fIvertical_position\fP La position verticale du texte dans la boîte\&. 
+.br
+\fIimage\fP L'image sur laquel le texte doit être ecrit\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_box_with_font_va (int x, int y, int width, int height, const char * message, const \fBMLV_Font\fP * font, int sizeInterligne, \fBMLV_Color\fP borderColor, \fBMLV_Color\fP textColor, \fBMLV_Color\fP backgroundColor, \fBMLV_Text_justification\fP text_justification, \fBMLV_Horizontal_position\fP horizontal_position, \fBMLV_Vertical_position\fP vertical_position, va_list pile)"
+
+.PP
+Même chose que la fonction \fBMLV_draw_text_box()\fP mis à part que le texte est rendu avec une fonte de caractères donnée en paramètre par l'utilisateur\&. Cette fonction est équivalente à la fonction \fBMLV_draw_text_box_with_font()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text_box_with_font()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIy\fP La coordonnée en Y de la position du coin Nord-Ouest de la boîte\&. 
+.br
+\fIwidth\fP La largeur de la boîte\&. 
+.br
+\fIheight\fP La hauteur de la boîte\&. 
+.br
+\fImessage\fP Le texte à afficher\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour dessiner le texte\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fIborderColor\fP La couleur des bordures\&. 
+.br
+\fItextColor\fP La couleur du texte\&. 
+.br
+\fIbackgroundColor\fP La couleur du fond de la boîte\&. 
+.br
+\fItext_justification\fP La justification du texte\&. 
+.br
+\fIhorizontal_position\fP La position horizontale du texte dans la boîte\&. 
+.br
+\fIvertical_position\fP La position verticale du texte dans la boîte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_va (int x, int y, const char * text, \fBMLV_Color\fP color, va_list pile)"
+
+.PP
+Imprime un texte donné à une position et une couleur données\&. Cette fonction est équivalente à la fonction \fBMLV_draw_text()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP Coordonnée en X du coin Nord-Ouest du texte 
+.br
+\fIy\fP Coordonnée en Y du coin Nord-Ouest du texte 
+.br
+\fItext\fP texte à afficher 
+.br
+\fIcolor\fP couleur du tracé 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_with_font_on_image_va (int x, int y, const char * text, const \fBMLV_Font\fP * font, \fBMLV_Color\fP color, \fBMLV_Image\fP * image, va_list pile)"
+
+.PP
+Écrit du texte sur une image en utilisant une couleur et une fonte de caractères données en paramètres\&. Cette fonction est équivalente à la fonction \fBMLV_draw_text_with_font_on_image()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text_with_font_on_image()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du coin Nord-Ouest du texte\&. 
+.br
+\fIy\fP La coordonnée en Y du coin Nord-Ouest du texte\&. 
+.br
+\fItext\fP Le texte à afficher\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour dessiner le texte\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIimage\fP L'image sur laquel le texte doit être ecrit\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_draw_text_with_font_va (int x, int y, const char * text, const \fBMLV_Font\fP * font, \fBMLV_Color\fP color, va_list pile)"
+
+.PP
+Écrit du texte sur l'écran en utilisant une couleur et une fonte de caractères données en paramètres\&. Cette fonction est équivalente à la fonction MLV_draw_text_wih_font() à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_draw_text_with_font()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fIx\fP La coordonnée en X du coin Nord-Ouest du texte\&. 
+.br
+\fIy\fP La coordonnée en Y du coin Nord-Ouest du texte\&. 
+.br
+\fItext\fP Le texte à afficher\&. 
+.br
+\fIcolor\fP La couleur du tracé\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour dessiner le texte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "int MLV_get_size_of_adapted_text_box_va (const char * message, int sizeInterligne, int * result_width, int * result_height, va_list pile)"
+
+.PP
+Cette fonction calcule la taille de la boîte de texte qui serait obtenue si vous utilisez la fonction : \fBMLV_draw_adapted_text_box()\fP\&. Cette fonction est équivalente à la fonction \fBMLV_get_size_of_adapted_text_box()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_get_size_of_adapted_text_box()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fImessage\fP Le texte qui sera affiché lorsque vous utiliserez \fBMLV_draw_adapted_text_box()\fP\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fIresult_width\fP La largeur de la boîte que vous obtiendrez en utilisant \fBMLV_draw_adapted_text_box()\fP\&. 
+.br
+\fIresult_height\fP La hauteur de la boîte que vous obtiendrez en utilisant \fBMLV_draw_adapted_text_box()\fP\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+La fonction renvoie la taille de la boîte de texte\&. 
+.RE
+.PP
+
+.SS "int MLV_get_size_of_adapted_text_box_with_font_va (const char * message, const \fBMLV_Font\fP * font, int sizeInterligne, int * result_width, int * result_height, va_list pile)"
+
+.PP
+Cette fonction calcule la taille de la boîte de texte qui serait obtenue si vous utilisez la fonction : \fBMLV_draw_adapted_text_box_with_font()\fP\&. Cette fonction est équivalente à la fonction \fBMLV_get_size_of_adapted_text_box_with_font()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_get_size_of_adapted_text_box_with_font()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fImessage\fP Le texte qui sera affiché lorsque vous utiliserez \fBMLV_draw_adapted_text_box_with_font()\fP\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour dessiner le texte\&. 
+.br
+\fIsizeInterligne\fP La taille de l'interligne\&. 
+.br
+\fIresult_width\fP La largeur de la boîte que vous obtiendrez en utilisant \fBMLV_draw_adapted_text_box_with_font()\fP\&. 
+.br
+\fIresult_height\fP La hauteur de la boîte que vous obtiendrez en utilisant \fBMLV_draw_adapted_text_box_with_font()\fP\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+La fonction renvoie la taille de la boîte de texte\&. 
+.RE
+.PP
+
+.SS "void MLV_get_size_of_text_va (const char * text, int * width, int * height, va_list pile)"
+
+.PP
+Cette fonction calcule la taille du texte qui sera affiché sur l'écran à l'aide de la fonction \fBMLV_draw_text()\fP\&. Cette fonction est équivalente à la fonction \fBMLV_get_size_of_text()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_get_size_of_text()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fItext\fP Le texte qui doit être affiché\&. 
+.br
+\fIwidth\fP La largeur du texte\&. 
+.br
+\fIheight\fP La hauteur du texte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SS "void MLV_get_size_of_text_with_font_va (const char * text, int * width, int * height, const \fBMLV_Font\fP * font, va_list pile)"
+
+.PP
+Cette fonction calcule la taille du texte qui sera affiché sur l'écran à l'aide de la fonction \fBMLV_draw_text_with_font()\fP\&. Cette fonction est équivalente à la fonction \fBMLV_get_size_of_text_with_font()\fP à l'exception qu'elle est apellée avec un paramètre de type va_list à la place d'une nombre variable d'arguments\&.
+
+.PP
+Pour plus de détail sur la fonction, aller voir la documentation de \fBMLV_get_size_of_text_with_font()\fP
+
+.PP
+\fBParamètres\fP
+.RS 4
+\fItext\fP Le texte qui doit être affiché\&. 
+.br
+\fIwidth\fP La largeur du texte\&. 
+.br
+\fIheight\fP La hauteur du texte\&. 
+.br
+\fIfont\fP La fonte de caractères utilisée pour afficher le texte\&. 
+.br
+\fIpile\fP Une liste d'arguments supplémentaires 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour MLV-2\&.0\&.2 à partir du code source\&.
