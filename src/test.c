@@ -1,4 +1,5 @@
 #include <MLV/MLV_all.h>
+#include <stdio.h>
 int main(void)
 {
     MLV_create_window("test", "test", 640, 480);

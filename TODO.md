@@ -1,4 +1,4 @@
-## Etape
+## Etapes
 -  Map
 - Joueur 
 - Déplacements
