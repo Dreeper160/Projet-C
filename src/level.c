@@ -1,4 +1,5 @@
 #include "constante.h"
+#include "level.h"
 
 int map[LIGNES][COLONNES] = {
                             {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
