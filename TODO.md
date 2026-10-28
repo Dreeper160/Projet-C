@@ -32,7 +32,7 @@ L'objectif : sortir un Bomberman jouable, robuste et sans code magique. Chacun d
 
 ## Phase 0 - Fondations
 
-* **Lot 1 (Membre A) : Setup et structures du plateau**
+*~~Lot 1 (Membre A) : Setup et structures du plateau~~
 
   * Initialisation du repo Git partagé, `.gitignore` (binaires, `.o`).
 
