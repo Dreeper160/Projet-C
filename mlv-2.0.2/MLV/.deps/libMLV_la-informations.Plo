@@ -1,5 +1,0 @@
-libMLV_la-informations.lo: informations.c /usr/include/stdc-predef.h \
- MLV_information.h config.h
-/usr/include/stdc-predef.h:
-MLV_information.h:
-config.h:
