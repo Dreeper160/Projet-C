@@ -19,10 +19,10 @@ int map[LIGNES][COLONNES] = {{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
                              {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
                              {2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2},
                              {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}};
-                             /*matrice du plateau. Bloc représenté par des chiffres. 
-                             0 : bloc vert
-                             1 : bloc destructible
-                             2 : bloc indestructible*/
+/*matrice du plateau. Bloc représenté par des chiffres.
+0 : bloc vert
+1 : bloc destructible
+2 : bloc indestructible*/
 
 void afficher_niveau_1()
 {
@@ -48,7 +48,6 @@ void afficher_niveau_1()
         }
     }
 }
-
 
 int main(void) /*CREER UN MAIN !!!!!!!!!!!!!!!!!!!!!!*/
 {
