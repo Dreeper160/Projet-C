@@ -5,5 +5,7 @@
 - Bloc 
 - Collision
 - BOMBE
+- Sauvegarde 
+- Menu Principal
 - Bonus Features
 - Game feel
