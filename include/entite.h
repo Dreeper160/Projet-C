@@ -1,4 +1,4 @@
-#ifndef _JOUEUR_H_
+#ifndef _ENTITE_H
 #define _JOUEUR_H_
 
 typedef struct
