@@ -1,0 +1,7 @@
+#include "niveau.h"
+
+typedef struct {
+    float x;
+    float y;
+}posJ;
+
