@@ -1,16 +1,13 @@
-#ifndef _ENTITE_H
-#define _JOUEUR_H_
+#ifndef _ENTITE_H_
+#define _ENTITE_H_
 
-typedef struct
-{
+typedef struct{
     float x;
     float y;
-} position;
+}position;
 
-typedef struct
-{
-    int sante;
-    position postion;
-} entite;
-
+typedef struct{
+    int est_en_vie;
+    position pos;
+}entite;
 #endif
