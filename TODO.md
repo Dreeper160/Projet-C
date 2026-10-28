@@ -44,7 +44,7 @@ L'objectif : sortir un Bomberman jouable, robuste et sans code magique. Chacun d
 
   * Définition des conventions de nommage et de l'architecture des modules.
 
-* **Lot 3 (Membre C) : Build et boucle principale**
+* **Lot 3 (Ulrich) : Build et boucle principale**
 
   * Makefile strict (`-Wall -Wextra`, `-lMLV`, flag POSIX pour `clock_gettime`).
 
