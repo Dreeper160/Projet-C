@@ -1,3 +1,6 @@
 /mlv-2.0.2/
 /build/
 .vscode/
+eval.c
+eval
+.gitignore

@@ -5,7 +5,7 @@
 #define TAILLE_CASE 45
 
 int map[LIGNES][COLONNES] = {{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
-                             {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
+                             {2, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2},
                              {2, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2},
                              {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
                              {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
@@ -19,8 +19,12 @@ int map[LIGNES][COLONNES] = {{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},
                              {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},
                              {2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2},
                              {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}};
+/*matrice du plateau. Bloc représenté par des chiffres.
+0 : bloc vert
+1 : bloc destructible
+2 : bloc indestructible*/
 
-void afficher_niveau()
+void afficher_niveau_1()
 {
     int i, j, x, y;
     MLV_draw_filled_rectangle(0, 0, COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE, MLV_COLOR_GREEN);
@@ -45,7 +49,7 @@ void afficher_niveau()
     }
 }
 
-int main(void)
+int main(void) /*CREER UN MAIN !!!!!!!!!!!!!!!!!!!!!!*/
 {
     /* Largeur : 15 colonnes * 45px = 675. Hauteur : 13 lignes * 45px = 585 */
     MLV_create_window("Bomberman - Test Niveau", "Bomberman", 1920, 1080);
