@@ -4,6 +4,7 @@
 #include "level.h"
 #include "bombe.h"
 #include "menu_du_jeu.h"
+#include <MLV/MLV_all.h>
 
 int main()
 {

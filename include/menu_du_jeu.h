@@ -1,5 +1,5 @@
-#ifndef _LEVEL_H_
-#define _LEVEL_H_
+#ifndef _MENU_DU_JEU_H_
+#define _MENU_DU_JEU_H_
 #include <MLV/MLV_all.h>
 #include "constante.h"
 
