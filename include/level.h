@@ -5,6 +5,8 @@
 
 extern int map[LIGNES][COLONNES];
 
+void charger_images_niveau();
 void afficher_niveau();
+void liberer_images_niveau();
 
 #endif

@@ -12,6 +12,7 @@ int main()
     bombe bomb1;
     int continuer = 1;
     int etat_jeu = 0; /* 0 = Menu, 1 = En jeu */
+  
 
     /* Variable pour empêcher de poser 60 bombes par seconde si on maintient Espace */
     int touche_espace_pressee = 0;
@@ -21,13 +22,7 @@ int main()
     bomb1.b.est_en_vie = 0; /* La bombe n'est pas posée au démarrage */
 
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
-
-    /* Le menu doit être affiché avant la boucle de jeu. */
-    afficher_menu();
-    MLV_actualise_window();
-    interagir_menu();
-    etat_jeu = 1;
-
+    charger_images_niveau();
     /* --- BOUCLE PRINCIPALE --- */
     while (continuer)
     {
@@ -89,7 +84,7 @@ int main()
             MLV_wait_milliseconds(16);
         }
     }
-
+    liberer_images_niveau();
     MLV_free_window();
     return 0;
 }
