@@ -21,7 +21,7 @@ int main()
     bomb1.b.est_en_vie = 0; /* La bombe n'est pas posée au démarrage */
 
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
-
+    charger_images_niveau();
     /* --- BOUCLE PRINCIPALE --- */
     while (continuer)
     {
@@ -87,7 +87,7 @@ int main()
             MLV_wait_milliseconds(16);
         }
     }
-
+    liberer_images_niveau();
     MLV_free_window();
     return 0;
 }
