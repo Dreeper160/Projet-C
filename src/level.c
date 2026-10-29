@@ -52,20 +52,4 @@ void afficher_niveau()
 }
 
 
-int main() /*CREER UN MAIN !!!!!!!!!!!!!!!!!!!!!!*/
-{
-    /* Largeur : 15 colonnes * 45px = 675. Hauteur : 13 lignes * 45px = 585 */
-    MLV_create_window("Bomberman - Test Niveau", "Bomberman", 1920, 1080);
 
-    /* Appel de ta fonction pour dessiner la grille */
-    afficher_niveau();
-
-    /* Actualisation obligatoire pour afficher les dessins à l'écran */
-    MLV_actualise_window();
-
-    /* Met le programme en pause jusqu'à ce qu'on appuie sur une touche */
-    MLV_wait_keyboard_or_mouse(NULL, NULL, NULL, NULL, NULL);
-
-    MLV_free_window();
-    return 0;
-}

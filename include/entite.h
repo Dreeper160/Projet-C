@@ -1,5 +1,5 @@
 #ifndef _ENTITE_H
-#define _JOUEUR_H_
+#define _ENTITE_H_
 
 typedef struct
 {
