@@ -1,4 +1,6 @@
 /mlv-2.0.2/
 /build/
 .vscode/
+.gitignore
+/temp/
 makefile_samy
