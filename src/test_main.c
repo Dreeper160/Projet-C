@@ -23,21 +23,30 @@ int main()
 
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
     charger_images_niveau();
+
+    afficher_menu();
+    MLV_actualise_window();
+    interagir_menu();
+    etat_jeu = 1;
+
     /* --- BOUCLE PRINCIPALE --- */
     while (continuer)
     {
         if (etat_jeu == 1)
         {
             /* --- JEU --- */
-            /* Si la bombe est active, on la dessine d'abord pour que le joueur passe par-dessus */
             if (bomb1.b.est_en_vie == 1)
             {
-                afficher_bombe(bomb1);
                 bombe_expiree(&bomb1);
             }
 
             /* 1. Affichage */
             afficher_niveau();
+
+            if (bomb1.b.est_en_vie == 1)
+            {
+                afficher_bombe(bomb1);
+            }
 
             afficher_joueur(j1);
             MLV_actualise_window();
