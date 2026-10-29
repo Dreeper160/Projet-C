@@ -10,7 +10,7 @@ BUILD_DIR = build
 
 TARGET = $(BUILD_DIR)/Bomberman
 # Compilation flags
-CFLAGS =  -std=c89 -Wall -Wextra -D_POSIX_C_SOURCE=199309L
+CFLAGS =  -std=c89 -Wall -Wextra -D_POSIX_C_SOURCE=199309L -Iinclude
 
 # Libraries
 LDLIBS = -lMLV -lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lSDL_mixer -lxml2 -lglib-2.0
