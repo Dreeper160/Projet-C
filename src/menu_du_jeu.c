@@ -1,4 +1,7 @@
+#include "constante.h"
+#include "menu_du_jeu.h"
 #include <MLV/MLV_all.h>
+
 /*typedef enum etat{
     jouer = 1;
     charger = 2;
@@ -63,22 +66,4 @@ void interagir_menu(){
                         MLV_COLOR_GREEN,
                         x, y 
                 );
-}
-
- 
-
-int main(void){ /*pour test les fonctions*/
-    MLV_Keyboard_button touche;
-
-    MLV_create_window("menu - test", "test",675,675);
-
-    afficher_menu();
-    MLV_actualise_window();
-    interagir_menu();
-    MLV_actualise_window();
-    MLV_wait_keyboard( &touche, NULL, NULL );
-    if(touche == MLV_KEYBOARD_q){
-    MLV_free_window();}
-    return 0;
-
 }

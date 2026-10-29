@@ -1,0 +1,9 @@
+#ifndef _LEVEL_H_
+#define _LEVEL_H_
+#include <MLV/MLV_all.h>
+#include "constante.h"
+
+void afficher_menu();
+void interagir_menu();
+
+#endif

@@ -1,6 +1,7 @@
 #ifndef BOMBE_H
 #define BOMBE_H
 #define T_MAX 20
+#include <MLV/MLV_all.h>
 #include <time.h>
 #include "constante.h"
 #include "entite.h"
