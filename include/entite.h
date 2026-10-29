@@ -10,5 +10,9 @@ typedef struct{
 typedef struct{
     int est_en_vie;
     position pos;
+    int direction;      
+    int en_mouvement;   
+    int frame_actuelle; 
+    int vitesse_anim;
 }entite;
 #endif

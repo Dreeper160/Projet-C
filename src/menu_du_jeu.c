@@ -1,8 +1,6 @@
 #include <MLV/MLV_all.h>
 #include <stdio.h>
-
-#define NB_MAX 4
-#define INTERLIGNE 30
+#include "constante.h"
 
 typedef enum
 {

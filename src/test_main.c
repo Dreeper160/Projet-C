@@ -23,6 +23,7 @@ int main()
 
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
     charger_images_niveau();
+    charger_images_joueur();
     MLV_Font *police_bouton = MLV_load_font(FONT, 20);
     MLV_Font *police_titre = MLV_load_font(FONT, 50);
 
@@ -98,6 +99,7 @@ int main()
         }
     }
     liberer_images_niveau();
+    liberer_images_joueur();
     MLV_free_window();
     return 0;
 }
