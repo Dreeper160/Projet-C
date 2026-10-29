@@ -25,7 +25,23 @@ int main()
     /* --- BOUCLE PRINCIPALE --- */
     while (continuer)
     {
-        if (etat_jeu == 0)
+        /* 1. Affichage */
+        afficher_niveau();
+        if (bombe_j1.b.est_en_vie)
+        {
+            afficher_bombe(bombe_j1);
+            bombe_expiree(&bombe_j1);
+        }
+        afficher_joueur(j1);
+        MLV_actualise_window();
+
+        /* 2. Vérification de la touche Echap pour quitter (Non-bloquant) */
+        if (MLV_get_keyboard_state(MLV_KEYBOARD_ESCAPE) == MLV_PRESSED)
+        {
+            continuer = 0;
+        }
+        /* 3. Déplacement fluide sans cooldown */
+        if (MLV_get_keyboard_state(MLV_KEYBOARD_e) == MLV_PRESSED && (!bombe_j1.b.est_en_vie))
         {
             /* --- MENU --- */
             MLV_clear_window(MLV_COLOR_BLACK);
