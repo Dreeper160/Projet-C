@@ -1,6 +1,5 @@
 #ifndef _JOUEUR_H_
 #define _JOUEUR_H_
-#include <MLV/MLV_all.h>
 #include "entite.h"
 #include "constante.h"
 
