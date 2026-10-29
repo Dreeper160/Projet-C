@@ -1,7 +1,5 @@
 #include "joueur.h"
 #include "constante.h"
-#include "joueur.h"
-#include "constante.h"
 
 void initialiser_joueur(entite *j, int x_depart, int y_depart){
     /* On convertit la case de départ en PIXELS (le centre de la case) */

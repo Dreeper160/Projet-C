@@ -3,3 +3,4 @@
 .vscode/
 .gitignore
 /temp/
+makefile_samy
