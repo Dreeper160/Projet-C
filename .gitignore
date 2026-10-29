@@ -2,3 +2,5 @@
 /build/
 .vscode/
 .gitignore
+jeu.sh
+/tmp/
