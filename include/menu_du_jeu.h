@@ -4,6 +4,6 @@
 #include "constante.h"
 
 void afficher_menu(MLV_Font *font_titre, MLV_Font *font_boutons);
-void interagir_menu(MLV_Font *font_boutons);
+int interagir_menu(MLV_Font *font_boutons);
 
 #endif

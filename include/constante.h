@@ -3,6 +3,9 @@
 #define LIGNES 15
 #define COLONNES 15
 #define TAILLE_CASE 45
+/*ressources*/
+#define FONT "Ressources/ARCADECLASSIC.TTF"
+
 /*
  * Active l'extension POSIX.1b (1993) pour rendre visibles la fonction
  * clock_gettime() qui me permet de répucréer l'heure exacte de X chose ou action et CLOCK_MONOTONIC, qui ne font pas partie du C89 standard.

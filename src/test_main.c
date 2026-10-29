@@ -10,9 +10,9 @@ int main()
 {
     entite j1;
     bombe bomb1;
+
     int continuer = 1;
     int etat_jeu = 0; /* 0 = Menu, 1 = En jeu */
-  
 
     /* Variable pour empêcher de poser 60 bombes par seconde si on maintient Espace */
     int touche_espace_pressee = 0;
@@ -23,11 +23,15 @@ int main()
 
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
     charger_images_niveau();
+    MLV_Font *police_bouton = MLV_load_font(FONT, 20);
+    MLV_Font *police_titre = MLV_load_font(FONT, 50);
 
-    afficher_menu();
+    afficher_menu(police_titre, police_bouton);
     MLV_actualise_window();
-    interagir_menu();
-    etat_jeu = 1;
+    while (etat_jeu == 0 || etat_jeu == -1)
+    {
+        etat_jeu = interagir_menu(police_bouton);
+    }
 
     /* --- BOUCLE PRINCIPALE --- */
     while (continuer)
