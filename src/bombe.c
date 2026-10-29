@@ -1,5 +1,5 @@
-#include "MLV/MLV_all.h"
-#include "../include/bombe.h"
+#include "constante.h"
+#include "bombe.h"
 
 void afficher_bombe(bombe bombe)
 {
