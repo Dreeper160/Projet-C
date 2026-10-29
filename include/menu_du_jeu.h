@@ -3,7 +3,7 @@
 #include <MLV/MLV_all.h>
 #include "constante.h"
 
-void afficher_menu();
-void interagir_menu();
+void afficher_menu(MLV_Font *font_titre, MLV_Font *font_boutons);
+void interagir_menu(MLV_Font *font_boutons);
 
 #endif
