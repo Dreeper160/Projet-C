@@ -1,3 +1,4 @@
+#include "constante.h"
 #include "bombe.h"
 
 void afficher_bombe(bombe bombe)

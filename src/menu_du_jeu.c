@@ -1,4 +1,6 @@
-#include <MLV/MLV_all.h>
+#include "constante.h"
+#include "menu_du_jeu.h"
+
 /*typedef enum etat{
     jouer = 1;
     charger = 2;

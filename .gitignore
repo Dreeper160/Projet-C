@@ -1,6 +1,4 @@
 /mlv-2.0.2/
 /build/
 .vscode/
-.gitignore
-jeu.sh
-/tmp/
+makefile_samy
