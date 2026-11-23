@@ -23,17 +23,14 @@ void charger_images_joueur()
 void afficher_joueur(entite j)
 {
     /* dimensions d'une seule cellule d'animation du sprite */
-    int largeur = 38;
-    int hauteur = 38;
+    int largeur = 128; 
+    int hauteur = 192;
     int frame_a_dessiner;
-    /* si le joueur est à l'arrêt, on force la frame 0  */
-    if (j.en_mouvement == 1)
-    {
-        frame_a_dessiner = j.frame_actuelle;
-    }
-    else
-    {
-        frame_a_dessiner = 0;
+/* si le joueur est à l'arrêt, on force la frame 1  */
+    if (j.en_mouvement == 1) {
+    frame_a_dessiner = j.frame_actuelle; 
+    } else {
+    frame_a_dessiner = 1; 
     }
     MLV_draw_partial_image(
         sprite_joueur,
@@ -60,33 +57,33 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
     float futur_y = j->pos.y;
     float vitesse = 3.0;               /* le joueur avance de 3 pixels à chaque image */
     int rayon = (TAILLE_CASE / 2) - 4; /* le rayon physique du joueur (18 pixels) */
-    int max_frames = 4;                /* correspond au nb d'image dans le sprite */
-    int case_gauche, case_droite, case_haut, case_bas;
-    /* on réinitialise le mouvement si on ne touche à rien, il s'arrête */
+    int max_frames = 4; /* correspond au nb d'image dans le sprite */
+    int coter_gauche, coter_droite, coter_haut, coter_bas;
+    /* on réinitialise le mouvement pour que le joueur s'arrête si on ne touche à rien */
     j->en_mouvement = 0;
 
     if (touche == MLV_KEYBOARD_UP || touche == MLV_KEYBOARD_z)
     {
         futur_y = futur_y - vitesse;
-        j->direction = 3; /* Ligne 3 de l'image vaut Haut */
+        j->direction = 0; /* Ligne 0 de l'image vaut Haut */
         j->en_mouvement = 1;
     }
     else if (touche == MLV_KEYBOARD_DOWN || touche == MLV_KEYBOARD_s)
     {
         futur_y = futur_y + vitesse;
-        j->direction = 0; /* Ligne 2 de l'image vaut Bas */
+        j->direction = 1; /* Ligne 1 de l'image vaut Bas */
         j->en_mouvement = 1;
     }
     else if (touche == MLV_KEYBOARD_LEFT || touche == MLV_KEYBOARD_q)
     {
         futur_x = futur_x - vitesse;
-        j->direction = 1; /* Ligne 1 de l'image vaut gauche */
+        j->direction = 2; /* Ligne 2 de l'image vaut gauche */
         j->en_mouvement = 1;
     }
     else if (touche == MLV_KEYBOARD_RIGHT || touche == MLV_KEYBOARD_d)
     {
         futur_x = futur_x + vitesse;
-        j->direction = 2; /* Ligne 3 de l'image vaut droite */
+        j->direction = 3; /* Ligne 3 de l'image vaut droite */
         j->en_mouvement = 1;
     }
     /* gestion de l'annimation */
@@ -101,14 +98,8 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
             /* On met à jour l'heure du dernier changement d'image */
             j->vitesse_anim = temps_actuel;
             j->frame_actuelle++;
-            /* on vérifie si on se déplace horizontalement car on a que 2 images dans le sprite pour le déplacement horizontale */
-            if (j->direction == 1 || j->direction == 2)
-            {
-                max_frames = 2;
-            }
-
-            if (j->frame_actuelle >= max_frames)
-            {
+            
+            if (j->frame_actuelle >= max_frames) {
                 j->frame_actuelle = 0;
             }
         }
@@ -120,18 +111,18 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
     }
     /* on calcule où se trouveront les 4 bords du joueur en pixels
        on divise par TAILLE_CASE pour savoir dans quelles cases de la map ils tombent */
-    case_gauche = (futur_x - rayon) / TAILLE_CASE;
-    case_droite = (futur_x + rayon) / TAILLE_CASE;
-    case_haut = (futur_y - rayon) / TAILLE_CASE;
-    case_bas = (futur_y + rayon) / TAILLE_CASE;
+    coter_gauche = (futur_x - rayon) / TAILLE_CASE;
+    coter_droite = (futur_x + rayon) / TAILLE_CASE;
+    coter_haut   = (futur_y - rayon) / TAILLE_CASE;
+    coter_bas    = (futur_y + rayon) / TAILLE_CASE;
 
     /* on vérifie que les 4 coins du joueur sont bien sur de l'air (0) */
-    if (map[case_haut][case_gauche] == 0 &&
-        map[case_haut][case_droite] == 0 &&
-        map[case_bas][case_gauche] == 0 &&
-        map[case_bas][case_droite] == 0)
+    if (map[coter_haut][coter_gauche] == 0 &&
+        map[coter_haut][coter_droite] == 0 &&
+        map[coter_bas][coter_gauche] == 0 &&
+        map[coter_bas][coter_droite] == 0) 
     {
-        /* aucun mur ne touche notre cercle, on valide le mouvement ! */
+    /* on valide le mouvement si aucun mur ne touche notre cercle */
         j->pos.x = futur_x;
         j->pos.y = futur_y;
     }
