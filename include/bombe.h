@@ -1,7 +1,9 @@
 #ifndef BOMBE_H
 #define BOMBE_H
 
-#define T_MAX 2 /* Temps maximal associé à une bombe*/
+#define T_MAX 2.0 /* Temps avant explosion de la bombe */
+#define FRAMES_MECHE 6
+#define T_IGNITE 0.5 /* Le temps d'ignition */
 #include <MLV/MLV_all.h>
 #include <time.h>
 #include "constante.h" /* Constantes du projet*/
@@ -11,11 +13,22 @@
  * @brief Représente une Bombe
  *
  */
+
+typedef enum
+{
+    BOMBE_MECHE,
+    BOMBE_IGNITE
+} etat_bombe;
+
 typedef struct
 {
     entite b;                   /* Entité représentant la bombe*/
     int rayon;                  /* Rayon de l'explosion*/
     struct timespec temps_pose; /* Moment où la bombe a été posée*/
+    etat_bombe state;
+    struct timespec temps_explosion;
+    position position_flames;
+    int nb_flames;
 } bombe;
 
 /**
@@ -27,14 +40,14 @@ typedef struct
     entite explo;                     /* Entité représentant l'explosion*/
     struct timespec temps_apparition; /* Moment où l'explosion apparaît*/
 } explosion;
-
 /**
- * @brief Affiche une bombe à l'écran
+ * @brief Permet de charger l'image associé a la bombe si aucune image n'est trouvé la bombe aura une texture noire
  *
- * @param bombe
+ *
+ * @param chemin chemin d'acces au sprite sheet de la bombe
  */
-void afficher_bombe(bombe bombe);
-
+void charger_images_bombe(void);
+void liberer_images_bombe(void);
 /**
  * @brief  Place une bombe à partir de la position de l'entité j
  *
@@ -49,4 +62,11 @@ void placer_bombe(bombe *bom, entite j);
  * @return int
  */
 int bombe_expiree(bombe *bom);
+/**
+ * @brief Affiche une bombe à l'écran
+ *
+ * @param bombe
+ */
+void afficher_bombe(bombe bombe);
+
 #endif

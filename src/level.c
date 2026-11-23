@@ -45,17 +45,20 @@ void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs){
             x = j * TAILLE_CASE;
             y = i * TAILLE_CASE;
 
-            if (map[i][j] == 0){
+            if (map[i][j] == 0)
+            {
                 /* Bloc de sol */
                 if (imgs.sol != NULL) MLV_draw_image(imgs.sol, x, y);
                 else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PURPLE);
             }
-            if (map[i][j] == 1){
+            if (map[i][j] == 1)
+            {
                 /* Bloc cassable */
                 if (imgs.mur_cassable != NULL) MLV_draw_image(imgs.mur_cassable, x, y);
                 else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_RED);
             }
-            if (map[i][j] == 2){
+            if (map[i][j] == 2)
+            {
                 /* Bloc incassable */
                 if (imgs.mur_incassable != NULL) MLV_draw_image(imgs.mur_incassable, x, y);
                 else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_GREY);

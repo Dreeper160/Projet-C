@@ -19,7 +19,29 @@ int main(void) {
 
     /* 1. Création de la fenêtre (toujours avant les chargements MLV) */
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
-    MLV_change_frame_rate(60);
+    charger_images_niveau();
+    charger_images_joueur();
+    charger_images_bombe();
+    MLV_Font *police_bouton = MLV_load_font(FONT, 20);
+    MLV_Font *police_titre = MLV_load_font(FONT, 50);
+
+    afficher_menu(police_titre, police_bouton);
+    MLV_actualise_window();
+    while (etat_jeu == 0 || etat_jeu == -1)
+    {
+        etat_jeu = interagir_menu(police_bouton);
+    }
+
+    /* --- BOUCLE PRINCIPALE --- */
+    while (continuer)
+    {
+        if (etat_jeu == 1)
+        {
+            /* --- JEU --- */
+            if (bomb1.b.est_en_vie == 1)
+            {
+                bombe_expiree(&bomb1);
+            }
 
     /* 2. Chargement des ressources */
     charger_images_niveau(&imgs);
@@ -69,6 +91,7 @@ int main(void) {
 
     /* 5. Libération propre de la mémoire */
     liberer_images_joueur();
+    liberer_images_bombe();
     liberer_images_niveau(&imgs);
     MLV_free_window();
 
