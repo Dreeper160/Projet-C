@@ -1,15 +1,6 @@
 #include <MLV/MLV_all.h>
-#include <stdio.h>
 #include "constante.h"
-
-typedef enum
-{
-    quitter = 0,
-    jouer = 1,
-    charger = 2,
-    options = 3,
-    menu_pause = 4
-} Etat;
+#include "menu_du_jeu.h"
 
 /* Positions et textes des boutons (communs à l'affichage et au clic) */
 static const int pos_x[NB_MAX] = {280, 220, 269, 0};
