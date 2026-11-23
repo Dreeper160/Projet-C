@@ -17,20 +17,31 @@ void initialiser_joueur(entite *j, int x_depart, int y_depart)
 
 void charger_images_joueur()
 {
-    sprite_joueur = MLV_load_image("Ressources/Map/sprite_frisk.png");
-    MLV_resize_image(sprite_joueur, 150, 150);
+    sprite_joueur = MLV_load_image("Ressources/frisk_mlv.png");
 }
 void afficher_joueur(entite j)
 {
     /* dimensions d'une seule cellule d'animation du sprite */
-    int largeur = 128; 
+    int largeur = 128;
     int hauteur = 192;
     int frame_a_dessiner;
-/* si le joueur est à l'arrêt, on force la frame 1  */
-    if (j.en_mouvement == 1) {
-    frame_a_dessiner = j.frame_actuelle; 
-    } else {
-    frame_a_dessiner = 1; 
+    if (sprite_joueur == NULL)
+    {
+        MLV_draw_filled_circle(
+            (int)j.pos.x,
+            (int)j.pos.y,
+            TAILLE_CASE / 2 - 4,
+            MLV_COLOR_GREEN);
+        return;
+    }
+    /* si le joueur est à l'arrêt, on force la frame 1  */
+    if (j.en_mouvement == 1)
+    {
+        frame_a_dessiner = j.frame_actuelle;
+    }
+    else
+    {
+        frame_a_dessiner = 1;
     }
     MLV_draw_partial_image(
         sprite_joueur,
@@ -57,7 +68,7 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
     float futur_y = j->pos.y;
     float vitesse = 3.0;               /* le joueur avance de 3 pixels à chaque image */
     int rayon = (TAILLE_CASE / 2) - 4; /* le rayon physique du joueur (18 pixels) */
-    int max_frames = 4; /* correspond au nb d'image dans le sprite */
+    int max_frames = 4;                /* correspond au nb d'image dans le sprite */
     int coter_gauche, coter_droite, coter_haut, coter_bas;
     /* on réinitialise le mouvement pour que le joueur s'arrête si on ne touche à rien */
     j->en_mouvement = 0;
@@ -98,8 +109,9 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
             /* On met à jour l'heure du dernier changement d'image */
             j->vitesse_anim = temps_actuel;
             j->frame_actuelle++;
-            
-            if (j->frame_actuelle >= max_frames) {
+
+            if (j->frame_actuelle >= max_frames)
+            {
                 j->frame_actuelle = 0;
             }
         }
@@ -113,16 +125,16 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
        on divise par TAILLE_CASE pour savoir dans quelles cases de la map ils tombent */
     coter_gauche = (futur_x - rayon) / TAILLE_CASE;
     coter_droite = (futur_x + rayon) / TAILLE_CASE;
-    coter_haut   = (futur_y - rayon) / TAILLE_CASE;
-    coter_bas    = (futur_y + rayon) / TAILLE_CASE;
+    coter_haut = (futur_y - rayon) / TAILLE_CASE;
+    coter_bas = (futur_y + rayon) / TAILLE_CASE;
 
     /* on vérifie que les 4 coins du joueur sont bien sur de l'air (0) */
     if (map[coter_haut][coter_gauche] == 0 &&
         map[coter_haut][coter_droite] == 0 &&
         map[coter_bas][coter_gauche] == 0 &&
-        map[coter_bas][coter_droite] == 0) 
+        map[coter_bas][coter_droite] == 0)
     {
-    /* on valide le mouvement si aucun mur ne touche notre cercle */
+        /* on valide le mouvement si aucun mur ne touche notre cercle */
         j->pos.x = futur_x;
         j->pos.y = futur_y;
     }
