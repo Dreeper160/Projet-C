@@ -115,6 +115,20 @@ int main(void) {
 
         /* Deplacement du joueur */
         deplacer_joueur(&joueur, touche, map);
+        if (bombe_joueur.b.est_en_vie == 1) {
+            bombe_expiree(&bombe_joueur);
+        }
+
+        if (MLV_get_keyboard_state(MLV_KEYBOARD_e) == MLV_PRESSED) {
+            if (touche_bombe_pressee == 0 &&
+                bombe_joueur.b.est_en_vie == 0) {
+                placer_bombe(&bombe_joueur, joueur);
+                touche_bombe_pressee = 1;
+            }
+        }
+        else {
+            touche_bombe_pressee = 0;
+        }
 
         /* Gestion de la bombe (touche E) */
         if (bombe_joueur.b.est_en_vie == 1) {
