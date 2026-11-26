@@ -2,12 +2,15 @@
 #include "bombe.h"
 
 static MLV_Image *sprite_bombe = NULL;
+static MLV_Image *sprite_bombe_ignite = NULL;
 
 void charger_images_bombe(void)
 {
-    sprite_bombe = MLV_load_image("Ressources/bomb/Bombe2-Sheet.png");
+    sprite_bombe = MLV_load_image("Ressources/bomb/bombe_normal-Sheet.png");
     if (sprite_bombe != NULL)
         MLV_resize_image(sprite_bombe, 270, 45);
+
+    sprite_bombe_ignite = MLV_load_image("Ressources/bomb/bombe_normal_ignite-Sheet.png");
 }
 
 void liberer_images_bombe(void)
@@ -16,6 +19,11 @@ void liberer_images_bombe(void)
     {
         MLV_free_image(sprite_bombe);
         sprite_bombe = NULL;
+    }
+    if (sprite_bombe_ignite != NULL)
+    {
+        MLV_free_image(sprite_bombe_ignite);
+        sprite_bombe_ignite = NULL;
     }
 }
 
@@ -37,6 +45,23 @@ void afficher_bombe(bombe bombe)
             (maintenant.tv_sec - bombe.temps_explosion.tv_sec) + (maintenant.tv_nsec - bombe.temps_explosion.tv_nsec) / 1e9;
         if (secondes_ignite < 0.0)
             secondes_ignite = 0.0;
+
+        if (sprite_bombe_ignite != NULL)
+        {
+            frame = (int)(secondes_ignite / T_IGNITE * FRAMES_IGNITE);
+            if (frame >= FRAMES_IGNITE)
+                frame = FRAMES_IGNITE - 1;
+
+            MLV_draw_partial_image(
+                sprite_bombe_ignite,
+                frame * 45,
+                0,
+                45,
+                45,
+                centre_x - 45 / 2,
+                centre_y - 45 / 2);
+            return;
+        }
 
         rayon = (int)(10.0 + (secondes_ignite / T_IGNITE) * (TAILLE_CASE / 2));
         if (rayon > TAILLE_CASE)
@@ -71,7 +96,7 @@ void afficher_bombe(bombe bombe)
 
     /*
      * Répartit toutes les frames sur la durée totale de la bombe.
-     * Avec 6 frames et T_MAX = 2 secondes, chaque frame dure environ 333 ms.
+     * Avec 6 frames et T_MAX = 1 secondes, chaque frame dure environ 166 ms.
      */
     frame = (int)(secondes / T_MAX * FRAMES_MECHE);
     if (frame >= FRAMES_MECHE)

@@ -1,9 +1,10 @@
 #ifndef BOMBE_H
 #define BOMBE_H
 #define RAYON_BOMBE_BASE 1
-#define T_MAX 2.0 /* Temps avant explosion de la bombe */
+#define T_MAX 0.8 /* Temps avant explosion de la bombe */
 #define FRAMES_MECHE 6
-#define T_IGNITE 0.5 /* Le temps d'ignition */
+#define FRAMES_IGNITE 5
+#define T_IGNITE 0.250 /* Le temps d'ignition */
 #include <MLV/MLV_all.h>
 #include <time.h>
 #include "constante.h" /* Constantes du projet*/

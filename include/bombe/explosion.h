@@ -1,6 +1,6 @@
 #ifndef _EXPLOSION_H
 #define _EXPLOSION_H
-#define DUREE_EXPLOSION 1.0 /** Durée d'affichage, en secondes. */
+#define DUREE_EXPLOSION 0.5 /** Durée d'affichage, en secondes. */
 #include "entite.h"
 #include <time.h>
 #include "bombe.h"
