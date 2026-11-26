@@ -25,24 +25,21 @@ void rempl_lvl_1(int map[LIGNES][COLONNES])
         for (j = 0; j < COLONNES; j++)
             map[i][j] = nv[i][j];
     }
-};
-/*matrice du plateau. Bloc représenté par des chiffres.
-0 : bloc vert
-1 : bloc destructible
-2 : bloc indestructible*/
+}
+                             /*matrice du plateau. Bloc représenté par des chiffres. 
+                             0 : bloc vert
+                             1 : bloc destructible
+                             2 : bloc indestructible*/
 void charger_images_niveau(Images_niveau *imgs)
 {
     imgs->sol = MLV_load_image("Ressources/Map/undertale_soil.png");
     imgs->mur_cassable = MLV_load_image("Ressources/Map/undertale_leaf.png");
     imgs->mur_incassable = MLV_load_image("Ressources/Map/undertale_wall.png");
 
-    if (imgs->sol != NULL)
-        MLV_resize_image(imgs->sol, TAILLE_CASE, TAILLE_CASE);
-    if (imgs->mur_cassable != NULL)
-        MLV_resize_image(imgs->mur_cassable, TAILLE_CASE, TAILLE_CASE);
-    if (imgs->mur_incassable != NULL)
-        MLV_resize_image(imgs->mur_incassable, TAILLE_CASE, TAILLE_CASE);
-};
+    if (imgs->sol != NULL) MLV_resize_image(imgs->sol, TAILLE_CASE, TAILLE_CASE);
+    if (imgs->mur_cassable != NULL) MLV_resize_image(imgs->mur_cassable, TAILLE_CASE, TAILLE_CASE);
+    if (imgs->mur_incassable != NULL) MLV_resize_image(imgs->mur_incassable, TAILLE_CASE, TAILLE_CASE);
+}
 
 void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs)
 {
@@ -59,16 +56,13 @@ void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs)
                 /* Bloc de sol */
                 if (imgs.sol != NULL)
                     MLV_draw_image(imgs.sol, x, y);
-                else
-                    MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PURPLE);
+                else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PURPLE);
             }
             if (map[i][j] == 1)
             {
                 /* Bloc cassable */
-                if (imgs.mur_cassable != NULL)
-                    MLV_draw_image(imgs.mur_cassable, x, y);
-                else
-                    MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_RED);
+                if (imgs.mur_cassable != NULL)MLV_draw_image(imgs.mur_cassable, x, y);
+                else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_RED);
             }
             if (map[i][j] == 2)
             {
@@ -82,15 +76,11 @@ void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs)
     }
 }
 
-void liberer_images_niveau(Images_niveau *imgs)
-{
-    if (imgs->sol != NULL)
-        MLV_free_image(imgs->sol);
-    if (imgs->mur_cassable != NULL)
-        MLV_free_image(imgs->mur_cassable);
-    if (imgs->mur_incassable != NULL)
-        MLV_free_image(imgs->mur_incassable);
-};
+void liberer_images_niveau(Images_niveau *imgs){
+    if (imgs->sol != NULL)  MLV_free_image(imgs->sol);
+    if (imgs->mur_cassable != NULL) MLV_free_image(imgs->mur_cassable);
+    if (imgs->mur_incassable != NULL)    MLV_free_image(imgs->mur_incassable);
+}
 
 void rempl_lvl_rand(int map[LIGNES][COLONNES])
 {
@@ -104,5 +94,4 @@ void rempl_lvl_rand(int map[LIGNES][COLONNES])
                 map[i][j] = rand() % 2;
             }
         }
-    }
-};
+}
