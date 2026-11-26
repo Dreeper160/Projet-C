@@ -17,7 +17,7 @@ void initialiser_joueur(entite *j, int x_depart, int y_depart)
 
 void charger_images_joueur()
 {
-    sprite_joueur = MLV_load_image("Ressources/frisk_mlv.png");
+    sprite_joueur = MLV_load_image("Ressources/friskmlv.png");
 }
 void afficher_joueur(entite j)
 {

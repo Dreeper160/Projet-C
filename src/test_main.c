@@ -7,8 +7,10 @@
 #include "joueur.h"
 #include "bombe.h"
 #include "menu_du_jeu.h"
+#include "explosion.h"
 
-int main(void) {
+int main(void)
+{
     /* Déclarations en haut de bloc (norme C89) */
     int map[LIGNES][COLONNES];
     Images_niveau imgs;
@@ -17,9 +19,14 @@ int main(void) {
     int quitter = 0;
     int touche_bombe_pressee = 0;
     int etat_jeu = 0;
+    explosion explosion_joueur;
     MLV_Keyboard_button touche;
     MLV_Font *police_bouton;
     MLV_Font *police_titre;
+
+    bombe_joueur.rayon = RAYON_BOMBE_BASE;
+    explosion_joueur.active = 0;
+    explosion_joueur.nb_cases = 0;
 
     /* Initialisation de l'aléatoire pour rempl_lvl_rand */
     srand((unsigned int)time(NULL));
@@ -31,7 +38,8 @@ int main(void) {
     police_bouton = MLV_load_font(FONT, 20);
     police_titre = MLV_load_font(FONT, 50);
 
-    if (police_bouton == NULL || police_titre == NULL) {
+    if (police_bouton == NULL || police_titre == NULL)
+    {
         liberer_images_joueur();
         liberer_images_bombe();
         MLV_free_window();
@@ -40,10 +48,12 @@ int main(void) {
 
     afficher_menu(police_titre, police_bouton);
     MLV_actualise_window();
-    while (etat_jeu == 0 || etat_jeu == -1) {
+    while (etat_jeu == 0 || etat_jeu == -1)
+    {
         etat_jeu = interagir_menu(police_bouton);
     }
-    if (etat_jeu == quitter) {
+    if (etat_jeu == quitter)
+    {
         liberer_images_joueur();
         liberer_images_bombe();
         MLV_free_font(police_bouton);
@@ -63,50 +73,66 @@ int main(void) {
     bombe_joueur.state = BOMBE_MECHE;
 
     /* 4. Boucle principale */
-    while (!quitter) {
+    while (!quitter)
+    {
         touche = MLV_KEYBOARD_NONE;
 
-        if (MLV_get_keyboard_state(MLV_KEYBOARD_ESCAPE) == MLV_PRESSED) {
+        if (MLV_get_keyboard_state(MLV_KEYBOARD_ESCAPE) == MLV_PRESSED)
+        {
             quitter = 1;
         }
         else if (MLV_get_keyboard_state(MLV_KEYBOARD_UP) == MLV_PRESSED ||
-                 MLV_get_keyboard_state(MLV_KEYBOARD_z) == MLV_PRESSED) {
+                 MLV_get_keyboard_state(MLV_KEYBOARD_z) == MLV_PRESSED)
+        {
             touche = MLV_KEYBOARD_UP;
         }
         else if (MLV_get_keyboard_state(MLV_KEYBOARD_DOWN) == MLV_PRESSED ||
-                 MLV_get_keyboard_state(MLV_KEYBOARD_s) == MLV_PRESSED) {
+                 MLV_get_keyboard_state(MLV_KEYBOARD_s) == MLV_PRESSED)
+        {
             touche = MLV_KEYBOARD_DOWN;
         }
         else if (MLV_get_keyboard_state(MLV_KEYBOARD_LEFT) == MLV_PRESSED ||
-                 MLV_get_keyboard_state(MLV_KEYBOARD_q) == MLV_PRESSED) {
+                 MLV_get_keyboard_state(MLV_KEYBOARD_q) == MLV_PRESSED)
+        {
             touche = MLV_KEYBOARD_LEFT;
         }
         else if (MLV_get_keyboard_state(MLV_KEYBOARD_RIGHT) == MLV_PRESSED ||
-                 MLV_get_keyboard_state(MLV_KEYBOARD_d) == MLV_PRESSED) {
+                 MLV_get_keyboard_state(MLV_KEYBOARD_d) == MLV_PRESSED)
+        {
             touche = MLV_KEYBOARD_RIGHT;
         }
 
         /* Mise à jour logique */
         deplacer_joueur(&joueur, touche, map);
-        if (bombe_joueur.b.est_en_vie == 1) {
-            bombe_expiree(&bombe_joueur);
+        if (bombe_joueur.b.est_en_vie == 1 &&
+            bombe_expiree(&bombe_joueur) == 1)
+        {
+            executer_explosion(&explosion_joueur, &bombe_joueur, map);
         }
+        actualiser_explosion(&explosion_joueur);
+        if (joueur_touche_explosion(&explosion_joueur, &joueur))
+            joueur.est_en_vie = 0;
 
-        if (MLV_get_keyboard_state(MLV_KEYBOARD_e) == MLV_PRESSED) {
+        if (MLV_get_keyboard_state(MLV_KEYBOARD_e) == MLV_PRESSED)
+        {
             if (touche_bombe_pressee == 0 &&
-                bombe_joueur.b.est_en_vie == 0) {
+                bombe_joueur.b.est_en_vie == 0)
+            {
                 placer_bombe(&bombe_joueur, joueur);
                 touche_bombe_pressee = 1;
             }
         }
-        else {
+        else
+        {
             touche_bombe_pressee = 0;
         }
 
         /* Rendu graphique */
         MLV_clear_window(MLV_COLOR_BLACK);
         afficher_niveau(map, imgs);
-        if (bombe_joueur.b.est_en_vie == 1) {
+        afficher_explosion(&explosion_joueur);
+        if (bombe_joueur.b.est_en_vie == 1)
+        {
             afficher_bombe(bombe_joueur);
         }
         afficher_joueur(joueur);
