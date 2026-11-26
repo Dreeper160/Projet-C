@@ -55,7 +55,8 @@ void afficher_joueur(entite j, MLV_Image *sprite_joueur) {
     }
 }
 
-void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLONNES]){
+void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLONNES])
+{
     float futur_x = j->pos.x;
     float futur_y = j->pos.y;
     float vitesse = 3.0; /* le joueur avance de 3 pixels à chaque image */
@@ -67,46 +68,55 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
     /* on réinitialise le mouvement pour que le joueur s'arrête si on ne touche à rien */
     j->en_mouvement = 0;
 
-    if (touche == MLV_KEYBOARD_UP || touche == MLV_KEYBOARD_z) {
+    if (touche == MLV_KEYBOARD_UP || touche == MLV_KEYBOARD_z)
+    {
         futur_y = futur_y - vitesse;
         j->direction = 0; /* Ligne 0 de l'image vaut Haut */
         j->en_mouvement = 1;
     }
-    else if (touche == MLV_KEYBOARD_DOWN || touche == MLV_KEYBOARD_s) {
+    else if (touche == MLV_KEYBOARD_DOWN || touche == MLV_KEYBOARD_s)
+    {
         futur_y = futur_y + vitesse;
         j->direction = 1; /* Ligne 1 de l'image vaut Bas */
         j->en_mouvement = 1;
     }
-    else if (touche == MLV_KEYBOARD_LEFT || touche == MLV_KEYBOARD_q) {
+    else if (touche == MLV_KEYBOARD_LEFT || touche == MLV_KEYBOARD_q)
+    {
         futur_x = futur_x - vitesse;
         j->direction = 2; /* Ligne 2 de l'image vaut gauche */
         j->en_mouvement = 1;
     }
-    else if (touche == MLV_KEYBOARD_RIGHT || touche == MLV_KEYBOARD_d) {
+    else if (touche == MLV_KEYBOARD_RIGHT || touche == MLV_KEYBOARD_d)
+    {
         futur_x = futur_x + vitesse;
         j->direction = 3; /* Ligne 3 de l'image vaut droite */
         j->en_mouvement = 1;
     }
     /* gestion de l'annimation */
-    if (j->en_mouvement == 1) {
+    if (j->en_mouvement == 1)
+    {
         int temps_actuel = MLV_get_time();
-        
+
         /* On soustrait l'heure actuelle à l'ancienne heure pour voir le temps écoulé pour ne pas dépendre du nb de fps
            le temps 200ms est choisit arbitrairement pour avoir une animation fluide */
-        if (temps_actuel - j->vitesse_anim >= 200) {  
+        if (temps_actuel - j->vitesse_anim >= 200)
+        {
             /* On met à jour l'heure du dernier changement d'image */
-            j->vitesse_anim = temps_actuel; 
+            j->vitesse_anim = temps_actuel;
             j->frame_actuelle++;
-            
-            if (j->frame_actuelle >= max_frames) {
+
+            if (j->frame_actuelle >= max_frames)
+            {
                 j->frame_actuelle = 0;
             }
         }
-    } else {
+    }
+    else
+    {
         /* on garde le temps actuelle si le joueur est à l'arret pour ne pas faire bugger l'annimation */
         j->vitesse_anim = MLV_get_time();
     }
-    /* on calcule où se trouveront les 4 bords du joueur en pixels 
+    /* on calcule où se trouveront les 4 bords du joueur en pixels
        on divise par TAILLE_CASE pour savoir dans quelles cases de la map ils tombent */
     coter_gauche = (futur_x - rayon_y) / TAILLE_CASE;
     coter_droite = (futur_x + rayon_y) / TAILLE_CASE;
@@ -117,9 +127,9 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
     if (map[coter_haut][coter_gauche] == 0 &&
         map[coter_haut][coter_droite] == 0 &&
         map[coter_bas][coter_gauche] == 0 &&
-        map[coter_bas][coter_droite] == 0) 
+        map[coter_bas][coter_droite] == 0)
     {
-    /* on valide le mouvement si aucun mur ne touche notre cercle */
+        /* on valide le mouvement si aucun mur ne touche notre cercle */
         j->pos.x = futur_x;
         j->pos.y = futur_y;
     }
