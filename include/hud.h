@@ -2,6 +2,4 @@
 #define _HUD_H_
 #include "constante.h"
 
-
-
 #endif

@@ -23,7 +23,7 @@ void rempl_lvl_1(int map[LIGNES][COLONNES]){
     for (i = 0; i < LIGNES; i++){
         for (j = 0; j < COLONNES; j++) map[i][j] = nv[i][j];
     }
-};
+}
                              /*matrice du plateau. Bloc représenté par des chiffres. 
                              0 : bloc vert
                              1 : bloc destructible
@@ -36,7 +36,7 @@ void charger_images_niveau(Images_niveau *imgs) {
     if (imgs->sol != NULL) MLV_resize_image(imgs->sol, TAILLE_CASE, TAILLE_CASE);
     if (imgs->mur_cassable != NULL) MLV_resize_image(imgs->mur_cassable, TAILLE_CASE, TAILLE_CASE);
     if (imgs->mur_incassable != NULL) MLV_resize_image(imgs->mur_incassable, TAILLE_CASE, TAILLE_CASE);
-};                  
+}                 
 
 void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs){
     int i, j, x, y;
@@ -68,7 +68,7 @@ void liberer_images_niveau(Images_niveau *imgs){
     if (imgs->sol != NULL)  MLV_free_image(imgs->sol);
     if (imgs->mur_cassable != NULL) MLV_free_image(imgs->mur_cassable);
     if (imgs->mur_incassable != NULL)    MLV_free_image(imgs->mur_incassable);
-};
+}
 
 void rempl_lvl_rand(int map[LIGNES][COLONNES]){
     int i, j;
@@ -80,4 +80,4 @@ void rempl_lvl_rand(int map[LIGNES][COLONNES]){
                 }
             }
         }
-};
+}
