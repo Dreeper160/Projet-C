@@ -48,7 +48,7 @@ void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs){
             if (map[i][j] == 0){
                 /* Bloc de sol */
                 if (imgs.sol != NULL) MLV_draw_image(imgs.sol, x, y);
-                else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PURPLE);
+                else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PINK);
             }
             if (map[i][j] == 1){
                 /* Bloc cassable */
@@ -58,7 +58,7 @@ void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs){
             if (map[i][j] == 2){
                 /* Bloc incassable */
                 if (imgs.mur_incassable != NULL) MLV_draw_image(imgs.mur_incassable, x, y);
-                else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_GREY);
+                else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PURPLE);
             }
         }
     }

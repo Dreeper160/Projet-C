@@ -14,6 +14,7 @@
 int main(void) {
     int map[LIGNES][COLONNES];
     Images_niveau imgs;
+    MLV_Image *sprite_joueur = NULL;
     entite joueur;
     bombe bombe_joueur;
     int fin_jeu = 0;
@@ -38,7 +39,7 @@ int main(void) {
     MLV_change_frame_rate(60);
 
     charger_images_niveau(&imgs);
-    charger_images_joueur();
+    charger_images_joueur(&sprite_joueur);
     charger_images_bombe();
     police_bouton = MLV_load_font(FONT, 20);
     police_titre = MLV_load_font(FONT, 50);
@@ -47,7 +48,7 @@ int main(void) {
         fprintf(stderr, "Erreur : impossible de charger la police (%s).\n", FONT);
         if (police_bouton != NULL) MLV_free_font(police_bouton);
         if (police_titre != NULL) MLV_free_font(police_titre);
-        liberer_images_joueur();
+        liberer_images_joueur(sprite_joueur);
         liberer_images_bombe();
         liberer_images_niveau(&imgs);
         MLV_free_window();
@@ -219,7 +220,7 @@ int main(void) {
         if (bombe_joueur.b.est_en_vie == 1) {
             afficher_bombe(bombe_joueur);
         }
-        afficher_joueur(joueur);
+        afficher_joueur(joueur, sprite_joueur);
 
         if (victoire_affichee) {
             MLV_draw_text_with_font(200, 20, "VICTOIRE !", police_titre, MLV_COLOR_YELLOW);
@@ -230,7 +231,7 @@ int main(void) {
     }
 
     /* 4. Liberation de la memoire */
-    liberer_images_joueur();
+    liberer_images_joueur(sprite_joueur);
     liberer_images_bombe();
     liberer_images_niveau(&imgs);
     MLV_free_font(police_bouton);
@@ -239,4 +240,3 @@ int main(void) {
 
     return 0;
 }
-
