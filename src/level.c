@@ -95,3 +95,4 @@ void rempl_lvl_rand(int map[LIGNES][COLONNES])
             }
         }
 }
+}
