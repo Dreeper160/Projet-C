@@ -26,7 +26,7 @@ int main(void)
     MLV_Keyboard_button touche;
     MLV_Font *police_bouton;
     MLV_Font *police_titre;
-    MLV_Music *musique_bonus;
+    MLV_Music *musique_bonus = NULL;
     int bonus_actif_precedent;
 
     bombe_joueur.rayon = RAYON_BOMBE_BASE;
@@ -78,16 +78,7 @@ int main(void)
     musique_bonus = MLV_load_music("Ressources/sounds/Yu-Peng_Chen_HOYO-MiX_-_Let_s_Go_Crimson_Knight.mp3");
     if (musique_bonus == NULL)
     {
-        fprintf(stderr, "Impossible de charger la musique du bonus.\n");
-        MLV_free_audio();
-        liberer_images_joueur();
-        liberer_images_bombe();
-        liberer_images_explosion();
-        liberer_images_trifolium();
-        MLV_free_font(police_bouton);
-        MLV_free_font(police_titre);
-        MLV_free_window();
-        return 1;
+        fprintf(stderr, "Impossible de charger la musique du bonus; la partie continue sans musique.\n");
     }
 
     /* 2. Chargement des ressources */
@@ -142,12 +133,14 @@ int main(void)
         if (bonus_actif_precedent == 1 && bonus_jeu.effet.actif == 0)
         {
             bombe_joueur.rayon = RAYON_BOMBE_BASE;
-            Mix_FadeOutMusic(4000);
+            if (musique_bonus != NULL)
+                Mix_FadeOutMusic(4000);
         }
 
         if (ramasser_trifolium(&bonus_jeu, &joueur) == 1)
         {
-            MLV_play_music(musique_bonus, 1.0, -1);
+            if (musique_bonus != NULL)
+                MLV_play_music(musique_bonus, 1.0, -1);
             bombe_joueur.rayon = RAYON_BONUS;
         }
         actualiser_explosion(&explosion_joueur);
@@ -193,8 +186,11 @@ int main(void)
     liberer_images_niveau(&imgs);
     MLV_free_font(police_bouton);
     MLV_free_font(police_titre);
-    MLV_stop_music();
-    MLV_free_music(musique_bonus);
+    if (musique_bonus != NULL)
+    {
+        MLV_stop_music();
+        MLV_free_music(musique_bonus);
+    }
     MLV_free_audio();
     MLV_free_window();
 
