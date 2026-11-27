@@ -1,10 +1,7 @@
 #include "joueur.h"
 #include "constante.h"
 
-static MLV_Image *sprite_joueur = NULL;
-
-void initialiser_joueur(entite *j, int x_depart, int y_depart)
-{
+void initialiser_joueur(entite *j, int x_depart, int y_depart){
     /* On convertit la case de départ en PIXELS (le centre de la case) */
     j->pos.x = (x_depart * TAILLE_CASE) + (TAILLE_CASE / 2.0);
     j->pos.y = (y_depart * TAILLE_CASE) + (TAILLE_CASE / 2.0);
@@ -15,60 +12,58 @@ void initialiser_joueur(entite *j, int x_depart, int y_depart)
     j->vitesse_anim = MLV_get_time();
 }
 
-void charger_images_joueur()
-{
-    sprite_joueur = MLV_load_image("Ressources/frisk_mlv.png");
+void charger_images_joueur(MLV_Image **sprite_joueur) {
+    *sprite_joueur = MLV_load_image("Ressources/frisk_mlv.png");
+    if (*sprite_joueur != NULL) MLV_resize_image(*sprite_joueur, LARGEUR_JOUEUR * 4, HAUTEUR_JOUEUR * 4);
 }
-void afficher_joueur(entite j)
-{
+
+void afficher_joueur(entite j, MLV_Image *sprite_joueur) {
     /* dimensions d'une seule cellule d'animation du sprite */
-    int largeur = 128;
-    int hauteur = 192;
-    int frame_a_dessiner;
-    if (sprite_joueur == NULL)
-    {
-        MLV_draw_filled_circle(
-            (int)j.pos.x,
-            (int)j.pos.y,
-            TAILLE_CASE / 2 - 4,
-            MLV_COLOR_GREEN);
-        return;
-    }
-    /* si le joueur est à l'arrêt, on force la frame 1  */
-    if (j.en_mouvement == 1)
-    {
+    int largeur = LARGEUR_JOUEUR;
+    int hauteur = HAUTEUR_JOUEUR;
+    int frame_a_dessiner, direction;
+
+    if (j.en_mouvement == 1) {
         frame_a_dessiner = j.frame_actuelle;
+        direction = j.direction;
     }
-    else
-    {
+    else{ /* si le joueur est a l'arret, on force la frame 1 du perso vers le bas */
         frame_a_dessiner = 1;
+        direction = 1;
     }
-    MLV_draw_partial_image(
-        sprite_joueur,
-        frame_a_dessiner * largeur,
-        j.direction * hauteur,
-        largeur,
-        hauteur,
-        j.pos.x - (largeur / 2),
-        j.pos.y - (hauteur / 2));
-    /*MLV_draw_partial_image	(	const MLV_Image * 	image, 	L'image à afficher sur la fenêtre
-                                    int 	x_source,  La coordonnée en X du sommet Nord-Ouest de la partie de l'image à afficher.
-                                    int 	y_source,  La coordonnée en Y du sommet Nord-Ouest de la partie de l'image à afficher.
-                                    int 	width_source,  	La largeur de la partie de l'image à afficher.
-                                    int 	height_source,  	La hauteur de la partie de l'image à afficher.
-                                    int 	x,  Coordonnée en X de la position dans la fenêtre du sommet Nord-Ouest de la partie de l'image à afficher.
-                                    int 	y   Coordonnée en Y de la position dans la fenêtre du sommet Nord-Ouest de la partie de l'image à afficher.
-                                )
-                                    sert à dessiner la partie du sprite correspondant au moment*/
+
+    if (sprite_joueur == NULL) MLV_draw_filled_rectangle(j.pos.x - (largeur / 2), j.pos.y - (hauteur / 2), largeur, hauteur, MLV_COLOR_BLUE);
+    else {
+        MLV_draw_partial_image(
+            sprite_joueur,
+            frame_a_dessiner * largeur,
+            direction * hauteur,
+            largeur,
+            hauteur,
+            j.pos.x - (largeur / 2),
+            j.pos.y - (hauteur / 2)
+        ); 
+        /*MLV_draw_partial_image	(	const MLV_Image * 	image, 	L'image à afficher sur la fenêtre
+                                        int 	x_source,  La coordonnée en X du sommet Nord-Ouest de la partie de l'image à afficher.
+                                        int 	y_source,  La coordonnée en Y du sommet Nord-Ouest de la partie de l'image à afficher.
+                                        int 	width_source,  	La largeur de la partie de l'image à afficher.
+                                        int 	height_source,  	La hauteur de la partie de l'image à afficher.
+                                        int 	x,  Coordonnée en X de la position dans la fenêtre du sommet Nord-Ouest de la partie de l'image à afficher.
+                                        int 	y   Coordonnée en Y de la position dans la fenêtre du sommet Nord-Ouest de la partie de l'image à afficher.
+                                    )	
+                                        sert à dessiner la partie du sprite correspondant au moment*/
+    }
 }
 
 void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLONNES])
 {
     float futur_x = j->pos.x;
     float futur_y = j->pos.y;
-    float vitesse = 3.0;               /* le joueur avance de 3 pixels à chaque image */
-    int rayon = (TAILLE_CASE / 2) - 4; /* le rayon physique du joueur (18 pixels) */
-    int max_frames = 4;                /* correspond au nb d'image dans le sprite */
+    float vitesse = 3.0; /* le joueur avance de 3 pixels à chaque image */
+    /* le rayon physique du joueur */
+    int rayon_x = (HAUTEUR_JOUEUR / 2) - 2;
+    int rayon_y = (LARGEUR_JOUEUR / 2) - 2;
+    int max_frames = 4; /* correspond au nb d'image dans le sprite */
     int coter_gauche, coter_droite, coter_haut, coter_bas;
     /* on réinitialise le mouvement pour que le joueur s'arrête si on ne touche à rien */
     j->en_mouvement = 0;
@@ -123,10 +118,10 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
     }
     /* on calcule où se trouveront les 4 bords du joueur en pixels
        on divise par TAILLE_CASE pour savoir dans quelles cases de la map ils tombent */
-    coter_gauche = (futur_x - rayon) / TAILLE_CASE;
-    coter_droite = (futur_x + rayon) / TAILLE_CASE;
-    coter_haut = (futur_y - rayon) / TAILLE_CASE;
-    coter_bas = (futur_y + rayon) / TAILLE_CASE;
+    coter_gauche = (futur_x - rayon_y) / TAILLE_CASE;
+    coter_droite = (futur_x + rayon_y) / TAILLE_CASE;
+    coter_haut   = (futur_y - rayon_x) / TAILLE_CASE;
+    coter_bas    = (futur_y + rayon_x) / TAILLE_CASE;
 
     /* on vérifie que les 4 coins du joueur sont bien sur de l'air (0) */
     if (map[coter_haut][coter_gauche] == 0 &&
@@ -139,10 +134,6 @@ void deplacer_joueur(entite *j, MLV_Keyboard_button touche, int map[LIGNES][COLO
         j->pos.y = futur_y;
     }
 }
-void liberer_images_joueur()
-{
-    if (sprite_joueur != NULL)
-    {
-        MLV_free_image(sprite_joueur);
-    }
+void liberer_images_joueur(MLV_Image *sprite_joueur) {
+    if (sprite_joueur != NULL) MLV_free_image(sprite_joueur);
 }

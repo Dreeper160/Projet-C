@@ -5,6 +5,8 @@
 #define TAILLE_CASE 45
 #define NB_MAX 4
 #define INTERLIGNE 30
+#define HAUTEUR_JOUEUR (TAILLE_CASE - 5)
+#define LARGEUR_JOUEUR ((HAUTEUR_JOUEUR * 2) / 3)
 /*ressources*/
 #define FONT "Ressources/fonts/ARCADECLASSIC.TTF"
 /*

@@ -4,9 +4,9 @@
 #include "constante.h"
 
 /* @brief */ 
-void charger_images_joueur();
+void charger_images_joueur(MLV_Image **sprite_joueur);
 /*@brief */ 
-void liberer_images_joueur();
+void liberer_images_joueur(MLV_Image *sprite_joueur);
 /*@brief 
  @param j 
  @param x_depart 
@@ -14,7 +14,7 @@ void liberer_images_joueur();
 void initialiser_joueur(entite *j, int x_depart, int y_depart);
 /* @brief 
    @param j */
-void afficher_joueur(entite j);
+void afficher_joueur(entite j, MLV_Image *sprite_joueur);
 /* @brief 
    @param j 
    @param touche 
