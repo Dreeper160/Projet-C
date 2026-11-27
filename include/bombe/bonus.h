@@ -10,7 +10,7 @@
 #define FRAME_TRIFOLIUM 4
 #define DUREE_EFFET_TRIFOLIUM 15 /*durée du boost*/
 #define TEMPS_APPARITION 5
-#define TAUX_DE_DROP 50 /*equivaut a 1% */
+#define TAUX_DE_DROP 1 /*equivaut a 1% */
 typedef struct
 {
     int visible;
