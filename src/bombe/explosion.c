@@ -1,4 +1,5 @@
 #include "explosion.h"
+#include "bonus.h"
 #define HAUT 0
 #define BAS 1
 #define GAUCHE 2
@@ -21,12 +22,13 @@ void liberer_images_explosion(void)
     }
 }
 
-void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES])
+void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES], bonus *bonus_jeu)
 {
     int rayon;
     int i, j;
     int bloque;
     rayon = b->rayon;
+    int ligne, colonne;
     int centre_ligne = (int)(b->b.pos.y / TAILLE_CASE);
     int centre_colonne = (int)(b->b.pos.x / TAILLE_CASE);
     /**
@@ -48,8 +50,8 @@ void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES
         bloque = 0;
         for (i = 1; i <= rayon && bloque == 0; i++)
         {
-            int ligne = centre_ligne;
-            int colonne = centre_colonne;
+            ligne = centre_ligne;
+            colonne = centre_colonne;
 
             if (j == HAUT)
                 ligne -= i;
@@ -77,8 +79,10 @@ void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES
                 exp->nb_cases++;
 
                 if (map[ligne][colonne] == 1)
+
                 {
                     map[ligne][colonne] = 0;
+                    spawn_trifolium(bonus_jeu, ligne, colonne);
                 }
             }
         }

@@ -6,7 +6,7 @@
 #define FRAMES_IGNITE 5
 #define _POSIX_C_SOURCE 199309L
 #define T_IGNITE 0.250 /* Le temps d'ignition */
-#include <MLV/MLV_all.h>*
+#include <MLV/MLV_all.h>
 #include "constante.h" /* Constantes du projet*/
 #include <time.h>
 
@@ -64,6 +64,6 @@ int bombe_expiree(bombe *bom);
  *
  * @param bombe
  */
-void afficher_bombe(bombe bombe);
+void afficher_bombe(bombe bombe, int bonus_actif);
 
 #endif

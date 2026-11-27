@@ -1,6 +1,5 @@
 #include "bonus.h"
 static MLV_Image *sprite_trifolium = NULL;
-
 void initialiser_bonus(bonus *b)
 {
     b->trefle.visible = 0;
@@ -91,8 +90,8 @@ void liberer_images_trifolium(void)
 }
 void afficher_trifolium(const bonus *b)
 {
-    int centre_x = b->trefle.colonne;
-    int centre_y = b->trefle.ligne;
+    int centre_x = b->trefle.colonne * TAILLE_CASE + TAILLE_CASE / 2;
+    int centre_y = b->trefle.ligne * TAILLE_CASE + TAILLE_CASE / 2;
     int frame;
     double secondes;
     struct timespec maintenant;
@@ -122,7 +121,7 @@ void afficher_trifolium(const bonus *b)
         }
         else
         {
-            MLV_draw_filled_circle(centre_x, centre_y, 1, MLV_COLOR_RED);
+            MLV_draw_filled_circle(centre_x, centre_y, TAILLE_CASE / 4, MLV_COLOR_GREEN);
         }
     }
 }

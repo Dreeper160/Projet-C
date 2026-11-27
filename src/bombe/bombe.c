@@ -2,11 +2,13 @@
 #include "bombe.h"
 
 static MLV_Image *sprite_bombe = NULL;
+static MLV_Image *sprite_bombe_bonus = NULL;
 static MLV_Image *sprite_bombe_ignite = NULL;
 
 void charger_images_bombe(void)
 {
     sprite_bombe = MLV_load_image("Ressources/bomb/bombe_normal-Sheet.png");
+    sprite_bombe_bonus = MLV_load_image("Ressources/bomb/Bombe2-Sheet.png");
     if (sprite_bombe != NULL)
         MLV_resize_image(sprite_bombe, 270, 45);
 
@@ -20,6 +22,11 @@ void liberer_images_bombe(void)
         MLV_free_image(sprite_bombe);
         sprite_bombe = NULL;
     }
+    if (sprite_bombe_bonus != NULL)
+    {
+        MLV_free_image(sprite_bombe_bonus);
+        sprite_bombe_bonus = NULL;
+    }
     if (sprite_bombe_ignite != NULL)
     {
         MLV_free_image(sprite_bombe_ignite);
@@ -27,7 +34,7 @@ void liberer_images_bombe(void)
     }
 }
 
-void afficher_bombe(bombe bombe)
+void afficher_bombe(bombe bombe, int bonus_actif)
 {
     int centre_x = bombe.b.pos.x;
     int centre_y = bombe.b.pos.y;
@@ -36,6 +43,8 @@ void afficher_bombe(bombe bombe)
     int frame;
     double secondes_ignite;
     int rayon;
+    MLV_Image *sprite;
+
     if (bombe.state == BOMBE_IGNITE)
     {
 
@@ -80,7 +89,11 @@ void afficher_bombe(bombe bombe)
         return;
     }
 
-    if (sprite_bombe == NULL)
+    sprite = bonus_actif && sprite_bombe_bonus != NULL
+                 ? sprite_bombe_bonus
+                 : sprite_bombe;
+
+    if (sprite == NULL)
     {
         MLV_draw_filled_circle(
             centre_x,
@@ -104,7 +117,7 @@ void afficher_bombe(bombe bombe)
         frame = 0;
 
     MLV_draw_partial_image(
-        sprite_bombe,
+        sprite,
         frame * 45,
         0,
         45,

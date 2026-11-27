@@ -4,6 +4,7 @@
 #include "entite.h"
 #include <time.h>
 #include "bombe.h"
+#include "bonus.h"
 #include "constante.h"
 
 /** @brief Coordonnées d'une case touchée par une explosion. */
@@ -30,7 +31,7 @@ typedef struct
  */
 void charger_images_explosion(void);
 void liberer_images_explosion(void);
-void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES]);
+void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES], bonus *bonus_jeu);
 int joueur_touche_explosion(const explosion *exp, const entite *joueur);
 void actualiser_explosion(explosion *exp);
 /**

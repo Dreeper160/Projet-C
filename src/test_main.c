@@ -1,10 +1,13 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
+#include <SDL/SDL_mixer.h>
 #include "constante.h"
 #include "entite.h"
 #include "level.h"
 #include "joueur.h"
 #include "bombe.h"
+#include "bonus.h"
 #include "menu_du_jeu.h"
 #include "explosion.h"
 
@@ -15,6 +18,7 @@ int main(void)
     Images_niveau imgs;
     entite joueur;
     bombe bombe_joueur;
+    bonus bonus_jeu;
     int quitter = 0;
     int touche_bombe_pressee = 0;
     int etat_jeu = 0;
@@ -22,8 +26,11 @@ int main(void)
     MLV_Keyboard_button touche;
     MLV_Font *police_bouton;
     MLV_Font *police_titre;
+    MLV_Music *musique_bonus;
+    int bonus_actif_precedent;
 
     bombe_joueur.rayon = RAYON_BOMBE_BASE;
+    initialiser_bonus(&bonus_jeu);
     explosion_joueur.active = 0;
     explosion_joueur.nb_cases = 0;
 
@@ -35,6 +42,7 @@ int main(void)
     charger_images_joueur();
     charger_images_bombe();
     charger_images_explosion();
+    charger_images_trifolium();
     police_bouton = MLV_load_font(FONT, 20);
     police_titre = MLV_load_font(FONT, 50);
 
@@ -43,6 +51,7 @@ int main(void)
         liberer_images_joueur();
         liberer_images_bombe();
         liberer_images_explosion();
+        liberer_images_trifolium();
         MLV_free_window();
         return 1;
     }
@@ -58,10 +67,27 @@ int main(void)
         liberer_images_joueur();
         liberer_images_bombe();
         liberer_images_explosion();
+        liberer_images_trifolium();
         MLV_free_font(police_bouton);
         MLV_free_font(police_titre);
         MLV_free_window();
         return 0;
+    }
+
+    MLV_init_audio();
+    musique_bonus = MLV_load_music("Ressources/sounds/Yu-Peng_Chen_HOYO-MiX_-_Let_s_Go_Crimson_Knight.mp3");
+    if (musique_bonus == NULL)
+    {
+        fprintf(stderr, "Impossible de charger la musique du bonus.\n");
+        MLV_free_audio();
+        liberer_images_joueur();
+        liberer_images_bombe();
+        liberer_images_explosion();
+        liberer_images_trifolium();
+        MLV_free_font(police_bouton);
+        MLV_free_font(police_titre);
+        MLV_free_window();
+        return 1;
     }
 
     /* 2. Chargement des ressources */
@@ -109,10 +135,24 @@ int main(void)
         if (bombe_joueur.b.est_en_vie == 1 &&
             bombe_expiree(&bombe_joueur) == 1)
         {
-            executer_explosion(&explosion_joueur, &bombe_joueur, map);
+            executer_explosion(&explosion_joueur, &bombe_joueur, map, &bonus_jeu);
+        }
+        bonus_actif_precedent = bonus_jeu.effet.actif;
+        actualiser_bonus(&bonus_jeu);
+        if (bonus_actif_precedent == 1 && bonus_jeu.effet.actif == 0)
+        {
+            bombe_joueur.rayon = RAYON_BOMBE_BASE;
+            Mix_FadeOutMusic(4000);
+        }
+
+        if (ramasser_trifolium(&bonus_jeu, &joueur) == 1)
+        {
+            MLV_play_music(musique_bonus, 1.0, -1);
+            bombe_joueur.rayon = RAYON_BONUS;
         }
         actualiser_explosion(&explosion_joueur);
-        if (joueur_touche_explosion(&explosion_joueur, &joueur))
+        if (bonus_jeu.effet.actif == 0 &&
+            joueur_touche_explosion(&explosion_joueur, &joueur))
             joueur.est_en_vie = 0;
 
         if (MLV_get_keyboard_state(MLV_KEYBOARD_e) == MLV_PRESSED)
@@ -132,10 +172,11 @@ int main(void)
         /* Rendu graphique */
         MLV_clear_window(MLV_COLOR_BLACK);
         afficher_niveau(map, imgs);
+        afficher_trifolium(&bonus_jeu);
         afficher_explosion(&explosion_joueur);
         if (bombe_joueur.b.est_en_vie == 1)
         {
-            afficher_bombe(bombe_joueur);
+            afficher_bombe(bombe_joueur, bonus_jeu.effet.actif);
         }
         afficher_joueur(joueur);
         MLV_actualise_window();
@@ -148,9 +189,13 @@ int main(void)
     liberer_images_joueur();
     liberer_images_bombe();
     liberer_images_explosion();
+    liberer_images_trifolium();
     liberer_images_niveau(&imgs);
     MLV_free_font(police_bouton);
     MLV_free_font(police_titre);
+    MLV_stop_music();
+    MLV_free_music(musique_bonus);
+    MLV_free_audio();
     MLV_free_window();
 
     return 0;
