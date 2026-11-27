@@ -28,6 +28,8 @@ typedef struct
  * @param b
  * @param map
  */
+void charger_images_explosion(void);
+void liberer_images_explosion(void);
 void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES]);
 int joueur_touche_explosion(const explosion *exp, const entite *joueur);
 void actualiser_explosion(explosion *exp);

@@ -4,11 +4,13 @@
 #define T_MAX 0.8 /* Temps avant explosion de la bombe */
 #define FRAMES_MECHE 6
 #define FRAMES_IGNITE 5
+#define _POSIX_C_SOURCE 199309L
 #define T_IGNITE 0.250 /* Le temps d'ignition */
-#include <MLV/MLV_all.h>
-#include <time.h>
+#include <MLV/MLV_all.h>*
 #include "constante.h" /* Constantes du projet*/
-#include "entite.h"    /* Définition du type entite*/
+#include <time.h>
+
+#include "entite.h" /* Définition du type entite*/
 
 /**
  * @brief Représente une Bombe

@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <time.h>
-#include <MLV/MLV_all.h>
 #include "constante.h"
 #include "entite.h"
 #include "level.h"
@@ -35,6 +34,7 @@ int main(void)
     MLV_create_window("Bomberman", "Bomberman", COLONNES * TAILLE_CASE, LIGNES * TAILLE_CASE);
     charger_images_joueur();
     charger_images_bombe();
+    charger_images_explosion();
     police_bouton = MLV_load_font(FONT, 20);
     police_titre = MLV_load_font(FONT, 50);
 
@@ -42,6 +42,7 @@ int main(void)
     {
         liberer_images_joueur();
         liberer_images_bombe();
+        liberer_images_explosion();
         MLV_free_window();
         return 1;
     }
@@ -56,6 +57,7 @@ int main(void)
     {
         liberer_images_joueur();
         liberer_images_bombe();
+        liberer_images_explosion();
         MLV_free_font(police_bouton);
         MLV_free_font(police_titre);
         MLV_free_window();
@@ -145,6 +147,7 @@ int main(void)
     /* 5. Libération propre de la mémoire */
     liberer_images_joueur();
     liberer_images_bombe();
+    liberer_images_explosion();
     liberer_images_niveau(&imgs);
     MLV_free_font(police_bouton);
     MLV_free_font(police_titre);

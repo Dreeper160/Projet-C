@@ -34,11 +34,10 @@ void afficher_bombe(bombe bombe)
     struct timespec maintenant;
     double secondes;
     int frame;
-
+    double secondes_ignite;
+    int rayon;
     if (bombe.state == BOMBE_IGNITE)
     {
-        double secondes_ignite;
-        int rayon;
 
         clock_gettime(CLOCK_MONOTONIC, &maintenant);
         secondes_ignite =

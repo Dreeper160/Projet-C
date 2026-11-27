@@ -3,6 +3,24 @@
 #define BAS 1
 #define GAUCHE 2
 #define DROITE 3
+#define FRAMES_EXPLOSION 12
+
+static MLV_Image *sprite_explosion = NULL;
+
+void charger_images_explosion(void)
+{
+    sprite_explosion = MLV_load_image("Ressources/bomb/Explosion-Sheet.png");
+}
+
+void liberer_images_explosion(void)
+{
+    if (sprite_explosion != NULL)
+    {
+        MLV_free_image(sprite_explosion);
+        sprite_explosion = NULL;
+    }
+}
+
 void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES])
 {
     int rayon;
@@ -74,18 +92,50 @@ void afficher_explosion(const explosion *exp)
     int i;
     int x;
     int y;
+    int frame;
+    struct timespec maintenant;
+    double secondes_ecoulees;
 
     if (exp->active == 0)
         return;
+
+    if (sprite_explosion != NULL)
+    {
+        clock_gettime(CLOCK_MONOTONIC, &maintenant);
+        secondes_ecoulees =
+            (maintenant.tv_sec - exp->temps_apparition.tv_sec) +
+            (maintenant.tv_nsec - exp->temps_apparition.tv_nsec) / 1e9;
+        if (secondes_ecoulees < 0.0)
+            secondes_ecoulees = 0.0;
+
+        frame = (int)(secondes_ecoulees / DUREE_EXPLOSION * FRAMES_EXPLOSION);
+        if (frame >= FRAMES_EXPLOSION)
+            frame = FRAMES_EXPLOSION - 1;
+    }
 
     for (i = 0; i < exp->nb_cases; i++)
     {
         x = exp->cases[i].colonne * TAILLE_CASE;
         y = exp->cases[i].ligne * TAILLE_CASE;
-        MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE,
-                                  MLV_COLOR_ORANGE);
+        if (sprite_explosion != NULL)
+        {
+            MLV_draw_partial_image(
+                sprite_explosion,
+                frame * TAILLE_CASE,
+                0,
+                TAILLE_CASE,
+                TAILLE_CASE,
+                x,
+                y);
+        }
+        else
+        {
+            MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE,
+                                      MLV_COLOR_ORANGE);
+        }
     }
 }
+
 int joueur_touche_explosion(const explosion *exp, const entite *joueur)
 {
     int ligne_joueur;
