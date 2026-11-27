@@ -10,4 +10,4 @@ int verif_victoire(int map[LIGNES][COLONNES]){
         }
     }
     return res;
-};
+}
