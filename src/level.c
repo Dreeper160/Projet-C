@@ -68,7 +68,7 @@ void afficher_niveau(int map[LIGNES][COLONNES], Images_niveau imgs)
                 /* Bloc incassable */
                 if (imgs.mur_incassable != NULL) MLV_draw_image(imgs.mur_incassable, x, y);
                 else MLV_draw_filled_rectangle(x, y, TAILLE_CASE, TAILLE_CASE, MLV_COLOR_PURPLE);
-            }
+        }
         }
     }
 }
@@ -91,4 +91,5 @@ void rempl_lvl_rand(int map[LIGNES][COLONNES])
                 map[i][j] = rand() % 2;
             }
         }
+    }
 }

@@ -1,0 +1,44 @@
+#ifndef _EXPLOSION_H
+#define _EXPLOSION_H
+#define DUREE_EXPLOSION 0.5 /** Durée d'affichage, en secondes. */
+#include "entite.h"
+#include <time.h>
+#include "bombe.h"
+#include "bonus.h"
+#include "constante.h"
+
+/** @brief Coordonnées d'une case touchée par une explosion. */
+typedef struct
+{
+    int ligne;
+    int colonne;
+} case_explosion;
+
+/** @brief Représente une explosion active sur la grille. */
+typedef struct
+{
+    case_explosion cases[LIGNES * COLONNES]; /** Cases touchées par les flammes. */
+    int nb_cases;                            /** Nombre de cases valides dans cases. */
+    int active;                              /** Indique si l'explosion est encore active. */
+    struct timespec temps_apparition;        /** Heure d'apparition, avec CLOCK_MONOTONIC. */
+} explosion;
+/**
+ * @brief
+ *
+ * @param exp
+ * @param b
+ * @param map
+ */
+void charger_images_explosion(void);
+void liberer_images_explosion(void);
+void executer_explosion(explosion *exp, const bombe *b, int map[LIGNES][COLONNES], bonus *bonus_jeu);
+int joueur_touche_explosion(const explosion *exp, const entite *joueur);
+void actualiser_explosion(explosion *exp);
+/**
+ * @brief
+ *
+ * @param exp represente l'explosion
+ */
+void afficher_explosion(const explosion *exp);
+
+#endif

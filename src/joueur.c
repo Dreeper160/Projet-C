@@ -42,7 +42,7 @@ void afficher_joueur(entite j, MLV_Image *sprite_joueur) {
             hauteur,
             j.pos.x - (largeur / 2),
             j.pos.y - (hauteur / 2)
-        ); 
+        );
         /*MLV_draw_partial_image	(	const MLV_Image * 	image, 	L'image à afficher sur la fenêtre
                                         int 	x_source,  La coordonnée en X du sommet Nord-Ouest de la partie de l'image à afficher.
                                         int 	y_source,  La coordonnée en Y du sommet Nord-Ouest de la partie de l'image à afficher.
@@ -50,7 +50,7 @@ void afficher_joueur(entite j, MLV_Image *sprite_joueur) {
                                         int 	height_source,  	La hauteur de la partie de l'image à afficher.
                                         int 	x,  Coordonnée en X de la position dans la fenêtre du sommet Nord-Ouest de la partie de l'image à afficher.
                                         int 	y   Coordonnée en Y de la position dans la fenêtre du sommet Nord-Ouest de la partie de l'image à afficher.
-                                    )	
+                                    )
                                         sert à dessiner la partie du sprite correspondant au moment*/
     }
 }

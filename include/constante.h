@@ -15,6 +15,5 @@
  * DOIT RESTER AVANT L'INCLUSION DE <time.h>.
  * Faut pas toucher la team
  */
-#define _POSIX_C_SOURCE 199309L
 
 #endif

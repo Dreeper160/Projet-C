@@ -10,13 +10,13 @@ BUILD_DIR = build
 
 TARGET = $(BUILD_DIR)/Bomberman
 # Compilation flags
-CFLAGS =  -std=c89 -Wall -Wextra -D_POSIX_C_SOURCE=199309L -Iinclude
+CFLAGS =  -std=c89 -Wall -Wextra -D_POSIX_C_SOURCE=199309L -Iinclude -Iinclude/bombe
 
 # Libraries
 LDLIBS = -lMLV -lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lSDL_mixer -lxml2 -lglib-2.0
 
 # Automatic retrieval of source files (I hate make)
-SRCS = $(wildcard $(SRC_DIR)/*.c)
+SRCS = $(wildcard $(SRC_DIR)/*.c $(SRC_DIR)/bombe/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
 
 # Main target
@@ -28,6 +28,7 @@ $(TARGET): $(OBJS)
 
 # Compile source files
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
+	@mkdir -p "$(dir $@)"
 	$(CC) $(CFLAGS) -c $< -o $@
 # Create the build directory
 $(BUILD_DIR):
